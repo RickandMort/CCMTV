@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/cid_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/is_show"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/video_image"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/img_default" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                android:id="@+id/task_video_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:text="郭丹：甲亢眼病的核磁共振评估手段"
+                android:textSize="14dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/task_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="2"
+                    android:text="未开始"
+                    android:textColor="#69ADFA"
+                    android:textSize="14sp"
+                    android:layout_weight="1"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    >
+                    <TextView
+                        android:id="@+id/task_status_image"
+                        android:layout_width="90dp"
+                        android:layout_height="30dp"
+                        android:background="@mipmap/learning_task04"
+                        android:gravity="center"
+                        android:text="去完成"
+                        android:textColor="#FFF"
+                        android:textSize="14sp"
+                        android:layout_alignParentRight="true"
+                        />
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+            <!--<TextView
+                android:id="@+id/task_num1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/task_num2"
+                android:layout_alignParentBottom="true"
+                android:text="("
+                android:textSize="16sp"
+                android:textColor="#00CCFF"/>
+
+            <TextView
+                android:id="@+id/task_num2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/task_num3"
+                android:layout_alignParentBottom="true"
+                android:text="0"
+                android:textSize="16sp"
+                android:textColor="#00CCFF"/>
+
+            <TextView
+                android:id="@+id/task_num3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/task_num4"
+                android:layout_alignParentBottom="true"
+                android:text="/"
+                android:textSize="16sp"
+                android:textColor="#00CCFF"/>
+
+            <TextView
+                android:id="@+id/task_num4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/task_num5"
+                android:layout_alignParentBottom="true"
+                android:text="3"
+                android:textSize="16sp"
+                android:textColor="#00CCFF"/>
+
+            <TextView
+                android:id="@+id/task_num5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text=")"
+                android:textSize="16sp"
+                android:textColor="#00CCFF"/>-->
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View  android:layout_height="5px"
+        android:background="#EFEFEF"
+        android:layout_width="match_parent" />
+
+    <!-- 存放aid -->
+    <TextView
+        android:id="@+id/task_aid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <!-- 存放id -->
+    <TextView
+        android:id="@+id/task_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+</LinearLayout>

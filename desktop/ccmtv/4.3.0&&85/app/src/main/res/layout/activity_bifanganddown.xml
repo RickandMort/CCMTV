@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFEF"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/myprofile_cont_layout_background"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:onClick="back">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/bark" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="播放和下载"
+            android:textColor="#626262"
+            android:textSize="18sp" />
+
+
+
+
+    </FrameLayout>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="#6F6F6F"
+        android:text="下载"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout_downtype"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFF"
+        android:gravity="center|left"
+        android:orientation="horizontal" >
+
+
+
+        <TextView
+            style="@style/style_tv_setting"
+            android:text="@string/down_first" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_downtype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:padding="3dp"
+            android:text="流畅"
+            android:textColor="#A5A5A5"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#e4e4e4" />
+
+    <LinearLayout
+        android:id="@+id/layout_onlywifi"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFF"
+        android:gravity="center|left"
+        android:orientation="horizontal" >
+
+
+        <TextView
+            style="@style/style_tv_setting"
+            android:text="@string/only_wifidown" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/iv_opendown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:padding="3dp"
+            android:src="@drawable/select_onlywifidown" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#e4e4e4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="#6F6F6F"
+        android:text="WLAN"
+        />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#e4e4e4" />
+
+    <LinearLayout
+        android:id="@+id/layout_everyremind_check"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFF"
+        android:gravity="center|left"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/style_tv_setting"
+            android:text="非WLAN网络播放提醒" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/iv_everyremind_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/checked"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#e4e4e4" />
+
+    <LinearLayout
+        android:id="@+id/layout_oneremind_check"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFF"
+        android:gravity="center|left"
+        android:orientation="horizontal" >
+
+
+        <TextView
+            style="@style/style_tv_setting"
+            android:text="@string/one_remind" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/iv_oneremind_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/checked"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#e4e4e4" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="#6F6F6F"
+        android:text="离线下载存储目录"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#e4e4e4" />
+
+    <LinearLayout
+        android:id="@+id/layout_phonecache_check"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFF"
+        android:gravity="center|left"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/style_tv_setting"
+            android:text="@string/phone_cache" />
+
+        <TextView
+            android:id="@+id/tv_phonememory"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/iv_phonecache_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/checked"
+            android:visibility="invisible"
+             />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#e4e4e4" />
+
+    <LinearLayout
+        android:id="@+id/layout_sdcache_check"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FFF"
+        android:gravity="center|left"
+        android:orientation="horizontal" >
+
+
+        <TextView
+            style="@style/style_tv_setting"
+            android:text="@string/sdcard_cache" />
+
+        <TextView
+            android:id="@+id/tv_sdcardmemory"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/iv_sdcache_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/checked"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#e4e4e4" />
+</LinearLayout>

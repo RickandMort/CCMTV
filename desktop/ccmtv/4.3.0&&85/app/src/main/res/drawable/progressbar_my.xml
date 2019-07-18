@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@android:id/background">
+        <shape>
+            <!-- 这个标签表示纯色填充，通过android:color即可指定shape中填充的颜色 -->
+            <solid android:color="#f7f7f7" />
+        </shape>
+    </item>
+
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <!-- 这个标签表示纯色填充，通过android:color即可指定progress进度条的颜色 -->
+                <!--<solid android:color="#dddddd" />-->
+
+                <solid android:color="#3A95FA" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

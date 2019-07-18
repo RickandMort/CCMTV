@@ -1,0 +1,36 @@
+#为注释符
+
+#-----------主 Dex 中必要依赖的脚本配置-----------
+#默认保留四大组件中其他三大组件(并计算其依赖树)，Activity 组件选择性保留(使用-just activity 选项),若为空不保留任何 Activity
+-just activity com.ceabie.demo.MainActivity
+
+#-----------附加类-----------
+# 如果你想要某个包路径在 maindex 中，则使用 -keep 选项，即使他已经在分包的路径中.若为空，不保留任意类
+#-keep com.ceabie.demo.**
+
+# 保留单个类.
+#-keep android.support.v7.app.AppCompatDialogFragment.class
+
+# 这条配置可以指定这个包下类在第二及其他 dex 中.
+#-split android.support.v?.**
+#将全部类移出主 Dex
+-split **.**
+
+# 不包含 Android gradle 插件自动生成的 miandex 列表.(不使用建议的依赖树，注释掉表示使用,否则-just activity 无效)
+#-donot-use-suggest
+
+# (分割每个 dex 包的方法数上限) 扩展参数:例如 --set-max-idx-number=50000
+# 如果出现 DexException: Too many classes in --main-dex-list, main dex capacity exceeded：
+# 表明限制的方法数小于 main dex 的必要方法数，调大到合适数值即可
+-dex-param --set-max-idx-number=4000
+
+# 不进行 dex 分包， 直到 dex 的 id 数量超过 65536.(设置自动执行分包策略)
+#-auto-maindex
+
+# 显示 miandex 的日志.
+#-log-mainlist
+---------------------
+作者：Wei_Leng
+来源：CSDN
+原文：https://blog.csdn.net/u014608640/article/details/53080216
+版权声明：本文为博主原创文章，转载请附上博文链接！

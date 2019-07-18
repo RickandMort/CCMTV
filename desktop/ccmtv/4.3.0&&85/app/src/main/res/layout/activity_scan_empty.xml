@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.linlic.ccmtv.yx.activity.home.yxzbjrrom.ScanEmptyActivity"
+    android:background="#f6f6f6"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:onClick="back">
+
+            <ImageView
+                android:id="@+id/id_iv_activity_title_8"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/login_back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_title_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="扫描结果"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black33"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/scan_img"
+            android:layout_marginTop="35dp"/>
+
+        <TextView
+            android:id="@+id/tv_scan_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:textColor="@color/black33"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="35dp"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation= "vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="15dp">
+
+    <CheckBox
+        android:id="@+id/cb_doc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[文档]是否显示" />
+    <CheckBox
+        android:id="@+id/cb_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[聊天]是否显示" />
+    <CheckBox
+        android:id="@+id/cb_qa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[问答]是否显示" />
+    <CheckBox
+        android:id="@+id/cb_intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[简介]是否显示" />
+
+    <CheckBox
+        android:id="@+id/cb_PIP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[全屏模式画中画]是否显示" />
+
+    <CheckBox
+        android:id="@+id/cb_hand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[举手]是否显示" />
+
+    <CheckBox
+        android:id="@+id/cb_cbRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[码流切换]是否显示"
+        android:visibility="gone"/>
+
+    <CheckBox
+        android:id="@+id/cb_net"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[优选网络]是否显示" />
+
+    <CheckBox
+        android:id="@+id/cb_danmu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[弹幕开关]是否显示" />
+
+    <CheckBox
+        android:id="@+id/cb_close_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[关闭视频]是否显示" />
+
+    <Spinner
+        android:id="@+id/sp_skinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/gs_bnt_back"
+        android:layout_width="@dimen/input_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="返回"
+        android:textSize="@dimen/input_size"
+        android:drawableLeft="@mipmap/gs_left_back" />
+
+
+</LinearLayout>

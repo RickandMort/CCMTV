@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+        <com.linlic.ccmtv.yx.utils.CircleImageView
+            android:id="@+id/_item_icon"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/anti_cheating"
+            />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_height="wrap_content">
+        
+        <TextView
+            android:id="@+id/_item_name"
+            android:layout_width="wrap_content"
+            android:text="都说了附件三老地方"
+            android:textColor="#333"
+            android:gravity="top"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/_item_time"
+            android:layout_width="wrap_content"
+            android:text="11:25"
+            android:layout_marginTop="10dp"
+            android:textColor="#333"
+            android:gravity="bottom"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/_item_rp"
+            android:layout_width="wrap_content"
+            android:text="回复TA"
+            android:textColor="@color/login_button"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:onClick="rp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/anniu26"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/_item_fan_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:src="@mipmap/message_awesome"
+            android:layout_marginRight="5dp"
+            />
+
+        <TextView
+            android:id="@+id/_item_content"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:text="是撒旦法撒旦法大师傅第三方的撒法的撒法的撒"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/video_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#e5e5e5"
+        android:onClick="get_video"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+
+        <FrameLayout
+            android:layout_width="130dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:id="@+id/iv_item_img2"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ys"/>
+
+            <ImageView
+                android:id="@+id/iv_item_ispay2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="left"
+                android:scaleType="fitXY"
+                android:src="@mipmap/free_img_blue"
+                android:visibility="gone"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+
+            <TextView
+                android:id="@+id/tv_item_text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:maxLines="1"
+                android:text="标题"
+                android:textColor="#5E5E5E"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_item_text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:maxLines="1"
+                android:text="阿萨德发生的发生大"
+                android:textColor="#5E5E5E"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

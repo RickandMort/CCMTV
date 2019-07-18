@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_nodata1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="20dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="100dp"
+    android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/img_show_no"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:src="@mipmap/nodata_empty" />
+
+    <TextView
+        android:id="@+id/tv_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="您还没有订阅科室"
+        android:textColor="#888A8D"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_tosub"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="15dp"
+        android:background="@mipmap/tosub"
+        android:padding="5dp"
+        android:text="立即订阅"
+        android:textColor="#FFF"
+
+        android:visibility="visible" />
+</LinearLayout>

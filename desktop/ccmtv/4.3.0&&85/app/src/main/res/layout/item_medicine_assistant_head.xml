@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/recommemd_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/medicine_recommend_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/recommend_icon" />
+
+        <TextView
+            android:id="@+id/medicine_recommend_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/medicine_recommend_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:text="推荐"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/medicine_assistant_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:text="更多>>"
+            android:textSize="14sp"
+            android:textColor="#999"/>
+
+    </RelativeLayout>
+</RelativeLayout>

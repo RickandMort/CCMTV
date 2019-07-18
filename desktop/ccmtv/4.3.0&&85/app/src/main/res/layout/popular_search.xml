@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/layout_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/activity_title_bg"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="centerInside"
+            android:onClick="back"
+            android:src="@mipmap/bark" />
+
+        <EditText
+            android:id="@+id/search_edit"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:hint="请输入视频名称或者关键字"
+            android:background="@mipmap/edittext_bg_img"
+            />
+
+        <ImageView
+            android:id="@+id/search_img"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/search_img"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/hr_bg4"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/popular_search"
+        android:text="@string/popular_search"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/hr_bg4"
+        />
+
+    <ListView
+        android:id="@+id/popular_search_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="0.1dp"
+        android:divider="@color/hr_bg4"
+        android:scrollbars="none"
+        />
+
+</LinearLayout>

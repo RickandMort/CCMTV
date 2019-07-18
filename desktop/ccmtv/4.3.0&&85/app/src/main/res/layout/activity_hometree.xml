@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 首页 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/home_toptitle" />
+
+
+    <!--<HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:scrollbars="none"
+        android:visibility="visible">
+        <LinearLayout
+            android:id="@+id/head_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>-->
+
+    <!--  <com.linlic.ccmtv.yx.widget.HorizontalListView
+          android:id="@+id/horizontalListView"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_alignParentTop="true"
+          android:stackFromBottom="true"
+          android:transcriptMode="alwaysScroll" />-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" />
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="#F2F2F2" />
+
+
+    <!--    <com.handmark.pulltorefresh.library.PullToRefreshScrollView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/pull_refresh_scrollview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:visibility="gone"
+            ptr:ptrAnimationStyle="flip"
+            ptr:ptrMode="both">-->
+
+
+    <ListView
+        android:id="@+id/list_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="#FFF" />
+
+
+    <!--   </com.handmark.pulltorefresh.library.PullToRefreshScrollView>-->
+
+
+</LinearLayout>

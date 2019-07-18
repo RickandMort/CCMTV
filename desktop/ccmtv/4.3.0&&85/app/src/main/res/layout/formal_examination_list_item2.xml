@@ -1,0 +1,1512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:clickable="true"
+    android:id="@+id/layout"
+    android:paddingTop="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/question_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"  />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/vh2"
+        android:layout_height="0.5dp"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/activity_title_view" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title_serial_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+    <!--单选、多选start-->
+    <LinearLayout
+        android:id="@+id/radios"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/radios_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#457DD7"
+            android:visibility="gone"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/radios_problem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:padding="7dp"
+            android:textColor="@color/no_select_text_color"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="right"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/radios_Collection"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="20dp"
+                android:onClick="clickexerciseCollection"
+                android:gravity="right"
+                android:src="@mipmap/collection_icon01"
+                />
+        </LinearLayout>
+
+        <com.linlic.ccmtv.yx.utils.MyGridView
+            android:id="@+id/gridview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="0.0dip"
+            android:listSelector="@null"
+            android:numColumns="4"
+            android:scrollbars="none"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="0.0dip" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/radios_add_layout"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/radios_layout_01"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:visibility="gone"
+                    android:clickable="true"
+                    android:onClick="viewclick"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+
+
+                    <TextView
+                        android:id="@+id/radio_id01"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:background="@mipmap/exams2_07"
+                        />
+
+                    <TextView
+                        android:id="@+id/radio_text01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:padding="5dp"
+                        android:textColor="@color/no_select_text_color"
+                        android:gravity="center|left"
+                        />
+                    <TextView
+                        android:id="@+id/radio_type01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/radios_layout_02"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:clickable="true"
+                    android:onClick="viewclick"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/radio_id02"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:background="@mipmap/exams2_07"
+                        />
+
+                    <TextView
+                        android:id="@+id/radio_text02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:padding="5dp"
+                        android:textColor="@color/no_select_text_color"
+                        android:gravity="center|left"
+                        />
+                    <TextView
+                        android:id="@+id/radio_type02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/radios_layout_03"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:visibility="gone"
+                    android:layout_marginRight="20dp"
+                    android:clickable="true"
+                    android:onClick="viewclick"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/radio_id03"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:background="@mipmap/exams2_07"
+                        />
+
+                    <TextView
+                        android:id="@+id/radio_text03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/no_select_text_color"
+                        android:padding="5dp"
+                        android:gravity="center|left"
+                        />
+                    <TextView
+                        android:id="@+id/radio_type03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/radios_layout_04"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:clickable="true"
+                    android:onClick="viewclick"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/radio_id04"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:background="@mipmap/exams2_07"
+                        />
+
+                    <TextView
+                        android:id="@+id/radio_text04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:padding="5dp"
+                        android:textColor="@color/no_select_text_color"
+                        android:gravity="center|left"
+                        />
+                    <TextView
+                        android:id="@+id/radio_type04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/radios_layout_05"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:clickable="true"
+                    android:onClick="viewclick"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/radio_id05"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:background="@mipmap/exams2_07"
+                        />
+
+                    <TextView
+                        android:id="@+id/radio_text05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/no_select_text_color"
+                        android:padding="5dp"
+                        android:gravity="center|left"
+                        />
+                    <TextView
+                        android:id="@+id/radio_type05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/radios_layout_06"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:visibility="gone"
+                    android:onClick="viewclick"
+                    android:clickable="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/radio_id06"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:background="@mipmap/exams2_07"
+                        />
+
+                    <TextView
+                        android:id="@+id/radio_text06"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/no_select_text_color"
+                        android:padding="5dp"
+                        android:gravity="center|left"
+                        />
+                    <TextView
+                        android:id="@+id/radio_type06"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/radios_layout_07"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    android:onClick="viewclick"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/radio_id07"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:background="@mipmap/exams2_07"
+                        />
+
+                    <TextView
+                        android:id="@+id/radio_text07"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/no_select_text_color"
+                        android:padding="5dp"
+                        android:gravity="center|left"
+                        />
+                    <TextView
+                        android:id="@+id/radio_type07"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/radios_layout_08"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:visibility="gone"
+                    android:clickable="true"
+                    android:onClick="viewclick"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/radio_id08"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:background="@mipmap/exams2_07"
+                        />
+
+                    <TextView
+                        android:id="@+id/radio_text08"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/no_select_text_color"
+                        android:padding="5dp"
+                        android:gravity="center|left"
+                        />
+                    <TextView
+                        android:id="@+id/radio_type08"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/radios_show"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+
+    </LinearLayout>
+    <!--单选、多选end-->
+
+    <!--判断题start-->
+    <LinearLayout
+        android:id="@+id/judgment_question"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/judgment_question_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:textColor="#457DD7"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/judgment_question_problem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:padding="7dp"
+            android:textColor="@color/no_select_text_color"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="right"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/judgment_Collection"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:onClick="clickexerciseCollection"
+                android:layout_marginRight="20dp"
+                android:gravity="right"
+                android:src="@mipmap/collection_icon01"
+                />
+        </LinearLayout>
+
+        <com.linlic.ccmtv.yx.utils.MyGridView
+            android:id="@+id/judgment_question_gridview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="0.0dip"
+            android:listSelector="@null"
+            android:numColumns="4"
+            android:scrollbars="none"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="0.0dip" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/judgment_question_layout_01"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:visibility="gone"
+                android:clickable="true"
+                android:layout_weight="1"
+                android:onClick="viewclick"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:id="@+id/judgment_question_id01"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:background="@mipmap/exams2_07"
+                    />
+
+                <TextView
+                    android:id="@+id/judgment_question_text01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:padding="5dp"
+                    android:textColor="@color/no_select_text_color"
+                    android:gravity="center|left"
+                    />
+                <TextView
+                    android:id="@+id/judgment_question_type01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/judgment_question_layout_02"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp"
+                android:clickable="true"
+                android:layout_weight="1"
+                android:onClick="viewclick"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/judgment_question_id02"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:background="@mipmap/exams2_07"
+                    />
+
+                <TextView
+                    android:id="@+id/judgment_question_text02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:padding="5dp"
+                    android:textColor="@color/no_select_text_color"
+                    android:gravity="center|left"
+                    />
+                <TextView
+                    android:id="@+id/judgment_question_type02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/judgment_question_show"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:visibility="gone"
+            android:layout_height="match_parent"/>
+      </FrameLayout>
+    </LinearLayout>
+    <!--判断题end-->
+
+   <!--简答题start-->
+    <LinearLayout
+        android:id="@+id/janes_answer"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/janes_answer_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/janes_answer_eid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/janes_answer_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:textColor="#457DD7"
+            android:textSize="16sp" />
+
+
+
+        <TextView
+            android:id="@+id/janes_answer_type_problem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:padding="7dp"
+            android:textColor="@color/no_select_text_color"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="right"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/janes_answer_Collection"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:onClick="clickexerciseCollection"
+                android:layout_marginRight="20dp"
+                android:gravity="right"
+                android:src="@mipmap/collection_icon01"
+                />
+        </LinearLayout>
+
+        <com.linlic.ccmtv.yx.utils.MyGridView
+            android:id="@+id/janes_answer_gridview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="0.0dip"
+            android:listSelector="@null"
+            android:numColumns="4"
+            android:scrollbars="none"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="0.0dip" />
+
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/janes_answer_editText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:minLines="6"
+                android:padding="10dp"
+                android:gravity="top|left"
+                android:textColor="@color/no_select_text_color"  />
+
+            <LinearLayout
+                android:id="@+id/janes_answer_show"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+
+
+    </LinearLayout>
+    <!--简答题end-->
+
+    <!--填空题start-->
+    <LinearLayout
+        android:id="@+id/li_blank"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/li_blank_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:text="1、填空题"
+            android:textColor="#457DD7"
+            android:textSize="16sp" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--<com.yl.fillblankquestiondemo.FillBlankView-->
+            <com.linlic.ccmtv.yx.utils.fill_in_the_blanks.FillBlankView
+                android:id="@+id/fbv_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:padding="7dp"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/fbv_content2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:layout_margin="20dp"
+                android:padding="7dp"
+                android:textSize="15sp" />
+
+
+            <LinearLayout
+                android:id="@+id/li_blank_show"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="right"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/li_blank_Collection"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:onClick="clickexerciseCollection"
+                android:layout_marginRight="20dp"
+                android:gravity="right"
+                android:src="@mipmap/collection_icon01"
+                />
+        </LinearLayout>
+
+
+        <com.linlic.ccmtv.yx.utils.MyGridView
+            android:id="@+id/li_blank_gridview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="0.0dip"
+            android:listSelector="@null"
+            android:numColumns="4"
+            android:scrollbars="none"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="0.0dip" />
+    </LinearLayout>
+    <!--填空题end-->
+
+
+    <!--公共题干题start-->
+    <LinearLayout
+        android:id="@+id/public_topic"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/public_topic_type_problem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="7dp"
+             android:textColor="@color/no_select_text_color"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/public_topic_type_problem2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="7dp"
+            android:textColor="@color/no_select_text_color"
+            android:textSize="15sp" />
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--<com.yl.fillblankquestiondemo.FillBlankView-->
+            <LinearLayout
+                android:id="@+id/public_topic2"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/public_topic_radios_layout_01"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:visibility="gone"
+                    android:onClick="viewclick"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+
+
+                    <TextView
+                        android:id="@+id/public_topic_radio_id01"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:background="@mipmap/exams2_07"
+                        />
+
+                    <TextView
+                        android:id="@+id/public_topic_radio_text01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:padding="5dp"
+                        android:textColor="@color/no_select_text_color"
+                        android:gravity="center|left"
+                        />
+                    <TextView
+                        android:id="@+id/public_topic_radio_type01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/public_topic_radios_layout_02"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:onClick="viewclick"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/public_topic_radio_id02"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:background="@mipmap/exams2_07"
+                        />
+
+                    <TextView
+                        android:id="@+id/public_topic_radio_text02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:padding="5dp"
+                        android:textColor="@color/no_select_text_color"
+                        android:gravity="center|left"
+                        />
+                    <TextView
+                        android:id="@+id/public_topic_radio_type02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/public_topic_radios_layout_03"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:visibility="gone"
+                    android:layout_marginRight="20dp"
+                    android:onClick="viewclick"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/public_topic_radio_id03"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:background="@mipmap/exams2_07"
+                        />
+
+                    <TextView
+                        android:id="@+id/public_topic_radio_text03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/no_select_text_color"
+                        android:padding="5dp"
+                        android:gravity="center|left"
+                        />
+                    <TextView
+                        android:id="@+id/public_topic_radio_type03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/public_topic_radios_layout_04"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:onClick="viewclick"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/public_topic_radio_id04"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:background="@mipmap/exams2_07"
+                        />
+
+                    <TextView
+                        android:id="@+id/public_topic_radio_text04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:padding="5dp"
+                        android:textColor="@color/no_select_text_color"
+                        android:gravity="center|left"
+                        />
+                    <TextView
+                        android:id="@+id/public_topic_radio_type04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/public_topic_radios_layout_05"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:onClick="viewclick"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/public_topic_radio_id05"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:background="@mipmap/exams2_07"
+                        />
+
+                    <TextView
+                        android:id="@+id/public_topic_radio_text05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/no_select_text_color"
+                        android:padding="5dp"
+                        android:gravity="center|left"
+                        />
+                    <TextView
+                        android:id="@+id/public_topic_radio_type05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/public_topic_radios_layout_06"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:visibility="gone"
+                    android:onClick="viewclick"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/public_topic_radio_id06"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:background="@mipmap/exams2_07"
+                        />
+
+                    <TextView
+                        android:id="@+id/public_topic_radio_text06"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/no_select_text_color"
+                        android:padding="5dp"
+                        android:gravity="center|left"
+                        />
+                    <TextView
+                        android:id="@+id/public_topic_radio_type06"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/public_topic_radios_layout_07"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:onClick="viewclick"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/public_topic_radio_id07"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:background="@mipmap/exams2_07"
+                        />
+
+                    <TextView
+                        android:id="@+id/public_topic_radio_text07"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/no_select_text_color"
+                        android:padding="5dp"
+                        android:gravity="center|left"
+                        />
+                    <TextView
+                        android:id="@+id/public_topic_radio_type07"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/public_topic_radios_layout_08"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:visibility="gone"
+                    android:onClick="viewclick"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/public_topic_radio_id08"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:background="@mipmap/exams2_07"
+                        />
+
+                    <TextView
+                        android:id="@+id/public_topic_radio_text08"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/no_select_text_color"
+                        android:padding="5dp"
+                        android:gravity="center|left"
+                        />
+                    <TextView
+                        android:id="@+id/public_topic_radio_type08"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/public_topic_show"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+
+
+
+    </LinearLayout>
+    <!--公共题干题end-->
+    
+    <!--公用案例分析题start-->
+    <LinearLayout
+        android:id="@+id/public_case_analysis_problem"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/public_case_analysis_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/public_case_analysis_eid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/public_case_analysis_problem_type_problem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="7dp"
+            android:textColor="@color/no_select_text_color"
+            android:textSize="15sp" />
+
+
+
+        <com.linlic.ccmtv.yx.utils.MyGridView
+            android:id="@+id/public_case_analysis_problem_gridview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="0.0dip"
+            android:listSelector="@null"
+            android:numColumns="4"
+            android:scrollbars="none"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="0.0dip" />
+        <TextView
+            android:id="@+id/public_case_analysis_problem_type_problem2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="7dp"
+            android:textColor="@color/no_select_text_color"
+            android:textSize="15sp" />
+
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/public_case_analysis_problem_editText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:minLines="6"
+                android:padding="10dp"
+                android:gravity="top|left"
+                android:textColor="@color/no_select_text_color"  />
+
+            <LinearLayout
+                android:id="@+id/public_case_analysis_problem_show"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+
+
+    </LinearLayout>
+        <!--公用案例分析题end-->
+
+    <!--共用答案=题start-->
+    <LinearLayout
+        android:id="@+id/common_answer_question"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/common_answer_question_type_problem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="7dp"
+            android:textColor="@color/no_select_text_color"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/common_answer_question_type_problem2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="5dp"
+            android:textColor="@color/no_select_text_color"
+            android:textSize="15sp" />
+
+
+        <com.linlic.ccmtv.yx.utils.MyGridView
+            android:id="@+id/common_answer_question_gridview_img"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="0.0dip"
+            android:listSelector="@null"
+            android:numColumns="4"
+            android:scrollbars="none"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="0.0dip" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+            <com.linlic.ccmtv.yx.utils.MyGridView
+                android:id="@+id/common_answer_question_options"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="0.0dip"
+                android:listSelector="@null"
+                android:numColumns="5"
+                android:scrollbars="none"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="0.0dip" />
+
+            <LinearLayout
+                android:id="@+id/common_answer_question_show"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+
+
+    </LinearLayout>
+    <!--共用答案题end-->
+
+    <!--公共题干题 -题干start-->
+    <LinearLayout
+        android:id="@+id/common_practice"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/common_practice_problem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="7dp"
+
+            android:textColor="@color/no_select_text_color"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="right"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/public_topic_Collection"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="20dp"
+                android:onClick="clickexerciseCollection"
+                android:gravity="right"
+                android:src="@mipmap/collection_icon01"
+                />
+        </LinearLayout>
+
+        <com.linlic.ccmtv.yx.utils.MyGridView
+            android:id="@+id/common_practice_gridview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="0.0dip"
+            android:listSelector="@null"
+            android:numColumns="4"
+            android:scrollbars="none"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="0.0dip" />
+
+    </LinearLayout>
+    <!--公共题干题 -题干end-->
+    <!--公共案例分析 -题干start-->
+    <LinearLayout
+        android:id="@+id/common_case_analysis_exercises"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/common_case_analysis_exercises_problem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="7dp"
+            android:textColor="@color/no_select_text_color"
+            android:textSize="15sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="right"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/public_case_analysis_problem_Collection"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:onClick="clickexerciseCollection"
+                android:layout_marginRight="20dp"
+                android:gravity="right"
+                android:src="@mipmap/collection_icon01"
+                />
+        </LinearLayout>
+        <com.linlic.ccmtv.yx.utils.MyGridView
+            android:id="@+id/common_case_analysis_exercises_gridview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="0.0dip"
+            android:listSelector="@null"
+            android:numColumns="4"
+            android:scrollbars="none"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="0.0dip" />
+
+    </LinearLayout>
+    <!--公共案例分析 -题干end-->
+    <!--公共答案 -题干start-->
+    <LinearLayout
+        android:id="@+id/common_answers"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/common_answers_problem"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:padding="7dp"
+            android:textColor="@color/no_select_text_color"
+            android:textSize="15sp" />
+
+        <com.linlic.ccmtv.yx.utils.MyRecyclerView
+            android:id="@+id/common_answers_gridview_problems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="0.0dip"
+            android:listSelector="@null"
+            android:divider="#ffffff"
+            android:dividerHeight="0dp"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"  />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="right"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/common_answer_question_Collection"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:onClick="clickexerciseCollection"
+                android:layout_marginRight="20dp"
+                android:gravity="right"
+                android:src="@mipmap/collection_icon01"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <!--公共答案 -题干end-->
+
+
+
+    <LinearLayout
+        android:id="@+id/answer_layout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:background="#51A5F7"
+                android:layout_height="2dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/practice_main_icon06"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="#51A5F7"
+                android:text="正确答案"
+                android:layout_marginRight="5dp"
+                android:textSize="16sp"
+                android:layout_height="wrap_content" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:background="#51A5F7"
+                android:layout_height="2dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/answer_layout_add"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/vh"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/activity_title_view" />
+
+    </LinearLayout>
+
+</LinearLayout>

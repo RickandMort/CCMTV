@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@color/recent_browse_file_title_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:background="@color/activity_title_bg"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/arrow_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="back">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="11dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/bark" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/activity_title_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="大病历"
+                android:textColor="#333"
+                android:textSize="18sp"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DCDCDC" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="名称"
+                        android:padding="10dp"
+                        android:textSize="15sp"/>
+
+                    <EditText
+                        android:id="@+id/edit_bigcase_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="top"
+                        android:hint="请输入病历名称"
+                        android:minLines="5"
+                        android:padding="10dp"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.6dp"
+                    android:background="#DCDCDC"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="图片："
+                        android:padding="10dp"
+                        android:textSize="15sp"/>
+
+                    <com.linlic.ccmtv.yx.utils.MyGridView
+                        android:id="@+id/Feedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:horizontalSpacing="0dp"
+                        android:numColumns="2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        />
+
+                </LinearLayout>
+
+
+
+                <!--<com.linlic.ccmtv.yx.utils.MyGridView-->
+                    <!--android:id="@+id/Feedback"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:horizontalSpacing="0.0dip"-->
+                    <!--android:listSelector="#00000000"-->
+                    <!--android:numColumns="4"-->
+                    <!--android:scrollbars="none"-->
+                    <!--android:stretchMode="columnWidth"-->
+                    <!--android:verticalSpacing="0.0dip" />-->
+
+
+
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:background="#fff"-->
+                <!--android:orientation="vertical"-->
+                <!--android:padding="10dp">-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/phone"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@null"-->
+                    <!--android:gravity="top"-->
+                    <!--android:hint="手机号/邮箱/QQ，方便我们联系您 （选填）"-->
+                    <!--android:maxLines="1"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:textColorHint="@color/hint_color"-->
+                    <!--android:textSize="15sp" />-->
+
+            <!--</LinearLayout>-->
+
+
+            <TextView
+                android:id="@+id/tv_submit"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@mipmap/integral_mall_icon16"
+                android:gravity="center"
+                android:onClick="commit"
+                android:text="上传"
+                android:textColor="#FFF" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

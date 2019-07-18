@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/detial_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/detail_top"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:background="#FFF"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/arrow_back"
+                android:layout_width="45dip"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:onClick="back">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="11dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/login_back" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/activity_title_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/detail_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/detail_top"
+            android:background="#EFEFEF" />
+
+        <ScrollView
+            android:id="@+id/detail_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/detail_view"
+            android:layout_marginBottom="20dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFF"
+                android:orientation="vertical">
+
+                <WebView
+                    android:id="@+id/detail_webView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+        </ScrollView>
+</RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fs_mid_tab_bg_nor" >
+    <LinearLayout
+        android:id="@+id/midTabsTmp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topFloatView"
+        android:background="@drawable/fs_gs_tab_bg_tmp"
+        android:orientation="horizontal" />
+
+    <RelativeLayout
+        android:id="@+id/videoLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp" >
+        <include layout="@layout/fs_vod_video_layout"></include>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/docLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/midTabsTmp" >
+        <include layout="@layout/fs_vod_doc_layout">
+
+        </include>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/vod_chapter_ly"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/midTabsTmp"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <include layout="@layout/fs_vod_chapter_layout" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/vod_chat_ly"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/midTabsTmp"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <include layout="@layout/fs_vod_chat_layout" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/vod_qa_ly"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/midTabsTmp"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <include layout="@layout/fs_vod_qa_layout" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/topFloatView"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp" >
+
+        <include layout="@layout/fs_vod_top_float_layout" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/midTabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topFloatView"
+        android:background="@drawable/fs_selector_mid_tab"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_marginLeft="15dp"
+            android:id="@+id/lyTab1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnTab1"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="@string/fs_doc"
+                android:textColor="@drawable/fs_selector_mid_tab_txt"
+                android:textSize="16sp"
+                />
+            <ImageView
+                android:id="@+id/ivUnderLineTab1"
+                android:layout_below="@+id/btnTab1"
+                style="@style/fs_tab_item_style"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="40dp"
+            android:id="@+id/lyTab4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnTab4"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="@string/fs_vod_chapter"
+                android:textColor="@drawable/fs_selector_mid_tab_txt"
+                android:textSize="16sp" />
+            <ImageView
+                android:layout_below="@+id/btnTab4"
+                android:id="@+id/ivUnderLineTab4"
+                style="@style/fs_tab_item_style"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="40dp"
+            android:id="@+id/lyTab2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/btnTab2"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="@string/fs_chat"
+                android:textColor="@drawable/fs_selector_mid_tab_txt"
+                android:textSize="16sp" />
+            <ImageView
+                android:layout_below="@+id/btnTab2"
+                android:id="@+id/ivUnderLineTab2"
+                style="@style/fs_tab_item_style"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="40dp"
+            android:id="@+id/lyTab3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnTab3"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:clickable="false"
+                android:focusable="false"
+                android:text="@string/fs_qa"
+                android:textColor="@drawable/fs_selector_mid_tab_txt"
+                android:textSize="16sp" />
+            <ImageView
+                android:layout_below="@+id/btnTab3"
+                android:id="@+id/ivUnderLineTab3"
+                style="@style/fs_tab_item_style"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/linLoadView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/linLoadPro"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center" >
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateBehavior="repeat"
+                android:indeterminateDrawable="@drawable/fs_gs_loading_progressbar148x148"
+                android:indeterminateDuration="3000"
+                android:indeterminateOnly="true" />
+
+            <LinearLayout
+                android:id="@+id/linLoadNetDisconnected"
+                style="@style/fs_gs_both_match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="165dp"
+                    android:layout_height="62dp"
+                    android:background="@drawable/fs_gs_warming_bg"
+                    android:gravity="center"
+                    android:text="@string/fs_gs_net_have_disconnect"
+                    android:textColor="@color/fs_gs_white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/exit_rel"
+        style="@style/fs_gs_both_match_parent"
+        android:visibility="gone" >
+
+        <include layout="@layout/fs_gs_progress_exit_wait" />
+    </RelativeLayout>
+</RelativeLayout>

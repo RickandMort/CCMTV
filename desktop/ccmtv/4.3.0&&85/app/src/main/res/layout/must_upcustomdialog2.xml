@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/transparent2">
+
+        <!--<LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:scrollbars="vertical">
+
+            <TextView
+                android:id="@+id/tv_showphone"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="发现新版本，立即体验?"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_showtip"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="升级提示：首页搜索升级，观看更流畅。"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#D1D1D1" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/cancel_btns"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/cancel_btn_select"
+                    android:visibility="gone"
+                    android:text="@string/give_up" />
+
+                &lt;!&ndash; <LinearLayout
+                     android:layout_width="1dp"
+                     android:layout_height="fill_parent"
+                     android:background="#D1D1D1" />&ndash;&gt;
+
+                <Button
+                    android:id="@+id/confirm_btns"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttomradios_btn_select"
+                    android:text="马上升级" />
+            </LinearLayout>
+        </LinearLayout>-->
+
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_showphone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="发现新版本，立即体验?"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_app_upgrade_top"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:id="@+id/tv_showtip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:gravity="center"
+                    android:text="升级提示：首页搜索升级，观看更流畅。"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:background="#FFFFFF"/>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_upgrade"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="30dp">
+                    <!-- <LinearLayout
+                         android:layout_width="1dp"
+                         android:layout_height="fill_parent"
+                         android:background="#D1D1D1" />-->
+
+                    <Button
+                        android:id="@+id/confirm_btns"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:background="@mipmap/ic_app_upgrade_now" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/cancel_btns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:background="@mipmap/medicine_delete" />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

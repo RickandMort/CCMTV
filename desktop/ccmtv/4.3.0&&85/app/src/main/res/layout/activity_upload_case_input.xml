@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#eeeeee">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:orientation="horizontal"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/id_tv_upload_case_input_titlebar_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:layout_gravity="center"
+            android:textColor="#3897f9"
+            android:textSize="18dp"
+            />
+
+        <TextView
+            android:id="@+id/id_tv_upload_case_input_titlebar_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:text="标题"
+            android:textSize="22dp"/>
+
+        <TextView
+            android:id="@+id/id_tv_upload_case_input_titlebar_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="保存"
+            android:textColor="#3897f9"
+            android:textSize="18dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF">
+        
+        <EditText
+            android:id="@+id/id_et_upload_case_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:gravity="top"
+            android:background="@color/transparent2"
+            android:minLines="5"
+            android:hint="请输入"/>
+
+        <com.linlic.ccmtv.yx.utils.MyGridView
+            android:id="@+id/id_gv_upload_case_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="15dp"
+            android:horizontalSpacing="3dp"
+            android:listSelector="#00000000"
+            android:numColumns="4"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dp"/>
+        
+    </LinearLayout>
+
+</LinearLayout>

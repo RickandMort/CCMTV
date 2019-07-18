@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_viptitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="3个月"
+                android:textSize="18sp"
+                android:textColor="#343434"
+                android:layout_gravity="center_vertical" />
+
+            <TextView
+                android:id="@+id/tv_vipprice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:text="100"
+                android:textColor="#ECA606" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="元"
+                android:textSize="18sp"
+                android:textColor="#343434"
+                android:layout_gravity="center_vertical" />
+
+            <ImageView
+                android:id="@+id/openmenber_img"
+                android:layout_width="35dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center|right"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="30dp"
+                android:src="@mipmap/openmenber_08" />
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_viptitle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="3个月"
+                    android:textSize="13sp"
+                    android:textColor="#B4B4B4"
+                    android:visibility="gone"
+                    android:layout_gravity="center_vertical" />
+
+                <TextView
+                    android:id="@+id/tv_vipprice2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:textSize="13sp"
+                    android:text="100元"
+                    android:textColor="#B4B4B4" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/open_vip"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="30dp"
+            android:src="@mipmap/openmenber_07" />
+    </LinearLayout>
+
+    <!--<View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E9E9E9" />-->
+</LinearLayout>

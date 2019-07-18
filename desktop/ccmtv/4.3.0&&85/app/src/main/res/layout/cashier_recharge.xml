@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 积分获取记录 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/get_integral_layout_bg"
+              android:orientation="vertical">
+
+
+    <!--<include layout="@layout/activity_title" />
+
+    &lt;!&ndash;&ndash;&gt;
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_big"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/get_integral_layout_bg"
+
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/head_bg" />
+
+                <com.linlic.ccmtv.yx.widget.CircleImageView
+                    android:id="@+id/cashier_recharge_img"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="2dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/my_information_tx" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/cashier_recharge_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/get_integration_name"
+                    android:textColor="@color/get_integral_name"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/cashier_recharge_integral"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cashier_revenue_log_name"
+                    android:textColor="@color/current_integration_name"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_below="@+id/layout_big"
+            android:background="@color/hr_bg2" />
+
+        <include layout="@layout/layout_nodata" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            android:text="充值金额："
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:background="@null"
+            android:inputType="number"
+            android:maxLength="6"
+            android:id="@+id/amount_of_charge"
+            android:hint="请输入金额"
+            android:textColorHint="@color/integral_main_Button_border_color"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/hr_bg4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="18sp"
+        android:textColor="@color/cashier_recharge_text1"
+        android:text="提示："
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="18sp"
+        android:textColor="@color/cashier_recharge_text2"
+        android:text="1.充值金额为大于50的整数"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="18sp"
+        android:textColor="@color/cashier_recharge_text2"
+        android:text="2.最高充值金额为200,000元"
+        />
+
+    <Button
+        android:id="@+id/btn_recharge"
+        style="@style/btn_style"
+        android:text="充值"
+        android:onClick="cashier_recharge"
+        android:textColor="@color/integral_main_Button_text_color2" />-->
+
+    <!--以下为2018-04-10新修改界面-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@mipmap/integral_main_top_bg"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/arrow_back"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:onClick="back">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="11dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/back_inva"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/activity_title_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="零钱充值"
+                android:textColor="#FFFEFD"
+                android:textSize="18sp"/>
+
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/cashier_recharge_integral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="账户余额：0元"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="充值金额"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/amount_of_charge"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_et_wallet_chrage"
+            android:maxLength="6"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="18dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/tv_num1"
+                    android:layout_width="45dp"
+                    android:layout_height="23dp"
+                    android:text="50元"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@mipmap/qian_chongzhi"/>
+
+                <TextView
+                    android:id="@+id/tv_num2"
+                    android:layout_width="45dp"
+                    android:layout_height="23dp"
+                    android:text="100元"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@mipmap/qian_chongzhi"
+                    android:layout_marginLeft="15dp"/>
+
+
+                <TextView
+                    android:id="@+id/tv_num3"
+                    android:layout_width="45dp"
+                    android:layout_height="23dp"
+                    android:text="300元"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@mipmap/qian_chongzhi"
+                    android:layout_marginLeft="15dp"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="20dp"
+                android:text="单笔限额20万"
+                android:textColor="@android:color/white"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textSize="15sp"/>
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@mipmap/wallet_small_dot"
+        android:drawablePadding="5dp"
+        android:text="充值最低限额50元"
+        android:textColor="#656565"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/btn_recharge"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/bg_btn_wallet_chrage"
+        android:onClick="cashier_recharge"
+        android:text="充值"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"/>
+
+</LinearLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:onClick="back">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/bark"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="视频列表"
+            android:textColor="#626262"
+            android:textSize="18sp"/>
+
+    </FrameLayout>
+
+    <include layout="@layout/activity_title4"/>
+
+    <LinearLayout
+        android:id="@+id/custom_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <com.linlic.ccmtv.yx.utils.CategoryView
+                android:id="@+id/category2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="left"
+                android:orientation="vertical"/>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/newest_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="最新"
+            android:textColor="@color/custom_chenck_text_bg"
+            android:textSize="20sp"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/types_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/custom_chenck_text_bg"
+            android:textSize="20sp"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/years_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/custom_chenck_text_bg"
+            android:textSize="20sp"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/departments_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/custom_chenck_text_bg"
+            android:textSize="20sp"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/member_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/custom_chenck_text_bg"
+            android:textSize="20sp"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#EFEFEF"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.linlic.ccmtv.yx.widget.NodataEmptyLayout
+                android:id="@+id/rl_more_video_nodata"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:visibility="gone"
+                app:empty_des="还没有相关的学习视频哦~"/>
+
+            <GridView
+                android:id="@+id/learning_video"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:horizontalSpacing="0.0dip"
+                android:listSelector="@null"
+                android:numColumns="2"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="0.0dip"/>
+
+        </FrameLayout>
+
+
+
+
+</LinearLayout>

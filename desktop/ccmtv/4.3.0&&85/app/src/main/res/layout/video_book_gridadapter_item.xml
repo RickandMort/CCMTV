@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/cover_chart"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@mipmap/text1000"
+            android:scaleType="fitXY"
+            android:layout_gravity="center"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:background="#40000000"/>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@mipmap/play_icon05"
+            android:scaleType="fitXY"
+            android:layout_gravity="center"
+            />
+
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_marginTop="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#333"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center"
+        android:gravity="center|left"
+        android:paddingLeft="3dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="高兴死了"
+        />
+    <TextView
+        android:id="@+id/estate"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"
+        android:textColor="#999"
+        android:layout_gravity="center"
+        android:gravity="center|left"
+        android:paddingLeft="3dp"
+        android:text="已读完"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_vertical_margin">
+
+    <ImageView
+        android:id="@+id/pp_research_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/kzbf_pop_cancle" />
+
+    <ImageView
+        android:id="@+id/pp_research_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/kzbf_pop_cashare" />
+
+    <LinearLayout
+        android:id="@+id/pp_research_img_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.linlic.ccmtv.yx.kzbf.widget.KzbfSubmitSucessImageView
+            android:id="@+id/kiv_subnit_sucess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/kzbf_pop_submit_sucess_textsign" />
+
+        <Button
+            android:id="@+id/btn_pp_check_result"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="50dp"
+            android:background="@mipmap/learning_task04"
+            android:text="查看调研结果"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pp_research_img_layout"
+        android:layout_marginTop="31dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="点击右上角的按钮，将调研分享至朋友圈!"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"> 
+<!--
+
+    <ImageView
+        android:id="@+id/banner_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        />
+-->
+
+    <com.linlic.ccmtv.yx.utils.RoundImageView
+        android:id="@+id/banner_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:src="@mipmap/ys"
+        app:image_shadow="true"
+        app:image_radius = "5dp"
+        app:image_shadow_radius="10dp"
+        app:shadow_color="0xffefc26c"
+        />
+
+    <TextView
+        android:id="@+id/banner_text"
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="大事发生发生地方"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/banner_aid"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

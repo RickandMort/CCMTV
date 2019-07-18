@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/item_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/college_level_activities_bg3"
+        android:orientation="vertical"
+        android:paddingTop="12dp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:paddingBottom="30dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <com.linlic.ccmtv.yx.utils.CircleImageView
+                    android:id="@+id/my_myhead"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/img_default2"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:gravity="center|left"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/item_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="蔡超玄  "
+                            android:textColor="#333"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            />
+
+                        <ImageView
+                            android:id="@+id/item_sex"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:scaleType="fitXY"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/sex_icon01"
+                            />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/item_basename"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textSize="13sp"
+                        android:text="出生日期：1989男12月12号"
+                        />
+                    <TextView
+                        android:id="@+id/item_mobphone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textSize="13sp"
+                        android:text="手机号：1562458745"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:background="@mipmap/station_line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/item_ksname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="当前科室：呼吸内科"
+                    android:textColor="#666"
+                    android:layout_weight="1"
+                    android:textSize="13sp"
+                    />
+                <TextView
+                    android:id="@+id/item_ls_enrollment_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="招收年度 ：2015"
+                    android:textColor="#666"
+                    android:layout_weight="1"
+                    android:textSize="13sp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/item_teacher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="带教老师：潘老师 张老师"
+                android:textColor="#666"
+                android:textSize="13sp"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

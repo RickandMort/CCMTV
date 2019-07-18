@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?><!--正式考试-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:focusable="true"
+    android:background="#ffffff"
+    android:focusableInTouchMode="true"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/arrow_back"
+                    android:layout_width="45dip"
+                    android:layout_height="match_parent"
+                    android:onClick="back">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="11dp"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/bark" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/activity_title_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="正式考试"
+                    android:textColor="#626262"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/check_the_answer_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|right"
+                    android:gravity="center"
+                    android:text="查看答题卡"
+                    android:textColor="#55A7F3"
+                    android:layout_marginRight="10dp"
+                    android:textSize="16sp" />
+
+            </FrameLayout>
+
+            <include layout="@layout/activity_title4" />
+
+            <TextView
+                android:id="@+id/examination_instructions_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="#F0F7FF"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:src="@mipmap/exams2_03"
+                    />
+
+                <TextView
+                    android:id="@+id/examination_instructions_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:singleLine="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:maxEms="13"
+                    android:textColor="#A3A7A8"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/schedule_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:layout_marginRight="20dp"
+                    android:text="32/50"
+                    android:visibility="gone"
+                    android:textColor="#55A7F3"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <include layout="@layout/activity_title4" />
+
+                    <ListView
+                        android:id="@+id/examination_instructions_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="37dp"
+                        android:divider="@null"
+                        android:listSelector="#00000000"
+                        android:scrollbars="none" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/imageLayout"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <com.linlic.ccmtv.yx.widget.ZoomImageView
+                android:id="@+id/matrixImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="50dp"
+                android:scaleType="center"
+                android:src="@mipmap/ys"
+                android:clickable="true"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/examination_instructions_timing"
+            android:layout_width="match_parent"
+            android:background="@mipmap/video_play_layout_bg"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:clickable="true"
+            android:visibility="gone"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:text="交卷"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center"
+                android:textColor="#ffffff"
+                android:onClick="examination_script"
+                android:background="@mipmap/change15"
+                />
+
+        </LinearLayout>
+
+
+
+
+        <TextView
+            android:id="@+id/examination_instructions_time"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="37dp"
+            android:layout_gravity="bottom|right"
+            android:gravity="center"
+            android:singleLine="true"
+            android:background="@mipmap/exams2_04"
+            android:text="00:00"
+            android:textColor="#ffffff"
+            android:textScaleX="1.5"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/examination_instructions_buttpm"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:text="交卷"
+            android:textSize="18sp"
+            android:layout_gravity="bottom"
+            android:textColor="#ffffff"
+            android:clickable="false"
+            android:onClick="examination_script"
+            android:background="#3798F9"
+            />
+
+
+
+        <LinearLayout
+            android:id="@+id/examination_instructions_timing2"
+            android:layout_width="match_parent"
+            android:background="@mipmap/anti_cheating_bg"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:clickable="true"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/anti_cheating"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="22sp"
+                android:textColor="#fff"
+                android:text="请输入解锁码"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/checkCode_ed"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:maxLength="1"
+                    android:background="#007F7F7F"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/checkCode_ed1"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:maxLength="1"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="#007F7F7F"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/checkCode_ed2"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:maxLength="1"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="#007F7F7F"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/checkCode_ed3"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#fff"
+                    android:maxLength="1"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="#007F7F7F"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="#fff"
+                    android:layout_height="1dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="#fff"
+                    android:layout_height="1dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="#fff"
+                    android:layout_height="1dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="#fff"
+                    android:layout_height="1dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center|right"
+                android:gravity="center|right"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="剩余解锁码次数："
+                    android:textColor="#fff"
+                    android:layout_gravity="center|right"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/remain"
+                    android:layout_width="wrap_content"
+                    android:text="1次"
+                    android:textColor="#fff"
+                    android:textSize="18sp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center|right"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="您也可以"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:layout_marginTop="50dp"
+                android:layout_height="wrap_content" />
+
+<!--android:onClick="examination_checkCode"  解锁-->
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@mipmap/change15"
+                android:onClick="examination_script"
+                android:text="交卷"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="15sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:background="#fff"
+                    android:layout_weight="1"
+                    android:layout_height="1dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="说明"
+                    android:textColor="#fff"
+                    android:textSize="18sp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:layout_height="1dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#fff"
+                    android:text="· 每场考试解锁码可向考官说明情况后获取"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#fff"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="· 考试过程中不能主动退出或后台运行"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#fff"
+                    android:text="· 挂电话后15秒内进入不会被锁定"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+
+</LinearLayout>

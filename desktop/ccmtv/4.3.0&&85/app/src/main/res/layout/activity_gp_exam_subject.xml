@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_title8" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center"
+            android:text="状态"
+            android:textColor="#999"/>
+
+        <RadioGroup
+            android:id="@+id/id_radiogroup_gp_exam_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/id_rb_gp_exam_subject_status_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="  正常"
+                android:button="@drawable/ic_upload_rb_selector"/>
+
+            <RadioButton
+                android:id="@+id/id_rb_gp_exam_subject_status_absence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="  缺考"
+                android:button="@drawable/ic_upload_rb_selector"/>
+
+            <RadioButton
+                android:id="@+id/id_rb_gp_exam_subject_status_nonexam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:text="  不考核"
+                android:button="@drawable/ic_upload_rb_selector"/>
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/id_lv_gp_exam_subject"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:listSelector="@color/transparent2"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:id="@+id/id_ll_gp_exam_subject_absence_nonexam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="备注" />
+
+        <EditText
+            android:id="@+id/id_et_gp_graduate_exam_reason"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="15dp"
+            android:gravity="top"/>
+
+        <LinearLayout
+            android:id="@+id/id_ll_gp_exam_subject_button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#dedede"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/id_tv_gp_exam_subject_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/anniu23"
+                android:paddingBottom="10dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:paddingTop="10dp"
+                android:text="取消"
+                android:textColor="#fff" />
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/id_tv_gp_exam_subject_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/anniu6"
+                android:paddingBottom="10dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:paddingTop="10dp"
+                android:text="保存"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

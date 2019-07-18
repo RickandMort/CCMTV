@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?> <!-- 头部导航  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/arrow_back"
+        android:layout_width="45dip"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:onClick="back">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="11dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/bark" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/arrow_search"
+        android:layout_width="45dip"
+        android:layout_marginLeft="45dip"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:onClick="search">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="11dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_x" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/activity_title_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginRight="50dp"
+        android:layout_toRightOf="@+id/arrow_back"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="学习任务"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/arrow_back2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginRight="10dp"
+        android:visibility="visible"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerInside"
+            android:layout_marginRight="10dp"
+            android:onClick="ss"
+            android:src="@mipmap/search_icon03" />
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:onClick="screen"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@mipmap/task_screening"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 筛选"
+                android:textSize="16sp"
+                android:textColor="#8D8D8D"/>
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

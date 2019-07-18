@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 上传病例 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@color/recent_browse_file_title_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <include layout="@layout/activity_title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:onClick="uploadManager"
+            android:text="上传管理"
+            android:textColor="#3897f9"
+            android:layout_marginRight="15dp"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/hr_bg6" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="bottom">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="bottom"
+                    android:layout_marginBottom="3dp"
+                    android:text="必填信息" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#FFF"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="* "
+                        android:textColor="#E61A5F" />
+
+                    <TextView
+                        android:layout_width="77dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|left"
+                        android:layout_weight="3"
+                        android:gravity="center|left"
+                        android:text="@string/upload_case_name"
+                        android:textColor="#777777"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/edit_casetitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/upload_case_name_hint"
+                    android:maxLength="15"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:textColorHint="@color/upload_video_file_tile_hint"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/transparent2" />
+
+            <LinearLayout
+                android:id="@+id/layout_One"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="* "
+                        android:textColor="#E61A5F" />
+
+                    <TextView
+                        android:layout_width="77dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/patient_information"
+                        android:textColor="#777777"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <com.linlic.ccmtv.yx.utils.MyGridView
+                    android:id="@+id/gridview1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="0.0dip"
+                    android:listSelector="#00000000"
+                    android:numColumns="4"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="5dp" />
+
+                <!--<ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/more" />-->
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/transparent2" />
+
+            <LinearLayout
+                android:id="@+id/layout_Two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="* "
+                        android:textColor="#E61A5F" />
+
+                    <TextView
+                        android:layout_width="77dp"
+                        android:layout_height="wrap_content"
+                        android:text="病\u3000\u3000史"
+                        android:textColor="#777777"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <com.linlic.ccmtv.yx.utils.MyGridView
+                    android:id="@+id/gridview2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:horizontalSpacing="0.0dip"
+                    android:listSelector="#00000000"
+                    android:numColumns="4"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="5dp" />
+
+                <!--<ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/more" />-->
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/transparent2" />
+
+
+            <LinearLayout
+                android:id="@+id/layout_Three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="* "
+                        android:textColor="#E61A5F" />
+
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="77dp"
+                        android:layout_height="wrap_content"
+                        android:text="治\u3000\u3000疗"
+                        android:textColor="#777777"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <com.linlic.ccmtv.yx.utils.MyGridView
+                    android:id="@+id/gridview3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:horizontalSpacing="0.0dip"
+                    android:listSelector="#00000000"
+                    android:numColumns="4"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="5dp" />
+
+                <!--<ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/more" />-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="bottom">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:gravity="bottom"
+                    android:text="选填信息" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_Four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:layout_width="77dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="2dp"
+                    android:text="@string/clinical_manifestation"
+                    android:textColor="#777777"
+                    android:textSize="18sp" />
+
+                <com.linlic.ccmtv.yx.utils.MyGridView
+                    android:id="@+id/gridview4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:horizontalSpacing="0.0dip"
+                    android:listSelector="#00000000"
+                    android:numColumns="4"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="5dp" />
+
+                <!--<ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/more" />-->
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/transparent2" />
+
+            <LinearLayout
+                android:id="@+id/layout_Five"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="77dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/supplementary_examination"
+                        android:textColor="#777777"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <com.linlic.ccmtv.yx.utils.MyGridView
+                    android:id="@+id/gridview5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:horizontalSpacing="0.0dip"
+                    android:listSelector="#00000000"
+                    android:numColumns="4"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="5dp" />
+
+                <!--<ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/more" />-->
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/transparent2" />
+
+            <LinearLayout
+                android:id="@+id/layout_Six"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:layout_width="77dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/special_examination"
+                    android:textColor="#777777"
+                    android:textSize="18sp" />
+
+                <com.linlic.ccmtv.yx.utils.MyGridView
+                    android:id="@+id/gridview6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:horizontalSpacing="0.0dip"
+                    android:listSelector="#00000000"
+                    android:numColumns="4"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="5dp" />
+
+                <!--<ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/more" />-->
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/transparent2" />
+
+            <LinearLayout
+                android:id="@+id/layout_Seven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:layout_width="77dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="2dp"
+                    android:text="诊\u3000\u3000断"
+                    android:textColor="#777777"
+                    android:textSize="18sp" />
+
+                <com.linlic.ccmtv.yx.utils.MyGridView
+                    android:id="@+id/gridview7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:horizontalSpacing="0.0dip"
+                    android:listSelector="#00000000"
+                    android:numColumns="4"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="5dp" />
+
+
+                <!--<ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/more" />-->
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/transparent2" />
+
+
+            <LinearLayout
+                android:id="@+id/layout_Eight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFF"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:layout_width="77dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="2dp"
+                    android:text="手\u3000\u3000术"
+                    android:textColor="#777777"
+                    android:textSize="18sp" />
+
+                <com.linlic.ccmtv.yx.utils.MyGridView
+                    android:id="@+id/gridview8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:horizontalSpacing="0.0dip"
+                    android:listSelector="#00000000"
+                    android:numColumns="4"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="5dp" />
+
+                <!--<ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/more" />-->
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@mipmap/ic_btn_upload"
+                android:onClick="commitCase" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:background="@mipmap/bg_upload_message">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_upload_explain_left"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="上传规则"
+                        android:layout_margin="10dp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_upload_explain_right"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="35dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="· "
+                        android:textColor="#999999"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="* "
+                        android:textColor="#E61A5F"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="为必填选项" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginBottom="20dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="· "
+                        android:textColor="#999999"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="照片每项最多可选择8张" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/myprofile_layout_background"
+              android:orientation="vertical">
+
+
+    <!--<include layout="@layout/activity_title" />-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:onClick="back">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/login_back"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_title_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="零钱提现"
+            android:textSize="18sp"/>
+
+
+    </FrameLayout>
+
+    <include layout="@layout/activity_title4"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@color/myprofile_cont_layout_background"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center|left"
+                    android:onClick="myprofile_head"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/forget_text1"
+                        android:textColor="@color/myprofile_textcolor" />
+
+                    <com.linlic.ccmtv.yx.adapter.CircleImageView
+                        android:id="@+id/myprofile_img"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/myprofile_prople" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:src="@mipmap/more" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/myprofile_view_background"
+                    android:visibility="gone" />
+
+                <LinearLayout style="@style/cashier_present_application_style">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="姓名:"
+                        android:textSize="18sp"
+                        android:textColor="@color/myprofile_textcolor" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cashier_present_application_name"
+                        android:background="@null"
+                        android:hint="请输入姓名"
+                        android:inputType="textPersonName"
+                        android:textSize="18sp"
+                        android:textColorHint="@color/integral_main_Button_border_color"
+                        />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/myprofile_view_background" />
+
+                <LinearLayout
+                    android:id="@+id/layout_yiyuan"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout style="@style/cashier_present_application_style">
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="银行:"
+                            android:textSize="18sp"
+                            android:textColor="@color/myprofile_textcolor" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:id="@+id/cashier_present_application_bank"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="例如：招商银行"
+                            android:inputType="text"
+                            android:textSize="18sp"
+                            android:textColorHint="@color/integral_main_Button_border_color"
+                            />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/myprofile_view_background" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_danwei"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout style="@style/cashier_present_application_style">
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="卡号:"
+                            android:textSize="18sp"
+                            android:textColor="@color/myprofile_textcolor" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cashier_present_application_bank_account"
+                            android:background="@null"
+                            android:inputType="number"
+                            android:hint="请输入卡号"
+                            android:maxLength="19"
+                            android:textSize="18sp"
+                            android:textColorHint="@color/integral_main_Button_border_color"
+                            />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/myprofile_view_background" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_keshi"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout style="@style/cashier_present_application_style">
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="提现金额:"
+                            android:textSize="18sp"
+                            android:textColor="@color/myprofile_textcolor" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cashier_present_application_money"
+                            android:background="@null"
+                            android:hint="提款金额不能少于100元"
+                            android:inputType="number"
+                            android:textSize="18sp"
+                            android:textColorHint="@color/integral_main_Button_border_color"
+                            />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/myprofile_view_background" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_zhicheng"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout style="@style/cashier_present_application_style">
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="联系电话:"
+                            android:textSize="18sp"
+                            android:textColor="@color/myprofile_textcolor" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cashier_present_application_phone"
+                            android:background="@null"
+                            android:hint="例如：18975113366"
+                            android:inputType="phone"
+                            android:textSize="18sp"
+                            android:textColorHint="@color/integral_main_Button_border_color"
+                            />
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/myprofile_view_background" />
+
+                </LinearLayout>
+
+
+                <LinearLayout style="@style/cashier_present_application_style">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="开户行:"
+                        android:textSize="18sp"
+                        android:textColor="@color/myprofile_textcolor" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cashier_present_application_bank_of_deposit"
+                        android:background="@null"
+                        android:hint="上海南京路支行"
+                        android:inputType="text"
+                        android:textSize="18sp"
+                        android:textColorHint="@color/integral_main_Button_border_color"
+                        />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/myprofile_view_background" />
+
+
+            </LinearLayout>
+
+            <Button
+                style="@style/btn_style"
+                android:onClick="MyprofileSubmit"
+                android:text="@string/regist_button" />
+        </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/cashier_present_application_style">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="姓名:"
+                    android:textColor="@color/integral_main_Button_border_color"
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/cashier_present_application_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="请输入姓名"
+                    android:inputType="text"
+                    android:textColorHint="@color/integral_main_Button_border_color"
+                    android:textSize="14sp"/>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/myprofile_view_background"/>
+
+            <LinearLayout
+                android:id="@+id/layout_yiyuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout style="@style/cashier_present_application_style">
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:text="银行:"
+                        android:textColor="@color/integral_main_Button_border_color"
+                        android:textSize="14sp"/>
+
+                    <EditText
+                        android:id="@+id/cashier_present_application_bank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="例如：招商银行"
+                        android:inputType="text"
+                        android:textColorHint="@color/integral_main_Button_border_color"
+                        android:textSize="14sp"/>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/myprofile_view_background"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_danwei"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout style="@style/cashier_present_application_style">
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:text="卡号:"
+                        android:textColor="@color/integral_main_Button_border_color"
+                        android:textSize="14sp"/>
+
+                    <EditText
+                        android:id="@+id/cashier_present_application_bank_account"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="请输入卡号"
+                        android:inputType="number"
+                        android:maxLength="19"
+                        android:textColorHint="@color/integral_main_Button_border_color"
+                        android:textSize="14sp"/>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/myprofile_view_background"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_keshi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout style="@style/cashier_present_application_style">
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:text="提现金额:"
+                        android:textColor="@color/integral_main_Button_border_color"
+                        android:textSize="14sp"/>
+
+                    <EditText
+                        android:id="@+id/cashier_present_application_money"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="提款金额不能少于100元"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:textColorHint="@color/integral_main_Button_border_color"
+                        android:textSize="14sp"/>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/myprofile_view_background"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_zhicheng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout style="@style/cashier_present_application_style">
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:text="联系电话:"
+                        android:textColor="@color/integral_main_Button_border_color"
+                        android:textSize="14sp"/>
+
+                    <EditText
+                        android:id="@+id/cashier_present_application_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:hint="例如：18975113366"
+                        android:maxLength="11"
+                        android:textColorHint="@color/integral_main_Button_border_color"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/myprofile_view_background"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/cashier_present_application_style">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="开户行:"
+                    android:textColor="@color/integral_main_Button_border_color"
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/cashier_present_application_bank_of_deposit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="上海南京路支行"
+                    android:inputType="text"
+                    android:textColorHint="@color/integral_main_Button_border_color"
+                    android:textSize="14sp"/>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/btn_style"
+                android:layout_width="200dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@mipmap/bg_btn_wallet_chrage"
+                android:onClick="MyprofileSubmit"
+                android:padding="8dp"
+                android:text="提现"
+                android:textColor="@color/regist_layout_background"
+                android:textSize="15sp"/>
+
+            <com.linlic.ccmtv.yx.widget.TextViewDrawable
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_margin="3dp"
+                android:drawableLeft="@mipmap/wallet_small_dot"
+                android:drawablePadding="10dp"
+                android:text="提现金额每次不少于100元且为整数"
+                android:textColor="#666666"
+                app:isAliganCenter="false"
+                android:textSize="13sp"/>
+
+            <com.linlic.ccmtv.yx.widget.TextViewDrawable
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_margin="3dp"
+                android:drawableLeft="@mipmap/wallet_small_dot"
+                android:drawablePadding="10dp"
+                android:text="用户申请提款后会5个工作日内到账"
+                android:textColor="#666666"
+                app:isAliganCenter="false"
+                android:textSize="13sp"/>
+
+            <com.linlic.ccmtv.yx.widget.TextViewDrawable
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_margin="3dp"
+                android:drawableLeft="@mipmap/wallet_small_dot"
+                android:drawablePadding="10dp"
+                android:text="如有问题，请与我们联系（021-63609919\n转8863）"
+                android:textColor="#666666"
+                app:isAliganCenter="false"
+                android:textSize="13sp"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

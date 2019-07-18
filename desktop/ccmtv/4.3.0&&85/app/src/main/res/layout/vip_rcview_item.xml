@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/tv_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@mipmap/vip_icon04"
+        />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:maxWidth="60dp"
+        android:minLines="2"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="VIP专属频道"
+        android:visibility="gone"/>
+
+
+</LinearLayout>

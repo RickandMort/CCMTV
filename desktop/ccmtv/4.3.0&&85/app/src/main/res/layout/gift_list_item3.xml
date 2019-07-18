@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.linlic.ccmtv.yx.widget.NodataEmptyLayout
+        android:id="@+id/souvenir_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:visibility="gone"
+        app:empty_des="当前还没有数据哦~"
+        app:empty_src="@mipmap/nodata_empty"
+        app:empty_topLine="false"/>
+
+    <GridView
+        android:id="@+id/gift_list_gridView3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="0.0dip"
+        android:listSelector="@null"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="0dip"/>
+
+</LinearLayout>

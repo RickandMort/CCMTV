@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFEF"
+    android:orientation="vertical"
+    tools:context="com.linlic.ccmtv.yx.kzbf.MedicineMessageActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:onClick="back">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/login_back" />
+        </LinearLayout>
+
+
+        <com.linlic.ccmtv.yx.kzbf.widget.CustomTitleBar
+            android:id="@+id/title_bar_yx"
+            android:layout_toRightOf="@+id/arrow_back"
+            android:layout_toLeftOf="@+id/medicine_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <!--<TextView-->
+        <!--android:id="@+id/activity_title_name"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:gravity="center"-->
+        <!--android:text="药讯"-->
+        <!--android:textColor="#000"-->
+        <!--android:textSize="20sp" />-->
+
+        <ImageView
+            android:id="@+id/medicine_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/medicine_menu"
+            android:padding="5dp"
+            android:src="@mipmap/vip_toserch" />
+
+        <ImageView
+            android:id="@+id/medicine_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            android:src="@mipmap/medicine_menu_icon" />
+
+    </RelativeLayout>
+
+    <!--<net.lucode.hackware.magicindicator.MagicIndicator-->
+        <!--android:id="@+id/magic_indicator"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="35dp"-->
+        <!--android:layout_marginTop="1dp" />-->
+
+    <com.linlic.ccmtv.yx.kzbf.widget.NoScrollViewPager
+        android:id="@+id/medicine_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp" />
+
+</LinearLayout>

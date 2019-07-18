@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="40dp"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:id="@+id/home_horizontallistview_item_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/children_and_women_icon02"
+            />
+
+        <ImageView
+            android:id="@+id/id_iv_red_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="1dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_point_pre"
+            android:visibility="visible"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/home_horizontallistview_item_title"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:gravity="center"
+        android:text="手术演示"
+        android:textColor="#666"
+        />
+</LinearLayout>

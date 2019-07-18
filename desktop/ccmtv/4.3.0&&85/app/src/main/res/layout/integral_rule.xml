@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_title" />
+
+    <include layout="@layout/layout_nodata" />
+
+    <include layout="@layout/layout_loading" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一、什么是CCMTV积分？" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    CCMTV积分专属于CCMTV临床频道网站/app，使用范围仅限于CCMTV临床频道网站/app。CCMTV积分用于观看需要积分的视频、下载病例、下载文献等。（CCMTV-VIP会员具有相关权限，可无视此规则。）"
+                android:textColor="#999999" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="二、如何获取CCMTV积分？" />
+
+            <TextView
+                style="@style/rule_content"
+                android:text="CCMTV积分获取有以下几种方式:" />
+
+            <TextView
+                style="@style/rule_content"
+                android:text="1、新用户获取:" />
+
+            <TextView
+                android:id="@+id/tv_regist_inte"
+                style="@style/rule_content"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/tv_comp_info"
+                style="@style/rule_content"
+                android:text="" />
+
+            <TextView
+                style="@style/rule_content"
+                android:text="2、每日签到获取积分:" />
+
+            <TextView
+                android:id="@+id/tv_qiandao"
+                style="@style/rule_content"
+                android:text="" />
+
+            <TextView
+                style="@style/rule_content"
+                android:text="3、发表评论获取积分:" />
+
+            <TextView
+                android:id="@+id/tv_comment_inva"
+                style="@style/rule_content" />
+
+            <TextView
+                style="@style/rule_content"
+                android:text="4、上传文件获取积分:" />
+
+            <TextView
+                android:id="@+id/tv_upvideo_inva"
+                style="@style/rule_content"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/tv_upcase_inva"
+                style="@style/rule_content"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/tv_upwenxian_inva"
+                style="@style/rule_content"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/tv_upzixun_inva"
+                style="@style/rule_content"
+                android:text="" />
+
+            <TextView
+                style="@style/rule_content"
+                android:text="注:上传文件的审核标准，可在上传页面查看" />
+
+            <TextView
+                style="@style/rule_content"
+                android:text="5.参加活动获取积分:" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/rule_content"
+                    android:text="    • 目前开通的活动:" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/rule_content"
+                        android:text="     (1)邀请好友获得积分" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:onClick="tofriend"
+                        android:text=" 查看详情》"
+                        android:textColor="#86B9F4" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                style="@style/rule_content"
+                android:text="6.购买获取积分:" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/rule_content"
+                    android:text="    • 可在购买积分页面进行购买" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="tobuyinte"
+                    android:text=" 立即购买》"
+                    android:textColor="#86B9F4" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="三、如何使用CCMTV积分？" />
+
+            <TextView
+                style="@style/rule_content"
+                android:text="CCMTV积分可用于:" />
+
+            <TextView
+                style="@style/rule_content"
+                android:text="    1)观看视频:CCMTV由部分视频是需要积分才能观看的，观看此类视频将会扣除账户积分。在48小时内重复观看同一视频，不在重复扣除积分" />
+
+            <TextView
+                style="@style/rule_content"
+                android:text="    2)下载:下载每个文献、PPT会扣除积分5分、下载每个病例会扣除账户3积分" />
+
+            <TextView
+                style="@style/rule_content"
+                android:text="    3）其他扣除积分的情况:当评论被管理员删除后将会扣除3积分" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

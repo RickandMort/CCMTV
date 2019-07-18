@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.linlic.ccmtv.yx.activity.rules_to_compensate.training_management.DetailVideoPlayActivity">
+
+    <com.xiao.nicevideoplayer.NiceVideoPlayer
+        android:id="@+id/video_player"
+        android:layout_width="match_parent"
+        android:layout_height="220dp" />
+</LinearLayout>

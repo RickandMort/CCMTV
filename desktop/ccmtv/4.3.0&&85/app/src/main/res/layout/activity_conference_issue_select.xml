@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.linlic.ccmtv.yx.activity.conference.ConferenceIssueSelectActivity">
+
+    <include layout="@layout/activity_title8" />
+
+    <!--<TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="会议议题选择界面"
+        android:gravity="center"/>-->
+
+    <ListView
+        android:id="@+id/id_lv_conference_issue_select"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:listSelector="@color/transparent2"
+        android:scrollbars="none"/>
+
+</LinearLayout>

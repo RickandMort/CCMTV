@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="#40434B"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="back">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/bark"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_title_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:ellipsize="marquee"
+            android:gravity="left"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="头像"
+            android:textColor="#FFF"
+            android:textSize="22sp"/>
+
+        <ImageView
+            android:id="@+id/iv_showdialog"
+            android:layout_width="28dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:src="@mipmap/three_dian3"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#DCDCDC"/>
+
+    <FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent">
+
+
+        <com.shizhefei.view.largeimage.LargeImageView
+            android:id="@+id/largeimg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+        <io.netopen.hotbitmapgg.library.view.RingProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:ringColor="@android:color/darker_gray"
+            app:ringProgressColor="@color/colorPrimary"
+            app:ringWidth="3dp"
+            app:style="STROKE"
+            app:textColor="@color/colorPrimary"
+            app:textIsShow="true"
+            app:textSize="16sp"/>
+
+    </FrameLayout>
+</LinearLayout>

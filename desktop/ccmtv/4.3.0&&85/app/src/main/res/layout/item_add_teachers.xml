@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp">
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:background="#3897F9" />
+
+
+        <TextView
+            android:id="@+id/_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_weight="1"
+            android:maxLines="1"/>
+
+        <ImageView
+            android:id="@+id/_item_select"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/training_11"
+            />
+
+    </LinearLayout>
+
+    <include layout="@layout/activity_title4"/>
+
+</LinearLayout>

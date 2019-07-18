@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical"
+    tools:context="com.linlic.ccmtv.yx.activity.login.PerfectInformationActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:onClick="back"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/login_back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:padding="10dp"
+            android:text="跳过"
+            android:textColor="#3494FF"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/activity_title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="完善资料"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E0E0" />
+
+    <LinearLayout style="@style/layout_myzl_style">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="真 实 姓 名"
+            android:textColor="@color/myprofile_textcolor"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/pif_truename"
+            style="@style/edit_wszl_style"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#E0E0E0" />
+
+    <LinearLayout style="@style/layout_myzl_style">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="性           别"
+            android:textColor="@color/myprofile_textcolor"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/wszl_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="20dp">
+
+            <CheckBox
+                android:id="@+id/wszl_ck1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:button="@drawable/wszl_check"
+                android:checked="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="男"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/wszl_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="20dp">
+
+            <CheckBox
+                android:id="@+id/wszl_ck2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:button="@drawable/wszl_check"
+                android:checked="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="女"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#E0E0E0" />
+
+    <LinearLayout style="@style/layout_myzl_style">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="用 户 类 型"
+            android:textColor="@color/myprofile_textcolor"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/pif_viptype"
+            style="@style/btn_wszl_style"
+            android:layout_marginLeft="5dp"
+            android:hint="请选择会员类型"
+            android:onClick="getVipType" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#E0E0E0" />
+
+    <LinearLayout
+        android:id="@+id/layout_yiyuan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout style="@style/layout_myzl_style">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="医           院"
+                android:textColor="@color/myprofile_textcolor" />
+
+            <Button
+                android:id="@+id/myprofile_hospital"
+                style="@style/btn_wszl_style"
+                android:layout_marginLeft="5dp"
+                android:hint="请选择医院"
+                android:onClick="getHospital"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#E0E0E0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_keshi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout style="@style/layout_myzl_style">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="科           室"
+                android:textColor="@color/myprofile_textcolor" />
+
+            <Button
+                android:id="@+id/myprofile_department"
+                style="@style/btn_wszl_style"
+                android:layout_marginLeft="5dp"
+                android:hint="请选择科室"
+                android:onClick="getDepartment" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#E0E0E0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_zhicheng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout style="@style/layout_myzl_style">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="职           称"
+                android:textColor="@color/myprofile_textcolor" />
+
+            <Button
+                android:id="@+id/myprofile_title"
+                style="@style/btn_wszl_style"
+                android:layout_marginLeft="5dp"
+                android:hint="请选择职称"
+                android:onClick="getTitle" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#E0E0E0" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_danwei"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout style="@style/layout_myzl_style">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="单           位"
+                android:textColor="@color/myprofile_textcolor"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/pif_danwei"
+                style="@style/edit_wszl_style"
+                android:hint="请填写所在单位"
+                android:inputType="text"
+                android:singleLine="true" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#E0E0E0" />
+
+    <LinearLayout style="@style/layout_myzl_style">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="联 系 地 址"
+            android:textColor="@color/myprofile_textcolor"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/pif_address"
+            style="@style/edit_wszl_style"
+            android:hint="请填写联系地址"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#E0E0E0" />
+
+    <LinearLayout
+        style="@style/layout_myzl_style"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="身份证号码"
+            android:textColor="@color/myprofile_textcolor"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/pif_idcard"
+            style="@style/edit_wszl_style"
+            android:hint="请填写身份证号码"
+            android:inputType="number"
+            android:maxLength="18"
+            android:singleLine="true" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#E0E0E0" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/anniu60"
+        android:onClick="regist"
+        android:paddingBottom="10dp"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp"
+        android:paddingTop="10dp"
+        android:text="完成"
+        android:textColor="#FFF"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/red_dot1"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/blue_dot" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:text="完善资料可获得10积分" />
+
+    </LinearLayout>
+
+</LinearLayout>

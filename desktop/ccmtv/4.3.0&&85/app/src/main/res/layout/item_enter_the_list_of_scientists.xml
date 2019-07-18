@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center|left"
+            android:gravity="center|left"
+            android:layout_height="match_parent">
+
+            <com.linlic.ccmtv.yx.utils.CircleImageView
+                android:id="@+id/my_myhead"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/img_default2" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/_item_name"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:paddingLeft="10dp"
+                        android:textStyle="bold"
+                        android:textColor="#333"
+                        />
+
+                    <ImageView
+                        android:id="@+id/_item_licensed_doctors_certificate"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:src="@mipmap/licensed_doctors_certificate_icon"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="5dp"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/_item_admitted_section"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="已入科"
+                        android:textColor="#DBB15C"
+                        android:paddingBottom="1dp"
+                        android:paddingTop="1dp"
+                        android:paddingLeft="7dp"
+                        android:textSize="12sp"
+                        android:layout_marginRight="10dp"
+                        android:paddingRight="7dp"
+                        android:background="@drawable/anniu9"
+                        />
+                    <TextView
+                        android:id="@+id/_item_not_admitted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="未入科"
+                        android:textColor="#999999"
+                        android:paddingBottom="1dp"
+                        android:paddingTop="1dp"
+                        android:layout_marginRight="10dp"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        android:textSize="12sp"
+                        android:background="@drawable/anniu40"
+                        />
+                    <TextView
+                        android:id="@+id/_item_in_wheel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="在轮"
+                        android:textSize="12sp"
+                        android:textColor="#69ADFA"
+                        android:paddingBottom="1dp"
+                        android:paddingTop="1dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:background="@drawable/anniu26"
+                        />
+
+                    </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/_item_text"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center|right"
+                android:gravity="center|right"
+                android:layout_height="wrap_content"
+                android:text="普外科"
+                />
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e1e1e1"
+        />
+</LinearLayout>

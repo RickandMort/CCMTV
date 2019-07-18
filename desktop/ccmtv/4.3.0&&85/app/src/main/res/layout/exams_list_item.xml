@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:background="@mipmap/examination_instructions_icon9"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="2dp"
+                    android:orientation="vertical"
+
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="7dp"
+                        >
+                        <TextView
+                            android:id="@+id/calendar_new"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="最新"
+                            android:gravity="center"
+                            android:textColor="#fff"
+                            android:textSize="12sp"
+                            android:background="@mipmap/examination_instructions_icon15"
+                            />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/my_exams_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:ellipsize="end"
+                                android:gravity="left"
+                                android:maxLines="2"
+                                android:textSize="16sp"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="3dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/exams_type1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="10sp"
+                                    android:paddingTop="1dp"
+                                    android:paddingLeft="4dp"
+                                    android:paddingRight="4dp"
+                                    android:paddingBottom="1dp"
+                                    android:layout_marginRight="7dp"
+                                    android:text="正"
+                                    android:background="@drawable/anniu46"
+                                    android:textColor="#3897f9"
+                                    />
+                                <TextView
+                                    android:id="@+id/exams_type2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="10sp"
+                                    android:paddingTop="1dp"
+                                    android:paddingLeft="4dp"
+                                    android:paddingRight="4dp"
+                                    android:paddingBottom="1dp"
+                                    android:layout_marginRight="7dp"
+                                    android:text="模"
+                                    android:background="@drawable/anniu47"
+                                    android:textColor="#f1b209"
+                                    />
+                                <TextView
+                                    android:id="@+id/exams_type3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="10sp"
+                                    android:paddingTop="1dp"
+                                    android:paddingLeft="4dp"
+                                    android:paddingRight="4dp"
+                                    android:paddingBottom="1dp"
+                                    android:layout_marginRight="7dp"
+                                    android:text="补"
+                                    android:background="@drawable/anniu48"
+                                    android:textColor="#ff6565"
+                                    />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="3dp"
+                                android:gravity="center|left"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/my_exams_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#999"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center"  />
+                                <LinearLayout
+                                    android:id="@+id/schedule_layout"
+                                    android:layout_width="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:background="@drawable/anniu7"
+                                    android:paddingLeft="15dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingBottom="5dp"
+                                    android:paddingRight="15dp"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:id="@+id/schedule_img"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:src="@mipmap/activity_my_40"/>
+
+                                    <TextView
+                                        android:id="@+id/schedule"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="  加入日程"
+                                        android:textColor="#fff"
+                                        android:textSize="13sp"
+                                        />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+                    <!-- <TextView
+                         android:id="@+id/my_exams_take"
+                         android:layout_width="60dp"
+                         android:layout_height="60dp"
+                         android:visibility="gone"
+                         android:background="@mipmap/exams1_11"
+                         android:text="未考试"
+                         android:textSize="12sp"
+                         android:gravity="center"
+                         android:textColor="#FCA962"
+                         android:layout_gravity="center|right"
+                         />-->
+
+                    <TextView
+                        android:id="@+id/my_exams_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        />
+
+
+                </LinearLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/fraction_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:src="@mipmap/examination_instructions_icon10"
+                        android:layout_gravity="right"
+                        android:scaleType="fitXY"
+                        android:layout_marginRight="-3dp"
+                        android:layout_height="match_parent"/>
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/my_exams_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="固定"
+                                android:textColor="#fff"
+                                android:paddingLeft="15dp"
+                                android:paddingTop="3dp"
+                                android:paddingBottom="3dp"
+                                android:paddingRight="15dp"
+                                android:textSize="13sp"
+                                android:background="@drawable/anniu12"
+                                />
+
+                                <LinearLayout
+                                    android:id="@+id/fraction_layout1"
+                                    android:layout_width="wrap_content"
+                                    android:orientation="horizontal"
+
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/fraction"
+                                        android:layout_width="wrap_content"
+                                        android:text="78"
+                                        android:textSize="40sp"
+                                        android:layout_height="wrap_content"/>
+                                    <TextView
+                                        android:id="@+id/fraction_text"
+                                        android:layout_width="wrap_content"
+                                        android:text="分"
+                                        android:layout_height="wrap_content"/>
+                                </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/fraction2"
+                                android:layout_width="wrap_content"
+                                android:text="待公布"
+                                android:textSize="20sp"
+                                android:visibility="gone"
+                                android:textColor="#999999"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/leantextview"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/italics_bg"
+                        />
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+
+</LinearLayout>

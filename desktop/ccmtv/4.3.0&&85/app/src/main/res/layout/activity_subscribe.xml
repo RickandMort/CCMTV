@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#FFF"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_keshitype"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#fff"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/activity_title_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="订阅"
+                android:textColor="#626262"
+                android:textSize="18sp"/>
+
+            <LinearLayout
+                android:id="@+id/arrow_back"
+                android:layout_width="45dip"
+                android:layout_height="match_parent"
+                android:onClick="back"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="11dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/bark"/>
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EFEFEF"
+            />
+
+
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="0dp"
+                android:orientation="vertical">
+
+                <com.youth.banner.Banner
+                    android:id="@+id/id_conference_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    app:image_scale_type="fit_xy"
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    app:indicator_drawable_selected="@drawable/conference_banner_indicator_select"
+                    app:indicator_drawable_unselected="@drawable/banner_unselect"
+                    app:indicator_margin="3dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        >
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/id_recyclerview_conference_department"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="45dp"
+                            />
+
+                        <LinearLayout
+                            android:id="@+id/qr_code_layout"
+                            android:layout_width="40dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|right"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@color/white"
+                            >
+
+                            <ImageView
+                                android:id="@+id/iv_addsub"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_gravity="center"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/ding_add"
+                                android:layout_marginLeft="8dp"
+                                />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#EFEFEF"
+                        android:layout_marginTop="10dp"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/id_recyclerview_conference_department_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp"
+                        android:layout_marginTop="10dp">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/id_recyclerview_conference_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#EFEFEF"
+                        />
+
+                </LinearLayout>
+
+            </android.support.design.widget.AppBarLayout>
+
+
+
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/my_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="always"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.linlic.ccmtv.yx.widget.NodataEmptyLayout
+                        android:id="@+id/subscribe_list_nodata"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#fff"
+                        android:visibility="gone"
+                        app:empty_des="当前还没有数据哦~"
+                        app:empty_src="@mipmap/nodata_empty"/>
+
+
+                    <com.linlic.ccmtv.yx.utils.MyListView
+                        android:id="@+id/list_sub"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FFF"
+                        android:listSelector="#FFF"
+                        android:divider="#EFEFEF"
+                        android:dividerHeight="1dp"
+                        android:visibility="visible"/>
+
+                </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+        </android.support.design.widget.CoordinatorLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_subnologin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="您还未登录，请登录后使用此功能"
+                android:textColor="#737373"
+                android:textSize="18sp"/>
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/regist_button"
+                android:onClick="btnClick"
+                android:padding="8dp"
+                android:text="登录"
+                android:textColor="#FFF"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/layout_nodata1"/>
+
+
+</LinearLayout>

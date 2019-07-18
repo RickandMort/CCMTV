@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_title" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/activity_my_26" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:text="日常任务"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:background="@color/white"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/layout_daily_attendance"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp">
+
+                    <ImageView
+                        android:id="@+id/iv_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/icon_jifen"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/sign_in1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="每日签到"
+                        android:textColor="#333333"
+                        android:textSize="14sp"
+                        android:layout_toRightOf="@+id/iv_icon"
+                        android:layout_marginLeft="16dp"/>
+
+                    <TextView
+                        android:layout_toRightOf="@id/sign_in1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:text="+5"
+                        android:textColor="#F0BB47"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/layout_daily_attendance_button"
+                        android:layout_width="65dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/activity_my_27"
+                        android:text="去完成"
+                        android:textSize="12sp"
+                        android:textColor="#ffffff"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F0F0F0" />
+
+
+                <RelativeLayout
+                    android:id="@+id/layout_sharevideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp">
+
+                    <ImageView
+                        android:id="@+id/iv_share_video"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/jifen_video"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/iv_share_video"
+                        >
+
+                        <TextView
+                            android:id="@+id/layout_sharevideo1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="分享视频"
+                            android:textColor="#333333"
+                            android:textSize="14sp"
+                            />
+
+                        <TextView
+                            android:layout_toRightOf="@id/layout_sharevideo1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+1"
+                            android:textColor="#F0BB47"
+                            android:layout_marginLeft="5dp"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_below="@+id/layout_sharevideo1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="每日上限10次"
+                            android:textColor="#A7A8A8"
+                            android:textSize="12sp"
+                            android:layout_marginTop="5dp"
+                            />
+
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/layout_sharevideo_button"
+                        android:layout_width="65dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/activity_my_27"
+                        android:text="做任务"
+                        android:textSize="12sp"
+                        android:textColor="#ffffff"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F0F0F0" />
+
+
+                <RelativeLayout
+                    android:id="@+id/layout_commentvideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp">
+
+                    <ImageView
+                        android:id="@+id/iv_ping_video"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/jifen_video"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/iv_ping_video"
+                        android:layout_centerVertical="true">
+
+                        <TextView
+                            android:id="@+id/layout_commentvideo1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="评论视频"
+                            android:layout_marginLeft="16dp"
+                            android:textColor="#333333"
+                            android:textSize="14sp"/>
+                        <TextView
+                            android:layout_toRightOf="@id/layout_commentvideo1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+1"
+                            android:textColor="#F0BB47"
+                            android:layout_marginLeft="5dp"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_below="@id/layout_commentvideo1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="每日上限10次"
+                            android:textColor="#A7A8A8"
+                            android:layout_marginTop="5dp"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+
+
+                    <Button
+                        android:id="@+id/layout_commentvideo_button"
+                        android:layout_width="65dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/activity_my_27"
+                        android:text="做任务"
+                        android:textSize="12sp"
+                        android:textColor="#ffffff"/>
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F0F0F0" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_invite_registration"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp">
+
+                    <ImageView
+                        android:id="@+id/iv_zhuce"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/jifen_register"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/layout_invite_registration1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="邀请注册"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@+id/iv_zhuce"
+                        android:layout_centerVertical="true"
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_toRightOf="@id/layout_invite_registration1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="+50"
+                        android:textColor="#F0BB47"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/layout_invite_registration_button"
+                        android:layout_width="65dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/activity_my_27"
+                        android:text="做任务"
+                        android:textSize="12sp"
+                        android:textColor="#ffffff"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F0F0F0"/>
+
+                <RelativeLayout
+                    android:id="@+id/layout_upload_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp">
+
+                    <ImageView
+                        android:id="@+id/iv_upload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/jifen_upload"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/layout_upload_video1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="上传视频"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@+id/iv_upload"
+                        android:layout_centerVertical="true"
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_toRightOf="@id/layout_upload_video1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="+80"
+                        android:textColor="#F0BB47"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="5dp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/layout_upload_video_button"
+                        android:layout_width="65dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/activity_my_27"
+                        android:text="做任务"
+                        android:textSize="12sp"
+                        android:textColor="#ffffff"/>
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F0F0F0"/>
+                <RelativeLayout
+                    android:id="@+id/layout_upload_case"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp">
+
+                    <ImageView
+                        android:id="@+id/iv_upload_bing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/jifen_upload"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/layout_upload_case1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="上传病例"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@+id/iv_upload_bing"
+                        android:layout_centerVertical="true"
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_toRightOf="@id/layout_upload_case1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="+10"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="#F0BB47"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/layout_upload_case_button"
+                        android:layout_width="65dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/activity_my_27"
+                        android:text="做任务"
+                        android:textSize="12sp"
+                        android:textColor="#ffffff"/>
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F0F0F0" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_perfect_information"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/iv_person_data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:background="@mipmap/jifen_person_data"
+                        />
+
+                    <TextView
+                        android:id="@+id/layout_perfect_information1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@+id/iv_person_data"
+                        android:text="完善个人资料"
+                        android:textColor="#333333"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/layout_perfect_information1"
+                        android:text="+10"
+                        android:textColor="#F0BB47"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+
+                    <Button
+                        android:id="@+id/layout_perfect_information_button"
+                        android:layout_width="65dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:background="@mipmap/activity_my_27"
+                        android:text="做任务"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F0F0F0"
+                    android:layout_marginBottom="50dp"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>

@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#F7F7F7"
+              android:orientation="vertical">
+
+    <include layout="@layout/activity_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_case_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="#FFF"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="病例标题 "
+                android:textColor="#2A2A2B"
+                android:textSize="24sp" />
+
+
+            <LinearLayout
+                android:id="@+id/layout_A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="13dp"
+                android:background="#FEFFFF"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="@string/patient_information"
+                        android:textColor="#7B797A"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_Anumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="5dp"
+                        android:text="0张照片"
+                        android:textColor="#C6C6C6"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.linlic.ccmtv.yx.widget.MyGridView
+                        android:id="@+id/id_gv_mycase_a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="4"
+                        android:horizontalSpacing="5dp"
+                        android:verticalSpacing="5dp"
+                        android:stretchMode="columnWidth"
+                        android:listSelector="@color/transparent2"/>
+
+                    <!--<ImageView
+                        android:id="@+id/iv_upfileA_1"
+                        style="@style/iv_mycase" />
+
+                    <ImageView
+                        android:id="@+id/iv_upfileA_2"
+                        style="@style/iv_mycase" />
+
+                    <ImageView
+                        android:id="@+id/iv_upfileA_3"
+                        style="@style/iv_mycase" />-->
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_info_A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="#999"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_B"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="13dp"
+                android:background="#FEFFFF"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="@string/medical_history"
+                        android:textColor="#7B797A"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_Bnumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="5dp"
+                        android:text="0张照片"
+                        android:textColor="#C6C6C6"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.linlic.ccmtv.yx.widget.MyGridView
+                        android:id="@+id/id_gv_mycase_b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="4"
+                        android:horizontalSpacing="5dp"
+                        android:verticalSpacing="5dp"
+                        android:stretchMode="columnWidth"
+                        android:listSelector="@color/transparent2"/>
+
+                    <!--<ImageView
+                        android:id="@+id/iv_upfileB_1"
+                        style="@style/iv_mycase" />
+
+                    <ImageView
+                        android:id="@+id/iv_upfileB_2"
+                        style="@style/iv_mycase" />
+
+                    <ImageView
+                        android:id="@+id/iv_upfileB_3"
+                        style="@style/iv_mycase" />-->
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_info_B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="#999"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_C"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="13dp"
+                android:background="#FEFFFF"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="治疗"
+                        android:textColor="#7B797A"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_Cnumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="5dp"
+                        android:text="0张照片"
+                        android:textColor="#C6C6C6"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.linlic.ccmtv.yx.widget.MyGridView
+                        android:id="@+id/id_gv_mycase_c"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="4"
+                        android:horizontalSpacing="5dp"
+                        android:verticalSpacing="5dp"
+                        android:stretchMode="columnWidth"
+                        android:listSelector="@color/transparent2"/>
+
+                    <!--<ImageView
+                        android:id="@+id/iv_upfileC_1"
+                        style="@style/iv_mycase" />
+
+                    <ImageView
+                        android:id="@+id/iv_upfileC_2"
+                        style="@style/iv_mycase" />
+
+                    <ImageView
+                        android:id="@+id/iv_upfileC_3"
+                        style="@style/iv_mycase" />-->
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_info_C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="#999"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_D"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="13dp"
+                android:background="#FEFFFF"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="临床表现"
+                        android:textColor="#7B797A"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_Dnumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="5dp"
+                        android:text="0张照片"
+                        android:textColor="#C6C6C6"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.linlic.ccmtv.yx.widget.MyGridView
+                        android:id="@+id/id_gv_mycase_d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="4"
+                        android:horizontalSpacing="5dp"
+                        android:verticalSpacing="5dp"
+                        android:stretchMode="columnWidth"
+                        android:listSelector="@color/transparent2"/>
+
+                    <!--<ImageView
+                        android:id="@+id/iv_upfileD_1"
+                        style="@style/iv_mycase" />
+
+                    <ImageView
+                        android:id="@+id/iv_upfileD_2"
+                        style="@style/iv_mycase" />
+
+                    <ImageView
+                        android:id="@+id/iv_upfileD_3"
+                        style="@style/iv_mycase" />-->
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_info_D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="#999"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_E"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="13dp"
+                android:background="#FEFFFF"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="辅助检查"
+                        android:textColor="#7B797A"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_Enumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="5dp"
+                        android:text="0张照片"
+                        android:textColor="#C6C6C6"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.linlic.ccmtv.yx.widget.MyGridView
+                        android:id="@+id/id_gv_mycase_e"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="4"
+                        android:horizontalSpacing="5dp"
+                        android:verticalSpacing="5dp"
+                        android:stretchMode="columnWidth"
+                        android:listSelector="@color/transparent2"/>
+
+                    <!--<ImageView
+                        android:id="@+id/iv_upfileE_1"
+                        style="@style/iv_mycase" />
+
+                    <ImageView
+                        android:id="@+id/iv_upfileE_2"
+                        style="@style/iv_mycase" />
+
+                    <ImageView
+                        android:id="@+id/iv_upfileE_3"
+                        style="@style/iv_mycase" />-->
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_info_E"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="#999"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_F"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="13dp"
+                android:background="#FEFFFF"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="特殊检查"
+                        android:textColor="#7B797A"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_Fnumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="5dp"
+                        android:text="0张照片"
+                        android:textColor="#C6C6C6"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.linlic.ccmtv.yx.widget.MyGridView
+                        android:id="@+id/id_gv_mycase_f"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="4"
+                        android:horizontalSpacing="5dp"
+                        android:verticalSpacing="5dp"
+                        android:stretchMode="columnWidth"
+                        android:listSelector="@color/transparent2"/>
+
+                    <!--<ImageView
+                        android:id="@+id/iv_upfileF_1"
+                        style="@style/iv_mycase" />
+
+                    <ImageView
+                        android:id="@+id/iv_upfileF_2"
+                        style="@style/iv_mycase" />
+
+                    <ImageView
+                        android:id="@+id/iv_upfileF_3"
+                        style="@style/iv_mycase" />-->
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_info_F"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="#999"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_G"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="13dp"
+                android:background="#FEFFFF"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="诊断"
+                        android:textColor="#7B797A"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_Gnumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="5dp"
+                        android:text="0张照片"
+                        android:textColor="#C6C6C6"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.linlic.ccmtv.yx.widget.MyGridView
+                        android:id="@+id/id_gv_mycase_g"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="4"
+                        android:horizontalSpacing="5dp"
+                        android:verticalSpacing="5dp"
+                        android:stretchMode="columnWidth"
+                        android:listSelector="@color/transparent2"/>
+
+                    <!--<ImageView
+                        android:id="@+id/iv_upfileG_1"
+                        style="@style/iv_mycase" />
+
+                    <ImageView
+                        android:id="@+id/iv_upfileG_2"
+                        style="@style/iv_mycase" />
+
+                    <ImageView
+                        android:id="@+id/iv_upfileG_3"
+                        style="@style/iv_mycase" />-->
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_info_G"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="#999"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_H"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="13dp"
+                android:background="#FEFFFF"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="手术"
+                        android:textColor="#7B797A"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_Hnumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="5dp"
+                        android:text="0张照片"
+                        android:textColor="#C6C6C6"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.linlic.ccmtv.yx.widget.MyGridView
+                        android:id="@+id/id_gv_mycase_h"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="4"
+                        android:horizontalSpacing="5dp"
+                        android:verticalSpacing="5dp"
+                        android:stretchMode="columnWidth"
+                        android:listSelector="@color/transparent2"/>
+
+                    <!--<ImageView
+                        android:id="@+id/iv_upfileH_1"
+                        style="@style/iv_mycase" />
+
+                    <ImageView
+                        android:id="@+id/iv_upfileH_2"
+                        style="@style/iv_mycase" />
+
+                    <ImageView
+                        android:id="@+id/iv_upfileH_3"
+                        style="@style/iv_mycase" />-->
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_info_H"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="#999"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="其他信息暂无"
+                android:textColor="#7E7E7D"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/hr_bg6" />
+
+</LinearLayout>

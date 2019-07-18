@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/direct_broadcast_item_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/direct_broadcast_icon02"
+            android:text="会议"
+            android:textColor="#fff"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/direct_broadcast_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2017年中国内镜医师大会"
+            android:maxLines="1"
+            android:textColor="#666"
+            android:layout_marginLeft="10dp"
+            />
+
+        <ImageView
+            android:id="@+id/direct_broadcast_item_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/direct_broadcast_icon07"
+            android:layout_gravity="center|right"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/direct_broadcast_item_banner"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/direct_broadcast_icon13"
+        />
+
+        <com.linlic.ccmtv.yx.utils.MyRecyclerView
+            android:id="@+id/direct_broadcast_item_myrecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.linlic.ccmtv.yx.utils.MyRecyclerView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/position"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#f0f0f0"
+        />
+</LinearLayout>

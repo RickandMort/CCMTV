@@ -1,0 +1,115 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFEF"
+    android:orientation="vertical"
+    tools:context="com.linlic.ccmtv.yx.kzbf.fragment.WriteMessageFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="接收者："
+            android:textColor="#999"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_write_message_helper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:hint="点击选择收件人"
+            android:textColorHint="#999"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/write_message_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EFEFEF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="标题："
+            android:textColor="#999"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/ed_message_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:text=""
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginTop="1dp"
+        android:background="#FFF"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/write_message_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="内容："
+            android:textColor="#999"
+            android:textSize="16sp" />
+
+        <ScrollView
+            android:id="@+id/sv_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_toRightOf="@+id/write_message_content">
+
+            <EditText
+                android:id="@+id/edit_message_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:minLines="11"
+                android:gravity="top|left" />
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/message_submit"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/learning_task04"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="#FFF"
+        android:textSize="16sp" />
+
+</LinearLayout>

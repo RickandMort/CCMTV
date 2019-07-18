@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <solid android:color="#f8f8f8" />
+
+    <stroke
+        android:dashGap="1dp"
+        android:dashWidth="0dp"
+        android:width="1dp"
+        android:color="#ececec" />
+
+    <!-- 自定义弧形 -->
+    <corners
+        android:bottomLeftRadius="15dp"
+        android:bottomRightRadius="15dp"
+        android:topLeftRadius="15dp"
+        android:topRightRadius="15dp" />
+
+</shape>

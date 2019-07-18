@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/forget_layout_background"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/activity_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center">
+
+
+        <EditText
+            android:id="@+id/forget_phone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/anniu2"
+            android:padding="7dp"
+            android:hint="请输入手机号码"
+            android:textColorHint="#DCDCDC"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textColor="#747474" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/anniu2"
+        android:gravity="center">
+
+
+
+        <EditText
+            android:id="@+id/forget_code"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:padding="7dp"
+            android:hint="@string/regist_code_hint"
+            android:textColorHint="#DCDCDC"
+            android:inputType="number"
+            android:maxLength="4"
+            android:textColor="#747474" />
+
+        <TextView
+            android:id="@+id/forget_sendCode"
+            android:layout_width="85dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginRight="5dp"
+            android:onClick="sendCode"
+            android:text="@string/regist_getcode"
+            android:textColor="#5578F6"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center">
+
+
+
+        <EditText
+            android:id="@+id/forget_pass"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/anniu2"
+            android:padding="7dp"
+            android:hint="请输入新密码"
+            android:textColorHint="#DCDCDC"
+            android:inputType="text"
+            android:maxLength="17"
+            android:password="true"
+            android:textColor="#747474" />
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/submit_"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/anniu60"
+        android:onClick="forgetPass"
+        android:paddingBottom="7dp"
+        android:paddingTop="7dp"
+        android:text="找回"
+        android:textColor="@color/regist_layout_background"
+        android:textSize="20sp" />
+
+</LinearLayout>

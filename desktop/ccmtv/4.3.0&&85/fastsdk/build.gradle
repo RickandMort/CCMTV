@@ -1,0 +1,46 @@
+//apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
+
+    android {
+        compileSdkVersion 27
+        buildToolsVersion  '26.0.2'
+
+        defaultConfig {
+            minSdkVersion 17
+            targetSdkVersion 22
+            versionCode  1
+            versionName  "1.0"
+        }
+        /* buildTypes {
+         release {
+             minifyEnabled false
+             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+         }
+
+     }*/
+
+    }
+/*     dexOptions {
+        //incremental = true
+        jumboMode = true
+        javaMaxHeapSize = "4g"
+//        keepRuntimeAnnotatedClasses = false
+    }*/
+
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/gensee_doc.jar')
+    compile files('libs/gensee_common.jar')
+    compile files('libs/gensee_hb.jar')
+    compile files('libs/gensee_rt_audio.jar')
+    compile files('libs/gensee_rtsdk.jar')
+    compile files('libs/gensee_rtmpplayer.jar')
+    compile files('libs/gensee_baseplayer.jar')
+    compile files('libs/gensee_vod_ol.jar')
+    compile files('libs/gensee_danmu.jar')
+    //    compile files('libs/gensee_fastsdk.jar')
+    compile project(':resourcelib')
+    compile files('libs/gensee_fastsdk.jar')
+}

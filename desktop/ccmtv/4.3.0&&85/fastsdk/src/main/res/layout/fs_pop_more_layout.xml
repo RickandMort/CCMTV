@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/fs_pop_more_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/txtCloseVideo"
+        style="@style/fs_pop_more_item_ly">
+
+        <TextView
+            style="@style/fs_pop_more_style_tv"
+            android:drawableLeft="@drawable/fs_selector_close_video"
+            android:text="@string/fs_gs_close_video" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyNetSwitch"
+        style="@style/fs_pop_more_item_ly">
+
+        <TextView
+            android:id="@+id/tvNetSwitch"
+            style="@style/fs_pop_more_style_tv"
+            android:drawableLeft="@drawable/fs_icon_more_netswitch"
+            android:text="@string/fs_switch_net" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/txtDiagnose"
+        style="@style/fs_pop_more_item_ly">
+
+        <TextView
+            style="@style/fs_pop_more_style_tv"
+            android:drawableLeft="@drawable/fs_icon_more_diagnos"
+            android:text="@string/fs_diagnosis" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

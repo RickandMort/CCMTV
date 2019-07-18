@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#fafafa"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:onClick="back">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/bark" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="试题练习"
+            android:textColor="#626262"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/activity_collection_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:gravity="center|right"
+            android:layout_marginRight="10dp"
+            android:text="收藏"
+            android:visibility="gone"
+            android:textColor="#3897f9"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+    <include layout="@layout/activity_title4" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:orientation="horizontal">
+
+            <ListView
+                android:id="@+id/department_list"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:divider="@null"
+                android:listSelector="#00000000"
+                android:paddingBottom="0dp"
+                android:scrollbars="none"/>
+
+            <View
+                android:layout_width="0.1dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:background="@color/integral_main_Button_border_color"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fafafa"
+                android:orientation="vertical"
+                android:paddingRight="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/department_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:textSize="20sp"
+                        android:visibility="gone"
+                        />
+
+                    <include layout="@layout/activity_title4"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|right"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="科目选择方式"
+                        android:textColor="#666"/>
+
+                    <TextView
+                        android:id="@+id/multiple_choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/anniu18"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="3dp"
+                        android:text="多选"
+                        android:textColor="#3798F9"
+                        android:textSize="18sp"
+                        />
+                    <!--android:background="@drawable/anniu18"-->
+                    <!--android:background="@drawable/anniu3"-->
+
+                </LinearLayout>
+
+
+                <GridView
+                    android:id="@+id/department_gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:background="#fafafa"
+                    android:horizontalSpacing="0.0dip"
+                    android:listSelector="@null"
+                    android:numColumns="3"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="0.0dip"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/id_tv_practice_department_begin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:background="#3798F9"
+            android:gravity="center"
+            android:text="开始练习"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            />
+    </FrameLayout>
+
+
+</LinearLayout>

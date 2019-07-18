@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#f0f0f0"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:onClick="back">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/bark" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/arrow_add"
+            android:layout_width="60dip"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="right"
+            android:onClick="add_teachers">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="编辑人员"
+                android:textColor="#5DA4F2"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="师资管理"
+            android:textColor="#333"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f0f0f0"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:background="#ffffff"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/start_time"
+            android:text="带教申请开放时间： "
+            android:layout_width="wrap_content"
+            android:textColor="#FB4543"
+            android:textSize="13sp"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/department"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未提交"
+                android:textColor="#fff"
+                android:layout_gravity="right"
+                android:paddingLeft="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:paddingRight="10dp"
+                android:textSize="13sp"
+                android:background="@drawable/anniu49"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#f0f0f0" />
+
+    <com.linlic.ccmtv.yx.widget.NodataEmptyLayout
+        android:id="@+id/periodical_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:visibility="gone"
+        app:empty_des="当前还没有数据哦~"
+        app:empty_src="@mipmap/nodata_empty"
+        app:empty_topLine="false"/>
+
+    <LinearLayout
+        android:id="@+id/data_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        >
+
+        <ListView
+            android:id="@+id/teacherss"
+            android:layout_width="match_parent"
+            android:background="#ffffff"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:id="@+id/submit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/audit_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:textColor="#666"
+                />
+            
+            <TextView
+                android:id="@+id/submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提交审核"
+                android:textColor="#fff"
+                android:paddingRight="40dp"
+                android:paddingLeft="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_gravity="center"
+                android:background="@drawable/anniu6"
+                />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

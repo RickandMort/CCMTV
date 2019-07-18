@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+   >
+    <include layout="@layout/activity_title8" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EFEFEF" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/view_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/view_KeShi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <org.angmarch.views.NiceSpinner
+                        android:id="@+id/id_spinner_examination_manage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="30dp"
+                        app:textTint="@color/videotree_text_bg2"/>
+
+                    <TextView
+                        android:id="@+id/tv_edu_tittle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="2"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tittle_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp">
+
+                    <TextView
+                        android:id="@+id/tv_rk_tittle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textSize="16sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:textColor="@color/exams_list_item_text_color3"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EFEFEF"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/detial_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ScrollView
+                    android:id="@+id/detail_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <WebView
+                            android:id="@+id/detail_webView"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"/>
+
+                        <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<View-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="3dp"-->
+                        <!--android:background="#cecece"/>-->
+
+
+                        <!--<ListView-->
+                        <!--android:id="@+id/id_lv_examination_manage"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:background="@color/white"-->
+                        <!--android:listSelector="@color/transparent2"/>-->
+
+                        <!--</LinearLayout>-->
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+                <LinearLayout
+                    android:id="@+id/view_comfirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="vertical"
+                    android:paddingTop="8dp">
+
+                    <RadioButton
+                        android:id="@+id/rb_isread"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:button="@drawable/ic_upload_rb_selector"
+                        android:text="    我已阅读"/>
+
+                    <LinearLayout
+                        android:id="@+id/id_tv_submit"
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@mipmap/video_sign2"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="6dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="确认提交"
+                            android:textColor="@color/white"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/video_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <com.linlic.ccmtv.yx.widget.NodataEmptyLayout
+            android:id="@+id/lt_nodata1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:visibility="gone"
+            app:empty_des="当前还没有数据哦~"
+            app:empty_src="@mipmap/nodata_empty"
+            app:empty_topLine="false"/>
+    </FrameLayout>
+
+</LinearLayout>

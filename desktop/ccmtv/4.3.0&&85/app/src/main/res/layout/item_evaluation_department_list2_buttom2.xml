@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="#f7f7f7"
+        android:text="带教评价总况"
+        android:textSize="16sp"
+        android:textColor="@color/personal_profile_select"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#333"
+                    android:text="平均成绩"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/_item_the_average_scores"
+                android:layout_width="match_parent"
+                android:text="100.00"
+                android:layout_weight="4"
+                android:textColor="#333"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="#333"
+                    android:text="差评个数"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/_item_the_number_of_bad_review"
+                android:layout_width="match_parent"
+                android:text="100.00"
+                android:layout_weight="4"
+                android:textColor="#333"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:textColor="@color/red"
+        android:layout_marginBottom="20dp"
+        android:text="评价分数&lt;80分，即为差评。"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        android:minLines="5"
+        android:padding="10dp"
+        android:gravity="top"
+        android:layout_gravity="center|top"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="退回"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@mipmap/direct_broadcast_icon17"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_width="50dp"
+            android:layout_height="1dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="确认"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@mipmap/direct_broadcast_icon08"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

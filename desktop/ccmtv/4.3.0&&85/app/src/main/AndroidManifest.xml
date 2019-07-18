@@ -1,0 +1,1832 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.linlic.ccmtv.yx">
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="22"/>
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.PERMISSION_GRANTED"/>
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <uses-feature android:name="android.hardware.sensor.accelerometer"/>
+
+    <!-- 发送一个永久的进程信号 -->
+    <uses-permission android:name="android.permission.SIGNAL_PERSISTENT_PROCESSES"/>
+
+    <!-- 日程权限start -->
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <!-- 日程权限end -->
+
+
+    <!-- 添加华为角标权限 -->
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
+
+    <!-- ************个推权限增加start**************** -->
+    <!-- 个推SDK权限配置开始 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 支持iBeancon 需要蓝牙权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <!-- 支持个推3.0 电子围栏功能 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- 自定义权限 -->
+    <uses-permission android:name="getui.permission.GetuiService.${applicationId}"/>
+
+    <permission
+        android:name="getui.permission.GetuiService.${applicationId}"
+        android:protectionLevel="normal"/>
+
+    <!-- 个推SDK权限配置结束 -->
+
+
+    <!-- iBeancon功能所需权限 -->
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <!-- 个推3.0电子围栏功能所需权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- ************个推权限增加end**************** -->
+
+
+    <!-- ************小米权限增加start**************** -->
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <!-- the following 2 com.xiaomi.mipushdemo should be changed to your package name -->
+    <permission
+        android:name="com.linlic.ccmtv.yx.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature"/>
+
+    <uses-permission android:name="com.linlic.ccmtv.yx.permission.MIPUSH_RECEIVE"/>
+
+    <!-- ************小米权限增加end**************** -->
+    <!-- ************华为权限增加start**************** -->
+
+
+    <!-- 接收PUSH TOKEN的广播以及PUSH消息需要定义该权限 com.linlic.ccmtv.yx 要替换上您应用的包名 -->
+    <permission
+        android:name="com.linlic.ccmtv.yx.permission.PROCESS_PUSH_MSG"
+        android:protectionLevel="signatureOrSystem"/>
+
+    <!-- 接收PUSH TOKEN的广播以及PUSH消息需要定义该权限 com.linlic.ccmtv.yx 要替换上您应用的包名 -->
+    <uses-permission android:name="com.linlic.ccmtv.yx.permission.PROCESS_PUSH_MSG"/>
+
+    <!-- HMS-SDK引导升级HMS功能，访问OTA服务器需要网络权限 | HMS-SDK upgrade HMS Feature, access to OTA server requires network privileges -->
+    <!-- HMS-SDK引导升级HMS功能，保存下载的升级包需要SD卡写权限 | HMS-SDK upgrade HMS Feature, save downloaded upgrade pack requires SD card Write permission -->
+    <!-- 检测网络状态 | Detecting Network status -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 获取用户手机的IMEI，用来唯一的标识设备。 | Gets the IMEI of the user's phone, used to uniquely identify the device. -->
+    <!-- 如果是安卓8.0，应用编译配置的targetSdkVersion>=26，请务必添加以下权限 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <!-- ************华为权限增加end**************** -->
+    <!-- ************oppo权限增加start**************** -->
+    <uses-permission android:name="com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE"/>
+    <!-- ************oppo权限增加end**************** -->
+    <!-- ************魅族权限增加start**************** -->
+    <!-- 兼容flyme5.0以下版本，魅族内部集成pushSDK必填，不然无法收到消息 -->
+    <uses-permission android:name="com.meizu.flyme.push.permission.RECEIVE"/>
+
+    <permission
+        android:name="com.linlic.ccmtv.yx.push.permission.MESSAGE"
+        android:protectionLevel="signature"/>
+
+    <uses-permission android:name="com.linlic.ccmtv.yx.push.permission.MESSAGE"/>
+    <!-- 兼容flyme3.0配置权限 -->
+    <uses-permission android:name="com.meizu.c2dm.permission.RECEIVE"/>
+
+    <permission
+        android:name="com.linlic.ccmtv.yx.permission.C2D_MESSAGE"
+        android:protectionLevel="signature"/>
+
+    <uses-permission android:name="com.linlic.ccmtv.yx.permission.C2D_MESSAGE"/>
+    <!-- ************魅族权限增加end**************** -->
+    <!-- 防作弊功能新增权限start -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <!-- 防作弊功能新增权限end -->
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!-- 往SDCard写入数据权限 -->
+    <!-- 读取数据的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_FORMAT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <!-- 视频播放 start -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+
+    <!-- 视频播放 end -->
+    <!-- 友盟 -->
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.SET_DEBUG_APP"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <!-- 日历权限start -->
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <!-- if you want to load images from the internet -->
+    <!-- if you want to load images from a file OR from the internet -->
+
+
+    <!-- 日历权限end -->
+
+
+    <!-- 高德地图权限start -->
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <!-- 高德地图权限end -->
+
+
+    <!-- 直播gensee start -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-feature android:name="android.hardware.camera.flash"/>
+    <uses-feature android:name="android.hardware.camera.setParameters"/>
+
+    <!-- 直播gensee end -->
+    <application
+        android:name=".activity.base.LocalApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/app_icon"
+        android:label="CCMTV临床频道"
+        android:resizeableActivity="false"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:name,label,allowBackup">
+
+        <!-- <provider -->
+        <!-- android:name="android.support.v4.content.FileProvider" -->
+        <!-- android:authorities="fileprovider" -->
+        <!-- android:exported="false" -->
+        <!-- android:grantUriPermissions="true"> -->
+        <!-- <meta-data -->
+        <!-- android:name="android.support.FILE_PROVIDER_PATHS" -->
+        <!-- android:resource="@xml/path"/> -->
+        <!-- </provider> -->
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+        <!-- 配置的第三方参数属性 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="033d506ee8582cad058e62f9732b4265"/> <!-- 高德得图 参数配置 -->
+        <meta-data
+            android:name="GETUI_APP_ID"
+            android:value="1YDl9DIp1hA11I8faAeVn1"/> <!-- 替换为第三方应用的APPID -->
+        <meta-data
+            android:name="GETUI_APP_KEY"
+            android:value="tdMQPR0zAp9ILK86jCzSs9"/> <!-- 替换为第三方应用的APPKEY -->
+        <meta-data
+            android:name="GETUI_APP_SECRET"
+            android:value="0GHP4vRf8t9Ivxn0BeRoL7"/> <!-- 替换为第三方应用的APPSECRET -->
+
+
+        <!--
+         <meta-data
+             android:name="MEIZU_APP_ID"
+             android:value="${MEIZU_APP_ID}" />
+         <meta-data
+             android:name="MEIZU_APP_KEY"
+             android:value="${MEIZU_APP_KEY}" />
+        -->
+
+        <meta-data
+            android:name="OPPO_APP_ID"
+            android:value="3346030"/>
+        <meta-data
+            android:name="OPPO_APP_KEY"
+            android:value="6U10H9rf4gcooo48GS4Cs0wcw"/>
+        <meta-data
+            android:name="OPPO_APP_SECRET"
+            android:value="66D498593A37864897fafE1876C62C91"/>
+
+        <!--
+        声明 Maximum Aspect Ratio  解决部分18:9屏幕手机下方出现黑框问题  且必须在application里设置android:resizeableActivity="false"
+        参考地址：  https://developer.android.com/guide/practices/screens-distribution
+        -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4"/>
+
+        <activity
+            android:name=".activity.login.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppStartLoad">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <!--
+                <intent-filter>
+                &lt;!&ndash; 下面这几行也必须得设置 &ndash;&gt;
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="ccmtv" />
+            </intent-filter>
+            -->
+
+
+            <!-- 要想在别的App上能成功调起App，必须添加intent过滤器 -->
+
+            <intent-filter>
+
+                <!-- 协议部分，随便设置 -->
+                <data
+                    android:host="www.ccmtv.cn"
+                    android:scheme="yy"/>
+                <!-- 下面这几行也必须得设置 -->
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 活动·柳叶杯 -->
+        <activity android:name=".activity.home.willowcup.WillowCupActivity"/>
+        <!-- 活动·杏林杯 -->
+        <activity android:name=".activity.home.apricotcup.ApricotActivity"/>
+        <!-- 活动·杏林杯文章详情 -->
+        <activity android:name=".activity.home.apricotcup.ApricotDetailsActivity"/>
+
+        <!-- 展示类型 -->
+        <activity android:name=".activity.home.willowcup.ShowTypeActivity"/>
+        <!-- 广告页 -->
+        <activity android:name=".activity.login.AdvertiseActivity"/>
+        <!-- 轮播图活动页 -->
+        <activity android:name=".activity.home.ActivityWebActivity"/>
+        <!-- 上传视频所需要的服务 -->
+        <service android:name=".activity.upload.service.MyUploadVideoService"/>
+        <!-- 上传病例所需要的服务 -->
+        <service android:name=".activity.upload.service.MyUploadCaseService"/>
+        <!-- 下载功能所需要的服务 -->
+        <service android:name=".activity.my.download.DownloadService"/>
+        <!-- 上传记录列表 -->
+        <!-- 高德地图start -->
+        <service android:name="com.amap.api.location.APSService"/>
+        <!-- 高德地图end -->
+        <activity
+            android:name=".activity.upload.IsUpload"
+            android:launchMode="singleTask"/>
+        <!-- 轮播图活动页 -->
+        <activity android:name=".activity.home.hxsl.BreatheActivity"/>
+        <!-- 下载列表 -->
+        <activity android:name=".activity.my.download.Download"/>
+        <!-- 新下载列表 -->
+        <activity android:name=".activity.my.download.DownloadOKNew"/>
+        <!-- 已完成下载列表 -->
+        <activity android:name=".activity.my.download.DownloadOK"/>
+        <!-- 下载中和下载失败列表 -->
+        <activity android:name=".activity.my.download.DownloadingActivity"/>
+        <!-- 上传-已经上传页 -->
+        <activity android:name=".activity.upload.Has_been_uploaded"/>
+        <!-- 上传-正在审核页 -->
+        <activity android:name=".activity.upload.IsReviewing"/>
+        <!-- VR -->
+        <!-- <activity android:name=".activity.videoar.VideoAR"/> -->
+        <!-- 极光通知 视频过度页 -->
+        <!-- 任务-每日签到 -->
+        <activity android:name=".activity.my.DailyAttendanceActivity"/>
+        <!-- 任务-分享视频 -->
+        <activity android:name=".activity.my.ShareVideoActivity"/>
+        <!-- 任务-评论视频 -->
+        <activity android:name=".activity.my.CommentVideoActivity"/>
+        <!-- 任务-邀请注册 -->
+        <activity android:name=".activity.my.InviteRegistrationActivity"/>
+        <!-- 任务-邀请注册 -->
+        <activity android:name=".activity.my.UploadVideoActivity"/>
+        <!-- 任务-上传病例 -->
+        <activity android:name=".activity.my.UploadCaseActivity"/>
+        <!-- 任务-完善个人信息 -->
+        <activity android:name=".activity.my.PerfectInformationActivity"/>
+
+        <!-- 圈子 -->
+        <activity android:name=".activity.my.personal_profile.Modify_the_circle"/>
+        <activity android:name=".activity.my.personal_profile.Personal_profile"/>
+        <!-- 我的考试 -->
+        <activity
+            android:name=".activity.my.medical_examination.My_exams_LearningTaskActivity"
+            android:launchMode="singleTask"/>
+        <!-- 考试须知 -->
+        <activity
+            android:name=".activity.my.medical_examination.Examination_instructions"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 测试-考试须知 -->
+        <activity android:name=".activity.my.medical_examination.Examination_instructions2"/>
+        <!-- 测试-考试-交卷 -->
+        <activity android:name=".activity.my.medical_examination.Test_End"/>
+        <!-- 正式考试 -->
+        <activity
+            android:name=".activity.my.medical_examination.Formal_examination"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan"/>
+        <!-- 测试考试 -->
+        <activity
+            android:name=".activity.my.medical_examination.Formal_examination_text"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 考试结果 -->
+        <activity android:name=".activity.my.medical_examination.Hand_in_the_papers"/>
+        <!-- 查看答题总览 -->
+        <activity android:name=".activity.my.medical_examination.Answering_card"/>
+        <!-- 查看答题详情 -->
+        <activity android:name=".activity.my.medical_examination.Check_the_answer_sheet"/>
+        <!-- 单位通知 -->
+        <activity android:name=".activity.my.unit_notification.Unit_notification"/>
+        <!-- 单位通知详情 -->
+        <activity android:name=".activity.my.unit_notification.Viewing_unit_notification"/>
+        <!-- 查看大图 -->
+        <activity android:name=".activity.my.medical_examination.Formal_examination_image"/>
+        <!-- 本院视频列表 -->
+        <activity android:name=".activity.my.our_video.My_Our_video"/>
+        <!-- 积分商城 -->
+        <activity android:name=".activity.integral_mall.IntegralMall"/>
+        <!-- 积分商城 -->
+        <activity android:name=".activity.integral_mall.Exchange_gifts"/>
+        <!-- 积分商城 商品详细 -->
+        <activity android:name=".activity.integral_mall.Commodity_introduction"/>
+        <!-- 积分商城 兑换成功 -->
+        <activity android:name=".activity.integral_mall.Exchange_success"/>
+        <!-- 积分商城 更多 -->
+        <activity android:name=".activity.integral_mall.IntegralMallClassification"/>
+        <!-- 积分商城 兑换记录 -->
+        <activity android:name=".activity.integral_mall.Exchange_record"/>
+        <!-- 积分商城 订单详情 -->
+        <activity android:name=".activity.integral_mall.Order_details"/>
+        <!-- 医院培训 首页 -->
+        <activity android:name=".activity.hospital_training.Hospital_training_main"/>
+        <!-- 医院培训 学习包 -->
+        <activity android:name=".activity.hospital_training.Learning_pachage"/>
+        <!-- 医院培训 更多视频 -->
+        <activity android:name=".activity.hospital_training.More_video"/>
+        <!-- 医院培训 科室选择 -->
+        <activity android:name=".activity.hospital_training.Section_list"/>
+        <!-- 医院培训 入口 -->
+        <activity
+            android:name=".activity.hospital_training.Hospital_training_entrance"
+            android:launchMode="singleTask"/>
+        <!-- 医院培训 政策法规列表 -->
+        <activity android:name=".activity.hospital_training.Policies_and_regulations"/>
+        <activity android:name=".activity.hospital_training.Policies_and_regulations2"/>
+        <!-- 医院培训 政策法规详细 -->
+        <activity android:name=".activity.hospital_training.Details_of_policies_and_regulations"/>
+        <!-- 医院培训 科室 -->
+        <activity android:name=".activity.hospital_training.Departments"/>
+        <!-- 医院培训 历史作答记录 -->
+        <activity android:name=".activity.hospital_training.Historical_records_reply"/>
+        <!-- 医院培训 收藏列表 -->
+        <activity android:name=".activity.hospital_training.Collection_list"/>
+        <!-- 医院培训 收藏 练习 -->
+        <activity
+            android:name=".activity.hospital_training.Collection_exercises"
+            android:windowSoftInputMode="adjustPan"/>
+        <!-- 医院培训 练习 -->
+        <activity
+            android:name=".activity.hospital_training.Practice"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".activity.upload.VideoPlayerActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation|keyboardHidden"
+            android:label="Media/VideoView"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:mimeType="video/*"/>
+                <data android:mimeType="audio/*"/>
+                <data android:scheme="http"/>
+                <data android:scheme="file"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 我的资料(注册第二页) -->
+        <activity
+            android:name=".activity.pull.MyProfile"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 登陆 -->
+        <activity
+            android:name=".activity.login.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <!-- 注册 -->
+        <activity android:name=".activity.login.RegisterActivity"/>
+        <!-- 用户协议 -->
+        <activity android:name=".activity.login.AgreementActivity"/>
+        <!-- 忘记密码 -->
+        <activity android:name=".activity.login.ForgetPassActivity"/>
+        <!-- 主页面Fragment -->
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 省 -->
+        <activity android:name=".activity.pull.HospitalProvince"/>
+        <!-- 市 -->
+        <activity android:name=".activity.pull.HospitalCity"/>
+        <!-- 医院 -->
+        <activity android:name=".activity.pull.Hospital"/>
+        <!-- 科室大类 -->
+        <activity android:name=".activity.pull.DepartmentMax"/>
+        <!-- 科室小类 -->
+        <activity android:name=".activity.pull.DepartmentMin"/>
+        <activity android:name=".activity.pull.DepartmentMin2"/>
+        <!-- 我的头像 -->
+        <activity android:name=".activity.my.MyHead"/>
+        <!-- 我的消息 -->
+        <activity
+            android:name=".activity.my.MyMessageActivity"
+            android:launchMode="singleTask"/>
+        <!-- 我的关注 -->
+        <activity android:name=".activity.my.MyFollowActivity"/>
+        <!-- 我的同事 -->
+        <activity android:name=".activity.my.MyWorkmateActivity"/>
+        <!-- 我的消息详细 -->
+        <activity android:name=".activity.my.MyMessageDetails"/>
+        <!-- 我的关注详情 -->
+        <activity
+            android:name=".activity.my.MyFollowDetails"
+            android:launchMode="singleTask"/>
+        <!-- 更多收费视频 -->
+        <activity android:name=".activity.my.MoreRateVideosActivity"/>
+        <!-- 他的关注 -->
+        <activity android:name=".activity.my.HisFollowActivity"/>
+        <!-- 流量提示 -->
+        <activity
+            android:name=".activity.my.download.TipGRRSActivity"
+            android:theme="@style/transcutestyle"/>
+        <!-- 他的同事 -->
+        <activity android:name=".activity.my.HisWorkMateActivity"/>
+        <!-- 我的开通会员 -->
+        <activity
+            android:name=".activity.my.MyOpenMenberActivity"
+            android:launchMode="singleTask"/>
+        <!-- 我的收藏 -->
+        <activity android:name=".activity.my.MyCollectionActivity"/>
+        <!-- 我的意见反馈 -->
+        <activity android:name=".activity.my.feedback.MyYjfkActivity"/>
+        <!-- 医生执照认证 -->
+        <activity android:name=".activity.my.MyYszzrzActivity"/>
+        <!-- 手机认证 -->
+        <activity android:name=".activity.my.MyPhonerzActivity"/>
+        <!-- 修改手机认证 -->
+        <activity android:name=".activity.my.HasPhoneNumActivity"/>
+        <!-- 医生执照已经认证 -->
+        <activity android:name=".activity.my.HasZzrzActivity"/>
+        <!-- 发送邮件 -->
+        <activity android:name=".activity.my.BackMessageActivity"/>
+        <!-- 邀请好友 -->
+        <activity android:name=".activity.my.MyInvitationFriend"/>
+        <!-- 积分规则 -->
+        <activity android:name=".activity.my.Integral_RuleActivity"/>
+        <!-- 设置 -->
+        <activity android:name=".activity.my.MySettingActivity"/>
+        <activity android:name=".activity.my.MyContact_us"/>
+        <!-- 积分任务 -->
+        <activity android:name=".activity.my.MyIntegralTaskActivity"/>
+        <!-- 关于我们 -->
+        <activity android:name=".activity.my.AboutOwnActivity"/>
+        <!-- 播放和下载 -->
+        <activity android:name=".activity.my.BofangAndDownActivity"/>
+        <!-- 用户搜索,空中拜访 -->
+        <activity android:name=".activity.my.UserSearchActivity"/>
+        <!-- 用户推荐页 -->
+        <activity android:name=".activity.my.RecommendActivity"/>
+        <!-- 音频播放 -->
+        <activity android:name=".floatWindow.Float_Main"/>
+        <!-- 视频搜索页 -->
+        <activity
+            android:name=".activity.CustomActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 最近浏览文件 -->
+        <activity android:name=".activity.home.Recent_Browse_File"/>
+        <!-- 我的积分 -->
+        <activity
+            android:name=".activity.my.Integral"
+            android:screenOrientation="portrait"/>
+        <!-- 积分获取记录 -->
+        <activity
+            android:name=".activity.my.Get_Integral"
+            android:screenOrientation="portrait"/>
+        <!-- <activity -->
+        <!-- android:name=".activity.my.Get_Integral2" -->
+        <!-- android:screenOrientation="portrait"/> -->
+        <!-- 积分扣除记录 -->
+        <activity android:name=".activity.my.Integral_deduction"/>
+        <!-- 获取免费积分 -->
+        <activity android:name=".activity.my.Get_Free_Integral"/>
+        <activity android:name=".activity.my.Get_Free_Integral2"/>
+        <activity android:name=".activity.upload.ChooseVideoActivity"/>
+        <!-- 视频简介 -->
+        <activity android:name=".activity.home.PlayVideo_abstract"/>
+        <!-- 专家介绍 -->
+        <activity android:name=".activity.home.PlayVideo_expert"/>
+        <!-- 视频播放 -->
+        <!-- 视频播放 -->
+        <!--
+            <activity
+            android:name=".activity.home.VideoFour"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:label="Media/VideoView"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        -->
+        <activity
+            android:name=".activity.home.VideoFive"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation|keyboardHidden"
+            android:label="Media/VideoView"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 任务视频播放页 -->
+        <activity
+            android:name=".activity.my.learning_task.VideoSignActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:label="Media/VideoView"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <!-- 视频播放 -->
+        <!-- android:launchMode="singleTask" -->
+        <!-- 视频播放 测试地址 -->
+        <!-- 石山视频播放所需要的服务 -->
+        <service
+            android:name=".activity.home.VideoService"
+            android:exported="false"/>
+        <!-- 上传视频 -->
+        <activity android:name=".activity.upload.Upload_video"/>
+        <!-- 上传病例 -->
+        <activity android:name=".activity.upload.Upload_case"/>
+        <!-- 热门搜索页 -->
+        <activity
+            android:name=".activity.Popular_search"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name=".activity.Popular_search2"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 筛选 -->
+        <activity android:name=".activity.Drop_down_screen"/>
+        <!-- 专题 -->
+        <activity android:name=".activity.home.SpecialActivity"/>
+        <!-- 专题 更多 -->
+        <activity android:name=".activity.home.special_more"/>
+        <!-- 我的病例 -->
+        <activity android:name=".activity.upload.MyCaseActivity"/>
+        <!-- 我的病例 2 -->
+        <activity android:name=".activity.upload.MyCaseActivity2"/>
+        <!-- 收银台 -->
+        <activity android:name=".activity.cashier.CashierActivity"/>
+        <activity android:name=".activity.cashier.CashierActivity2"/>
+        <!-- 收银台 消费记录 -->
+        <activity android:name=".activity.cashier.Cashier_records_of_consumption"/>
+        <!-- 收银台 提现记录 -->
+        <activity android:name=".activity.cashier.Cashier_present_record"/>
+        <!-- 收银台 提现申请 -->
+        <activity android:name=".activity.cashier.Cashier_present_application"/>
+        <!-- 收银台 充值 -->
+        <activity android:name=".activity.cashier.Cashier_recharge"/>
+        <!-- 收银台 收入日志 -->
+        <activity android:name=".activity.cashier.Cashier_revenue_log"/>
+        <!-- 收银台 充值支付 -->
+        <activity android:name=".activity.cashier.PaymentActivity"/>
+        <!-- 执业考试 -->
+        <activity
+            android:name=".activity.home.Practicing_physician_examination"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 执业考试 内页 -->
+        <activity android:name=".activity.home.Practicing_physician_examination_list"/>
+        <!-- 兑换积分 -->
+        <activity android:name=".activity.my.Exchange_integral"/>
+        <!-- 医学直播间 -->
+        <activity android:name=".activity.home.yxzbjrrom.MedicalLiveRoomActivity"/>
+        <!-- 医学直播间 播放页 网页 -->
+        <activity android:name=".activity.home.yxzbjrrom.Medical_live_RoomWebActivity"/>
+        <!-- 医学直播间 更多精彩预告 -->
+        <activity android:name=".activity.home.yxzbjrrom.MedicalLiveRoomTrailerAcitvity"/>
+        <!-- 医学直播间 更多精彩回顾 -->
+        <activity android:name=".activity.home.yxzbjrrom.MedicalLiveRoomReviewAcitvity"/>
+        <!-- 活动页WEB 更多 -->
+        <activity android:name=".activity.login.SplashWebActivity"/>
+        <!-- 二维码扫描登录 -->
+        <activity android:name=".activity.login.Qr_code_to_log_in"/>
+        <!-- 查看大图 关闭硬件加速原因：显示不了大图。异常：Bitmap too large to be uploaded into a texture -->
+        <activity
+            android:name=".activity.upload.PicViewerActivity"
+            android:hardwareAccelerated="false"/>
+        <!-- 查看已经上传病例 -->
+        <activity android:name=".activity.upload.MyHasUpCaseActivity"/>
+        <!-- 本地视频播放 更多 -->
+        <!-- 查看大图 -->
+        <activity android:name=".activity.my.ShowBigImageActivity"/>
+        <!-- 查看大图 -->
+        <activity android:name=".activity.my.HeadLargeImgActivity"/>
+        <activity android:name=".activity.home.ar.ARmainActivity"/>
+        <!-- AR资源管理页 -->
+        <activity android:name=".activity.my.ARAssertManagerActivity"/>
+        <!-- 订阅管理 -->
+        <activity android:name=".activity.subscribe.SubscribeManagerActivity"/>
+        <activity android:name=".activity.subscribe.SubscribeManagerNewActivity"/>
+        <!-- 学习任务 -->
+        <activity android:name=".activity.my.learning_task.LearningTaskActivity"/>
+        <!-- 临床运动 -->
+        <activity android:name=".activity.step.Clinical_exercise"/>
+        <!-- 历史步数 -->
+        <activity android:name=".activity.step.Historical_step_number"/>
+
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            tools:replace="android:configChanges"/>
+
+        <!-- alipay sdk end -->
+
+
+        <!-- 小米手机角标处理服务 -->
+        <service
+            android:name=".service.BadgeIntentService"
+            android:exported="false"/>
+
+        <!-- share sdk begin -->
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <!-- 调用QQ原生SDK，需要注册的回调activity -->
+        <activity
+            android:name="cn.sharesdk.tencent.qq.ReceiveActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="tencent1105022501"/>
+            </intent-filter>
+        </activity>
+
+        <!-- share sdk end -->
+        <activity
+            android:name=".activity.my.MyChangePassActivity"
+            android:label="@string/title_activity_my_change_pass"
+            android:parentActivityName=".activity.base.BaseActivity"/>
+
+        <!-- 微信支付 -->
+        <activity
+            android:name=".activity.my.OpenMenberActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:scheme="wx37532d8c612b2c3f"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+        <!-- *************小米推送服务配置start************************** -->
+        <service
+            android:name="com.xiaomi.push.service.XMJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:process=":pushservice2"/>
+        <service
+            android:name="com.xiaomi.push.service.XMPushService"
+            android:enabled="true"
+            android:process=":pushservice2"/>
+        <service
+            android:name="com.xiaomi.mipush.sdk.PushMessageHandler"
+            android:enabled="true"
+            android:exported="true"/>
+        <service
+            android:name="com.xiaomi.mipush.sdk.MessageHandleService"
+            android:enabled="true"/>
+
+        <receiver
+            android:name=".receiver.DemoMessageReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.PingReceiver"
+            android:exported="false"
+            android:process=":pushservice2">
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- *************小米推送服务配置end************************** -->
+
+
+        <!-- *************oppo推送服务配置start************************** -->
+        <service
+            android:name="com.coloros.mcssdk.PushService"
+            android:permission="com.coloros.mcs.permission.SEND_MCS_MESSAGE">
+            <intent-filter>
+                <action android:name="com.coloros.mcs.action.RECEIVE_MCS_MESSAGE"/>
+            </intent-filter>
+        </service>
+        <!-- *************oppo推送服务配置end************************** -->
+
+
+        <!-- *************华为推送服务配置start************************** -->
+        <!--
+          接入HMSSDK 需要注册的appid参数。value的值中“10512168”用实际申请的appid替换，来源于开发者联盟网站应用的权益详情。
+          格式 android:value="appid=xxxxxx"
+          Access HMSSDK need to register AppID parameters. Value "10512168" is replaced with the actual application APPID, derived from the Developer affiliate website application.
+          Format android:value= "appid=xxxxxx"
+        -->
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="appid=10512168"/>
+
+        <!--
+             接入HMSSDK 需要注册的provider，authorities 一定不能与其他应用一样，所以这边 com.linlic.ccmtv.yx 要替换上您应用的包名
+            Access HMSSDK need to register provider,authorities must not be the same as other applications, so this side ${package_name} to replace the package name you applied
+        -->
+        <provider
+            android:name="com.huawei.hms.update.provider.UpdateProvider"
+            android:authorities="com.linlic.ccmtv.yx.hms.update.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"/>
+
+        <!--
+             接入HMSSDK 需要注册的provider，authorities 一定不能与其他应用一样，所以这边 com.linlic.ccmtv.yx 要替换上您应用的包名
+            Access HMSSDK need to register provider,authorities must not be the same as other applications, so this side ${package_name} to replace the package name you applied
+        -->
+        <provider
+            android:name="com.huawei.updatesdk.fileprovider.UpdateSdkFileProvider"
+            android:authorities="com.linlic.ccmtv.yx.updateSdk.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true"/>
+
+        <!-- <activity android:name=".OpendeviceActivity"/> -->
+
+
+        <!-- 使用 HMSAgent 代码接入HMSSDK 需要注册的activity | Use hmsagent code to access HMSSDK activity that requires registration -->
+        <activity
+            android:name="com.huawei.android.hms.agent.common.HMSAgentActivity"
+            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent">
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent"/>
+        </activity>
+
+        <!-- 接入HMSSDK 需要注册的activity | Access HMSSDK activity to be registered -->
+        <activity
+            android:name="com.huawei.hms.activity.BridgeActivity"
+            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent">
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent"/>
+        </activity>
+
+        <!-- 接入HMSSDK 需要注册的activity | Access HMSSDK activity to be registered -->
+        <activity
+            android:name="com.huawei.updatesdk.service.otaupdate.AppUpdateActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/upsdkDlDialog">
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent.NoTitleBar"/>
+        </activity>
+
+        <!-- 接入HMSSDK 需要注册的activity | Access HMSSDK activity to be registered -->
+        <activity
+            android:name="com.huawei.updatesdk.support.pm.PackageInstallerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:theme="@style/upsdkDlDialog">
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent"/>
+        </activity>
+
+        <!--
+             接入HMSSDK PUSH模块需要注册，第三方相关 :接收Push消息（注册、Push消息、Push连接状态）广播，
+                此receiver类需要开发者自己创建并继承com.huawei.hms.support.api.push.PushReceiver类，
+                参考示例代码中的类：com.huawei.hmsagent.HuaweiPushRevicer
+            Access to the HMSSDK push module requires registration:
+	            Receive push message (registration, push message, push connection state) broadcast.
+	            This receiver class requires the developer to create and inherit the com.huawei.hms.support.api.push.PushReceiver class.
+	            Reference to class in sample code: Com.huawei.hmsagent.HuaweiPushRevicer
+        -->
+        <!-- <receiver android:name=".receiver.HuaweiPushRevicer"> -->
+        <!-- <intent-filter> -->
+
+
+        <!-- &lt;!&ndash; 必须,用于接收token | Must， for receiving token &ndash;&gt; -->
+        <!-- <action android:name="com.huawei.android.push.intent.REGISTRATION"/> -->
+        <!-- &lt;!&ndash; 必须，用于接收消息 | Must， used to receive messages &ndash;&gt; -->
+        <!-- <action android:name="com.huawei.android.push.intent.RECEIVE"/> -->
+        <!-- &lt;!&ndash; 可选，用于点击通知栏或通知栏上的按钮后触发onEvent回调 | Optional, click the button on the notification bar or the notification bar to trigger the onevent callback &ndash;&gt; -->
+        <!-- <action android:name="com.huawei.android.push.intent.CLICK"/> -->
+        <!-- &lt;!&ndash; 可选，查看push通道是否连接，不查看则不需要 | Optional, query whether the push channel is connected or not &ndash;&gt; -->
+        <!-- <action android:name="com.huawei.intent.action.PUSH_STATE"/> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+
+
+        <!--
+        接入HMSSDK PUSH模块需要注册，第三方相关 :接收Push消息（注册、透传消息、通知栏点击事件）广播，
+                此receiver类需要开发者自己创建并继承com.huawei.hms.support.api.push.PushReceiver类，
+                参考示例代码中的类：com.huawei.hmsagent.HuaweiPushRevicer
+		com.linlic.ccmtv.yx 要替换上您应用的包名
+        -->
+        <receiver
+            android:name=".receiver.HuaweiPushRevicer"
+            android:permission="com.linlic.ccmtv.yx.permission.PROCESS_PUSH_MSG">
+            <intent-filter>
+
+                <!-- 必须,用于接收token -->
+                <action android:name="com.huawei.android.push.intent.REGISTRATION"/>
+                <!-- 必须, 用于接收透传消息 -->
+                <action android:name="com.huawei.android.push.intent.RECEIVE"/>
+                <!-- 必须, 用于接收通知栏消息点击事件 此事件不需要开发者处理，只需注册就可以 -->
+                <action android:name="com.huawei.intent.action.PUSH_DELAY_NOTIFY"/>
+            </intent-filter>
+        </receiver>
+
+        <!--
+            如下2个通知会在以后的版本中逐渐废弃
+                    接入HMSSDK PUSH模块需要注册，第三方相关 :接收Push消息（点击通知栏或通知栏上的按钮后触发onEvent回调、查看push通道是否连接）广播，
+                        此receiver类需要开发者自己创建并继承com.huawei.hms.support.api.push.PushReceiver类，
+                        参考示例代码中的类：com.huawei.hmsagent.HuaweiPushRevicer
+                com.linlic.ccmtv.yx 要替换上您应用的包名
+        -->
+        <!-- <receiver android:name="xxxx"> -->
+        <!-- <intent-filter> -->
+        <!-- &lt;!&ndash; 用于点击通知栏或通知栏上的按钮后触发onEvent回调 &ndash;&gt; -->
+        <!-- <action android:name="com.huawei.android.push.intent.CLICK" /> -->
+        <!-- &lt;!&ndash; 查看push通道是否连接, 不查看则不需要 &ndash;&gt; -->
+        <!-- <action android:name="com.huawei.intent.action.PUSH_STATE"/> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+
+
+        <!-- 接入HMSSDK PUSH模块需要注册该service，不需要开发者处理 -->
+        <service
+            android:name="com.huawei.hms.support.api.push.service.HmsMsgService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.huawei.push.msg.NOTIFY_MSG"/>
+                <action android:name="com.huawei.push.msg.PASSBY_MSG"/>
+            </intent-filter>
+        </service>
+
+        <!-- &lt;!&ndash; 接入HMSSDK PUSH模块需要注册 :接收通道发来的通知栏消息 | The access HMSSDK push module needs to be registered: the notification bar message sent from the receiving channel &ndash;&gt; -->
+        <!-- <receiver android:name="com.huawei.hms.support.api.push.PushEventReceiver"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.huawei.intent.action.PUSH"/> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <!-- 接入HMSSDK 需要注册的应用下载服务 | Access HMSSDK need to register app download service -->
+        <service
+            android:name="com.huawei.updatesdk.service.deamon.download.DownloadService"
+            android:exported="false"/>
+        <!-- *************华为推送服务配置end************************** -->
+
+
+        <!-- *************魅族推送服务配置start************************** -->
+        <!-- push应用定义消息receiver声明 -->
+        <receiver android:name=".receiver.MyPushMsgReceiver">
+            <intent-filter>
+
+                <!-- 接收push消息 -->
+                <action android:name="com.meizu.flyme.push.intent.MESSAGE"/>
+                <!-- 接收register消息 -->
+                <action android:name="com.meizu.flyme.push.intent.REGISTER.FEEDBACK"/>
+                <!-- 接收unregister消息 -->
+                <action android:name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK"/>
+                <!-- 兼容低版本Flyme3推送服务配置 -->
+                <action android:name="com.meizu.c2dm.intent.REGISTRATION"/>
+                <action android:name="com.meizu.c2dm.intent.RECEIVE"/>
+
+                <category android:name="com.linlic.ccmtv.yx"/>
+            </intent-filter>
+        </receiver>
+        <!-- *************魅族推送服务配置end************************** -->
+        <!-- *************vivo推送服务配置start************************** -->
+        <service
+            android:name="com.vivo.push.sdk.service.CommandClientService"
+            android:exported="true"
+            android:process=":pushservice_vivo"/>
+
+        <activity
+            android:name="com.vivo.push.sdk.LinkProxyClientActivity"
+            android:exported="false"
+            android:process=":pushservice_vivo"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <!-- push应用定义消息receiver声明 -->
+        <receiver
+            android:name=".receiver.PushMessageReceiverImpl"
+            android:process=":pushservice_vivo">
+            <intent-filter>
+
+                <!-- 接收push消息 -->
+                <action android:name="com.vivo.pushclient.action.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.vivo.push.api_key"
+            android:value="2dc90f55-57d7-4488-86b9-4186ba93fb8a"/>
+        <meta-data
+            android:name="com.vivo.push.app_id"
+            android:value="10275"/>
+
+        <!-- *************vivo推送服务配置end************************** -->
+        <service
+            android:name=".activity.step.service.StepService"
+            android:priority="1000"
+            android:process=":service">
+            <intent-filter>
+
+                <!-- 系统启动完成后会调用 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.DATE_CHANGED"/>
+                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.intent.action.ACTION_TIME_TICK"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </service>
+        <!--
+        <service
+            android:name=".activity.receiver.DService"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+            android:process=":service">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+        -->
+        <receiver android:name=".activity.my.medical_examination.PhoneReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE"/>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".activity.step.service.BootCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".AppRegister">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP"/>
+            </intent-filter>
+        </receiver>
+        <!-- 微信支付 -->
+        <!-- 网络监测start -->
+        <receiver android:name=".receiver.NetBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <!-- 网络监测end -->
+        <!-- TalkingData -->
+        <meta-data
+            android:name="TD_APP_ID"
+            android:value="BD1524458CC5DA02B2005408B45E0221"/>
+        <meta-data
+            android:name="TD_CHANNEL_ID"
+            android:value="ccmtv"/>
+
+        <!-- 百度统计 -->
+        <!-- 您从百度网站获取的APP KEY -->
+        <meta-data
+            android:name="BaiduMobAd_STAT_ID"
+            android:value="GTT08cSM6PnOhF9Tima0XbVwXdaFwDze"/>
+        <!-- 3bd081f3f7 -->
+
+
+        <!-- 是否开启错误日志统计，默认为false -->
+        <meta-data
+            android:name="BaiduMobAd_EXCEPTION_LOG"
+            android:value="true"/>
+        <!-- 日志发送策略，可选值：APP_START、ONCE_A_DAY、SET_TIME_INTERVAL，默认为APP_START -->
+        <meta-data
+            android:name="BaiduMobAd_SEND_STRATEGY"
+            android:value="APP_START"/>
+        <!-- 日志发送策略 为SET_TIME_INTERVAL时，需设定时间间隔(取消下行注释)。取值为1-24的整数，默认为1 -->
+        <!-- <meta-data android:name="BaiduMobAd_TIME_INTERVAL" android:value="2" /> -->
+        <!-- 日志仅在wifi网络下发送，默认为false -->
+        <meta-data
+            android:name="BaiduMobAd_ONLY_WIFI"
+            android:value="true"/>
+        <!-- 是否获取基站位置信息 ,默认为true -->
+        <meta-data
+            android:name="BaiduMobAd_CELL_LOCATION"
+            android:value="true"/>
+        <!-- 是否获取GPS位置信息，默认为true -->
+        <meta-data
+            android:name="BaiduMobAd_GPS_LOCATION"
+            android:value="true"/>
+        <!-- 是否获取WIFI位置信息，默认为true -->
+        <meta-data
+            android:name="BaiduMobAd_WIFI_LOCATION"
+            android:value="true"/>
+
+        <!-- 下载AR图片需要的服务 -->
+        <service
+            android:name=".activity.login.service.DownloadARImgService"
+            android:enabled="true"
+            android:exported="true"/>
+
+        <!-- 悬浮窗start -->
+        <!--
+            <service android:name="com.linlic.ccmtv.yx.floatWindow.service.PlayingMusicServices"
+            android:exported="true"
+            android:enabled="true"/>
+        -->
+        <service
+            android:name=".floatWindow.service.FloatViewService"
+            android:exported="false"/>
+        <!-- **********个推服务start********** -->
+        <!-- 配置的第三方参数属性 -->
+        <meta-data
+            android:name="PUSH_APPID"
+            android:value="1YDl9DIp1hA11I8faAeVn1"/>
+        <meta-data
+            android:name="PUSH_APPKEY"
+            android:value="tdMQPR0zAp9ILK86jCzSs9"/>
+        <meta-data
+            android:name="PUSH_APPSECRET"
+            android:value="0GHP4vRf8t9Ivxn0BeRoL7"/>
+
+        <!-- 配置SDK核心服务 -->
+        <service
+            android:name="com.igexin.sdk.PushService"
+            android:exported="true"
+            android:label="NotificationCenter"
+            android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.service.message"/>
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.igexin.sdk.PushReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="com.igexin.sdk.action.refreshls"/>
+                <!-- 以下三项为可选的action声明，可大大提高service存活率和消息到达速度 -->
+                <action android:name="android.intent.action.MEDIA_MOUNTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.igexin.sdk.PushActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity
+            android:name="com.igexin.sdk.GActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <!-- 用户自定义服务继承自GTIntentService,作为SDK与APP桥梁服务,用来接收各种消息和命令回复 -->
+        <service
+            android:name=".service.DemoIntentService"
+            android:label="PushService1"
+            android:process=":pushservice1"/>
+
+        <!-- 配置SDK核心服务 -->
+        <service
+            android:name=".service.DemoPushService"
+            android:exported="true"
+            android:label="PushService1"
+            android:process=":pushservice1"/>
+        <!-- **********个推服务end********** -->
+
+        <activity
+            android:name=".activity.my.learning_task.TaskDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.my.learning_task.PPTSignActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.my.newDownload.Downloading2Activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.my.newDownload.DownloadFinishActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.login.RegistActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.login.FillInVerificationCodeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.login.SetPasswordActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.login.PerfectInformationActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".kzbf.activity.ProtocolActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".kzbf.MedicineMessageActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".kzbf.activity.MedicineDetialActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity
+            android:name=".kzbf.activity.MoreRecommendActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".kzbf.activity.PersonalHomeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".kzbf.activity.MedicineMoreActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".kzbf.activity.MoreCommentActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".kzbf.activity.SpecialGuideDetialActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".kzbf.activity.LiteratureDetialActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".kzbf.SkyProtocolActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".kzbf.activity.MessageActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".kzbf.activity.MyFouseActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".kzbf.activity.MessageDetialActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".kzbf.activity.MyCollectionActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".kzbf.activity.ChoosePersonActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".kzbf.activity.MyDownloadActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".kzbf.activity.BigImageActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".kzbf.activity.SearchActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".kzbf.activity.PDFViewerActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.home.ScanActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.user_statistics.UserStatisticsActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 新直播首页new 2018-03-07 -->
+        <activity
+            android:name=".activity.direct_broadcast.Direct_broadcast_main"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustResize"/>
+        <!-- 新直播介绍new 2018-03-15 -->
+        <activity
+            android:name=".activity.direct_broadcast.Brief_introduction_of_live_broadcast"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 直播介绍页new 2018-03-13 -->
+        <activity
+            android:name=".activity.direct_broadcast.Live_broadcast_introduction"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustResize"/>
+        <!-- 直播搜索1 -->
+        <activity android:name=".activity.Popular_search3"/>
+        <!-- 直播搜索结果页 -->
+        <activity
+            android:name=".activity.Direct_broadcast_CustomActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 电子书 介绍页 -->
+        <activity
+            android:name=".activity.my.book.Video_book"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 电子书 列表页 -->
+        <activity android:name=".activity.my.book.Video_book_Main"/>
+        <!-- 电子书 阅读 -->
+        <activity android:name=".activity.my.book.Book_PDFViewerActivity"/>
+        <!-- 上传完成记录列表2 -->
+        <activity
+            android:name=".activity.upload.IsUpload2"
+            android:launchMode="singleTask"/>
+        <!-- 正在上传记录列表 -->
+        <activity android:name=".activity.upload.UploadingActivity"/>
+        <!-- 学习任务 PDF -->
+        <activity android:name=".activity.my.learning_task.PDFSignActivity"/>
+        <!-- 音频签到页 -->
+        <activity
+            android:name=".activity.my.learning_task.AudioSignActivity"
+            android:hardwareAccelerated="false"/>
+        <!-- 学习任务 TXT -->
+        <activity android:name=".activity.my.learning_task.TXTSignActivity"/>
+        <!-- 电子书 视频播放页 -->
+        <activity
+            android:name=".activity.my.book.Video_book_Five"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 电子书 支付 -->
+        <activity android:name=".activity.my.OpenMenberActivity2"/>
+
+        <!-- 频道 频道选择页 -->
+        <activity android:name=".activity.channel.Channel_selection"/>
+        <!-- 医考 练习首页 -->
+        <activity android:name=".activity.hospital_training.Practice_Main"/>
+        <!-- 频道 频道页 -->
+        <activity
+            android:name=".activity.channel.Channel_Main"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 新版首页 -->
+        <!--
+            <activity android:name=".activity.home.HomeFragment_new"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
+        -->
+
+
+        <!-- 会议 首页 -->
+        <activity
+            android:name=".activity.conference.ConferenceMainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 会议 单个会议详情 -->
+        <activity
+            android:name=".activity.conference.ConferenceDetailActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 会议 单个会议具体议题所有视频 -->
+        <activity
+            android:name=".activity.conference.ConferenceIssueVideoActivity"
+            android:launchMode="singleTask"/>
+        <!-- 会议 单个会议具体议题选择二级议题 -->
+        <activity android:name=".activity.conference.ConferenceIssueSelectActivity"/>
+        <!-- 绑定手机 -->
+        <activity android:name=".activity.my.BindPhoneNumberActivity"/>
+        <!-- 绑定手机 输入验证码 -->
+        <activity android:name=".activity.my.BindPhoneInputVrifyCodeActivity"/>
+        <!-- 上传病例 8张图片 -->
+        <activity android:name=".activity.upload.UploadCase2"/>
+        <!-- 学习记录首页 -->
+        <activity android:name=".activity.user_statistics.UserStatistics2Activity"/>
+        <!-- 学习汇总 -->
+        <activity android:name=".activity.user_statistics.StudySummaryActivity"/>
+        <!-- 学习记录具体详情 -->
+        <activity
+            android:name=".activity.user_statistics.StudyRecordListActivity"
+            android:launchMode="singleTask"/>
+        <!-- 学习记录类型选择 -->
+        <activity android:name=".activity.user_statistics.StudyRecordTypeSelectActivity"/>
+        <!-- 学习记录我的考核 -->
+        <activity android:name=".activity.user_statistics.StudyRecordMyExaminationActivity"/>
+        <!-- 搜索页2 -->
+        <activity android:name=".activity.CustomActivity2"/>
+        <!-- VIP专区页 -->
+        <activity android:name=".activity.vip.VipSpecialAreaActivity"/>
+        <!-- 本院资源 -->
+        <activity android:name=".activity.my.our_video.My_Our_Resources_Activity"/>
+        <!-- 本院资源搜索 -->
+        <activity android:name=".activity.my.our_video.MyOurResourcesSearchActivity"/>
+        <!-- 本院资源展示PDF、TXT -->
+        <activity android:name=".activity.my.our_video.MyOurResourcesDisplayActivity"/>
+        <activity android:name=".activity.my.our_video.MyOurResourcesDisplayActivity2"/>
+        <!-- VIP专区科室选择页 -->
+        <activity android:name=".activity.vip.VipDepartmentSelectActivity"/>
+        <!-- VIP专区 形式内容频道 更多视频 -->
+        <activity android:name=".activity.vip.Vip_Channel"/>
+        <!-- VIP专区 科室内容频道 更多视频 -->
+        <activity android:name=".activity.vip.Vip_Channel2"/>
+        <!-- VIP专区 科室内容频道 小科室选这页 -->
+        <activity android:name=".activity.vip.Vip_Channel_select"/>
+        <!-- VIP专区  特权页 -->
+        <activity
+            android:name=".activity.vip.Privilege_page"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 评价入口 -->
+        <activity android:name=".activity.rules_to_compensate.evaluation.Evaluation"/>
+        <!-- 评价入口 教秘身份 进入 -->
+        <activity android:name=".activity.rules_to_compensate.evaluation.Evaluation2"/>
+        <!-- 月度评价带教 -->
+        <activity android:name=".activity.rules_to_compensate.evaluation.The_evaluation_of_teaching_list"/>
+        <!-- 月度评价科室 -->
+        <activity android:name=".activity.rules_to_compensate.evaluation.Evaluation_department_list"/>
+        <!-- 月度评价 列表 教秘查看 -->
+        <activity android:name=".activity.rules_to_compensate.evaluation.Evaluation_department_list2"/>
+        <!-- 月度评价 列表 审核查看 -->
+        <activity android:name=".activity.rules_to_compensate.evaluation.Evaluation_department_list3"/>
+        <!-- 评价 详情 -->
+        <activity android:name=".activity.rules_to_compensate.evaluation.Evaluation_in_detail"/>
+        <!-- 年度评优 -->
+        <activity android:name=".activity.rules_to_compensate.evaluation.The_annual_assessment"/>
+        <!-- 师资管理 -->
+        <activity android:name=".activity.rules_to_compensate.the_teachers_management.The_teachers_management"/>
+        <!-- 师资管理 审核列表 -->
+        <activity android:name=".activity.rules_to_compensate.the_teachers_management.The_teachers_management_audit"/>
+        <!-- 添加带教 -->
+        <activity android:name=".activity.rules_to_compensate.the_teachers_management.Add_Teachers"/>
+        <!-- 查看学员 月份选择列表 -->
+        <activity android:name=".activity.rules_to_compensate.students.Students_month"/>
+        <!-- 查看学员  列表 -->
+        <activity android:name=".activity.rules_to_compensate.students.Students_list"/>
+        <!-- 查看轮转信息 -->
+        <activity android:name=".activity.rules_to_compensate.rotation.Rotation"/>
+
+        <!-- 规培  考核管理界面 -->
+        <activity android:name=".activity.rules_to_compensate.gp_exam.ExaminationManageActivity"/>
+        <!-- 规培  出科考核界面 -->
+        <activity
+            android:name=".activity.rules_to_compensate.gp_exam.GraduateExamActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <!-- 规培  考核学生名单界面 -->
+        <activity android:name=".activity.rules_to_compensate.gp_exam.GpExamStudentListActivity"/>
+        <!-- 规培  出科考核学生名单界面 -->
+        <activity android:name=".activity.rules_to_compensate.gp_exam.GpGraduateExamStudentListActivity"/>
+        <!-- 规培  考核科目界面 -->
+        <activity android:name=".activity.rules_to_compensate.gp_exam.GpExamSubjectActivity"/>
+        <!-- 规培  日常考核界面 -->
+        <activity android:name=".activity.rules_to_compensate.gp_exam.GpDailyExamActivity"/>
+        <!-- 规培  出科考核科目跳转日常考核界面 -->
+        <activity android:name=".activity.rules_to_compensate.gp_exam.GpGraduateToDailyExamActivity"/>
+        <!-- 规培  日常考核学员成绩界面 -->
+        <activity android:name=".activity.rules_to_compensate.gp_exam.GpStuExamScoreListActivity"/>
+        <!-- 规培  个人信息界面 可编辑 -->
+        <activity android:name=".activity.rules_to_compensate.gp_personal_information.GpPersonalInformationActivity"/>
+        <!-- 规培  个人信息界面 可编辑 -->
+        <activity android:name=".activity.rules_to_compensate.gp_personal_information.GpPersonalInformationActivity3"/>
+        <!-- 规培  个人信息界面  不可编辑 只能查看 -->
+        <activity android:name=".activity.rules_to_compensate.gp_personal_information.GpPersonalInformationActivity2"/>
+        <!-- 结业申请  个人信息界面  不可编辑 只能查看 -->
+        <activity android:name=".activity.rules_to_compensate.gp_personal_information.GpPersonalInformationActivity5"/>
+        <!-- 规培  入科 月份选择 -->
+        <activity android:name=".activity.rules_to_compensate.the_division_management.Entry_month_selection"/>
+        <!-- 规培  入科 学员列表 形式1  预览使用 -->
+        <activity android:name=".activity.rules_to_compensate.the_division_management.Enter_the_list_of_scientists"/>
+        <!-- 规培  入科 学员列表 形式2  本月 或历史月 数据使用 -->
+        <activity android:name=".activity.rules_to_compensate.the_division_management.Enter_the_list_of_scientists2"/>
+        <!-- 规培  入科 查看或办理 -->
+        <activity android:name=".activity.rules_to_compensate.the_division_management.To_deal_with_the_family"/>
+        <!-- 规培  审核列表 -->
+        <activity android:name=".activity.rules_to_compensate.audit.Audit_list"/>
+        <!-- 规培  出科考核发送通知界面 -->
+        <activity android:name=".activity.rules_to_compensate.gp_exam.GpGraduateExamSendNoticeActivity"/>
+        <!-- 上传  上传视频2018-07修改页面 -->
+        <activity android:name=".activity.upload.new_upload.Upload_video3"/>
+        <!-- 上传  上传病例2018-07修改页面 -->
+        <activity android:name=".activity.upload.new_upload.Upload_case3"/>
+        <!-- 上传  上传病例2018-07增加信息录入界面 -->
+        <activity android:name=".activity.upload.new_upload.UploadCaseInputActivity"/>
+        <!-- 上传  上传完成列表2018-07修改界面 -->
+        <activity android:name=".activity.upload.new_upload.IsUpload3"/>
+        <!-- 上传  上传正在上传列表2018-07修改界面 -->
+        <activity android:name=".activity.upload.new_upload.UploadingActivity3"/>
+        <!-- 规培  日常考核审核列表 -->
+        <activity android:name=".activity.rules_to_compensate.audit.GpDailyExamAuditList"/>
+        <!-- 规培  出科考核审核列表 -->
+        <activity android:name=".activity.rules_to_compensate.audit.GpGraduateExamAuditList"/>
+        <!-- 我的病例 3 -->
+        <activity
+            android:name=".activity.upload.new_upload.MyCaseActivity3"
+            android:launchMode="singleTask"/>
+        <!-- 规培  教学活动 -->
+        <activity android:name=".activity.rules_to_compensate.training_management.Training_management"/>
+        <!-- 规培  我的培训 -->
+        <activity android:name=".activity.rules_to_compensate.training_management.Training_management2"/>
+        <!-- 规培  阶段性考核列表 -->
+        <activity
+            android:name=".activity.rules_to_compensate.periodical_exam.PeriodicalExamListActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 规培  教学活动  发布 -->
+        <activity android:name=".activity.rules_to_compensate.training_management.New_teaching_activities"/>
+        <!-- 规培  教学活动  查看活动 -->
+        <activity android:name=".activity.rules_to_compensate.training_management.Event_Details"/>
+        <!-- 规培  教学活动  下载文件 -->
+        <activity android:name=".activity.rules_to_compensate.training_management.File_down"/>
+        <!-- 规培  我的培训  查看活动 -->
+        <activity android:name=".activity.rules_to_compensate.training_management.Event_Details2"/>
+        <!-- 规培  我的培训  审核 查看 -->
+        <activity android:name=".activity.rules_to_compensate.training_management.Event_Details3"/>
+        <!-- 首次启动引导页 -->
+        <activity android:name=".activity.login.WelcomeActivity"/>
+        <!-- 规赔 选择学员 -->
+        <activity android:name=".activity.rules_to_compensate.training_management.Select_staff"/>
+        <!-- 规赔 选择讲师 -->
+        <activity android:name=".activity.rules_to_compensate.training_management.Select_lecturer"/>
+        <!-- 小米推送 过度类 -->
+        <activity android:name=".activity.mipush.PermissionActivity"/>
+
+        <!-- 规培  阶段性考核  考站列表 -->
+        <activity
+            android:name=".activity.rules_to_compensate.periodical_exam.PeriodicalExamStationListActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 规培  阶段性考核  考生列表 -->
+        <activity
+            android:name=".activity.rules_to_compensate.periodical_exam.PeriodicalExamStuListActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 规培  阶段性考核  考核详情页 -->
+        <activity
+            android:name=".activity.rules_to_compensate.periodical_exam.PeriodicalExamActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan"/>
+        <!-- 规培  阶段性考核  住院医师查看考核详情页 -->
+        <activity
+            android:name=".activity.rules_to_compensate.periodical_exam.StuPeriodicalExamActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan"/>
+        <!-- 我的收藏2 -->
+        <activity android:name=".activity.my.MyCollectionActivity2"/>
+        <!-- 规培  阶段性考核  住院医师查看页面 -->
+        <activity android:name=".activity.rules_to_compensate.periodical_exam.StuCheckPeriodicalExamActivity"/>
+        <!-- 规培  阶段性考核  住院医师查看详情页面 -->
+        <activity android:name=".activity.rules_to_compensate.periodical_exam.StuPeriodicalExamDetailActivity"/>
+        <!-- 规培  阶段性考核  住院医师查看分数页面 -->
+        <activity android:name=".activity.rules_to_compensate.periodical_exam.StuPeriodicalExamScoreActivity"/>
+        <!-- 规培  出科考核  出科轮转手册 -->
+        <activity android:name=".activity.rules_to_compensate.gp_exam.GpWebViewActivity"/>
+        <!-- 消息  消息管理页面 -->
+        <activity android:name=".activity.message.Message_management"/>
+        <!-- 消息  评论/留言 -->
+        <activity android:name=".activity.message.Comment"/>
+        <!-- 消息  VIP消息 -->
+        <activity android:name=".activity.message.VIP_message"/>
+        <!-- 消息  粉丝 -->
+        <activity android:name=".activity.message.Fan_message"/>
+        <!-- 消息  消息详情 -->
+        <activity android:name=".activity.message.Message_details"/>
+        <!-- 消息  发私信 -->
+        <activity android:name=".activity.message.New_message"/>
+        <!-- 消息  私信列表 -->
+        <activity android:name=".activity.message.Private_letters"/>
+        <!-- 消息  发私信 接收人选择 -->
+        <activity android:name=".activity.message.Select_staff"/>
+        <!-- 勋章 列表页面 -->
+        <activity
+            android:name=".activity.medal.MedalListActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 勋章 详情页面 -->
+        <activity
+            android:name=".activity.medal.MedalDetialActivity"
+            android:theme="@style/MyTransparent"/>
+        <!-- 成长 成长等级界面 -->
+        <activity
+            android:name=".activity.growth.GrowthValueActivity"
+            android:theme="@style/ActTheme"/>
+        <!-- 资料库  首页 -->
+        <activity
+            android:name=".activity.medical_database.Medical_database_Main"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 资料库  介绍页 -->
+        <activity android:name=".activity.medical_database.Article_details"/>
+        <!-- 资料库  PDF展示页 -->
+        <activity android:name=".activity.medical_database.File_down"/>
+        <!-- 资料库  ppt展示页 -->
+        <activity android:name=".activity.medical_database.Ppt_lock"/>
+        <!-- 地图  高德地图测试页 -->
+        <activity
+            android:name=".activity.amap.AmapActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 地图  高德地图测试页2 -->
+        <activity
+            android:name=".activity.amap.AmapActivity1"
+            android:screenOrientation="portrait"/>
+        <!-- 考勤  考勤签到首页 -->
+        <activity
+            android:name=".activity.check_work_attendance.Check_work_attendance"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 考勤  二维码扫描记录 -->
+        <activity android:name=".activity.check_work_attendance.Code_Recording_list"/>
+        <!-- 考勤  考勤记录 -->
+        <activity android:name=".activity.check_work_attendance.Attendance_list"/>
+        <!-- 考勤  二维码签到扫描结果 -->
+        <activity android:name=".activity.check_work_attendance.Qr_code"/>
+        <!-- 大病历     外层列表 -->
+        <activity android:name=".activity.bigcase.BigCaseActivity"/>
+        <!-- 大病历     内层列表 -->
+        <activity android:name=".activity.bigcase.MonthBigCaseActivity"/>
+        <!-- 大病历     上传/编辑大病历 -->
+        <activity android:name=".activity.bigcase.BigCaseUpdateActivity"/>
+        <!-- 大病历     人员列表 -->
+        <activity android:name=".activity.bigcase.BigcaseUserListActivity"/>
+        <!-- 医考 模拟考试 -->
+        <activity android:name=".activity.my.medical_examination.Mock_exam"/>
+        <!-- 入科教育  住院医师 -->
+        <activity
+            android:name=".activity.entrance_edu.EntranceEduUserActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <!-- 意见反馈  首页 -->
+        <activity android:name=".activity.my.feedback.Feedback_Main"/>
+        <!-- 意见反馈  常见问题详情 -->
+        <activity android:name=".activity.my.feedback.Feedback_details"/>
+        <!-- 意见反馈  我的反馈列表 -->
+        <activity android:name=".activity.my.feedback.My_feedback"/>
+        <!-- 意见反馈  我的反馈详情 -->
+        <activity android:name=".activity.my.feedback.My_Feedback_details"/>
+        <!-- 考勤  请假 -->
+        <activity android:name=".activity.check_work_attendance.Leave"/>
+        <!-- 考勤  请假 -->
+        <activity android:name=".activity.check_work_attendance.Leave_list"/>
+        <!-- 约课   列表 -->
+        <activity android:name=".activity.AppointmentCourse.YKListActivity"/>
+        <!-- 院级活动  列表 -->
+        <activity android:name=".activity.rules_to_compensate.college_level_activities.College_level_activities"/>
+        <!-- 院级活动  详情 -->
+        <activity android:name=".activity.rules_to_compensate.college_level_activities.College_level_activities_Details"/>
+        <!-- 院级活动  发布 -->
+        <activity android:name=".activity.rules_to_compensate.college_level_activities.New_College_level_activities"/>
+        <!-- 院级活动  发布 已选参与人员列表 -->
+        <activity android:name=".activity.rules_to_compensate.college_level_activities.College_level_activities_Participant2"/>
+        <!-- 院级活动  查看 参与人员列表 -->
+        <activity android:name=".activity.rules_to_compensate.college_level_activities.College_level_activities_Participant"/>
+        <!-- 院级活动  发布 选择参与人员 -->
+        <activity android:name=".activity.rules_to_compensate.college_level_activities.Select_staff_College_level_activities"/>
+        <!-- 院级活动  发布 查看文件 -->
+        <activity android:name=".activity.rules_to_compensate.college_level_activities.Courseware_College_level"/>
+        <!-- 教学活动 课后评价 -->
+        <activity android:name=".activity.rules_to_compensate.training_management.Training_Evaluation_in_detail"/>
+
+        <!-- 约课   详情 -->
+        <activity android:name=".activity.AppointmentCourse.YKDetailActivity"/>
+        <!-- 约课   调研表单 -->
+        <activity android:name=".activity.AppointmentCourse.YKSurveyActivity"/>
+        <!-- 入科分配LoginCloseActivity列表(月份) -->
+        <activity android:name=".activity.assginks.AssginKsIndexAcivity"/>
+        <!-- 入科分配科室每月人员列表 -->
+        <activity android:name=".activity.assginks.AssignKsUserActivity"/>
+        <!-- 入科分配科室编辑查看 -->
+        <activity android:name=".activity.assginks.AssignKsDetailActivity"/>
+        <!-- 360评价  带教老师评估住院医师一：index -->
+        <activity android:name=".activity.comment360.AppraiseIndexActivity"/>
+        <!-- 360评价  带教老师评估住院医师二：UserList -->
+        <activity android:name=".activity.comment360.AppraiseUserListActivity"/>
+        <!-- 360评价  带教老师评估住院医师三：评价 -->
+        <activity android:name=".activity.comment360.AppraiseDetailActivity"/>
+        <!-- 360评价  基地列表 -->
+        <activity android:name=".activity.rules_to_compensate.evaluation.EvaluationBase"/>
+        <!-- 360评价  基地评分详情 -->
+        <activity android:name=".activity.rules_to_compensate.evaluation.EvaluationBaseDetailActivity"/>
+        <!-- 360评价  展示二维码 -->
+        <activity android:name=".activity.rules_to_compensate.evaluation.QRCordActivity"/>
+        <!-- 规培  教学活动 课件列表 -->
+        <activity android:name=".activity.rules_to_compensate.training_management.Courseware"/>
+        <!-- 规培  教学活动 参与人员 -->
+        <activity android:name=".activity.rules_to_compensate.training_management.Event_Details_Participant"/>
+        <!-- 规培  教学活动 讲师 -->
+        <activity android:name=".activity.rules_to_compensate.training_management.Event_Details_lecturer"/>
+        <!-- 规培  教学活动 请假 -->
+        <activity android:name=".activity.rules_to_compensate.training_management.Event_Details_Leave"/>
+        <!-- 规培  教学活动 随堂笔记 学员列表 -->
+        <activity android:name=".activity.rules_to_compensate.training_management.Event_Details_Accompanying_notes_Students"/>
+        <!-- 规培  教学活动 随堂笔记 文件列表 -->
+        <activity android:name=".activity.rules_to_compensate.training_management.Event_Details_Accompanying_notes"/>
+        <!-- 规培  教学活动 带教 -->
+        <activity android:name=".activity.rules_to_compensate.training_management.Event_Details_Teaching"/>
+        <!-- 规培  教学活动 选择带教 -->
+        <activity android:name=".activity.rules_to_compensate.training_management.Select_teaching"/>
+        <!-- 规培  教学活动 全员教学活动列表 -->
+        <activity android:name=".activity.rules_to_compensate.training_management.Training_management3"/>
+        <!-- 规培  教学活动 全员教学活动列表 -->
+        <activity android:name=".activity.rules_to_compensate.training_management.Event_Details4"/>
+
+        <!-- 出科考核 多套模板列表页 -->
+        <activity android:name=".activity.rules_to_compensate.gp_exam.ChooseModelActivity"/>
+        <activity android:name=".activity.my.FocusListActivity">
+        </activity>
+
+        <!-- 直播gensee start -->
+        <activity
+            android:name=".gensee.GenseeMainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.gensee.fastsdk.ui.portrait.PublishActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"/>
+        <activity
+            android:name="com.gensee.fastsdk.ui.landscape.LandscapePubActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"/>
+        <activity
+            android:name="com.gensee.fastsdk.ui.portrait.WatchActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"/>
+        <activity
+            android:name="com.gensee.fastsdk.ui.LiveActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
+        </activity>
+
+        <!-- alipay sdk begin -->
+
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+
+        <!-- alipay sdk end -->
+
+        <service android:name="com.gensee.fastsdk.service.LogCatService"/>
+
+        <activity android:name=".gensee.SettingActivity"/>
+        <activity
+            android:name="com.gensee.fastsdk.ui.VodActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!-- 直播gensee end -->
+        <!-- 新过程考核日常考核 -->
+        <activity android:name=".activity.rules_to_compensate.gp_exam.ProcessExamDailyStudentListActivity">
+        </activity>
+        <!-- 考核基地 日常考核 -->
+        <activity android:name=".activity.rules_to_compensate.gp_exam.GpBaseDailyExamActivity">
+        </activity>
+        <!-- 单站和多站考核列表 -->
+        <activity android:name=".activity.rules_to_compensate.gp_exam.SingleStationExamActivity"/>
+        <!-- 单站考核和多站考核详情列表 -->
+        <activity android:name=".activity.rules_to_compensate.gp_exam.ExamStationListActivity"/>
+        <!-- 单站和多站学员列表 -->
+        <activity android:name=".activity.rules_to_compensate.gp_exam.ExamStationStudentListActivity"/>
+        <!-- 学生考站详情 -->
+        <activity android:name=".activity.rules_to_compensate.gp_exam.StudentExamStationDetailsActivity">
+        </activity>
+        <!-- 学生成绩单列表 -->
+        <activity android:name=".activity.rules_to_compensate.gp_exam.GradeListActivity">
+        </activity>
+        <!-- 督导模块 督查任务列表 -->
+        <activity android:name=".activity.supervisor.Oversight_Task_List"/>
+        <!-- 督导模块 科室评估列表 -->
+        <activity android:name=".activity.supervisor.Department_evaluation"/>
+        <!-- 督导模块 评分/查看评分 -->
+        <activity android:name=".activity.supervisor.Department_score"/>
+        <!-- 导师模块 学员列表 -->
+        <activity android:name=".activity.tutor.Tutor_students"/>
+        <!-- 导师模块 学员详情 -->
+        <activity android:name=".activity.rules_to_compensate.gp_personal_information.GpPersonalInformationActivity4"/>
+
+        <!-- 学习包 -->
+        <activity
+            android:name=".activity.rules_to_compensate.gp_exam.LearningPackageActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <!-- 学习包 相关推荐 -->
+        <activity
+            android:name=".activity.rules_to_compensate.gp_exam.RelatedRecommendActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <!-- 扫描空页面 -->
+        <activity android:name=".activity.home.yxzbjrrom.ScanEmptyActivity">
+        </activity>
+        <activity android:name=".activity.rules_to_compensate.gp_exam.ApplyForDelayActivity">
+        </activity>
+        <activity android:name=".activity.rules_to_compensate.gp_exam.MakeApplyForDelayActivity"/>
+
+        <!-- 正式考试 人脸识别 悬浮窗 -->
+        <service android:name=".service.FloatingImageDisplayService"/>
+        <!-- 书架 实体书 详情页 -->
+        <activity android:name=".activity.my.book.Video_book2"/>
+        <!-- 书架 我的订单 -->
+        <activity android:name=".activity.my.book.My_order"/>
+        <!-- 书架 我的订单详情 -->
+        <activity android:name=".activity.my.book.Order_details"/>
+        <!-- 书架 订单 填写信息 -->
+        <activity android:name=".activity.my.book.Order_filling"/>
+        <!-- 书架 实体书 支付 -->
+        <activity android:name=".activity.my.OpenMenberActivity3"/>
+        <activity
+            android:name=".arcface.activity.PreviewActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <!-- 相关推荐 -->
+        <activity
+            android:name=".activity.rules_to_compensate.training_management.VideoRecordingActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".activity.rules_to_compensate.training_management.DetailVideoPlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".activity.upload.new_upload.UploadAgreementActivity">
+        </activity>
+    </application>
+
+</manifest>

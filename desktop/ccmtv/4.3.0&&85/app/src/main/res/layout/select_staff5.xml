@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="vertical"
+        android:background="#fff"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+
+
+            <EditText
+                android:id="@+id/keyword_text"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="@mipmap/sousuo_03"
+                android:drawableLeft="@mipmap/search_icon"
+                android:hint="请输入姓名"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:paddingLeft="15dip"
+                android:textSize="14dip" />
+
+            <TextView
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="8dp"
+                android:text="搜索"
+                />
+
+            <TextView
+                android:id="@+id/condition_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="筛选 "
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:paddingLeft="9dp"
+                android:paddingRight="9dp"
+                android:paddingBottom="3dp"
+                android:paddingTop="3dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginLeft="5dp"
+                android:drawableRight="@mipmap/drop_down_icon1"
+                android:textColor="#3897F9"
+                android:background="@drawable/anniu18"
+                />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <include layout="@layout/activity_title4"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:paddingLeft="20dp"
+
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="学员"
+                    />
+
+                <TextView
+                    android:id="@+id/select_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/anniu18"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="全选"
+                    android:textColor="@color/login_button"
+                    />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/student_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:divider="@null"
+                android:listSelector="#00000000"
+                android:layout_marginBottom="55dp"
+                android:scrollbars="none"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:text="确定"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:background="@color/login_button"
+            android:textColor="#fff"
+            android:layout_height="50dp"/>
+        <com.linlic.ccmtv.yx.widget.NodataEmptyLayout
+            android:id="@+id/management_nodata"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:visibility="gone"
+            app:empty_des="当前暂无可选主讲人哦~"
+            app:empty_src="@mipmap/nodata_empty"
+            app:empty_topLine="false"/>
+
+
+        <!--条件选择-->
+        <LinearLayout
+            android:id="@+id/leave_submit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="60dp"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:background="#60000000" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:paddingTop="10dp"
+                android:layout_gravity="center"
+                android:scrollbars="none"
+                android:orientation="vertical"
+                >
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ListView
+                        android:id="@+id/condition_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="15dp"
+                        android:listSelector="@color/transparent2"
+                        android:paddingRight="15dp"
+                        android:layout_marginBottom="65dp"
+                        android:scrollbars="none"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:layout_gravity="center|bottom"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/condition_reset"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="重置"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="25dp"
+                            android:paddingRight="25dp"
+                            android:textColor="#fff"
+                            android:background="@drawable/anniu7"
+                            />
+
+                        <View
+                            android:layout_width="70dp"
+                            android:layout_height="0.1dp"/>
+
+                        <TextView
+                            android:id="@+id/condition_submit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="确定"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="25dp"
+                            android:paddingRight="25dp"
+                            android:textColor="#fff"
+                            android:background="@drawable/anniu7"
+                            />
+
+
+                    </LinearLayout>
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+
+</LinearLayout>

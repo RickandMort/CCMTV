@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_bigitem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="4dp"
+                android:layout_height="18dp"
+                android:background="@drawable/anniu6" />
+
+            <TextView
+                android:id="@+id/tv_item_toptitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="肿瘤科"
+                android:textColor="#7f7f7f"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更多>>"
+            android:paddingLeft="10dp"
+            android:textColor="#7f7f7f"
+            android:paddingRight="10dp"
+            android:layout_gravity="center|right"
+            android:gravity="center|right"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/iv_item_img1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/home_item_top" />
+
+            <ImageView
+                android:id="@+id/iv_item_ispay1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="left"
+                android:scaleType="fitXY"
+                android:src="@mipmap/free_img_blue"
+                android:visibility="gone" />
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/tv_item_text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text="标题"
+            android:textColor="#5E5E5E"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/iv_item_img2"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/img_default"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_item_ispay2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="left"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/free_img_blue"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tv_item_text2"
+                    style="@style/home_buttom_textview"
+                    android:layout_marginTop="10dp"
+                    android:gravity="top"
+                    android:lines="2"
+                    android:maxLines="2"
+                    android:text="标题"
+                    android:textColor="#5E5E5E"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/iv_item_img3"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/img_default"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_item_ispay3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="left"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/free_img_blue"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tv_item_text3"
+                    style="@style/home_buttom_textview"
+                    android:layout_marginTop="10dp"
+                    android:gravity="top"
+                    android:lines="2"
+                    android:maxLines="2"
+                    android:text="标题"
+                    android:textColor="#5E5E5E"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/iv_item_img4"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/img_default"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_item_ispay4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="left"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/free_img_blue"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tv_item_text4"
+                    style="@style/home_buttom_textview"
+                    android:layout_marginTop="10dp"
+                    android:gravity="top"
+                    android:lines="2"
+                    android:maxLines="2"
+                    android:text="标题"
+                    android:textColor="#5E5E5E"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/iv_item_img5"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/img_default"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_item_ispay5"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="left"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/free_img_blue"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tv_item_text5"
+                    style="@style/home_buttom_textview"
+                    android:layout_marginTop="10dp"
+                    android:gravity="top"
+                    android:lines="2"
+                    android:maxLines="2"
+                    android:text="标题"
+                    android:textColor="#5E5E5E"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/iv_item_buttomimg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="5dp"
+            android:background="#EFEFEF" />
+        <ImageView
+            android:id="@+id/iv_item_buttomimg"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@mipmap/home_item_advertising"
+            android:scaleType="fitXY"
+           />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="5dp"
+            android:background="#EFEFEF" />
+
+    </LinearLayout>
+
+</LinearLayout>

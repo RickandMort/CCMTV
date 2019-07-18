@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?> <!-- 头部导航  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_ll_activity_title_8"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:onClick="back">
+
+            <ImageView
+                android:id="@+id/id_iv_activity_title_8"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/login_back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_title_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/activity_title_name"
+            android:textColor="@color/activity_title_name2"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/arrow_bac"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+
+            android:onClick="back">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/bark" />
+        </LinearLayout>
+    </LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/arrow_back"
+        android:layout_width="45dip"
+        android:layout_height="match_parent"
+        android:onClick="back">
+
+        <ImageView
+            android:id="@+id/id_iv_activity_title_8"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/login_back" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/activity_title_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/black"
+
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxLines="1"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/id_iv_activity_title_8_right"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="20dp"
+        android:src="@mipmap/direct_broadcast_icon15"
+        android:visibility="invisible"/>
+
+</LinearLayout>

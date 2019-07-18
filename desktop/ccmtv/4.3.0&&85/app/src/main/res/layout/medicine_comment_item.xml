@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 相关item -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.linlic.ccmtv.yx.utils.CustomImageView
+            android:id="@+id/video_menu_comment_item_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_61" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/video_menu_comment_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:gravity="center|left"
+                    android:text="李医生" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/item_medicine_zan_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:src="@mipmap/medicine_zan"/>
+
+                    <TextView
+                        android:id="@+id/item_medicine_zan_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="123"
+                        android:textSize="13sp"
+                        android:textColor="#999"/>
+
+                    <TextView
+                        android:id="@+id/video_menu_comment_reply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center|right"
+                        android:text="回复"
+                        android:textColor="@color/alert_dialog_items_name_background" />
+
+                    <TextView
+                        android:id="@+id/video_menu_comment_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:gravity="center|right"
+                        android:text="删除"
+                        android:textColor="@color/alert_dialog_items_name_background" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/video_menu_comment_item_times"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:gravity="center|right"
+                android:text="25分钟前 "
+                android:textColor="#999"/>
+
+            <TextView
+                android:id="@+id/video_menu_comment_item_cont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:text="" />
+
+            <LinearLayout
+                android:id="@+id/video_comment_item_list"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                  <!--  <TextView
+                        android:id="@+id/comment_itme2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:text="测试"
+                        />
+
+                    <TextView
+                        android:id="@+id/comment_itme3"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:text="测试"
+                        />
+-->
+
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/comment_itme4"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/alert_dialog_items_name_background"
+                android:layout_height="wrap_content"
+                android:text="查看全部"
+                />
+
+
+            <TextView
+                android:id="@+id/video_menu_comment_item_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+            <TextView
+                android:id="@+id/video_menu_comment_item_cid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?><!--医学会议内页-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:background="#fff"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include
+        layout="@layout/activity_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="145dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/practicing_icon02"
+                    />
+
+        <LinearLayout
+            android:id="@+id/ll_medical_congress_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="学习视频"
+                    android:textColor="#fff"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="#92C6F2"/>
+            <com.linlic.ccmtv.yx.utils.MyGridView
+                android:id="@+id/list1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="2"/>
+
+
+              </LinearLayout>
+
+
+
+            <com.linlic.ccmtv.yx.widget.NodataEmptyLayout
+                android:id="@+id/rl_medical_congress_nodata1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:visibility="gone"
+                app:empty_src="@mipmap/nodata_empty"/>
+               </FrameLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

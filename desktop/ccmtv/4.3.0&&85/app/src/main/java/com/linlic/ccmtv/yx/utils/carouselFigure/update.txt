@@ -1,0 +1,45 @@
+copy:
+上网权限
+src:
+	xxx.xxx.lib.*;
+	Main.java
+res:
+	drawable-hdpi:
+			icon_empty.png
+			icon_error.png
+			icon_point_pre.png
+			icon_point.png
+			icon_stub.png
+	layout:
+			view_banner.xml
+			view_cycle_viewpager_contet.xml
+			view_cycle_viewpager_indicator.xml
+			activity_main.xml:
+							<fragment
+						        android:id="@+id/fragment_cycle_viewpager_content"
+						        android:name="s.linlicccmtv.a.lib.CycleViewPager"
+						        android:layout_width="match_parent"
+						        android:layout_height="180dip" />
+     
+							    <RelativeLayout 
+							        android:layout_width="fill_parent"
+							        android:layout_height="0dip"
+							        android:layout_weight="1">
+							        
+							        <TextView 
+							            android:layout_width="wrap_content"
+							            android:layout_height="wrap_content"
+							            android:layout_centerInParent="true"
+							            android:text="content"/>
+							    </RelativeLayout>
+libs:
+	universal-image-loader-1.9.2-SNAPSHOT-with-sources.jar
+
+update xml：
+activity_main.xml
+	fragment 
+		android:name="s.linlicccmtv.a.lib.CycleViewPager"
+		
+view_cycle_viewpager_contet.xml
+		<s.linlicccmtv.a.lib.BaseViewPager>
+		</<s.linlicccmtv.a.lib.BaseViewPager>

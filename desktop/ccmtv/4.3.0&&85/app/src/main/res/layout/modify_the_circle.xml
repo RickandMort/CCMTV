@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#EFEFEF"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:onClick="back">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/bark" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="修改个人简介"
+            android:textColor="#626262"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:onClick="MyprofileSubmit">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="完成"
+                android:textColor="#49A3FA"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="#6F6F6F"
+        android:text="个人资料"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <LinearLayout style="@style/layout_myzl_style">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="职        称"
+                android:textColor="@color/myprofile_textcolor" />
+
+            <Button
+                android:id="@+id/myprofile_title"
+                style="@style/btn_myzl_style2"
+                android:onClick="getTitle"
+                android:text="@string/forget_selecter" />
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/myprofile_view_background" />
+
+        <LinearLayout style="@style/layout_myzl_style">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:text="毕业院校"
+                android:textColor="@color/myprofile_textcolor" />
+
+            <EditText
+                android:id="@+id/myprofile_academy"
+                style="@style/edit_myzl_style2"
+                android:hint="如上海医科大学等"
+                android:textColorHint="#dcdcdc"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/myprofile_view_background" />
+        <LinearLayout style="@style/layout_myzl_style">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:text="学        位"
+                android:textColor="@color/myprofile_textcolor" />
+
+            <EditText
+                android:id="@+id/myprofile_degree"
+                style="@style/edit_myzl_style2"
+                android:hint="如医学学士、医学硕士、医学博士等"
+                android:textColorHint="#dcdcdc"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/myprofile_view_background" />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="#6F6F6F"
+        android:text="执业成就"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/practice_achievement"
+            style="@style/edit_myzl_style3"
+            android:padding="10dp"
+            android:textColorHint="#dcdcdc"
+            android:hint="如医学学士、医学硕士、医学博士等"
+            android:minLines="3"
+            android:singleLine="true" />
+
+     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="#6F6F6F"
+        android:text="个人介绍"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/practice_give"
+            style="@style/edit_myzl_style3"
+            android:textColorHint="#dcdcdc"
+            android:padding="10dp"
+            android:hint="如爱好、座右铭等"
+            android:minLines="3"
+            android:singleLine="true" />
+
+    </LinearLayout>
+
+</LinearLayout>

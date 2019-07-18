@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:onClick="back">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/bark" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/activity_title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="入科"
+            android:textColor="#333"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f7f7f7" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:text="姓名："
+                    android:textColor="#999" />
+
+                <TextView
+                    android:id="@+id/_item_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="公示语"
+                    android:textColor="#333" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:text="手机号码："
+                    android:textColor="#999" />
+
+                <TextView
+                    android:id="@+id/_item_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="公示语"
+                    android:textColor="#333" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:text="学历："
+                    android:textColor="#999" />
+
+                <TextView
+                    android:id="@+id/_item_recor_of_formal_schooling"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="公示语"
+                    android:textColor="#333" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:text="执业医师证："
+                    android:textColor="#999" />
+
+                <TextView
+                    android:id="@+id/_item_certificate_of_medical_practitioner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="公示语"
+                    android:textColor="#333" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:text="入培时间："
+                    android:textColor="#999" />
+
+                <TextView
+                    android:id="@+id/_item_admission_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="公示语"
+                    android:textColor="#333" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:text="基地："
+                    android:textColor="#999" />
+
+                <TextView
+                    android:id="@+id/_item_base"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#333" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:text="轮转科室："
+                    android:textColor="#999" />
+
+                <TextView
+                    android:id="@+id/_item_rotary_department"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="公示语"
+                    android:textColor="#333" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:text="计划轮转时间："
+                    android:textColor="#999" />
+
+                <TextView
+                    android:id="@+id/_item_plan_your_admission_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#333" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/add_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:orientation="vertical"
+                      android:layout_height="wrap_content">
+
+                      <LinearLayout
+                          android:orientation="horizontal"
+                          android:layout_width="match_parent"
+                          android:paddingRight="15dp"
+                          android:paddingLeft="15dp"
+                          android:paddingTop="15dp"
+                          android:layout_height="wrap_content">
+
+                          <TextView
+                              android:text="带教老师："
+                              android:layout_weight="1.4"
+                              android:textColor="#999"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content" />
+
+
+                          <org.angmarch.views.NiceSpinner
+                              android:id="@+id/_item_with_the_teacher"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:layout_weight="1" />
+
+
+
+
+                      </LinearLayout>
+                      <LinearLayout
+                          android:orientation="horizontal"
+                          android:layout_width="match_parent"
+                          android:paddingRight="15dp"
+                          android:paddingLeft="15dp"
+                          android:paddingTop="15dp"
+                          android:layout_height="wrap_content">
+
+                          <TextView
+                              android:text="起始时间："
+                              android:layout_weight="1.4"
+                              android:textColor="#999"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content" />
+                          <TextView
+                              android:id="@+id/_item_start_time"
+                              android:text="公示语"
+                              android:layout_weight="1"
+                              android:textColor="#333"
+                              android:onClick="To_calendarView"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content" />
+
+                      </LinearLayout>
+                      <LinearLayout
+                          android:orientation="horizontal"
+                          android:layout_width="match_parent"
+                          android:paddingRight="15dp"
+                          android:paddingLeft="15dp"
+                          android:paddingTop="15dp"
+                          android:layout_height="wrap_content">
+
+                          <TextView
+                              android:text="结束时间："
+                              android:layout_weight="1.4"
+                              android:textColor="#999"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content" />
+                          <TextView
+                              android:id="@+id/_item_end_time"
+                              android:text="公示语"
+                              android:layout_weight="1"
+                              android:textColor="#333"
+                              android:onClick="To_calendarView"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content" />
+
+                      </LinearLayout>
+
+                  </LinearLayout>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/function_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|right"
+                android:gravity="center|right"
+                android:orientation="horizontal"
+                android:paddingRight="20dp">
+
+                <TextView
+                    android:id="@+id/add_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:text="增加"
+                    android:textColor="@color/login_button" />
+
+                <TextView
+                    android:id="@+id/del_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:text="减少"
+                    android:textColor="@color/login_button" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/function_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/close_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/direct_broadcast_icon17"
+                    android:gravity="center"
+                    android:text="取消" />
+
+                <View
+                    android:layout_width="50dp"
+                    android:layout_height="1dp" />
+
+                <TextView
+                    android:id="@+id/submit_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/direct_broadcast_icon08"
+                    android:gravity="center"
+                    android:text="确认"
+                    android:textColor="#fff" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

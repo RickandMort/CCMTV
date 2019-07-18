@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 赛选页 心血管 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/drop_down_screen_cardiovascular_max"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/maxText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:text="心血管"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/drop_down_screen_cardiovascular_min"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/drop_down_screen_cardiovascular_min_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:tag="心血管"
+                android:text="冠心病"
+                android:textColor="@color/drop_down_screen_tumour"
+                android:textSize="15dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/hr_bg2" />
+
+            <TextView
+                android:id="@+id/drop_down_screen_cardiovascular_min_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:tag="心血管"
+                android:text="高血压"
+                android:textColor="#707070"
+                android:textSize="15dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/hr_bg2" />
+
+            <TextView
+                android:id="@+id/drop_down_screen_cardiovascular_min_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:tag="心血管"
+                android:text="心律失常"
+                android:textColor="@color/drop_down_screen_tumour"
+                android:textSize="15dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/hr_bg2" />
+
+            <TextView
+                android:id="@+id/drop_down_screen_cardiovascular_min_text4"
+                android:tag="心血管"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="先心病"
+                android:textColor="#707070"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/drop_down_screen_cardiovascular_min_text5"
+                android:tag="心血管"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="心内膜病"
+                android:textColor="#707070"
+                android:textSize="15dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/hr_bg2" />
+
+            <TextView
+                android:id="@+id/drop_down_screen_cardiovascular_min_text6"
+                android:tag="心血管"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="心力衰竭"
+                android:textColor="#707070"
+                android:textSize="15dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/hr_bg2" />
+
+            <TextView
+                android:id="@+id/drop_down_screen_cardiovascular_min_text7"
+                android:tag="心血管"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="心瓣膜病"
+                android:textColor="#707070"
+                android:textSize="15dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/hr_bg2" />
+
+            <TextView
+                android:id="@+id/drop_down_screen_cardiovascular_min_text8"
+                android:tag="心血管"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="心肌病"
+                android:textColor="#707070"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/drop_down_screen_cardiovascular_min_text9"
+                android:tag="心血管"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text=" 心肌梗塞"
+                android:textColor="#707070"
+                android:textSize="15dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/hr_bg2" />
+
+            <TextView
+                android:id="@+id/drop_down_screen_cardiovascular_min_text10"
+                android:tag="心血管"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="房颤"
+                android:textColor="#707070"
+                android:textSize="15dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/hr_bg2" />
+
+            <TextView
+                android:id="@+id/drop_down_screen_cardiovascular_min_text11"
+                android:tag="心血管"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="其他"
+                android:textColor="#707070"
+                android:textSize="15dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:textColor="#707070"
+                android:textSize="15dp"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

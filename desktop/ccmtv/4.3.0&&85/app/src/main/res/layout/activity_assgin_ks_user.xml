@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.linlic.ccmtv.yx.activity.rules_to_compensate.gp_exam.ExaminationManageActivity">
+
+    <include layout="@layout/activity_title8"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/videofive_comment_reply"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="姓名"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="轮转科室"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="分配科室"/>
+
+                <TextView
+                    android:layout_width="58dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="操作"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="#cecece" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_gravity="center"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="5dp"
+                            android:layout_height="5dp"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/videofive_comment_reply" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_height="wrap_content"
+                            android:text="未入科"
+                            />
+                        <View
+                            android:layout_width="5dp"
+                            android:layout_height="5dp"
+                            android:layout_marginLeft="20dp"
+                            android:background="@color/bg_edittext_focused" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_height="wrap_content"
+                            android:text="已入科"
+                            />
+
+                    </LinearLayout>
+
+                    <com.jcodecraeer.xrecyclerview.XRecyclerView
+                        android:id="@+id/listView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="none"/>
+                </LinearLayout>
+                <com.linlic.ccmtv.yx.widget.NodataEmptyLayout
+                    android:id="@+id/lt_nodata1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:visibility="gone"
+                    app:empty_des="当前还没有数据哦~"
+                    app:empty_src="@mipmap/nodata_empty"
+                    app:empty_topLine="false" />
+            </FrameLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

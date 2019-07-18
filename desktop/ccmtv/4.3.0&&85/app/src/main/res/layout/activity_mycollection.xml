@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@color/recent_browse_file_title_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <include layout="@layout/activity_title" />
+    </LinearLayout>
+
+    <include layout="@layout/layout_nodata" />
+
+    <include layout="@layout/layout_loading" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both">
+
+        <com.linlic.ccmtv.yx.widget.SwipeListView
+            android:id="@+id/mycollection_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@color/recent_browse_file_list_bg"
+            android:divider="@color/hr_bg4"
+            android:dividerHeight="0.1dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+</LinearLayout>

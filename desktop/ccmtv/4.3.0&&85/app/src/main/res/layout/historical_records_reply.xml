@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?><!--查看考卷-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ffffff"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/arrow_back"
+                    android:layout_width="45dip"
+                    android:layout_height="match_parent"
+                    android:onClick="back">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="11dp"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/bark"/>
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/activity_title_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="历史记录"
+                    android:textColor="#626262"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/check_the_answer_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|right"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:text="查看答题卡"
+                    android:textColor="#55A7F3"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+
+            </FrameLayout>
+
+            <include layout="@layout/activity_title4"/>
+
+            <TextView
+                android:id="@+id/examination_instructions_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:visibility="gone"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F0F7FF"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:src="@mipmap/exams2_03"
+                    />
+
+                <TextView
+                    android:id="@+id/examination_instructions_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center|left"
+                    android:maxEms="13"
+                    android:maxLines="1"
+                    android:text="受到法律手段警方了解放到十分激烈手段警方连锁店"
+                    android:textColor="#A3A7A8"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/schedule_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center|left"
+                    android:text="32/50"
+                    android:textColor="#55A7F3"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <include layout="@layout/activity_title4"/>
+
+            <com.linlic.ccmtv.yx.widget.NodataEmptyLayout
+                android:id="@+id/historical_nodata"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:visibility="gone"
+                app:empty_des="当前还没有记录哦~"
+                app:empty_src="@mipmap/nodata_empty"
+                app:empty_topLine="true"/>
+
+            <ListView
+                android:id="@+id/examination_instructions_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:listSelector="#00000000"
+                android:paddingTop="10dp"
+                android:scrollbars="none"
+                android:visibility="gone"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/imageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <com.linlic.ccmtv.yx.widget.ZoomImageView
+                android:id="@+id/matrixImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="50dp"
+                android:clickable="true"
+                />
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/home_toptitle" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:orientation="vertical"
+                        app:layout_collapseMode="pin"
+                        app:layout_collapseParallaxMultiplier="0.9"
+                        >
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <FrameLayout
+                                android:id="@+id/fl_banner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <com.youth.banner.Banner
+                                    android:id="@+id/banner"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="165dp"
+                                    app:image_scale_type="fit_xy"
+                                    app:indicator_drawable_selected="@drawable/home_banner_indicator_white_dot"/>
+                            </FrameLayout>
+
+                            <!--<com.linlic.ccmtv.yx.widget.HorizontalListView
+                                android:layout_width="match_parent"
+                                android:id="@+id/horizontalListView"
+                                android:layout_marginTop="145dp"
+                                android:paddingLeft="30dp"
+                                android:paddingRight="10dp"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="10dp"
+                                android:background="@mipmap/horizontallistview_bg"
+                                android:layout_height="100dp"/>-->
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/id_recyclerview_home_new"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_below="@+id/fl_banner"
+                                android:layout_marginTop="-16dp"
+                                android:background="@mipmap/horizontallistview_bg"
+                                android:paddingBottom="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingTop="10dp"/>
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            >
+
+                            <LinearLayout
+                                android:id="@+id/medicine_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/medicine_img"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@mipmap/medicine_01"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/medicine_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="内科"
+                                    android:textColor="#666"
+                                    />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:background="#EEEEEE"
+                                />
+
+                            <LinearLayout
+                                android:id="@+id/surgery_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/surgery_img"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@mipmap/surgery_01"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/surgery_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="外科"
+                                    android:textColor="#666"
+                                    />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:background="#EEEEEE"
+                                />
+
+                            <LinearLayout
+                                android:id="@+id/children_and_women_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/children_and_women_img"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@mipmap/children_and_women_icon02"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/children_and_women_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="外科"
+                                    android:textColor="#666"
+                                    />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:background="#EEEEEE"
+                                />
+
+                            <LinearLayout
+                                android:id="@+id/other_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/other_img"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@mipmap/children_and_women_icon02"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/other_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="其他"
+                                    android:textColor="#666"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/banner1"
+                            android:layout_width="match_parent"
+                            android:layout_height="75dp"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/texticon01"
+                            />
+
+
+
+                        <com.linlic.ccmtv.yx.utils.MyGridView
+                            android:id="@+id/features_gridview"
+                            android:layout_width="match_parent"
+                            android:padding="5dp"
+                            android:horizontalSpacing="5dp"
+                            android:verticalSpacing="5dp"
+                            android:numColumns="2"
+                            android:layout_height="wrap_content">
+
+                        </com.linlic.ccmtv.yx.utils.MyGridView>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="10dp"
+                            android:text="推荐视频"
+                            android:textColor="#333"
+                            android:textSize="18sp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            >
+
+                            <TextView
+                                android:id="@+id/newest_hottest"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="最新最热"
+                                android:textColor="#666"
+                                android:textSize="18sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/super_access"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="超级访问"
+                                android:textColor="#666"
+                                android:textSize="18sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/lecture_room"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="百家讲坛"
+                                android:textColor="#666"
+                                android:textSize="18sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/famous_view_of_famous_artists"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="名家视角"
+                                android:textColor="#666"
+                                android:textSize="18sp"
+                                />
+
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_gravity="bottom"
+                                android:background="#EFEFEF"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                >
+
+                                <View
+                                    android:id="@+id/newest_hottest_bg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="4dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:layout_weight="1"
+                                    android:background="#3194F9"
+                                    />
+
+                                <View
+                                    android:id="@+id/super_access_bg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="4dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:layout_weight="1"
+                                    android:background="#3194F9"
+                                    android:visibility="invisible"
+                                    />
+
+                                <View
+                                    android:id="@+id/lecture_room_bg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="4dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:layout_weight="1"
+                                    android:background="#3194F9"
+                                    android:visibility="invisible"
+                                    />
+
+                                <View
+                                    android:id="@+id/famous_view_of_famous_artists_bg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="4dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:layout_weight="1"
+                                    android:background="#3194F9"
+                                    android:visibility="invisible"
+                                    />
+                            </LinearLayout>
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <com.linlic.ccmtv.yx.utils.MyGridView
+                    android:id="@+id/videos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:horizontalSpacing="5dp"
+                    android:listSelector="@null"
+                    android:numColumns="2"/>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/layout_gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                >
+
+                <TextView
+                    android:id="@+id/newest_hottest1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="最新最热"
+                    android:textColor="#666"
+                    android:textSize="18sp"
+                    />
+
+                <TextView
+                    android:id="@+id/super_access1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="超级访问"
+                    android:textColor="#666"
+                    android:textSize="18sp"
+                    />
+
+                <TextView
+                    android:id="@+id/lecture_room1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="百家讲坛"
+                    android:textColor="#666"
+                    android:textSize="18sp"
+                    />
+
+                <TextView
+                    android:id="@+id/famous_view_of_famous_artists1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="名家视角"
+                    android:textColor="#666"
+                    android:textSize="18sp"
+                    />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_gravity="bottom"
+                    android:background="#EFEFEF"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <View
+                        android:id="@+id/newest_hottest_bg1"
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:background="#3194F9"
+                        />
+
+                    <View
+                        android:id="@+id/super_access_bg1"
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:background="#3194F9"
+                        android:visibility="invisible"
+                        />
+
+                    <View
+                        android:id="@+id/lecture_room_bg1"
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:background="#3194F9"
+                        android:visibility="invisible"
+                        />
+
+                    <View
+                        android:id="@+id/famous_view_of_famous_artists_bg1"
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:background="#3194F9"
+                        android:visibility="invisible"
+                        />
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/view_report_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:clickable="true"
+            android:background="#70000000">
+
+            <ImageView
+                android:id="@+id/iv_report_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@mipmap/report_dialog_bg"
+                android:clickable="true"
+                />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

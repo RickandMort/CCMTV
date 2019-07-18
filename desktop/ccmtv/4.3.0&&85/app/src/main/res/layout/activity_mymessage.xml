@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@color/recent_browse_file_title_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <include layout="@layout/activity_title" />
+    </LinearLayout>
+
+
+    <include layout="@layout/layout_loading" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/bg_edittext_focused" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:background="#FFF"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_get"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:drawablePadding="3dp"
+                android:drawableTop="@drawable/icon_get"
+                android:onClick="onTabClicked"
+                android:text="@string/menu_get"
+                android:textColor="@drawable/menu_text_color"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="3dp"
+            android:layout_height="50dp"
+            android:lineSpacingMultiplier="0.2"
+            android:singleLine="false"
+            android:text="................"
+            android:textColor="#d3d1d1"
+            android:textSize="10dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:drawablePadding="3dp"
+                android:drawableTop="@drawable/icon_send"
+                android:onClick="onTabClicked"
+                android:text="@string/menu_send"
+                android:textColor="@drawable/menu_text_color"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="3dp"
+            android:layout_height="50dp"
+            android:lineSpacingMultiplier="0.2"
+            android:singleLine="false"
+            android:text="................"
+            android:textColor="#d3d1d1"
+            android:textSize="10dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:drawablePadding="3dp"
+                android:drawableTop="@drawable/icon_new"
+                android:onClick="onTabClicked"
+                android:text="@string/menu_new"
+                android:textColor="@drawable/menu_text_color"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15px"
+        android:background="@color/hr_bg2" />
+
+    <include layout="@layout/layout_nodata" />
+
+    <ListView
+        android:id="@+id/message_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:listSelector="#00000000" />
+
+
+</LinearLayout>

@@ -1,0 +1,434 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@color/layout_bg"
+    android:orientation="vertical"><!-- 播放页 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:visibility="gone"
+            android:src="@mipmap/ic_launcher"/>
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:gravity="center"
+            android:text="appName"/>
+
+        <include layout="@layout/layout_loading" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FDEEDE"
+            android:padding="10dp"
+            android:text="当前网络不可用!"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/video_play_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp">
+
+                    <ImageView
+                        android:id="@+id/video_play_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/ys" />
+
+                    <LinearLayout
+                        android:id="@+id/promptLinearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="#333333"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="invisible">
+
+                        <TextView
+                            android:id="@+id/promptText1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="本次观看需要扣除5积分，您剩余123积分。"
+                            android:textColor="@color/layout_bg" />
+
+                        <TextView
+                            android:id="@+id/promptText2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="48小时内可重复观看当期影片。"
+                            android:textColor="@color/layout_bg" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <Button
+                                android:id="@+id/promptopen"
+                                style="@style/btn_style1"
+                                android:text="@string/integral_main_Button_text2"
+                                android:textColor="@color/integral_main_Button_text_color2" />
+
+                            <Button
+                                android:id="@+id/promptopen_vip"
+                                style="@style/btn_style1"
+                                android:text="@string/integral_main_Button_text2"
+                                android:textColor="@color/integral_main_Button_text_color2"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/play_img"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/video_play_img" />
+
+                    <LinearLayout
+                        android:id="@+id/arrow_back"
+                        android:layout_width="45dip"
+                        android:layout_height="wrap_content"
+                        android:onClick="back">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:scaleType="centerInside"
+                            android:src="@mipmap/arrow2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/networkLinearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="#333333"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="invisible">
+
+                        <TextView
+                            android:id="@+id/networkText1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="网络未连接，请检查网络设置"
+                            android:textColor="@color/layout_bg" />
+
+                        <TextView
+                            android:id="@+id/networkText2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="点此重试"
+                            android:textColor="@color/layout_bg2" />
+
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/video_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <cn.cc.android.sdk.view.VideoView
+                        android:id="@+id/video_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp" />
+
+                    <LinearLayout
+                        android:id="@+id/arrow_back2"
+                        android:layout_width="45dip"
+                        android:layout_height="wrap_content"
+                        android:onClick="back">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+                            android:scaleType="centerInside"
+                            android:src="@mipmap/arrow2" />
+                    </LinearLayout>
+                </FrameLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/video_view"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <FrameLayout
+                        android:id="@+id/fragment_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/video_menu_relevant_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#00000000"
+                android:layout_marginBottom="40dp"
+                android:listSelector="#00000000"
+                android:scrollbars="none"/>
+<!--评论-->
+            <LinearLayout
+                android:id="@+id/video_comment_list"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="全部评论"
+                        android:textSize="20dp"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/video_comment_X"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="╳"
+                        android:textSize="20dp"
+                        android:gravity="right"
+                        android:textStyle="bold"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/video_comment_dilong"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/color_white"
+                    android:gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal" >
+
+                    <com.linlic.ccmtv.yx.utils.CustomImageView
+                        android:id="@+id/MyImg"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:onClick="changeVideo"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/menu_icon1" />
+
+                    <EditText
+                        android:id="@+id/video_menu_comment_edittext_ff"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/anniu5"
+                        android:focusable="true"
+                        android:imeOptions="actionSend"
+                        android:singleLine="true"
+                        android:focusableInTouchMode="true"
+                        android:hint="我来说几句"
+                        android:maxLines="1"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp"
+                        android:textColorHint="@color/integral_main_Button_text_color1" />
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/video_menu_comment_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="#00000000"
+                    android:listSelector="#00000000"
+                    android:scrollbars="none"
+                    android:visibility="visible"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_comment_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/nodata"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="还没有评论，做第一个评论的人"
+                        android:textSize="16sp"
+                        android:textColor="#999"/>
+
+                    <TextView
+                        android:id="@+id/tv_say_something"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="说两句"
+                        android:textSize="18sp"
+                        android:textColor="#FFF"
+                        android:background="@mipmap/learning_task04"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+<!--评论end-->
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/video_comment_dilong2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_white"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+ <!--       <com.linlic.ccmtv.yx.utils.CustomImageView
+            android:id="@+id/MyImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:onClick="changeVideo"
+            android:scaleType="fitXY"
+            android:src="@mipmap/menu_icon1" />-->
+
+  <!--      <EditText
+            android:id="@+id/video_menu_comment_edittext_f"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/anniu5"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:hint="我来说几句"
+            android:maxLines="1"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:textColorHint="@color/integral_main_Button_text_color1" />-->
+
+        <EditText
+            android:id="@+id/video_menu_comment_edittext_f"
+            android:layout_width="fill_parent"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/sousuo_03"
+            android:drawableLeft="@mipmap/video_paly3_19"
+            android:imeOptions="actionSearch"
+            android:hint="  我来说几句"
+            android:maxLines="1"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:textColorHint="@color/integral_main_Button_text_color1"
+            android:textSize="14dip" >
+        </EditText>
+
+        <Button
+            android:id="@+id/video_menu_comment_edittext_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/regist_button"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:textColor="@color/regist_layout_background"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/upload_sumit" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="15dp"
+                android:background="#FAFAFA"
+
+                >
+                <TextView
+                    android:id="@+id/_item_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="20dp"
+                    android:textColor="#999999"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="#EEEEEE"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="20dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/_item_img"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/text1000"
+                        />
+
+                    <TextView
+                        android:id="@+id/_item_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_weight="1"
+                        android:textColor="#333"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="15dp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="right"
+                        android:paddingTop="10dp"
+                        android:gravity="right"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/_item_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#333"
+                            android:textSize="16sp"
+                            />
+                        <TextView
+                            android:id="@+id/_item_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#999"
+                            android:textSize="16sp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            />
+                        <TextView
+                            android:id="@+id/_item_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#333"
+                            android:textSize="16sp"
+                            />
+
+
+                        <TextView
+                            android:id="@+id/_item_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#999"
+                            android:textSize="16sp"
+                            android:layout_marginTop="25dp"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/_item_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:paddingRight="20dp"
+                    android:text="快递单号：13125565855"
+                    />
+
+            </LinearLayout>
+
+
+
+    
+</LinearLayout>

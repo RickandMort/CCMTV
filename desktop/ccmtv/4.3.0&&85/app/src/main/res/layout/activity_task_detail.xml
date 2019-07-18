@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.linlic.ccmtv.yx.activity.my.learning_task.TaskDetailActivity">
+
+    <include layout="@layout/activity_title7" />
+
+    <!--<com.linlic.ccmtv.yx.utils.MyListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#EFEFEF" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:id="@+id/myScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_task_detail_upload">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/task_detail_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="#333"
+                    android:text=""
+                    android:textSize="16dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/task_video_image"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="8dp"
+                        android:layout_gravity="center|top"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/learning_task03" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/time_icon01"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_task_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:maxLines="2"
+                                android:text=""
+                                android:textColor="@color/recent_browse_file_list_item_title"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/task_detail_time"
+                                android:layout_width="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_height="wrap_content"
+                                android:text=""  />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/anniu36"
+                                android:padding="7dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="类型："
+                                    android:textColor="#F2A402"
+                                    android:textSize="12sp"/>
+
+                                <TextView
+                                    android:id="@+id/task_catename"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="PPT"
+                                    android:textColor="#F2A402"
+                                    android:textSize="12sp"/>
+
+                            </LinearLayout>
+                            </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+
+
+                            <!--<LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="28dp"
+                                android:layout_marginLeft="4dp"
+                                android:background="@drawable/btn_yuan_shape"
+                                android:orientation="horizontal"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="5dp">
+
+                                <TextView
+                                    android:id="@+id/tv_type"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:paddingLeft="5dp"
+                                    android:text="类型："
+                                    android:textColor="@color/darkerorange"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/task_detail_catename"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:paddingRight="5dp"
+                                    android:text="视频"
+                                    android:textColor="@color/darkerorange"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>-->
+
+                            <LinearLayout
+                                android:id="@+id/task_detail_ask_all"
+                                android:layout_width="match_parent"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="8dp"
+                                android:background="@drawable/anniu38"
+                                android:padding="20dp"
+                                android:layout_marginRight="8dp"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:textColor="#333"
+                                        android:layout_gravity="center|left"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="18sp"
+                                        android:text="任务要求"/>
+
+                                <TextView
+                                    android:id="@+id/task_detail_ask"
+                                    android:layout_width="match_parent"
+                                    android:layout_marginTop="5dp"
+                                    android:textColor="#666"
+                                    android:layout_height="wrap_content"
+                                    android:text=""/>
+                                <LinearLayout
+                                    android:id="@+id/task_detail_description_layout"
+                                    android:layout_width="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:textColor="#333"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_gravity="center|left"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="18sp"
+                                    android:text="任务说明"/>
+
+                                <TextView
+                                    android:id="@+id/task_detail_description"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:textColor="#666"
+                                    android:text=""
+                                      />
+
+                                    </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/audit_score_layout"
+                                    android:layout_width="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:textColor="#333"
+                                        android:layout_marginTop="15dp"
+                                        android:layout_gravity="center|left"
+                                        android:layout_height="wrap_content"
+                                        android:textSize="18sp"
+                                        android:text="审核评分"/>
+
+                                    <TextView
+                                        android:id="@+id/audit_score"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginTop="5dp"
+                                        android:textColor="#666"
+                                        android:text=""
+                                        />
+                                </LinearLayout>
+
+
+
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/task_detail_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20px"
+                    android:background="#EFEFEF" />
+
+                <!--<LinearLayout
+                    android:id="@+id/task_detail_ask_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="任务要求："
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/task_detail_ask"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="43dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="需要学习2个视频,单个视频需签到3次,单个自测试时间5分钟,自测次数5次,自测合格率为60%"
+                        android:textColor="#00CCFF"
+                        android:textSize="14sp" />
+
+                </LinearLayout>-->
+
+
+                <!--保存is_start-->
+                <TextView
+                    android:id="@+id/is_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+
+
+                <!--<View
+                    android:layout_width="match_parent"
+                    android:layout_height="20px"
+                    android:background="#EFEFEF" />-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!--<TextView
+                        android:id="@+id/task_detail_upload"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@mipmap/learning_task04"
+                        android:onClick="upload"
+                        android:paddingLeft="27dp"
+                        android:paddingTop="7dp"
+                        android:text="上传文件"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:visibility="visible" />-->
+
+                    <TextView
+                        android:id="@+id/task_detail_contentname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="任务内容："
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/id_uploading_recyclerView_study"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <com.linlic.ccmtv.yx.utils.MyListView
+                        android:id="@+id/video_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:background="#fff"
+                        android:divider="@null"
+                        android:listSelector="#00000000"
+                        android:scrollbars="none" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_task_detail_upload"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:background="@color/Blue"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/task_detail_upload_file"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="upload"
+                android:text="上传文件"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/task_detail_upload_video"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="uploadVideo"
+                android:text="上传视频"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

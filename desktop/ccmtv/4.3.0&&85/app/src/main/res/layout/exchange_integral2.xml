@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 积分获取记录 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/get_integral_layout_bg"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:onClick="back">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/bark" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="积分兑换"
+            android:textColor="#626262"
+            android:textSize="18sp" />
+
+
+    </FrameLayout>
+
+    <!---->
+
+
+    <include layout="@layout/layout_nodata_empty" />
+
+    <LinearLayout
+        android:id="@+id/exchange_integral_errmesage_bg"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="@color/exchange_integral_errmesage_bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/exchange_integral_errmesage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="兑换失败，请重新填写兑换码"
+            android:textColor="@color/exchange_integral_errmesage"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#EFEFEF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/redeem_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="请在此输入兑换码"
+            android:inputType="text"
+            android:paddingLeft="20dp"
+            android:textColorHint="@color/integral_main_Button_border_color"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#EFEFEF" />
+
+
+    <Button
+        android:id="@+id/btn_recharge"
+        android:layout_width="200dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:background="@mipmap/change12"
+        android:onClick="cashier_recharge"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:text="兑换"
+        android:textColor="@color/integral_main_Button_text_color2"
+        android:textSize="20sp" />
+
+
+</LinearLayout>

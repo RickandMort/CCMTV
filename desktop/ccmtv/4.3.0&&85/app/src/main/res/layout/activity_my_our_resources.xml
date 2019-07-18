@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="#fff"
+              tools:context="com.linlic.ccmtv.yx.activity.my.our_video.My_Our_Resources_Activity">
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:onClick="back">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/login_back"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/title_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="45dip"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/activity_title_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="课件"
+                android:textColor="#626262"
+                android:textSize="16sp"/>
+            <LinearLayout
+                android:id="@+id/search_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="11dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/direct_broadcast_icon15"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/title_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="45dip"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            >
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="fill_parent"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@mipmap/sousuo_03"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
+                android:paddingLeft="15dip"
+                android:singleLine="true"
+                android:textSize="14dip"></EditText>
+
+
+            <LinearLayout
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:onClick="openFileMenu">
+
+                <TextView
+                    android:id="@+id/search_recall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/acitvity_search_three_hean_Text"
+                    android:textColor="#333" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <include layout="@layout/activity_title4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:paddingBottom="5dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/file_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="文档"
+            android:layout_gravity="center"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:textColor="#333333"
+            android:background="@drawable/anniu33"
+            />
+
+        <TextView
+            android:id="@+id/video_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="视频"
+            android:layout_gravity="center"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingBottom="3dp"
+            android:layout_marginLeft="15dp"
+            android:paddingTop="3dp"
+            android:textColor="#333333"
+            android:background="@drawable/anniu33"
+            />
+
+        <TextView
+            android:id="@+id/condition_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="全部"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="7dp"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginLeft="15dp"
+            android:drawableRight="@mipmap/drop_down_icon1"
+            android:textColor="#3897F9"
+            android:background="@drawable/anniu18"
+            />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/id_lv_our_resources"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:scrollbars="none"
+            android:listSelector="@color/transparent2"
+            android:paddingTop="10dp"/>
+
+        <com.linlic.ccmtv.yx.widget.NodataEmptyLayout
+            android:id="@+id/lt_nodata1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:visibility="gone"
+            app:empty_des="还没有任何数据哦~"
+            app:empty_src="@mipmap/nodata_file"
+            app:empty_topLine="true"/>
+
+        <!--条件选择-->
+        <LinearLayout
+            android:id="@+id/leave_submit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="60dp"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:background="#60000000" >
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:paddingTop="10dp"
+                    android:layout_gravity="center"
+                    android:scrollbars="none"
+                    android:orientation="vertical"
+                    >
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ListView
+                    android:id="@+id/condition_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:listSelector="@color/transparent2"
+                    android:paddingRight="15dp"
+                    android:layout_marginBottom="65dp"
+                    android:scrollbars="none"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp"
+                    android:layout_gravity="center|bottom"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/condition_reset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="重置"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp"
+                        android:textColor="#fff"
+                        android:background="@drawable/anniu7"
+                        />
+
+                    <View
+                        android:layout_width="70dp"
+                        android:layout_height="0.1dp"/>
+
+                    <TextView
+                        android:id="@+id/condition_submit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="确定"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp"
+                        android:textColor="#fff"
+                        android:background="@drawable/anniu7"
+                        />
+
+
+                </LinearLayout>
+            </FrameLayout>
+
+                </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

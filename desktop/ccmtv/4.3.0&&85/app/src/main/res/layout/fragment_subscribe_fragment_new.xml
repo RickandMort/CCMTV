@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_subnologin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="您还未登录，请登录后使用此功能"
+                android:textColor="#737373"
+                android:textSize="18sp" />
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/regist_button"
+                android:onClick="btnClick"
+                android:padding="8dp"
+                android:text="登录"
+                android:textColor="#FFF"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="false">
+
+        <RelativeLayout
+            android:id="@+id/layout_keshitype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <net.lucode.hackware.magicindicator.MagicIndicator
+                android:id="@+id/magic_indicator5"
+                android:layout_width="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_height="45dp" />
+
+            <ImageView
+                android:id="@+id/iv_addsub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/sub_img"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include layout="@layout/layout_nodata1" />
+
+</LinearLayout>

@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.linlic.ccmtv.yx.kzbf.activity.SpecialGuideDetialActivity">
+
+    <RelativeLayout
+        android:id="@+id/guide_top"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:onClick="back">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/login_back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="指南详情"
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/guide_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/guide_top"
+        android:background="#EFEFEF" />
+
+    <ScrollView
+        android:id="@+id/guide_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/guide_view"
+        android:layout_marginBottom="40dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFF"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/guide_detial_item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:text="“肝动”AASLD：慢性乙肝肝炎诊断及治疗热门"
+                android:textColor="#333"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:text="发布时间："
+                    android:textColor="#999"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/guide_posttime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#999"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:text="定制者："
+                    android:textColor="#999"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/guide_auther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text=""
+                    android:textColor="#999"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:text="出处："
+                    android:textColor="#999"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/guide_source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text=""
+                    android:textColor="#999"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <WebView
+                android:id="@+id/guide_webView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/guide_detial_eye_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/medicine_eye" />
+
+                <TextView
+                    android:id="@+id/guide_detial_eye_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/guide_detial_eye_img"
+                    android:text="321"
+                    android:textColor="#999"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/guide_detial_zan_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/guide_detial_eye_num"
+                    android:clickable="true"
+                    android:src="@mipmap/medicine_zan" />
+
+                <TextView
+                    android:id="@+id/guide_detial_zan_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/guide_detial_zan_img"
+                    android:text="123"
+                    android:textColor="#999"
+                    android:textSize="13sp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_guide_download"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="100dp"
+                    android:layout_toRightOf="@+id/guide_detial_zan_num"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/guide_download_img"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_toLeftOf="@+id/guide_download_txt"
+                        android:src="@mipmap/detial_download_icon" />
+
+                    <TextView
+                        android:id="@+id/guide_download_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginTop="3dp"
+                        android:text="原文下载"
+                        android:textColor="#999"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/guide_left_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/guide_download_txt"
+                        android:layout_toRightOf="@+id/guide_download_img"
+                        android:maxLines="1"
+                        android:text="大小：100.5k"
+                        android:textColor="#999"
+                        android:textSize="13sp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/guide_view2"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/guide_detial_eye_img"
+                android:layout_marginTop="5dp"
+                android:background="#EFEFEF" />
+
+            <TextView
+                android:id="@+id/guide_tuijian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="相关推荐"
+                android:textColor="#999"
+                android:textSize="15sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/guide_tuijian_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:scrollbars="none" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/guide_eye_img"
+                android:layout_marginTop="5dp"
+                android:background="#EFEFEF" />
+
+            <RelativeLayout
+                android:id="@+id/rl_guide_comment_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/guide_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="全部评论"
+                    android:textColor="#999"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/guide_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="更多>>"
+                    android:textColor="#999"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/guide_comment_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_guide_write_comment"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="#EFEFEF"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_guide_comment"
+            android:layout_width="fill_parent"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@mipmap/sousuo_03"
+            android:drawableLeft="@mipmap/icon_write_comment"
+            android:hint=" 写评论..."
+            android:imeOptions="actionSend"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:textColorHint="#999"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_guide_comment_collection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/guide_detial_collection_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/icon_comment_collection" />
+
+            <TextView
+                android:id="@+id/guide_detial_collection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="收藏"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_guide_comment_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:onClick="ShareTitle"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/guide_detial_share_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/icon_comment_share" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="分享"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_guide_comment_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/guide_detial_download_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@mipmap/icon_comment_download" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="下载"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

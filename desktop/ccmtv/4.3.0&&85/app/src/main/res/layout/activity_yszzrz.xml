@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@color/recent_browse_file_title_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <include layout="@layout/activity_title" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/kuang_yszzrz"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:padding="10dp"
+                        android:text="上传医生执照"
+                        android:textColor="#747474"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_showzz"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@mipmap/icon_add"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_choosezz"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@mipmap/icon_add" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#e4e4e4" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="20dp"
+                        android:text="真实姓名"
+                        android:textColor="#747474"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/edit_truename"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edit"
+                        android:maxLength="10"
+                        android:paddingLeft="5dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="20dp"
+                        android:text="证件号"
+                        android:textColor="#747474"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/edit_zjnum"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edit"
+                        android:inputType="number"
+                        android:maxLength="20"
+                        android:paddingLeft="5dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                style="@style/btn_style"
+                android:onClick="Submit_ZZ"
+                android:text="提交" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="我们将在1~2个工作日审核完毕"
+                android:textColor="#747474"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:text="注意:"
+                    android:textColor="#FF0000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/step_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_tip"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:text="1.(助理)职业医师"
+                    android:textColor="#747474"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/step_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/step_one"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:text="职业医师可通过填写[医师执业证书]编码或将[医师执业证书]拍照或扫描后上传开通认证小站进行验证。"
+                    android:textColor="#747474"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/step_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/step_two"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:text="2.暂无执业证的医师"
+                    android:textColor="#747474"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/step_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/step_three"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:text="暂无执业证的医师可将资格证或者工作证等证件拍照或者扫描后上传进行认证。"
+                    android:textColor="#747474"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/step_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/step_four"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:text="3.医学生"
+                    android:textColor="#747474"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/step_six"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/step_five"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:text="医学生可将学生证拍照或者扫描后上传进行认证。"
+                    android:textColor="#747474"
+                    android:textSize="14sp" />
+
+
+            </RelativeLayout>
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

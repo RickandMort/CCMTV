@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#efefef"
+    tools:context="com.linlic.ccmtv.yx.activity.user_statistics.UserStatistics2Activity">
+
+    <include layout="@layout/activity_title8"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/id_tv_study_record_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="学习汇总"
+                android:textColor="#3897f9"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/id_iv_study_record_title1"
+                android:layout_width="30dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="5dp"
+                android:background="#3897f9" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/id_tv_study_record_title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="数据记录"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/id_iv_study_record_title2"
+                android:layout_width="30dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="5dp"
+                android:background="#3897f9"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/id_tv_study_record_title3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的考核"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/id_iv_study_record_title3"
+                android:layout_width="30dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="5dp"
+                android:background="#3897f9"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_ll_study_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/corner_rect_study_record"
+        android:gravity="center"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/id_tv_study_record_total_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/yellow"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="学习时长"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            android:background="#FFFFFF" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/id_tv_study_record_continue_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/yellow"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="连续学习"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:src="@mipmap/study_record_right_arrow" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="最近7日的学习时长/单位：分钟"
+        android:textColor="#AEAEAE"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="#FFFFFF">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:alpha="0.3" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/linechart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="40dp"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

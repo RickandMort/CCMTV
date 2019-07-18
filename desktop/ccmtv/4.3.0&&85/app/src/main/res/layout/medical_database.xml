@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="#fff"
+              android:layout_height="match_parent">
+    <include layout="@layout/activity_title8"/>
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/id_coordinator_layout_conference_main"
+        android:layout_width="match_parent"
+        android:background="#fff"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:orientation="vertical">
+
+                    <com.youth.banner.Banner
+                        android:id="@+id/id_conference_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        app:image_scale_type="fit_xy"
+                        app:indicator_drawable_selected="@drawable/conference_banner_indicator_select"
+                        app:indicator_drawable_unselected="@mipmap/conference_banner_unselect"
+                        app:indicator_height="12dp"
+                        app:indicator_width="18dp"/>
+                </LinearLayout>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+            <LinearLayout
+                android:id="@+id/id_ll_conference_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/id_recyclerview_conference_department"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/id_recyclerview_special_topic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/id_ll_time_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/id_recyclerview_conference_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/id_nested_scrollview_conference"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="always"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <!--- app:layout_behavior="@string/appbar_scrolling_ view_behavior"-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.linlic.ccmtv.yx.widget.NodataEmptyLayout
+                    android:id="@+id/lt_nodata1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:visibility="gone"
+                    app:empty_des="还没有相关会议信息哦~"
+                    app:empty_src="@mipmap/nodata_empty"
+                    app:empty_topLine="true"/>
+
+                <!--<RelativeLayout-->
+                <!--android:id="@+id/lt_nodata1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="#fff"-->
+                <!--android:visibility="gone">-->
+
+                <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="15px"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:background="#EFEFEF"/>-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/nodata_img"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:src="@mipmap/nodata"/>-->
+
+                <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/nodata_img"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:gravity="center_horizontal"-->
+                <!--android:text="还没有任何数据哦~"-->
+                <!--android:textColor="#999"-->
+                <!--android:textSize="18sp"/>-->
+
+                <!--</RelativeLayout>-->
+
+                <com.linlic.ccmtv.yx.utils.MyListView
+                    android:id="@+id/id_lv_conference"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:paddingTop="5dp"/>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</LinearLayout>

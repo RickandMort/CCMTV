@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.linlic.ccmtv.yx.activity.user_statistics.StudySummaryActivity">
+
+    <include layout="@layout/activity_title8" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFF6F5FA"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="420dp"
+                android:background="@mipmap/bg_study_calendar"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/id_tv_study_summary_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="小时"
+                    android:textColor="@color/yellow"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="总学习时长"
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_study_summary_calendar"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingBottom="12dp"
+                        android:paddingLeft="6dp"
+                        android:paddingRight="6dp"
+                        android:paddingTop="12dp">
+
+                        <ImageView
+                            android:id="@+id/id_iv_study_summary_month_left"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/study_record_calendar_left" />
+
+                        <TextView
+                            android:id="@+id/id_tv_study_summary_year_month"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="#3897F9"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:id="@+id/id_iv_study_summary_month_right"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/study_record_calendar_right" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#e1e1e1" />
+
+                    <com.haibin.calendarview.CalendarView
+                        android:id="@+id/calendarView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#33ffffff"
+                        app:calendar_height="30dp"
+                        app:current_month_lunar_text_color="#CFCFCF"
+                        app:current_month_text_color="#333333"
+                        app:min_year="2004"
+                        app:month_view="com.linlic.ccmtv.yx.activity.user_statistics.SimpleMonthView"
+                        app:other_month_text_color="#e1e1e1"
+                        app:scheme_text_color="#333"
+                        app:scheme_theme_color="#333"
+
+                        app:week_background="#00000000"
+                        app:week_text_color="#111"
+                        app:week_view="com.linlic.ccmtv.yx.activity.user_statistics.SimpleWeekView"
+                        app:year_view_day_text_color="#333333"
+                        app:year_view_day_text_size="9sp"
+                        app:year_view_month_text_color="#ff0000"
+                        app:year_view_month_text_size="20sp"
+                        app:year_view_scheme_color="#f17706" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="#e1e1e1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF">
+
+                <LinearLayout
+                    android:id="@+id/id_ll_study_summary_look_video_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center|left"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/style_tv_setting"
+                        android:layout_marginLeft="20dp"
+                        android:text="观看视频数" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|right">
+
+                        <TextView
+                            android:id="@+id/id_tv_study_summary_look_video_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|right"
+                            android:text="0"
+                            android:textColor="#3897f9" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|right"
+                            android:paddingRight="10dp"
+                            android:text="条"
+                            android:textColor="#A5A5A5" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@mipmap/jiantou_right" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e1e1e1" />
+
+                <LinearLayout
+                    android:id="@+id/id_ll_study_summary_listen_audio_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center|left"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/style_tv_setting"
+                        android:layout_marginLeft="20dp"
+                        android:text="听音频数" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|right">
+
+                        <TextView
+                            android:id="@+id/id_tv_study_summary_listen_audio_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|right"
+                            android:text="0"
+                            android:textColor="#3897f9" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|right"
+                            android:paddingRight="10dp"
+                            android:text="条"
+                            android:textColor="#A5A5A5" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:src="@mipmap/jiantou_right" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e1e1e1" />
+
+                <LinearLayout
+                    android:id="@+id/id_ll_study_summary_look_article_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center|left"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/style_tv_setting"
+                        android:layout_marginLeft="20dp"
+                        android:text="观看文章数" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|right">
+
+                        <TextView
+                            android:id="@+id/id_tv_study_summary_look_article_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|right"
+                            android:text="0"
+                            android:textColor="#3897f9" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|right"
+                            android:paddingRight="10dp"
+                            android:text="篇"
+                            android:textColor="#A5A5A5" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="10dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@mipmap/jiantou_right"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e1e1e1" />
+
+                <LinearLayout
+                    android:id="@+id/id_ll_study_summary_continuity_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center|left"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/style_tv_setting"
+                        android:layout_marginLeft="20dp"
+                        android:text="连续学习" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|right">
+
+                        <TextView
+                            android:id="@+id/id_tv_study_summary_continuity_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|right"
+                            android:text="0"
+                            android:textColor="#3897f9" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|right"
+                            android:paddingRight="10dp"
+                            android:text="天"
+                            android:textColor="#A5A5A5" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="10dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@mipmap/jiantou_right"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#e1e1e1" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/id_tv_study_summary_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#8e8e8e"
+                android:text="从2018/01/01开始计算" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

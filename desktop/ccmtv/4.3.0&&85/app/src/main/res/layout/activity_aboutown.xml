@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_title" />
+
+    <TextView
+        style="@style/rule_content"
+        android:layout_marginTop="15dp"
+        android:text="        CCMTV临床频道隶属于上海翊凌医疗信息技术有限公司是一家基于新互联网技术和无线通讯技术而创建的医学类专业视频媒体（www.ccmtv.cn）。频道致力于以临床知名专家、前沿学术热点内容为核心；以构建临床实践学术社区、发挥临床医师“众”的力量为宗旨；以创新传播技术为特点、促进学术交流为己任的新型专业媒体。" />
+
+    <TextView
+        style="@style/rule_content"
+        android:text="        作为医学专业媒体，CCMTV深入报道医学会议、病例讨论、手术演示等。让更多的医生犹如身临现场，学习了解最新成果。" />
+
+    <TextView
+        style="@style/rule_content"
+        android:text="        作为医学专业媒体，CCMTV更加贴近临床实践，走进临床科室，促进经验的交流与分享。" />
+
+    <TextView
+        style="@style/rule_content"
+        android:text="        作为医学专业媒体，CCMTV精心制作有影响力的专业节目，深入全面讲解领域最新进展、临床诊疗标准。" />
+
+    <TextView
+        style="@style/rule_content"
+        android:text="        作为医学专业媒体，CCMTV展开国内、外学术交流。推进与国内外重要的学术组织、教育机构和专业媒体合作。" />
+
+    <TextView
+        style="@style/rule_content"
+        android:text="        “荟萃名家 聚焦临床”。未来，我们将为临床医师提供更多形式的交流平台和学习工具，积极引领国内医学传播、健康教育和医药市场营销的新模式。临床频道（CCMTV）将与中国临床医师一道，致力于建设新型医学专业媒体，使之成为真正有价值的“临床医学电视台”。" />
+
+</LinearLayout>

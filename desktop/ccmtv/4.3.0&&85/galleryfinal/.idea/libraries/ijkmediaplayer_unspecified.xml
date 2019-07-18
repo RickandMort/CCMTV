@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="ijkmediaplayer-unspecified">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../app/build/intermediates/exploded-aar/CCMTV-NWY/ijkmediaplayer/unspecified/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../app/build/intermediates/exploded-aar/CCMTV-NWY/ijkmediaplayer/unspecified/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

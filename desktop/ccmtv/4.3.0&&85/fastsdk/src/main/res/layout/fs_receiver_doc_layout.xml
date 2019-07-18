@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.gensee.view.GSDocViewGx
+        android:id="@+id/docView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <LinearLayout
+        android:id="@+id/relDef"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:background="@color/fs_doc_default_bg">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:background="@drawable/fs_icon_no_doc"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"/>
+        <TextView
+            android:id="@+id/tvDef"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fs_doc_no_watch_doc"
+            android:textColor="@color/fs_nothing_text_color"
+            android:paddingTop="10dp"
+            android:textSize="12sp"
+            android:alpha="0.5" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_float_right_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true" >
+
+        <include layout="@layout/fs_receiver_float_right_bar" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlopenSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/fs_fullscreen_samll_style">
+        <ImageView
+            android:id="@+id/openSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fs_video_doc_open"></ImageView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/doc_full_screen_small_rl"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/full_screen_small_rl"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_height="match_parent">
+            <include layout="@layout/fs_fullscreen_small_right"></include>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

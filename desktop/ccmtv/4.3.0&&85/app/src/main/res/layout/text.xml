@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/promptLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="#333333"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/promptText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="本次观看需要扣除5积分，您剩余123积分。"
+            android:textColor="@color/layout_bg" />
+
+        <TextView
+            android:id="@+id/promptText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="48小时内可重复观看当期影片。"
+            android:textColor="@color/layout_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/promptopen"
+                style="@style/btn_style1"
+                android:text="@string/integral_main_Button_text2"
+                android:textColor="@color/integral_main_Button_text_color2" />
+
+            <Button
+                android:id="@+id/promptopen_vip"
+                style="@style/btn_style1"
+                android:text="@string/integral_main_Button_text2"
+                android:textColor="@color/integral_main_Button_text_color2"  />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

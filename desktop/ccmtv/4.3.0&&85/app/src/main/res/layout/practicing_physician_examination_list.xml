@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:id="@+id/practicing_xml"
+    android:layout_marginBottom="10dp"
+    android:layout_height="match_parent">
+
+
+    <!--预告 -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="left|center"
+        android:gravity="left|center"
+        android:background="@mipmap/pay_bg_06"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="-1dp"
+            android:background="#4392d9" />
+
+        <TextView
+            style="@style/home_buttom_title"
+            android:text="@string/recommendForMe"
+            android:textSize="18sp"
+            android:id="@+id/practicing_name"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.linlic.ccmtv.yx.utils.MyListView
+            android:id="@+id/practicing_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:divider="@null"
+            android:listSelector="#00000000"
+            android:scrollbars="none"
+            >
+
+        </com.linlic.ccmtv.yx.utils.MyListView>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/practicing_fid"
+        android:visibility="gone"  />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pageNum"
+        android:visibility="gone"  />
+
+
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:autoWrapLineLayout="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/department_layout"
+        android:layout_width="match_parent"
+        android:padding ="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:gravity="center|left"
+        android:layout_gravity="center|left"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/department_name"
+            android:layout_width="wrap_content"
+            android:padding="5dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/item_text_selector"
+            android:textSize="18sp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <cn.wolfspider.autowraplinelayout.AutoWrapLineLayout
+        android:id="@+id/auto_wrap_line_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        autoWrapLineLayout:verticalGap="5dp"
+        autoWrapLineLayout:horizontalGap="10dp"
+        autoWrapLineLayout:fillMode = "1">
+
+    </cn.wolfspider.autowraplinelayout.AutoWrapLineLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="#e8e8e8"
+        android:layout_height="0.1dp"/>
+    <TextView
+        android:id="@+id/department_id"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

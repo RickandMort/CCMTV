@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SwitchButton">
+        <attr name="bmWidth" format="dimension"></attr>
+        <attr name="bmHeight" format="dimension"></attr>
+    </declare-styleable>
+    <declare-styleable name="NumberProgressBar">
+        <attr name="progress" format="integer" />
+        <attr name="maxx" format="integer" />
+
+        <attr name="progress_unreached_color" format="color" />
+        <attr name="progress_reached_color" format="color" />
+
+        <attr name="progress_reached_bar_height" format="dimension" />
+        <attr name="progress_unreached_bar_height" format="dimension" />
+
+        <attr name="progress_text_size" format="dimension" />
+        <attr name="progress_text_color" format="color" />
+
+        <attr name="progress_text_offset" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="NumberProgressBarNew">
+        <attr name="progress_current" format="integer" />
+        <attr name="progress_max" format="integer" />
+        <attr name="progress_unreached_color_new" format="color" />
+        <attr name="progress_reached_color_new" format="color" />
+        <attr name="progress_reached_bar_height_new" format="dimension" />
+        <attr name="progress_unreached_bar_height_new" format="dimension" />
+        <attr name="progress_text_size_new" format="dimension" />
+        <attr name="progress_text_color_new" format="color" />
+        <attr name="progress_text_offset_new" format="dimension" />
+        <attr name="progress_text_visibility" format="enum">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="Themes">
+        <attr name="numberProgressBarStyle" format="reference" />
+    </declare-styleable>
+
+    <!--仿头条顶部-->
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="slidingBlock" format="reference|color" />
+        <attr name="allowWidthFull" format="boolean" />
+        <attr name="disableViewPager" format="boolean" />
+    </declare-styleable>
+    <!-- LockPatternView class attributes -->
+    <declare-styleable name="LockPatternView">
+
+        <!--
+             Aspect to use when drawing LockPatternView. Choices are "square"(default), "lock_width"
+             or "lock_height"
+        -->
+        <attr name="aspect">
+            <enum name="square" value="0" />
+            <enum name="lockWidth" value="1" />
+            <enum name="lockHeight" value="2" />
+        </attr>
+        <attr name="line" format="color" />
+        <attr name="btnNormal" format="reference" />
+        <attr name="btnTouched" format="reference" />
+        <attr name="circleNormal" format="reference" />
+        <attr name="circleGreen" format="reference" />
+        <attr name="circleRed" format="reference" />
+        <attr name="arrowGreenUp" format="reference" />
+        <attr name="arrowRedUp" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="CircleLayout">
+        <attr name="innerRadius" format="dimension" />
+        <attr name="sliceDivider" format="reference|color" />
+        <attr name="innerCircle" format="reference|color" />
+        <attr name="angleOffset" format="float" />
+        <attr name="angleRange" format="float" />
+        <attr name="layoutMode">
+            <enum name="normal" value="1" />
+            <enum name="pie" value="2" />
+        </attr>
+    </declare-styleable>
+    <!-- Defines the custom XML attributes supported for a HorizontalListView -->
+    <declare-styleable name="HorizontalListView">
+        <attr name="android:divider" />
+        <attr name="android:requiresFadingEdge" />
+        <attr name="android:fadingEdgeLength" />
+    </declare-styleable>
+
+
+    <declare-styleable name="searchedit">
+        <attr name="imagewidth" format="dimension" />
+        <attr name="search_textSize" format="dimension" />
+        <attr name="search_textColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleProgressBar">
+        <!-- 设置圆环进度条的圆环背景属性，包括颜色与宽度 -->
+        <attr name="circle_color" format="color" />
+        <attr name="circle_width" format="dimension" />
+
+        <!-- 设置圆环进度条的进度条属性，包括颜色与宽度，颜色可以设置3种从而实现一个渐变的效果 -->
+        <attr name="progress_color1" format="color" />
+        <attr name="progress_color2" format="color" />
+        <attr name="progress_color3" format="color" />
+        <attr name="progress_width" format="dimension" />
+
+
+        <!-- 设置圆环进度条百分比是从低到高显示还是从高到低显示 ，默认从低到高，即从0到100 -->
+        <attr name="set_high_to_low" format="boolean" />
+
+        <!-- 是否设置圆环进度条中间的内容属性，需要与下面的一组属性配合使用-->
+        <attr name="is_set_top_title" format="boolean" />
+        <attr name="is_set_mid_content" format="boolean" />
+        <attr name="is_set_bottom_content" format="boolean" />
+
+        <!-- 设置圆环进度条中间的内容属性-->
+        <attr name="top_title" format="string" />
+        <attr name="bottom_content" format="string" />
+        <attr name="current_progress" format="float" />
+        <attr name="max_progress" format="float" />
+
+        <attr name="top_title_color" format="color" />
+        <attr name="mid_progress_color" format="color" />
+        <attr name="bottom_content_color" format="color" />
+        <attr name="top_title_text_size" format="dimension" />
+        <attr name="bottom_content_text_size" format="dimension" />
+        <attr name="current_progress_text_size" format="dimension" />
+
+
+        <!-- 设置显示圆环的弧度，360度则显示整个圆环-->
+        <attr name="sweep_angle" format="integer" />
+        <attr name="start_arc" format="float" />
+        <attr name="end_arc" format="float" />
+
+
+    </declare-styleable>
+
+    <declare-styleable name="TextViewDrawable">
+        <attr name="drawableLeftWidth" format="dimension" />
+        <attr name="drawableTopWidth" format="dimension" />
+        <attr name="drawableRightWidth" format="dimension" />
+        <attr name="drawableLeftHeight" format="dimension" />
+        <attr name="drawableTopHeight" format="dimension" />
+        <attr name="drawableRightHeight" format="dimension" />
+        <attr name="drawableBottomHeight" format="dimension" />
+        <attr name="drawableBottomWidth" format="dimension" />
+        <attr name="isAliganCenter" format="boolean" />
+    </declare-styleable>
+
+    <!-- 自定义验证码输入框-->
+    <declare-styleable name="VerificationCodeView">
+        <!--输入框的数量-->
+        <attr name="icv_et_number" format="integer" />
+        <!--输入框的宽度-->
+        <attr name="icv_et_width" format="dimension|reference" />
+        <!--输入框之间的分割线-->
+        <attr name="icv_et_divider_drawable" format="reference" />
+        <!--输入框文字颜色-->
+        <attr name="icv_et_text_color" format="color|reference" />
+        <!--输入框文字大小-->
+        <attr name="icv_et_text_size" format="dimension|reference" />
+        <!--输入框获取焦点时边框-->
+        <attr name="icv_et_bg_focus" format="reference" />
+        <!--输入框没有焦点时边框-->
+        <attr name="icv_et_bg_normal" format="reference" />
+        <!--是否是密码模式-->
+        <attr name="icv_et_pwd" format="boolean" />
+        <!--密码模式时,圆的半径-->
+        <attr name="icv_et_pwd_radius" format="dimension|reference" />
+    </declare-styleable>
+    <!--空页面布局-->
+    <declare-styleable name="NodataEmptyLayout">
+        <attr name="empty_src" format="reference" />
+        <attr name="empty_des" format="string" />
+        <attr name="text_color" format="string" />
+        <attr name="empty_topLine" format="boolean" />
+    </declare-styleable>
+    <!-- RichText 可以直接设置图片大小的TextView -->
+    <declare-styleable name="RichText">
+        <attr name="drawable_src" format="reference" />
+        <attr name="drawable_height" format="dimension" />
+        <attr name="drawable_width" format="dimension" />
+        <attr name="drawable_location">
+            <enum name="left" value="1" />
+            <enum name="top" value="2" />
+            <enum name="right" value="3" />
+            <enum name="bottom" value="4" />
+        </attr>
+    </declare-styleable>
+    <!-- MyProgressLine 自定义颜色的进度条 -->
+    <declare-styleable name="MyProgressLine">
+        <attr name="bmColor" format="color" />
+        <attr name="bmHight" format="dimension" />
+        <attr name="linehight" format="dimension" />
+        <attr name="lineColor" format="color" />
+        <attr name="descColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="MedalDetialTitleImageView">
+        <attr name="medal_src" format="reference" />
+        <attr name="medal_default_height" format="integer" />
+    </declare-styleable>
+
+
+    <declare-styleable name="FoldTextView">
+        <attr name="showMaxLine" format="integer" />
+        <attr name="tipGravity" format="integer" />
+        <attr name="tipColor" format="reference|color" />
+        <attr name="tipClickable" format="boolean" />
+        <attr name="foldText" format="string" />
+        <attr name="expandText" format="string" />
+        <attr name="showTipAfterExpand" format="boolean" />
+        <attr name="isSetParentClick" format="boolean"/>
+    </declare-styleable>
+
+</resources>

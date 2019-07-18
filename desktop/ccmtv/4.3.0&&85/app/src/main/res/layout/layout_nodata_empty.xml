@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.linlic.ccmtv.yx.widget.NodataEmptyLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nodata_empty_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone"
+    app:empty_des="暂时还没有数据哦~"
+    app:empty_src="@mipmap/nodata_file" />

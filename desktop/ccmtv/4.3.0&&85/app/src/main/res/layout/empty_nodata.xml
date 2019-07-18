@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/v_nodata_empty_top_line"
+        android:layout_width="match_parent"
+        android:layout_height="15px"
+        android:layout_alignParentTop="true"
+        android:background="#EFEFEF"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_nodata_empty_img"
+        android:layout_width="210dp"
+        android:layout_height="168dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:src="@mipmap/nodata_file" />
+
+    <TextView
+        android:id="@+id/tv_empty_nodata_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/iv_nodata_empty_img"
+        android:layout_centerHorizontal="true"
+        android:text="还没有任何数据哦~"
+        android:textColor="#999"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btn_empty_nodata_ckick"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/tv_empty_nodata_des"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@mipmap/learning_task04"
+        android:padding="8dp"
+        android:text="去下载"
+        android:textColor="#FFF"
+        android:textSize="16sp"
+        android:visibility="gone" />
+</RelativeLayout>

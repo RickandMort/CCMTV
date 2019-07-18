@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 上传 item 1 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <FrameLayout
+                android:id="@+id/collect_frameLoayout"
+                android:layout_width="90dp"
+                android:layout_height="60dp">
+
+                <ImageView
+                    android:id="@+id/upload_item_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+
+                    android:layout_gravity="center|top"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/img_default" />
+
+                <ImageView
+                    android:id="@+id/upload_top_item_img"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="5dp"
+                    android:src="@mipmap/vip_img"
+                    android:visibility="invisible" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/upload_item_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1111"
+                    android:textColor="#666"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/upload_times"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:padding="6dp"
+                        android:text="11111111111"
+                        android:textColor="#C8C8C8"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/icon_shenhes" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#e5e5e5" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/department_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12"
+        android:visibility="gone" />
+
+</LinearLayout>

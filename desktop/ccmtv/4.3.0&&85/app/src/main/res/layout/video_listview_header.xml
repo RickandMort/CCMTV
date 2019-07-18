@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.linlic.ccmtv.yx.widget.FocuedTextView
+                android:id="@+id/activity_title_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center|left"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|right"
+                android:layout_marginRight="10dp"
+                android:layout_weight="4"
+                android:gravity="center|right"
+                android:onClick="toAbstract">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|right"
+                    android:layout_marginRight="5dp"
+                    android:text="简介"
+                    android:textColor="@color/videotree_text_bg"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/bark4" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/videotree_view_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <!--    <TextView
+                    android:id="@+id/video_play_count_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center|left"
+                    android:text="390.9万总播放量"
+                    android:textColor="@color/background_menu_divider" />-->
+
+            <!-- <ImageView
+                 android:id="@+id/video_header_comment_img"
+                 android:layout_width="25dp"
+                 android:layout_height="30dp"
+                 android:layout_marginLeft="10dp"
+                 android:layout_marginRight="6dp"
+                 android:src="@drawable/video_comm" />-->
+            <ImageView
+
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="6dp"
+                android:src="@mipmap/video_play_count" />
+
+            <TextView
+                android:id="@+id/video_play_count_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="评论"
+                android:textColor="@color/videotree_text_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|right"
+                android:gravity="center|right"
+                android:orientation="horizontal"
+
+                >
+
+                <LinearLayout
+                    android:id="@+id/layout_vote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_votenum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:text="0票"
+                        android:textColor="#cccccc" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:text=" | "
+                        android:textColor="#cccccc" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="2dp"
+                        android:src="@mipmap/video_icon_zambia" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginRight="15dp"
+                        android:text="投票"
+                        android:textColor="#cccccc" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_praise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/video_no_zambia_img"
+                        android:layout_width="20dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="2dp"
+                        android:src="@mipmap/video_icon_zambia" />
+
+                    <TextView
+                        android:id="@+id/video_no_zambia_Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginRight="15dp"
+                        android:text="0"
+                        android:textColor="#cccccc" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/video_icon_collection_img"
+                    android:layout_width="20dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/video_icon_collection" />
+
+
+                <ImageView
+                    android:id="@+id/video_header_comment_img"
+                    android:layout_width="20dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/video_icon_comment" />
+
+
+                <ImageView
+                    android:id="@+id/video_download_img"
+                    android:layout_width="20dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/video_icon_download" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="30dp"
+                    android:onClick="ShareVideo"
+                    android:src="@mipmap/video_share" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#f7f7f7" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center|left"
+                    android:text="专家介绍"
+                    android:textColor="@color/videotree_text_bg"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <!--       <com.linlic.ccmtv.yx.utils.HorizontalListView
+                       android:id="@+id/horizontallistview1"
+                       android:layout_width="wrap_content"
+                       android:layout_gravity="center"
+                       android:layout_height="120dp" />-->
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/horizontallistview1"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="left"
+                android:layout_marginLeft="7dp"
+                android:scrollbars="none" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#f7f7f7" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center|left"
+                    android:text="相关视频"
+                    android:textColor="@color/videotree_text_bg"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <!--            <com.linlic.ccmtv.yx.utils.HorizontalListView
+                            android:id="@+id/horizontallistview2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="150dp" />-->
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/horizontallistview2"
+                android:layout_width="wrap_content"
+                android:layout_height="170dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#f7f7f7" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|left"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center|left"
+                    android:text="评论"
+                    android:textColor="@color/videotree_text_bg"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/color_white"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.linlic.ccmtv.yx.utils.CustomImageView
+                    android:id="@+id/MyImg2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/my_information_tx" />
+
+                <EditText
+                    android:id="@+id/video_menu_comment_edittext_ff"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/anniu5"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="我来说几句"
+                    android:maxLines="1"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:textColorHint="@color/integral_main_Button_text_color1" />
+
+                <TextView
+                    android:id="@+id/video_menu_comment_edittext_submit1"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="发表"
+                    android:textColor="@color/login_name" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

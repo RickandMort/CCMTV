@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/video_comment_dilong2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:background="@color/color_white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/video_menu_comment_edittext_f"
+            android:layout_width="fill_parent"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@mipmap/sousuo_03"
+            android:drawableLeft="@mipmap/video_paly3_19"
+            android:hint="  我来说几句"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:textColorHint="@color/integral_main_Button_text_color1"
+            android:textSize="14dip"></EditText>
+
+        <Button
+            android:id="@+id/video_menu_comment_edittext_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/regist_button"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:text="@string/upload_sumit"
+            android:textColor="@color/regist_layout_background" />
+    </LinearLayout>
+
+</LinearLayout>

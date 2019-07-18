@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.linlic.ccmtv.yx.activity.rules_to_compensate.gp_exam.MakeApplyForDelayActivity"
+    android:orientation="vertical"
+    android:background="#f0f0f0">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:onClick="back">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/login_back"/>
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/activity_title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="申请延期"
+            android:textColor="#333333"
+            android:textSize="18sp"/>
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="轮转科室"
+            android:textSize="14sp"
+            android:textColor="@color/black66"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@mipmap/delay_dot"
+            android:drawablePadding="2dp"
+            />
+
+
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/nice_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="76dp"
+                app:textTint="@color/videotree_text_bg2"
+                />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_choose_ks"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="76dp"
+            android:background="@drawable/delay_gray_bg"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="麻醉科"
+                android:textSize="14sp"
+                android:textColor="@color/black33"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/down_icon"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="6dp"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_plan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="计划轮转时间"
+            android:textSize="14sp"
+            android:textColor="@color/black66"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@mipmap/delay_dot"
+            android:drawablePadding="2dp"
+            />
+        
+        <TextView
+            android:id="@+id/tv_plan_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="14sp"
+            android:layout_marginLeft="48dp"
+            android:textColor="@color/black33"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/tv_plan"
+            android:layout_toLeftOf="@+id/tv_look"
+            android:layout_marginRight="5dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_look"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查看"
+            android:textSize="14sp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/color3897f9"
+            android:layout_marginRight="15dp"
+            android:visibility="gone"
+            />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="延期出科开始时间"
+            android:textSize="14sp"
+            android:textColor="@color/black66"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@mipmap/delay_dot"
+            android:drawablePadding="2dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_start_time"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:text="请选择"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            android:background="@drawable/delay_gray_bg"
+            android:layout_marginLeft="19dp"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black33"/>
+
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="延期出科结束时间"
+            android:textSize="14sp"
+            android:textColor="@color/black66"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@mipmap/delay_dot"
+            android:drawablePadding="2dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_end_time"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:text="请选择"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            android:background="@drawable/delay_gray_bg"
+            android:layout_marginLeft="19dp"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black33"/>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="申请理由"
+            android:textSize="14sp"
+            android:textColor="@color/black66"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@mipmap/delay_dot"
+            android:drawablePadding="2dp"
+            />
+
+        <EditText
+            android:id="@+id/et_reason"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="top"
+            android:background="#FAFAFA"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:layout_marginBottom="20dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp">
+
+        <Button
+            android:id="@+id/btn_summit"
+            android:layout_width="140dp"
+            android:layout_height="38dp"
+            android:background="@drawable/study_buy_button"
+            android:text="提交"
+            android:textSize="15sp"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

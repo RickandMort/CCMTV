@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?> <!-- 上传  item 3 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="3dp"
+            android:background="@mipmap/img_yinying" />
+
+        <ImageView
+            android:id="@+id/iv_upcase"
+            android:layout_width="90dp"
+            android:layout_height="72dp"
+            android:background="@mipmap/img_default"
+            android:scaleType="fitXY" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tv_case_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="1111"
+                    android:textColor="#707070"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_case_nowsize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12M"
+                        android:textSize="14sp"
+                        android:textColor="#C8C8C8" />
+
+
+                    <TextView
+                        android:id="@+id/tv_case_totalsize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:text="12M"
+                        android:textSize="14sp"
+                        android:textColor="#C8C8C8" />
+
+                    <TextView
+                        android:id="@+id/tv_case_uptime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:text="2016.6.23"
+                        android:textSize="14sp"
+                        android:textColor="#C8C8C8"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tv_case_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="12111"
+                        android:textColor="#707070"
+                        android:textSize="13sp"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="55dp"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_state"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@mipmap/img_up" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="center" >
+
+
+            <!-- 定义一个水平进度条 -->
+            <ProgressBar
+                android:id="@+id/numberbar5"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:layout_weight="1"
+                android:max="100"
+                android:layout_marginRight="10dp"
+                android:progressDrawable="@drawable/progressbar_color"
+                style="?android:attr/progressBarStyleHorizontal"/>
+
+            <TextView
+                android:id="@+id/tv_case_prog"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:text="0%"
+                android:gravity="center"
+                android:textColor="#ec919c"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_case_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12"
+        android:visibility="gone" />
+
+</LinearLayout>
+
+
+    <!--
+
+
+     <com.linlic.ccmtv.yx.widget.NumberProgressBar
+         android:id="@+id/numberbar1"
+         style="@style/NumberProgressBar_Default"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:padding="20dp"
+         android:visibility="gone"
+         custom:progress="0" />
+
+     <com.linlic.ccmtv.yx.widget.NumberProgressBar
+         android:id="@+id/numberbar2"
+         style="@style/NumberProgressBar_Passing_Green"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:padding="20dp"
+         android:visibility="gone"
+         custom:progress="20" />
+
+     <com.linlic.ccmtv.yx.widget.NumberProgressBar
+         android:id="@+id/numberbar3"
+         style="@style/NumberProgressBar_Relax_Blue"
+         android:layout_height="wrap_content"
+         android:layout_margin="20dp"
+         android:visibility="gone"
+         custom:progress="30" />
+
+     <com.linlic.ccmtv.yx.widget.NumberProgressBar
+         android:id="@+id/numberbar4"
+         style="@style/NumberProgressBar_Grace_Yellow"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_margin="20dp"
+         android:visibility="gone"
+         custom:progress="40" />
+
+
+     <com.linlic.ccmtv.yx.widget.NumberProgressBar
+         style="@style/NumberProgressBar_Warning_Red"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_margin="20dp"
+         android:visibility="gone"
+         custom:progress="0" />
+
+
+     <com.linlic.ccmtv.yx.widget.NumberProgressBar
+         android:id="@+id/numberbar6"
+         style="@style/NumberProgressBar_Funny_Orange"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_margin="20dp"
+         android:visibility="gone"
+         custom:progress="60" />
+
+     <com.linlic.ccmtv.yx.widget.NumberProgressBar
+         android:id="@+id/numberbar7"
+         style="@style/NumberProgressBar_Beauty_Red"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_margin="20dp"
+         android:visibility="gone"
+         custom:progress="70" />
+
+     <com.linlic.ccmtv.yx.widget.NumberProgressBar
+         android:id="@+id/numberbar8"
+         style="@style/NumberProgressBar_Twinkle_Night"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_margin="20dp"
+         android:visibility="gone"
+         custom:progress="80" />
+
+
+     <View
+         android:layout_width="match_parent"
+         android:layout_height="0.1dp"
+         android:layout_marginLeft="10dp"
+         android:layout_marginRight="10dp"
+         android:layout_marginTop="10dp"
+         android:background="#e5e5e5" />-->
+

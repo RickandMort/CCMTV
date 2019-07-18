@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?><!--医学会议item-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="40dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="left|center"
+        android:gravity="left|center"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="3dp"
+            android:id="@+id/practicing_itme_lg_tilte"
+            android:layout_gravity="left|center"
+            android:gravity="left|center"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/paly_icon01" />
+
+            <TextView
+                android:id="@+id/practicing_itme_tilte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="#666666"
+                android:text="医学伦理学"
+                />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/practicing_itme_fid"
+        android:visibility="gone"
+        />
+</LinearLayout>

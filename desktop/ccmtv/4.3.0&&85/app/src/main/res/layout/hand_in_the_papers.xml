@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?><!--交卷-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:onClick="back">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/bark" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="考试结果"
+            android:textColor="#626262"
+            android:textSize="18sp" />
+
+
+    </FrameLayout>
+
+    <include layout="@layout/activity_title4" />
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/layout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:background="#FFEBEC"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center|left"
+                            android:gravity="center|left"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:layout_height="30dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/exams5_03"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:textSize="14sp"
+                                android:textColor="#8D8987"
+                                android:text="以下为客观题得分，主观题请等待管理员批阅"
+                                />
+
+                        </LinearLayout>
+
+                        <include layout="@layout/activity_title4" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:textColor="#8D8987"
+                                android:text="客观题得分"
+                                />
+
+
+                            <LinearLayout
+                                android:layout_width="120dp"
+                                android:orientation="horizontal"
+                                android:background="@mipmap/exams1_14"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_height="120dp">
+                                <TextView
+                                    android:id="@+id/hand_in_the_papers_point"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="0"
+                                    android:textStyle="bold"
+                                    android:textColor="#F0A702"
+                                    android:textSize="42sp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:paddingTop="10dp"
+                                    android:text="分"
+                                    android:textStyle="bold"
+                                    android:textColor="#F0A702"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/hand_in_the_papers_text1"
+                                android:layout_marginTop="20dp"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="考试结束，请查看您的成绩"
+                                android:textColor="#626262"
+                                android:textSize="16sp" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout2"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginTop="30dp"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="#8D8987"
+                            android:visibility="invisible"
+                            android:text="客观题得分"
+                            />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center"
+                            android:paddingRight="70dp"
+                            android:paddingLeft="70dp"
+                            android:gravity="center"
+                            android:layout_height="120dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:paddingTop="10dp"
+                                android:text="考试成绩待管理员公布后可查看，请耐心等待。"
+                                android:textColor="#666"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_marginTop="20dp"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:visibility="invisible"
+                            android:gravity="center"
+                            android:text="考试结束，请查看您的成绩"
+                            android:textColor="#626262"
+                            android:textSize="16sp" />
+
+
+                    </LinearLayout>
+                </FrameLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/examination_instructions_buttpm1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:text="查看答题卡"
+                        android:textSize="20sp"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center"
+                        android:textColor="#666"
+                        android:clickable="false"
+                        android:onClick="enter_the_examination"
+                        android:background="@mipmap/button_03"
+                        />
+
+                    <Button
+                        android:id="@+id/examination_instructions_buttpm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:text="再考一次"
+                        android:layout_weight="1"
+                        android:textSize="20sp"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center"
+                        android:textColor="#ffffff"
+                        android:onClick="back1"
+                        android:background="@mipmap/button_01"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+    </ScrollView>
+
+</LinearLayout>

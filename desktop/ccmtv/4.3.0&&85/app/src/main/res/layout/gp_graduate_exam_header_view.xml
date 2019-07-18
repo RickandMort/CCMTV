@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/id_ll_graduate_exam_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF">
+
+        <LinearLayout
+            android:id="@+id/id_ll_graduate_exam_date"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="7dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="考试日期:"
+                android:textColor="#999"
+                />
+
+            <EditText
+                android:id="@+id/id_et_graduate_exam_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_marginLeft="10dp"
+                android:hint=""/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@mipmap/pingjia_top"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="总得分"
+                android:textColor="#3897F9"
+                android:textSize="13sp"
+                android:background="@mipmap/total_score"
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="24dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                >
+                <TextView
+                    android:id="@+id/tv_show_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="75"
+                    android:textColor="#3897F9"
+                    android:textSize="36sp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@null"
+                    android:inputType="number"
+                    android:enabled="false"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="分"
+                    android:textColor="#3897F9"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="20dp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="满分100分，80分以下为差评"
+                android:textColor="@color/black66"
+                android:textSize="11sp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="22dp"
+                android:layout_marginBottom="15dp"
+                android:visibility="gone"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/id_ll_graduate_exam_parent_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:orientation="vertical"
+            android:layout_marginTop="2dp">
+
+            <LinearLayout
+                android:id="@+id/id_ll_graduate_exam_examined_stu_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="考核学员:"
+                    android:textColor="@color/black66"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/id_tv_graduate_exam_examined_stu_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="40dp"
+                    android:textSize="15sp"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_teacher_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="带教老师:"
+                    android:textColor="@color/black66"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/id_tv_graduate_exam_examined_teacher_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="40dp"
+                    android:textSize="15sp"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_ll_graduate_exam_examiner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="考        官:"
+                    android:textColor="@color/black66"
+                    android:textSize="15sp"/>
+
+                <EditText
+                    android:id="@+id/id_et_graduate_exam_examiner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:textColor="#333333"
+                    android:layout_marginLeft="40dp"
+                    android:textSize="15sp"
+                    android:hint=""/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_ll_graduate_exam_entering_type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/examination_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="成绩录入方式:"
+                    android:textColor="@color/black66"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/id_tv_graduate_exam_entering_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15sp"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_ll_graduate_exam_template"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="模        板:"
+                    android:textColor="@color/black66"
+                    android:gravity="center_vertical"/>
+
+                <!--<org.angmarch.views.NiceSpinner
+                    android:id="@+id/id_spinner_graduate_exam_template"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/ll_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/anniu10"
+                        android:orientation="vertical"
+
+                        >
+
+                        <RelativeLayout
+                            android:id="@+id/rl_item_grade"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:padding="2dp">
+
+                            <TextView
+                                android:id="@+id/tv_value_form"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:background="#fff"
+                                android:ellipsize="end"
+                                android:gravity="left|center"
+                                android:hint="0"
+                                android:paddingLeft="10dp"
+                                android:singleLine="true"
+                                android:textColor="#ff000000">
+                            </TextView>
+
+                            <LinearLayout
+                                android:id="@+id/bt_dropdown_form"
+                                android:layout_width="30dp"
+                                android:layout_height="match_parent"
+                                android:layout_toRightOf="@+id/tv_value_form"
+                                android:background="#fff"
+                                android:gravity="center"
+                                >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@mipmap/down_icon"/>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_score_type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="打分方式:"
+                    android:textColor="@color/black66"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/score_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15sp"
+                    android:text="" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/id_ll_graduate_exam_score"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="打        分:"
+                    android:textColor="@color/black66" />
+
+                <EditText
+                    android:id="@+id/id_et_graduate_exam_score"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_edittext2"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:hint=""/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/examination_instructions_buttpm1"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="查看答题卡"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:textColor="#ffffff"
+            android:clickable="false"
+            android:onClick="enter_the_examination"
+            android:background="@mipmap/button_01"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/id_ll_graduate_exam_upload_picture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="图        片:"
+                android:textColor="@color/black66"
+                android:textSize="15sp"/>
+
+            <com.linlic.ccmtv.yx.widget.MyGridView
+                android:id="@+id/id_gv_graduate_exam_pic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:verticalSpacing="10dp"
+                android:horizontalSpacing="5dp"
+                android:layout_marginTop="10dp"
+                android:stretchMode="columnWidth"
+                android:background="@color/transparent2"
+                android:listSelector="@color/transparent2"
+                android:layout_marginLeft="10dp"
+                android:numColumns="4" />
+
+            <ImageView
+                android:id="@+id/id_iv_graduate_exam_add_pic"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:onClick="addExamPic"
+                android:src="@mipmap/upload_addpic"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

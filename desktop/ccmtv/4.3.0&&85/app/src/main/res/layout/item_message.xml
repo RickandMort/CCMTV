@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout
+        android:id="@+id/swipeLayout"
+        app:contentView="@+id/content"
+        app:rightMenuView="@+id/right_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/rl_message_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.linlic.ccmtv.yx.utils.CustomImageView
+                    android:id="@+id/message_user_img"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/img_default" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_message_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_toRightOf="@+id/message_user_img">
+
+                    <TextView
+                        android:id="@+id/message_helper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="小蕊"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/message_addtime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text="2017年12月21日"
+                        android:textColor="#999"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_message_top"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/message_user_img">
+
+                    <TextView
+                        android:id="@+id/message_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_alignParentLeft="true"
+                        android:text="清晨血压就是晨峰血压吗？"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textColor="#666"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/message_detial"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="查看详情 >"
+                        android:textColor="#00AEEB"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rl_message_item"
+                android:background="#EFEFEF" />
+
+            <TextView
+                android:id="@+id/tv_red_dot"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_look_num"
+                android:gravity="center"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/right_delete"
+            android:layout_width="80dp"
+            android:background="#00AEEB"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="删除"
+                android:textSize="18sp"
+                android:textColor="#FFF"/>
+
+        </RelativeLayout>
+
+    </com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout>
+
+</RelativeLayout>
