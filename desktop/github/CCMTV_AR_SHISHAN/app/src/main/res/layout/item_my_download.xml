@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentView="@+id/rl_content"
+        app:rightMenuView="@+id/right">
+
+        <RelativeLayout
+            android:id="@+id/rl_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@mipmap/detial_download_icon" />
+
+                <TextView
+                    android:id="@+id/my_download_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:layout_weight="1"
+                    android:text="高血压合理围手术期患者低体温防治专家共识（2017）"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_progress"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:visibility="visible">
+
+                    <com.linlic.ccmtv.yx.kzbf.widget.CircleProgressBar
+                        android:id="@+id/circle_progress_bar_4"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:bottom_content="失败"
+                        app:bottom_content_text_size="12sp"
+                        app:circle_color="#EFEFEF"
+                        app:circle_width="3dp"
+                        app:is_set_bottom_content="false"
+                        app:is_set_mid_content="false"
+                        app:is_set_top_title="false"
+                        app:max_progress="270"
+
+                        app:mid_progress_color="#f00"
+                        app:progress_color1="#00AEEB"
+                        app:progress_color2="#00AEEB"
+                        app:progress_color3="#00AEEB"
+                        app:progress_width="3dp"
+                        app:start_arc="135"
+                        app:top_title="下载"
+                        app:top_title_color="#000"
+                        app:top_title_text_size="12sp"
+                        android:visibility="visible"/>
+
+                    <com.linlic.ccmtv.yx.utils.CustomImageView
+                        android:id="@+id/my_download_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/icon_download_start"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/my_download_progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="0%"
+                        android:textSize="10sp"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_content"
+                android:layout_marginLeft="50dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/bottom_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="下载完成,共M"
+                    android:textColor="#666"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/bottom_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="2017-12-26"
+                    android:textColor="#666"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/rl_bottom"
+                android:background="#EFEFEF" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/right"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!--<TextView
+                android:id="@+id/right_cancel"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="#FAB913"
+                android:text="取消"
+                android:textColor="#FFF"
+                android:textSize="18sp" />-->
+
+            <TextView
+                android:id="@+id/right_delete"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="#00AEEB"
+                android:text="删除"
+                android:textColor="#FFF"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout>
+
+</RelativeLayout>

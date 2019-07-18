@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/list_buttom_text"
+        android:layout_width="match_parent"
+        android:textColor="#FF2A2A"
+        android:padding="15dp"
+        android:textSize="16sp"
+        android:text="*本次评价需要在2018年6月30日前完成。"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

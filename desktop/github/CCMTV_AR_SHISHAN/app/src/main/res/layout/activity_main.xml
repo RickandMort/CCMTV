@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/s_fragments"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"></LinearLayout>
+
+            <include layout="@layout/bottom_menu" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/code_tx_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@mipmap/guide_1"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="codezd"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="125dp"
+                android:layout_height="47dp"
+                android:layout_gravity="center|bottom"
+                android:layout_marginBottom="35dp"
+
+                android:src="@mipmap/code_zd"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!--网络提示占位-->
+        <LinearLayout
+            android:id="@+id/newtWork_view_placeHolder"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#ffdcdc"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/ic_net_tips" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/post_hint4"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

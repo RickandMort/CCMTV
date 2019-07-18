@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:autoWrapLineLayout="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#fff"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:onClick="back">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/bark"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/share_layout"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:onClick="back">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_comment_share"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="文章详情"
+            android:textColor="#626262"
+            android:textSize="18sp"/>
+
+
+    </FrameLayout>
+
+    <include layout="@layout/activity_title4"/>
+
+    <FrameLayout
+        android:id="@+id/detial_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/viewing_tilte"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="20dp"
+                    android:textStyle="bold"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <com.linlic.ccmtv.yx.utils.CircleImageView
+                        android:id="@+id/_icon"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/anti_cheating"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/anniu16"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:text="发布者"
+                                android:textColor="#fff"
+                                android:textSize="13sp"/>
+
+                            <TextView
+                                android:id="@+id/viewing_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:textColor="#A6A6A6"/>
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/viewing_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#A6A6A6"
+                            android:textSize="14sp"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#F3F3F3"
+                    />
+
+                <com.linlic.ccmtv.yx.widget.NoScrollWebView
+                    android:id="@+id/viewing_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    />
+
+
+                <LinearLayout
+                    android:id="@+id/file_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="center|left"
+                    android:layout_weight="1"
+                    android:padding="15dp"
+                    android:background="@drawable/anniu22"
+                    android:orientation="horizontal">
+
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/database_file2"
+                        />
+                    <TextView
+                        android:id="@+id/title2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="#88AFE6"
+                        android:text="点击查看"
+                        />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/layout_praise"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/medicine_detial_eye_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/medicine_eye" />
+
+                        <TextView
+                            android:id="@+id/medicine_detial_eye_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/medicine_detial_eye_img"
+                            android:text="321"
+                            android:textColor="#999"
+                            android:textSize="13sp" />
+
+                        <ImageView
+                            android:id="@+id/video_no_zambia_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/medicine_zan"/>
+
+                        <TextView
+                            android:id="@+id/zambia_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/medicine_detial_eye_img"
+                            android:text="321"
+                            android:textColor="#999"
+                            android:textSize="13sp"/>
+
+
+
+                        <ImageView
+                            android:id="@+id/video_icon_collection_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="-2dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@mipmap/collection_01"/>
+
+                        <TextView
+                            android:id="@+id/collection_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/medicine_detial_eye_img"
+                            android:text="321"
+                            android:textColor="#999"
+                            android:textSize="13sp"/>
+
+
+
+
+
+
+
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <cn.wolfspider.autowraplinelayout.AutoWrapLineLayout
+                        android:id="@+id/auto_wrap_line_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        autoWrapLineLayout:fillMode="1"
+                        autoWrapLineLayout:horizontalGap="1dp"
+                        autoWrapLineLayout:verticalGap="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:text="关键词:    "
+                            android:textColor="#6AB4FF"
+                            />
+
+                    </cn.wolfspider.autowraplinelayout.AutoWrapLineLayout>
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="#e5e5e5"/>
+
+                <!--专家-->
+                <LinearLayout
+                    android:id="@+id/video_Expert_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="作者"
+                            android:textColor="#666"
+                            android:textSize="16sp"/>
+
+                    </LinearLayout>
+
+                    <com.linlic.ccmtv.yx.utils.MyGridView
+                        android:id="@+id/video_Experts_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:horizontalSpacing="5dp"
+                        android:listSelector="@null"
+                        android:numColumns="4"/>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="#e5e5e5"/>
+                </LinearLayout>
+                <!--专家end-->
+
+
+                <!--更多推荐start-->
+                <LinearLayout
+                    android:id="@+id/relevant_list_layout"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|left"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center|left"
+                            android:text="更多推荐"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <com.linlic.ccmtv.yx.utils.MyListView
+                        android:id="@+id/video_menu_relevant_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:divider="#00000000"
+                        android:listSelector="#00000000"
+                        android:scrollbars="none"/>
+                    <!--更多推荐end-->
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="#e5e5e5"/>
+
+                </LinearLayout>
+
+
+                <!--评论-->
+                <LinearLayout
+                    android:id="@+id/video_comment_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="60dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/qbcomment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="全部评论"
+                            android:textSize="16sp"
+                            android:textStyle="bold"/>
+
+
+                    </LinearLayout>
+
+
+                    <com.linlic.ccmtv.yx.utils.MyListView
+                        android:id="@+id/video_menu_comment_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="#00000000"
+                        android:listSelector="#00000000"
+                        android:scrollbars="none"
+                        android:visibility="visible"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_comment_empty"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/nodata"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="还没有评论，做第一个评论的人"
+                            android:textColor="#999"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_say_something"
+                            android:layout_width="120dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="15dp"
+                            android:background="@mipmap/learning_task04"
+                            android:gravity="center"
+                            android:text="说两句"
+                            android:textColor="#FFF"
+                            android:textSize="18sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--评论end-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="#e5e5e5"/>
+
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f7f7f7"
+                />
+
+            <LinearLayout
+                android:id="@+id/video_comment_dilong2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="bottom"
+                android:background="@color/color_white"
+                android:clickable="true"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <!--       <com.linlic.ccmtv.yx.utils.CustomImageView
+                           android:id="@+id/MyImg"
+                           android:layout_width="40dp"
+                           android:layout_height="40dp"
+                           android:layout_margin="10dp"
+                           android:onClick="changeVideo"
+                           android:scaleType="fitXY"
+                           android:src="@mipmap/menu_icon1" />-->
+
+                <!--      <EditText
+                          android:id="@+id/video_menu_comment_edittext_f"
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:layout_marginBottom="10dp"
+                          android:layout_marginTop="10dp"
+                          android:layout_weight="1"
+                          android:background="@drawable/anniu5"
+                          android:focusable="true"
+                          android:focusableInTouchMode="true"
+                          android:hint="我来说几句"
+                          android:maxLines="1"
+                          android:paddingBottom="5dp"
+                          android:paddingLeft="10dp"
+                          android:paddingRight="10dp"
+                          android:paddingTop="5dp"
+                          android:textColorHint="@color/integral_main_Button_text_color1" />-->
+
+                <!--           <EditText
+                    android:id="@+id/video_menu_comment_edittext_f"
+                    android:layout_width="fill_parent"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawableLeft="@mipmap/video_paly3_19"
+                    android:hint="  我来说几句"
+                    android:imeOptions="actionSend"
+                    android:maxLines="1"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:textColorHint="@color/integral_main_Button_text_color1"
+                    android:textSize="14dip"></EditText>-->
+
+                <TextView
+                    android:id="@+id/video_menu_comment_edittext_f"
+                    android:layout_width="fill_parent"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawableLeft="@mipmap/video_paly3_19"
+                    android:imeOptions="actionSend"
+                    android:maxLines="1"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="  我来说几句"
+                    android:textColorHint="@color/integral_main_Button_text_color1"
+                    android:textSize="14dip"/>
+
+                <TextView
+                    android:id="@+id/comment_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@mipmap/comment01"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:paddingRight="10dp"
+                    android:textColor="#333"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--评论 查看全部评论start-->
+        <LinearLayout
+            android:id="@+id/item_comment_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="35dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="评论详情"
+                                android:textSize="20sp"
+                                android:textStyle="bold"/>
+
+                            <ImageView
+                                android:id="@+id/icon_x_comment"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:src="@mipmap/icon_x"/>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="10dp"
+                            android:background="#f6f6f6"/>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <com.linlic.ccmtv.yx.utils.CustomImageView
+                                android:id="@+id/video_menu_comment_item_img"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="10dp"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/icon_61"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="10dp"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+
+                                        <TextView
+                                            android:id="@+id/video_menu_comment_item_name"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center|left"
+                                            android:gravity="center|left"
+                                            android:text="李医生"/>
+
+                                        <TextView
+                                            android:id="@+id/video_menu_comment_item_times"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center|left"
+                                            android:layout_marginTop="5dp"
+                                            android:gravity="center|left"
+                                            android:text="25分钟前 "
+                                            android:textColor="#999"
+                                            android:textSize="13sp"/>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center|right"
+                                        android:layout_weight="1"
+                                        android:gravity="center|right"
+                                        android:orientation="horizontal">
+
+
+                                        <TextView
+                                            android:id="@+id/video_menu_comment_reply"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center|right"
+                                            android:layout_marginRight="10dp"
+                                            android:background="@drawable/anniu20"
+                                            android:gravity="center|right"
+                                            android:paddingBottom="3dp"
+                                            android:paddingLeft="10dp"
+                                            android:paddingRight="10dp"
+                                            android:paddingTop="3dp"
+                                            android:text="回复TA"
+                                            android:textColor="@color/alert_dialog_items_name_background"
+                                            android:textSize="12sp"/>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/video_menu_comment_item_cont"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|left"
+                                    android:layout_weight="1"
+                                    android:gravity="center|left"
+                                    android:text=""/>
+
+                                <TextView
+                                    android:id="@+id/video_menu_comment_item_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone"/>
+
+                                <TextView
+                                    android:id="@+id/video_menu_comment_item_cid"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="#f6f6f6"/>
+
+                        <com.linlic.ccmtv.yx.utils.MyListView
+                            android:id="@+id/item_MyComment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:divider="#00000000"
+                            android:listSelector="#00000000"
+                            android:scrollbars="none"
+                            android:visibility="visible"/>
+
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="#fff"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#f7f7f7"/>
+
+                    <TextView
+                        android:id="@+id/video_menu_comment_edittext_ff"
+                        android:layout_width="fill_parent"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:drawableLeft="@mipmap/video_paly3_19"
+                        android:imeOptions="actionSend"
+                        android:maxLines="1"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp"
+                        android:text="  我来说几句"
+                        android:textColorHint="@color/integral_main_Button_text_color1"
+                        android:textSize="14dip"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+        <!--评论 查看全部评论end-->
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000"
+        android:visibility="gone" />
+
+</LinearLayout>

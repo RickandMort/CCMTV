@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:onClick="back">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/login_back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="直播"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+    <include layout="@layout/activity_title4" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@mipmap/direct_broadcast_icon13"
+        android:scaleType="fitXY"
+        android:layout_height="140dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="简介"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="40dp"
+        android:layout_gravity="center"
+        android:paddingTop="10dp"
+        android:paddingLeft="40dp"
+        android:textColor="#333"
+        android:background="@drawable/anniu21"
+        />
+
+
+</LinearLayout>

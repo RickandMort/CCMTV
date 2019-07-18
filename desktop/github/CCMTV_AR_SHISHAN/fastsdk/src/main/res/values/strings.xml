@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="fs_gs_sure">OK</string>
+    <string name="fs_gs_sure_1">OK</string>
+    <string name="fs_gs_join_reconnecting">Loading…</string>
+    <string name="fs_gs_i_known">OK</string>
+    <string name="fs_gs_exit_webcast">Do you want to exit the webcast?</string>
+    <string name="fs_gs_end_webcast">Do you want to END the webcast?</string>
+    <string name="fs_gs_cancel">Cancel</string>
+    <string name="fs_gs_net_disconnect">Network error. Please check your network connection.</string>
+    <string name="fs_gs_exit_tip">exit program</string>
+    <string name="fs_gs_net_have_disconnect">Network disconnected...</string>
+    <string name="fs_gs_net_have_disconnect_tip">Network disconnected.</string>
+    <string name="fs_gs_net_connecting">Connecting to server. Please wait...</string>
+    <string name="fs_gs_join_panelist">Sorry, but you may not join webcast as a panelist in this app. Please re-enter as an ordinary attendee.</string>
+
+    <!-- error code -->
+    <string name="fs_gs_domain_error">Please check the domain name.</string>
+    <string name="fs_gs_error_data_timeout">Data expired</string>
+    <string name="fs_gs_error_service">Incorrect service</string>
+    <string name="fs_gs_error_param">Incorrect param</string>
+    <string name="fs_gs_error_number_unexist">Inexistent ID</string>
+    <string name="fs_gs_error_token">Wrong password</string>
+    <string name="fs_gs_error_login">Wrong username or password</string>
+    <string name="fs_gs_error_role">Role Required</string>
+    <string name="fs_gs_error_fail_webcast">Invalid ID</string>
+    <string name="fs_gs_error_webcast_unstart">Not started</string>
+    <string name="fs_gs_error_isonly_web">Support web only</string>
+    <string name="fs_gs_error_room_unenable">Invalid ID</string>
+    <string name="fs_gs_error_owner_error">Internal Problem</string>
+    <string name="fs_gs_error_invalid_address">Invalid ID</string>
+    <string name="fs_gs_error_room_overdue">Overdue</string>
+    <string name="fs_gs_error_authourization_not_enough">Not enough authority</string>
+    <string name="fs_gs_error_untimely">The activity has not started yet.</string>
+    <string name="fs_gs_error_unsupport_mobile">Do not support mobile</string>
+    <!-- xlistview -->
+    <string name="fs_gs_xlistview_header_hint_normal">Pull to refresh</string>
+    <string name="fs_gs_xlistview_header_hint_ready">Release to load data</string>
+    <string name="fs_gs_xlistview_header_hint_loading">Loading...</string>
+    <string name="fs_gs_xlistview_header_last_time">Latest update：</string>
+    <string name="fs_gs_xlistview_footer_hint_normal">More</string>
+    <string name="fs_gs_xlistview_footer_hint_ready">Release to load more</string>
+    <!-- chat -->
+    <string name="fs_gs_chat_send">Send</string>
+    <string name="fs_gs_chat_sys">System info</string>
+    <string name="fs_gs_chat_to">&amp;gt;</string>
+    <string name="fs_gs_chat_me">Me</string>
+    <string name="fs_gs_chat_say">:</string>
+    <string name="fs_gs_chat_unenable">All silenced</string>
+    <string name="fs_gs_chat_only_me">只看我的聊天</string>
+    <string name="fs_gs_chat_quickly">Too frequent message submission. Please try later.</string>
+    <string name="fs_gs_chat_publicchat_open">Chat enabled</string>
+    <string name="fs_gs_chat_publicchat_close">Chat disabled</string>
+    <string name="fs_gs_chat_mode_only_pub">Public chat only</string>
+    <string name="fs_gs_chat_mode_only_private">Private chat only</string>
+    <string name="fs_chat_private_tip">您收到一条%s的私聊消息</string>
+    <string name="fs_chat_bottom_private_tip">您收到%s的私聊消息</string>
+    <string name="fs_chat_only_me">只看我的聊天</string>
+    <string name="fs_chat_public_disable">当前禁止聊天，您的消息发送失败</string>
+    <!-- qa -->
+    <string name="fs_qa_reply_tip">%s回答了你的提问</string>
+    <string name="fs_qa_wen">问</string>
+    <string name="fs_qa_reply">回答</string>
+    <string name="fs_qa_unenable">禁止提问</string>
+    <string name="fs_qa_enable">允许提问</string>
+    <string name="fs_qa_replying">回复中</string>
+    <string name="fs_qa_voice_reply">[已加入语音回复列表]</string>
+    <string name="fs_qa_voice_replying">[语音回复中]</string>
+    <string name="fs_qa_voice_replied">[语音已回复]</string>
+    <string name="fs_qa_only_me">只看我的问答</string>
+    <!-- private chat -->
+    <string name="fs_chat_to_user_tip">正在和%s私聊</string>
+    <!-- tip -->
+    <string name="fs_gs_leave_err_eject_tip">You are removed from the activity.</string>
+    <string name="fs_gs_leave_err_close_tip">Activity over. Thank you!</string>
+    <string name="fs_gs_leave_err_ip_deny">Your IP is banned.</string>
+    <string name="fs_gs_leave_other_place_login">您的账号已在其他地方登录</string>
+    <string name="fs_gs_leave_unknow_reason">您已退出直播</string>
+    <!-- webcast -->
+    <string name="fs_gs_leave_webcast_err_timeup">The activity is overdue. Click \'OK\' to exit.</string>
+    <string name="fs_gs_join_webcast_err_param">This webpage may be overdue or the activity is over.Please return to the join page to input the password.</string>
+    <string name="fs_gs_join_webcast_err_codec">You cannot access, because the specified audio coding doesn\'t match this activity.</string>
+    <string name="fs_gs_join_webcast_err_host">Sorry, this role is taken and you cannot join.</string>
+    <string name="fs_gs_join_webcast_err_license">There are too many people in the activity. Please try to join later.</string>
+    <string name="fs_gs_join_webcast_err_locked">You cannot access as the activity is locked.</string>
+    <string name="fs_gs_join_webcast_err_ip">You cannot access because your IP is banned.</string>
+    <string name="fs_gs_join_webcast_err_third_auth">Third-party authentication failure</string>
+    <string name="fs_gs_join_webcast_err_too_early">Activity has not started yet. Please join later.</string>
+    <string name="fs_gs_join_webcast_timeout">Timeout</string>
+    <string name="fs_gs_cast_status_ing">Live</string>
+    <string name="fs_gs_cast_status_pause">Paused</string>
+    <string name="fs_gs_cast_status_notstart">Not Started</string>
+    <string name="fs_gs_cast_status_end">Over</string>
+    <!-- more -->
+    <string name="fs_gs_net_3g">Your device is consuming data flow and will incur fees. Do you want to continue?</string>
+    <string name="fs_gs_net_2g">Your device is consuming data flow and will incur fees. Do you want to continue?</string>
+    <string name="fs_gs_net_4g">Your device is consuming data flow and will incur fees. Do you want to continue?</string>
+    <string name="fs_gs_net_x_g_host">Your device is consuming data flow and will incur fees. Do you want to continue?</string>
+    <string name="fs_gs_net_no_network">No network available</string>
+    <string name="fs_gs_exit">Exit</string>
+    <string name="fs_gs_end">End</string>
+    <string name="fs_gs_continues">Continue</string>
+    <string name="fs_gs_diagnosis_end">Bug report sent</string>
+    <string name="fs_gs_diagnosis_ing">Sending bug report</string>
+    <string name="fs_gs_diagnosis_fail">Failed to send bug report</string>
+    <string name="fs_gs_reminder_open_mic">Do you want to turn on your microphone?</string>
+    <string name="fs_gs_accept_mic_open">open</string>
+    <string name="fs_gs_accept_mic_refuse">refuse</string>
+    <string name="fs_gs_reminder_open_mic_normal">邀请您加入语音互动</string>
+    <string name="fs_gs_reminder_open_camera_normal">邀请您加入视频互动</string>
+
+    <string name="fs__reminder_open_mic">确定打开你的语音?</string>
+    <string name="fs__reminder_open_mic_normal">邀请您加入语言互动</string>
+    <string name="fs__reminder_open_camera_normal">邀請您加入视频互动</string>
+    <!-- idc -->
+    <string name="fs_gs_idc_title">Network path</string>
+    <string name="fs_gs_idc_no_data">No network available</string>
+    <!-- upgrade -->
+    <string name="fs_gs_no_video">No video</string>
+    <string name="fs_gs_audio_closed">Audio off</string>
+    <string name="fs_gs_audio_opened">Audio on</string>
+    <string name="fs_gs_mic_hang_up">Off</string>
+    <string name="fs_gs_mic_open">Your microphone is on </string>
+
+    <!-- bright volume -->
+    <string name="fs_mute_volume">静音</string>
+    <!-- pub client -->
+    <string name="fs_gs_start_live">Start</string>
+    <string name="fs_gs_live_pause">Webcast paused</string>
+    <string name="fs_gs_live_resume">Webcast restored</string>
+
+    <!-- lod -->
+    <string name="fs_gs_lod_is_on">Playing cast record now. Please end it to make sure the app work normally.</string>
+    <!-- as -->
+    <string name="fs_gs_as_is_on_msg">Sharing desktop now and cannot publish your video temporarily.</string>
+    <string name="fs_gs_package_no_camera_perssmion">Cannot access camera. Please allow in settings of your device.</string>
+
+    <!-- beauty -->
+    <string name="fs_gs_user_disable_chat">Disable chat</string>
+    <string name="fs_gs_user_enable_chat">Enable chat</string>
+    <string name="fs_gs_user_eject">Kick out</string>
+    <string name="fs_gs_chat_host_join">(Admin)is in</string>
+    <string name="fs_gs_chat_host_leave">(Admin)is out</string>
+    <string name="fs_gs_chat_is_disable_to_chat">is disabled to chat</string>
+    <string name="fs_gs_chat_is_alowed_to_chat">is allowed to chat</string>
+    <string name="fs_gs_chat_is_kicked_out">is removed from the room by admin</string>
+    <string name="fs_gs_chat_activity_start">activity starts</string>
+    <string name="fs_gs_disable_somebody_chat">Do you want to mute him/her?</string>
+    <string name="fs_gs_remove_somebody">Do you want to remove him/her?</string>
+    <string name="fs_gs_chat_forbid">抱歉，你已被组织者禁言</string>
+    <string name="fs_gs_as_other_begin">The live video will be interrupted if you end desktop sharing. Do you want to end?</string>
+    <string name="fs_gs_as_is_on">Sharing desktop now...</string>
+    <string name="fs_gs_as_video_active">The live video is restoring</string>
+
+    <string name="fs_gs_role_panelist_training">「 助教 」</string>
+    <string name="fs_gs_role_panelist_webcast">「 嘉宾 」</string>
+    <string name="fs_gs_role_normal_user">「 普通参加者 」</string>
+    <string name="fs_gs_tip_board">打赏榜单</string>
+    <string name="fs_gs_tip_total">合计：</string>
+    <string name="fs_gs_tip_total_empty">亲，还没人给你打赏呦~加油!</string>
+    <string name="fs_gs_tip_tiped">打赏了一个红包</string>
+    <string name="fs_gs_tip_server_fail">数据提交失败，请重试</string>
+
+    <string name="fs_gs_sponsor_Saying">「分君身上暖，感恩心缱绻」</string>
+    <string name="fs_gs_sponsor_encouragement">还没有人赞赏，快来当第一个赞赏人吧</string>
+    <string name="fs_gs_sponsor_alipay">支付宝支付</string>
+    <string name="fs_gs_sponsor_custom_sum">自定义金额</string>
+    <string name="fs_gs_reward_text">reward</string>
+    <!-- lottery -->
+    <string name="fs_lottery_going">Lucky draw time!</string>
+    <string name="fs_lottery_name_list">Draw attendees</string>
+    <string name="fs_lottery_pause">Draw banned</string>
+    <string name="fs_lottery_pause_tip">Oops, the lucky draw is banned.</string>
+    <!-- rollcall -->
+    <string name="fs_rollcall_going">Roll call</string>
+    <string name="fs_rollcall_finish">Roll call is over.</string>
+    <string name="fs_rollcall_roll">OK</string>
+    <string name="fs_rollcall_finish_tip">The roll call is over.</string>
+
+    <!-- vote -->
+    <string name="fs_vote_commit">Send</string>
+    <string name="fs_vote_force_tip">此问卷不能跳过哦，请努力完成吧</string>
+    <string name="fs_vote_count_failure">Keep trying!</string>
+    <string name="fs_vote_count_success">You have passed. Well done!</string>
+    <string name="fs_vote_count_good">Excellent!</string>
+    <string name="fs_vote_question_single">Single-choice</string>
+    <string name="fs_vote_question_multi">Multi-choice</string>
+    <string name="fs_single_choice">[Single-choice]</string>
+    <string name="fs_multi_choice">[Multi-choice]</string>
+    <string name="fs_text_choice">[Q&amp;A]</string>
+    <string name="fs_vote_please_dawan">Please answer the questions and submit</string>
+    <string name="fs_vote_please_dawan_all">There are still questions not answered.</string>
+    <string name="fs_vote_comment_failure">Failed to submit the questionnaire.</string>
+    <string name="fs_vote_text_join_count">Attendees：%s</string>
+
+    <!-- card -->
+    <string name="fs_card_expand_tip">Quiz</string>
+    <string name="fs_card_publish_tip">The quiz content is demonstrated in the files or by the presenter in audio.</string>
+    <string name="fs_card_attent_count">%s in total</string>
+    <string name="fs_card_page_publish_btn">Send and close</string>
+    <string name="fs_card_result_publish_teach">Correct:</string>
+    <string name="fs_card_result_publish_my">Mine:</string>
+    <string name="fs_card_result_success">You have passed. Well done!</string>
+
+    <string name="fs_doc_no_publish_doc">Click the document icon to upload document~</string>
+    <string name="fs_doc_no_watch_doc">No document~</string>
+    <string name="fs_qa_no">Experts will answer questions for you</string>
+
+    <string name="fs_video_audio_have_tip">Your camera and microphone are still on and once shut down, you can NOT turn them on.</string>
+    <string name="fs_video_have_tip">Your camera are still on and once shut down, you can NOT turn them on.</string>
+    <string name="fs_audio_have_tip">Your microphone are still on and once shut down, you can NOT turn them on.</string>
+    <string name="fs_doc">Doc</string>
+    <string name="fs_chat">Chat</string>
+    <string name="fs_video">Video</string>
+    <string name="fs_qa">Q&amp;A</string>
+    <string name="fs_introdution">Profile</string>
+    <string name="fs_introdution_intro">Live profile</string>
+    <string name="fs_introdution_plan_title">Live arrangement</string>
+    <string name="fs_introdution_speaker_title">Lecturer</string>
+    <string name="fs_loading">Loading...</string>
+
+    <string name="fs_gs_close_video">关闭视频</string>
+    <string name="fs_gs_open_video">打开视频</string>
+    <string name="fs_diagnosis">Bug report</string>
+    <string name="fs_switch_net">Network path</string>
+    <string name="fs_new_msg_tip">%d new messages</string>
+    <string name="fs_chat_copy">Copy</string>
+    <string name="fs_user_offline">[offline]</string>
+    <string name="fs_quality_sd">SD</string>
+    <string name="fs_quality_hd">HD</string>
+
+    <string name="fs_package_no_camera_perssmion">Cannot access camera. Please allow in settings of your device.</string>
+
+    <string name="fs_gs_no_content">暂无内容</string>
+    <string name="fs_gs_live_pause_tip">休息一下吧~</string>
+
+    <string name="fs_vod_chapter">Chapter</string>
+    <string name="fs_chapter_time">Duration</string>
+    <string name="fs_chapter_title">Title</string>
+    <string name="fs_chapter_index">Serial No.</string>
+    <string name="fs_chapter_no">No chapter here~</string>
+
+    <string name="fs_share">Share</string>
+    <string name="fs_vod_play_exit">Do you want to end the on-demand webcast?</string>
+    <string name="fs_vod_err_domain">Wrong domain</string>
+    <string name="fs_vod_err_time_out">Time out</string>
+    <string name="fs_vod_err_site_unused">Unusable site</string>
+    <string name="fs_vod_err_un_net">Network unavailable. Please check.</string>
+    <string name="fs_vod_err_data_timeout">Overdue data</string>
+    <string name="fs_vod_err_service">Please check the serviceType</string>
+    <string name="fs_vod_err_param">Please check to parameter</string>
+    <string name="fs_vod_err_un_invoke_getobject">Please call getVodObject</string>
+    <string name="fs_vod_err_vod_init_fail">Failed to call getVodObject</string>
+    <string name="fs_vod_err_vod_num_unexist">Non-existent on-demand webcast or webcast number</string>
+    <string name="fs_vod_err_vod_pwd_err">Wrong password</string>
+    <string name="fs_vod_err_vod_acc_pwd_err">Wrong account or password</string>
+    <string name="fs_vod_err_unsupport_mobile">Mobile device unsupported</string>
+    <string name="fs_live_err_third_certification_authourity">Third-party certification failed</string>
+    <string name="fs_vod_err_lisence">Too many attendees</string>
+    <string name="fs_vod_err_vod_init_failure">Failed to initialize</string>
+    <string name="fs_vod_pause_failure">Failed to pause</string>
+    <string name="fs_vod_play_failure">Failed to play</string>
+    <string name="fs_vod_resume_failure">Failed to restore</string>
+    <string name="fs_vod_play_init_failure">Failed to initialize playing</string>
+    <string name="fs_vod_stop_failure">Failed to terminate</string>
+</resources>

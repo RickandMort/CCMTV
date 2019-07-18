@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_title8" />
+
+    <com.linlic.ccmtv.yx.widget.NodataEmptyLayout
+        android:id="@+id/lt_nodata1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:visibility="gone" />
+
+
+    <!--<ListView
+        android:id="@+id/list_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="#00000000"
+        android:background="@color/recent_browse_file_list_bg" />-->
+
+    <com.linlic.ccmtv.yx.activity.upload.stickygridheaders.StickyGridHeadersGridView
+        android:id="@+id/asset_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clipToPadding="false"
+        android:columnWidth="90dip"
+        android:horizontalSpacing="3dip"
+        android:listSelector="@color/transparent"
+        android:numColumns="3"
+        android:verticalSpacing="3dip" />
+
+</LinearLayout>

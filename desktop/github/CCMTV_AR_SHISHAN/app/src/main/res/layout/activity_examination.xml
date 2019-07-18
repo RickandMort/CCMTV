@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.linlic.ccmtv.yx.activity.rules_to_compensate.gp_exam.ExaminationManageActivity">
+
+    <include layout="@layout/activity_title8"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <org.angmarch.views.NiceSpinner
+                    android:id="@+id/id_spinner_examination_manage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="30dp"
+
+                    app:textTint="@color/videotree_text_bg2"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:gravity="end"
+                    android:text="操作"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="#cecece"/>
+
+                <com.linlic.ccmtv.yx.widget.NodataEmptyLayout
+                    android:id="@+id/lt_nodata1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff"
+                    android:visibility="gone"
+                    app:empty_des="当前还没有数据哦~"
+                    app:empty_src="@mipmap/nodata_empty"
+                    app:empty_topLine="false"/>
+
+                <!--<RelativeLayout-->
+                <!--android:id="@+id/lt_nodata1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="#fff"-->
+                <!--android:visibility="gone">-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/nodata_img"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:src="@mipmap/nodata"/>-->
+
+                <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/nodata_img"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:gravity="center_horizontal"-->
+                <!--android:text="还没有任何数据哦~"-->
+                <!--android:textColor="#999"-->
+                <!--android:textSize="18sp"/>-->
+
+                <!--</RelativeLayout>-->
+
+                <ListView
+                    android:id="@+id/id_lv_examination_manage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:listSelector="@color/transparent2"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/id_tv_to_periodical_exam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#3897f9"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="阶段性考核"
+            android:textColor="#FFFFFF"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

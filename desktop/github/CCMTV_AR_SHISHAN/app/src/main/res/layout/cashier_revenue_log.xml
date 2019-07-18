@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 积分获取记录 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/get_integral_layout_bg"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/activity_title" />
+
+    <!---->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_big"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/get_integral_layout_bg"
+
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/head_bg" />
+
+                <com.linlic.ccmtv.yx.widget.CircleImageView
+                    android:id="@+id/cashier_revenue_log_img"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="2dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/my_information_tx" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/cashier_revenue_log_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/get_integration_name"
+                    android:textColor="@color/get_integral_name"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/cashier_revenue_log_integral"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cashier_revenue_log_name"
+                    android:textColor="@color/current_integration_name"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_below="@+id/layout_big"
+            android:background="@color/hr_bg2" />
+
+
+        <LinearLayout
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view2"
+            android:layout_gravity="center"
+            android:background="@color/get_integral_layout_bg"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="2.4"
+                android:gravity="center"
+                android:text="事 由"
+                android:textColor="@color/get_integral_listview_th"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="0.1dp"
+                android:layout_height="match_parent"
+                android:background="@color/hr_bg4" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:text="收入"
+                android:textColor="@color/get_integral_listview_th"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="0.1dp"
+                android:layout_height="match_parent"
+                android:background="@color/hr_bg4" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2.9"
+                android:gravity="center"
+                android:text="时 间"
+                android:textColor="@color/get_integral_listview_th"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/view3"
+            android:background="@color/hr_bg4" />
+
+        <include layout="@layout/layout_nodata" />
+
+        <!--<ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >-->
+
+        <ListView
+            android:id="@+id/get_integral_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view4"
+            android:scrollbars="none"
+            android:paddingBottom="30dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#FFF"
+            android:gravity="center"
+            android:paddingBottom="15dp"
+            android:text="@string/get_integral_description"
+            android:textColor="@color/get_integral" />
+    </RelativeLayout>
+
+</LinearLayout>

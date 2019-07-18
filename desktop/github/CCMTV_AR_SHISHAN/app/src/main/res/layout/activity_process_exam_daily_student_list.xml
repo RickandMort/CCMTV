@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:focusable="true"
+              android:focusableInTouchMode="true">
+
+    <include layout="@layout/activity_title8"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/id_tv_gp_exam_student_list_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:paddingRight="10dp"
+                android:drawableRight="@mipmap/drop_down_icon1"
+                android:text="第二周 "
+                android:background="@drawable/anniu26"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="#69ADFA"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/id_tv_gp_exam_student_list_item_department"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/anniu23"
+                android:drawableRight="@mipmap/drop_down_icon2"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingBottom="2dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="2dp"
+                android:text="基地 "
+                android:textColor="#333"
+                android:textSize="14sp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/id_tv_gp_exam_student_list_item_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:paddingLeft="10dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:drawableRight="@mipmap/drop_down_icon2"
+                android:background="@drawable/anniu23"
+                android:paddingRight="10dp"
+                android:text="轮转年限 "
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#999"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/id_ll_gp_graduate_exam_student_list_1_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.linlic.ccmtv.yx.utils.MyListView
+                        android:id="@+id/id_lv_gp_graduate_exam_student_list_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FFFFFF"
+                        android:listSelector="@color/transparent2"
+                        android:scrollbars="none"
+                        android:divider="@null"/>
+
+                    <TextView
+                        android:id="@+id/id_tv_gp_graduate_exam_student_list_hint_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:text="*本次考核需要在2018-06-29前完成成绩录入。"
+                        android:textColor="#FF0000"
+                        />
+
+                    <Button
+                        android:id="@+id/id_btn_gp_graduate_exam_student_list_submit_1"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@mipmap/button_01"
+                        android:text="提交成绩"
+                        android:textColor="@color/white" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:orientation="horizontal"
+                        android:id="@+id/id_tv_gp_graduate_exam_student_list_reject_reason_2"
+                        android:layout_marginLeft="20dp"
+                        >
+                        <TextView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:text="!"
+                            android:background="@drawable/anniu40"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:textColor="#999"
+                            />
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#999"
+                            android:text="退回原因"  />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/id_tv_gp_graduate_exam_student_list_reject_reason_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="#666"
+                        android:padding="8dp"  />
+
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+        </ScrollView>
+        <!--空数据处理-->
+        <com.linlic.ccmtv.yx.widget.NodataEmptyLayout
+            android:id="@+id/audit_nodata"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:visibility="gone"
+            app:empty_des="当前还没有数据哦~"
+            app:empty_src="@mipmap/nodata_empty"
+            app:empty_topLine="false"/>
+        <!--条件模块-->
+        <LinearLayout
+            android:id="@+id/condition_layout"
+            android:layout_width="match_parent"
+            android:background="#20000000"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/cycle_listview"
+                android:layout_width="match_parent"
+                android:scrollbars="none"
+                android:background="#fff"
+                android:layout_marginBottom="200dp"
+                android:layout_height="wrap_content"/>
+            <ListView
+                android:id="@+id/base_listview"
+                android:layout_width="match_parent"
+                android:scrollbars="none"
+                android:background="#fff"
+                android:layout_marginBottom="200dp"
+                android:layout_height="wrap_content"/>
+            <ListView
+                android:id="@+id/rotation_years_listview"
+                android:layout_width="match_parent"
+                android:scrollbars="none"
+                android:background="#fff"
+                android:layout_marginBottom="200dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+
+    <!--<View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#dedede"/>-->
+
+</LinearLayout>

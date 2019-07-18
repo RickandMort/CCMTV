@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F7F7FA">
+
+    <include layout="@layout/activity_title8"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="18dp"
+        android:orientation="horizontal"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="考试名称"
+            android:textColor="#333333"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="35dp"
+            android:text="详情"
+            android:textColor="#333333"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="成绩"
+            android:textColor="#333333"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#CCCCCC"/>
+
+    <com.linlic.ccmtv.yx.widget.NodataEmptyLayout
+        android:id="@+id/lt_nodata1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:visibility="gone"
+        app:empty_des="当前还没有数据哦~"
+        app:empty_src="@mipmap/nodata_empty"
+        app:empty_topLine="true"/>
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/lt_nodata1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="#fff"-->
+        <!--android:visibility="gone">-->
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="15px"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:background="#EFEFEF" />-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/nodata_img"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:src="@mipmap/nodata"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:layout_below="@+id/nodata_img"-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:text="还没有任何数据哦~"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textColor="#999"/>-->
+
+    <!--</RelativeLayout>-->
+
+    <ListView
+        android:id="@+id/id_lv_stu_check_periodical_exam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="0.5dp"
+        android:divider="#E1E1E1"
+        android:listSelector="@color/transparent2"
+        android:background="#FFFFFF"/>
+
+</LinearLayout>

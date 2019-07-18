@@ -1,0 +1,964 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.linlic.ccmtv.yx.widget.CircleImageView
+            android:id="@+id/iv_vipheader"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:background="@mipmap/img_default2" />
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_vipheader"
+            android:text="开通会员VIP海量视频免费看"
+            android:textColor="#DBB15C" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/iv_openvip"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/anniu9"
+                android:paddingBottom="5dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="5dp"
+                android:text="开通会员"
+                android:textColor="#DBB15C"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/iv_vip_toserch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:padding="5dp"
+                android:src="@mipmap/vip_toserch" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/vip_topimg"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@mipmap/vip_topimg"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@mipmap/icon_openmember" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingTop="3dp"
+                        android:text="平台推荐"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/vip_item_horv"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:scrollbars="none" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:id="@+id/pingtai_img1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="110dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/img_default"
+                                    android:visibility="visible" />
+
+                                <ImageView
+                                    android:id="@+id/pingtai_top_img1"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="left"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/free_img_blue"
+                                    android:visibility="invisible" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/pingtai_text1"
+                                style="@style/home_buttom_textview"
+                                android:layout_marginTop="10dp"
+                                android:gravity="top"
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="标题"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:id="@+id/pingtai_img2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="110dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/img_default"
+                                    android:visibility="visible" />
+
+                                <ImageView
+                                    android:id="@+id/pingtai_top_img2"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="left"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/free_img_blue"
+                                    android:visibility="invisible" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/pingtai_text2"
+                                style="@style/home_buttom_textview"
+                                android:layout_marginTop="10dp"
+                                android:gravity="top"
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="标题"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:id="@+id/pingtai_img3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="110dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/img_default"
+                                    android:visibility="visible" />
+
+                                <ImageView
+                                    android:id="@+id/pingtai_top_img3"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="left"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/free_img_blue"
+                                    android:visibility="invisible" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/pingtai_text3"
+                                style="@style/home_buttom_textview"
+                                android:layout_marginTop="10dp"
+                                android:gravity="top"
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="标题"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:id="@+id/pingtai_img4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="110dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/img_default"
+                                    android:visibility="visible" />
+
+                                <ImageView
+                                    android:id="@+id/pingtai_top_img4"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="left"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/free_img_blue"
+                                    android:visibility="invisible" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/pingtai_text4"
+                                style="@style/home_buttom_textview"
+                                android:layout_marginTop="10dp"
+                                android:gravity="top"
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="标题"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#DCDCDC" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_pingtai_lot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:text="换一批"
+                            android:textColor="#F0AA18"
+                            android:textSize="14dp" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/refresh_vip"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="#EEEEEE" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@mipmap/icon_openmember" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:padding="5dp"
+                        android:text="热门视频"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:id="@+id/hot_img1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="110dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/img_default"
+                                    android:visibility="visible" />
+
+                                <ImageView
+                                    android:id="@+id/hot_top_img1"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="left"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/free_img_blue"
+                                    android:visibility="invisible" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/hot_text1"
+                                style="@style/home_buttom_textview"
+                                android:layout_marginTop="10dp"
+                                android:gravity="top"
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="标题"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:id="@+id/hot_img2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="110dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/img_default"
+                                    android:visibility="visible" />
+
+                                <ImageView
+                                    android:id="@+id/hot_top_img2"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="left"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/free_img_blue"
+                                    android:visibility="invisible" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/hot_text2"
+                                style="@style/home_buttom_textview"
+                                android:layout_marginTop="10dp"
+                                android:gravity="top"
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="标题"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:id="@+id/hot_img3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="110dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/img_default"
+                                    android:visibility="visible" />
+
+                                <ImageView
+                                    android:id="@+id/hot_top_img3"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="left"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/free_img_blue"
+                                    android:visibility="invisible" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/hot_text3"
+                                style="@style/home_buttom_textview"
+                                android:layout_marginTop="10dp"
+                                android:gravity="top"
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="标题"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:id="@+id/hot_img4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="110dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/img_default"
+                                    android:visibility="visible" />
+
+                                <ImageView
+                                    android:id="@+id/hot_top_img4"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="left"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/free_img_blue"
+                                    android:visibility="invisible" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/hot_text4"
+                                style="@style/home_buttom_textview"
+                                android:layout_marginTop="10dp"
+                                android:gravity="top"
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="标题"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#DCDCDC" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_hot_lot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:text="换一批"
+                            android:textColor="#F0AA18"
+                            android:textSize="14dp" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/refresh_vip"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="#EEEEEE" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@mipmap/icon_openmember" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:padding="5dp"
+                        android:text="Vip都在看"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:id="@+id/vip_img1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="110dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/img_default"
+                                    android:visibility="visible" />
+
+                                <ImageView
+                                    android:id="@+id/vip_top_img1"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="left"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/free_img_blue"
+                                    android:visibility="invisible" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/vip_text1"
+                                style="@style/home_buttom_textview"
+                                android:layout_marginTop="10dp"
+                                android:gravity="top"
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="标题"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:id="@+id/vip_img2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="110dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/img_default"
+                                    android:visibility="visible" />
+
+                                <ImageView
+                                    android:id="@+id/vip_top_img2"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="left"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/free_img_blue"
+                                    android:visibility="invisible" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/vip_text2"
+                                style="@style/home_buttom_textview"
+                                android:layout_marginTop="10dp"
+                                android:gravity="top"
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="标题"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:id="@+id/vip_img3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="110dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/img_default"
+                                    android:visibility="visible" />
+
+                                <ImageView
+                                    android:id="@+id/vip_top_img3"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="left"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/free_img_blue"
+                                    android:visibility="invisible" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/vip_text3"
+                                style="@style/home_buttom_textview"
+                                android:layout_marginTop="10dp"
+                                android:gravity="top"
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="标题"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:id="@+id/vip_img4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="110dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/img_default"
+                                    android:visibility="visible" />
+
+                                <ImageView
+                                    android:id="@+id/vip_top_img4"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="left"
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/free_img_blue"
+                                    android:visibility="invisible" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/vip_text4"
+                                style="@style/home_buttom_textview"
+                                android:layout_marginTop="10dp"
+                                android:gravity="top"
+                                android:lines="2"
+                                android:maxLines="2"
+                                android:text="标题"
+                                android:textSize="14sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#DCDCDC" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_vip_lot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:text="换一批"
+                            android:textColor="#F0AA18"
+                            android:textSize="14dp" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/refresh_vip"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="#EEEEEE" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- <LinearLayout
+         android:id="@+id/arrow_back"
+         android:layout_width="match_parent"
+         android:layout_height="46dp"
+         android:layout_gravity="center"
+         android:background="@color/department_title_bg" >
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:gravity="center"
+             android:text="@string/activity_title_name"
+             android:textColor="#FFFFFF"
+             android:textSize="18sp" />
+     </LinearLayout>
+
+     <ScrollView
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:fillViewport="true"
+         android:layout_marginTop="10dp"
+         android:background="#ffffff"
+         android:scrollbars="none" >
+
+         <com.linlic.ccmtv.yx.utils.MyGridView
+             android:id="@+id/gridview"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:horizontalSpacing="0.0dip"
+             android:listSelector="@null"
+             android:numColumns="3"
+             android:scrollbars="none"
+             android:stretchMode="columnWidth"
+             android:verticalSpacing="0.0dip" />
+     </ScrollView>-->
+
+</LinearLayout>

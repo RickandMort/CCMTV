@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/_item_layout"
+        android:layout_width="85dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@mipmap/privilege_page_icon10"
+        android:layout_height="85dp">
+
+        <ImageView
+            android:id="@+id/_item_img"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@mipmap/privilege_page_icon9"
+            />
+
+        <TextView
+            android:id="@+id/_item_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="心血管"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/activity_title" />
+
+    <LinearLayout
+        android:id="@+id/layout_renzheng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="@mipmap/bg_zhizhao"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/iv_my_yszz"
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@mipmap/img_default" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_show_renzheng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="您的医生执业证书"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_issuccess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:text="已通过认证"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_renzheng_falture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:background="@mipmap/zhizhao_falture"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:text="认证失败"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_idcard_yz_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:text="认证失败原因" />
+
+        <Button
+            style="@style/btn_style"
+            android:onClick="to_again_upload"
+            android:text="@string/again_upload" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="我们将在1~2个工作日审核完毕"
+            android:textColor="#747474"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#FBFBFB">
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:text="提示:"
+            android:textColor="#F70101"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/step_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_tip"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:text="1.验证医生执业证书可以提高信誉度。"
+            android:textColor="#AAA9A9"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/step_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/step_one"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:text="2.医生执业证书只有管理员才有权限查看，请放心!"
+            android:textColor="#AAA9A9"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/step_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/step_two"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:text="3.如需修改请发送邮件至"
+            android:textColor="#AAA9A9"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/step_two"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@+id/step_three"
+            android:paddingTop="5dp"
+            android:text=" ccmtv@ccmtv.cn"
+            android:textColor="#368AD8"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

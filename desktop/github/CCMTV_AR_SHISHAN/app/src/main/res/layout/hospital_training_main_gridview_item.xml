@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/section_laout"
+        android:layout_width="match_parent"
+        android:background="@mipmap/section_img01"
+        android:layout_gravity="center"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:gravity="center|right"
+        android:layout_height="75dp">
+        <TextView
+            android:id="@+id/section_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:maxLines="2"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:background="@drawable/anniu23"
+            android:drawablePadding="2dp"
+            android:drawableRight="@mipmap/section_img05"
+            android:textSize="14sp"
+            android:textColor="#fff"
+            />
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/section_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>

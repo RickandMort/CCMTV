@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/download_memory"
+    android:layout_width="match_parent"
+    android:layout_height="20dp">
+
+    <ProgressBar
+        android:id="@+id/memory_progress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:max="100"
+        android:progressDrawable="@drawable/progressbar_my" />
+
+    <TextView
+        android:id="@+id/memory_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:text="SD卡存储：总空间20.9G / 剩余20.9G"
+        android:textSize="11sp" />
+
+</RelativeLayout>

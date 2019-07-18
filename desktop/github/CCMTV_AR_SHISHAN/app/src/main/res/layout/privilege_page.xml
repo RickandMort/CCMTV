@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/arrow_back"
+                    android:layout_width="45dip"
+                    android:layout_height="match_parent"
+                    android:onClick="back">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="11dp"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/bark" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/activity_title_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="VIP特权"
+                    android:textSize="18sp" />
+
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#efefef"
+                />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/vip_item_horv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:scrollbars="none" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#efefef"
+                    />
+
+            <com.zhouwei.mzbanner.MZBannerView
+                android:id="@+id/privilege_to_introduce"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                app:canLoop="true"
+                app:indicatorAlign="left"
+                app:middle_page_cover="false"
+                app:open_mz_mode="true" />
+
+            <TextView
+                android:id="@+id/xf_text"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:text="续费VIP"
+                android:textStyle="bold"
+                android:onClick="clickView"
+                android:textColor="#fff"
+                android:background="@mipmap/privilege_page_icon1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_margin="30dp"
+                />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/show_layout"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="#90000000"
+                    android:clickable="true"
+                    android:layout_height="match_parent"/>
+
+
+                <!--透明层 禁止事件下透-->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_height="265dp">
+
+                    <LinearLayout
+                        android:background="@mipmap/privilege_page_icon5"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_gravity="center|bottom"
+                        android:orientation="vertical">
+
+
+                        <ImageView
+                            android:id="@+id/cover_chart"
+                            android:layout_width="120dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="30dp"
+                            android:src="@mipmap/privilege_page_icon7" />
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:paddingLeft="3dp"
+                            android:text="恭喜您"
+                            android:textColor="#B78A2E"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:paddingLeft="3dp"
+                            android:text="您已经获得一个月VIP/60积分/30积分！"
+                            android:textColor="#333"
+                            android:textSize="16sp" />
+
+
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:id="@+id/icon_x"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="right"
+                        android:src="@mipmap/privilege_page_icon6" />
+
+                </FrameLayout>
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+
+
+
+</LinearLayout>

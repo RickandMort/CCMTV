@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 填充的颜色 -->
+    <solid android:color="#50000000" />
+
+    <!-- 定义边框的颜色 -->
+    <stroke
+        android:dashGap="0dp"
+        android:dashWidth="0dp"
+        android:width="0.1dp"
+        android:color="#000000" />
+    
+     <!-- 设置矩形的四个角为弧形 -->
+    <corners android:radius="10dp" />
+
+</shape>

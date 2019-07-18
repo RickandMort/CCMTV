@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+>
+
+    <LinearLayout
+        android:id="@+id/chapter_no_ly"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:background="@drawable/fs_no_chapter"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="@string/fs_chapter_no"
+            android:textColor="#666666"
+            android:paddingTop="10dp"
+            android:textSize="12sp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/chapt_list_ly"
+        android:paddingTop="@dimen/fs_chapter_padding_ver"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal"
+            android:id="@+id/chapter_title_ly"
+            android:visibility="gone"
+            android:paddingLeft="@dimen/fs_chapter_padding_item_left"
+            android:paddingRight="@dimen/fs_chapter_padding_item_right"
+            android:paddingTop="@dimen/fs_chapter_padding_ver"
+            android:paddingBottom="@dimen/fs_chapter_padding_ver" >
+
+            <TextView
+                style="@style/fs_chapter_tv"
+                android:gravity="center"
+                android:layout_width="@dimen/fs_chapter_left_width"
+                android:text="@string/fs_chapter_index" >
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <TextView
+                    style="@style/fs_chapter_tv"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/fs_chapter_item_padding_left"
+                    android:paddingRight="@dimen/fs_chapter_item_padding_left"
+                    android:text="@string/fs_chapter_title" >
+                </TextView>
+
+                <RelativeLayout
+                    android:paddingRight="@dimen/fs_chapter_right_margin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        style="@style/fs_chapter_tv"
+                        android:layout_width="wrap_content"
+                        android:text="00:00:00"
+                        android:visibility="invisible"
+                        />
+                    <TextView
+                        style="@style/fs_chapter_tv"
+                        android:layout_width="wrap_content"
+                        android:text="@string/fs_chapter_time" >
+                    </TextView>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.gensee.fastsdk.ui.view.xlistview.XListView
+            android:id="@+id/vod_chapter_xlv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:listSelector="@drawable/fs_selector_vod_listview_item"
+            android:cacheColorHint="@android:color/transparent"
+            android:dividerHeight="0dp"
+            android:divider="@null"
+     >
+        </com.gensee.fastsdk.ui.view.xlistview.XListView>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 底部导航 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/bottom_menu"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bot_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/bottom_menu"
+                android:drawableTop="@drawable/menu_img_home"
+                android:onClick="onTabClicked"
+                android:text="@string/menu_text_home"
+                android:textColor="@color/menu_text_color"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/bot_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/bottom_menu"
+                android:drawableTop="@drawable/menu_img_department"
+                android:onClick="onTabClicked"
+                android:text="上传"
+                android:textColor="@color/menu_text_color"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/bot_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/bottom_menu"
+                android:drawableTop="@drawable/menu_img_upload"
+                android:onClick="onTabClicked"
+                android:text="VIP"
+                android:textColor="@color/menu_text_color"
+                android:textSize="10sp" />
+            <!-- -->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/bot_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/bottom_menu"
+                android:drawableTop="@drawable/menu_img_sub"
+                android:onClick="onTabClicked"
+                android:text="@string/menu_text_subscribe"
+                android:textColor="@color/menu_text_color"
+                android:textSize="10sp" />
+            <!-- -->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/bot_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/bottom_menu"
+                android:drawableTop="@drawable/menu_img_my"
+                android:onClick="onTabClicked"
+                android:text="@string/menu_text_my"
+                android:textColor="@color/menu_text_color"
+                android:textSize="10sp" />
+            <!---->
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

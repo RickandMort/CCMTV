@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="185dp"
+    android:background="@mipmap/medal_banner_bg_01"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="105dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/medal_banner_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="特别成就勋章"
+            android:textColor="#FDD869"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/medal_banner_item_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:text="已经得:5个"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <com.linlic.ccmtv.yx.activity.medal.view.MedalBannerItemRatingbar
+            android:id="@+id/medal_banner_rating"
+            android:layout_width="135dp"
+            android:layout_height="6dp"
+            android:layout_gravity="bottom" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/medal_banner_item_medal_icon"
+        android:layout_width="90dp"
+        android:layout_height="126dp"
+        android:layout_gravity="center_vertical"
+        android:elevation="8dp" />
+    <!--app:image_shadow="true"-->
+    <!--app:image_radius = "5dp"-->
+    <!--app:image_shadow_radius="10dp"-->
+
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?><!--医学会议item-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="160dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <com.linlic.ccmtv.yx.utils.CustomRoundAngleImageView
+                    android:id="@+id/recommendForMe_img1"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/img_default" />
+
+                <ImageView
+                    android:id="@+id/recommendForMe_top_img1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="5dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/free_img_blue"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/recommendForMe_text1"
+                style="@style/home_buttom_textview"
+                android:text="杜光阳：2016年甲状腺外科中的热点和新进展" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

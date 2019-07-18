@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:focusable="true"
+              android:focusableInTouchMode="true">
+
+    <include layout="@layout/activity_title8"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/id_tv_gp_exam_student_list_item_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:paddingLeft="50dp"
+            android:text="学员"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/id_tv_gp_exam_student_list_item_department"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="轮转科室"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/id_tv_gp_exam_student_list_item_score"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingRight="50dp"
+            android:text="成绩"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#dedede" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.linlic.ccmtv.yx.utils.MyListView
+                android:id="@+id/id_lv_gp_exam_student_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:listSelector="@color/transparent2"
+                android:scrollbars="none" />
+
+            <!--<LinearLayout
+                android:id="@+id/id_ll_gp_audit_student_list_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/id_radiogroup_gp_audit_exam_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/id_rb_gp_audit_exam_status_pass"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/ic_upload_rb_selector"
+                            android:checked="true"
+                            android:text="  通过"/>
+
+                        <RadioButton
+                            android:id="@+id/id_rb_gp_audit_exam_status_return"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:button="@drawable/ic_upload_rb_selector"
+                            android:text="  退回" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/id_et_id_et_return_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/bg_edittext2"
+                    android:padding="10dp"
+                    android:visibility="gone"/>
+
+                &lt;!&ndash;<TextView
+                    android:id="@+id/id_tv_gp_exam_student_list_hint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="*本次考核需要在2018-06-29前完成成绩录入。"
+                    android:textColor="#FF0000"
+                    android:visibility="gone" />&ndash;&gt;
+
+
+
+
+            </LinearLayout>-->
+
+            <EditText
+                android:id="@+id/id_et_id_et_return_reason"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:gravity="start"
+                android:hint="请输入退回理由"
+                android:background="@drawable/bg_edittext2"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/id_btn_gp_exam_student_list_return"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="50dp"
+                    android:background="@mipmap/button_03"
+                    android:text="退回"
+                    android:textColor="@color/white"/>
+
+                <Button
+                    android:id="@+id/id_btn_gp_exam_student_list_submit"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/button_01"
+                    android:text="通过"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

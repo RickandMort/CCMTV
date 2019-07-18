@@ -1,0 +1,49 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="btn_height">40dp</dimen>
+    <dimen name="btn_width">50dp</dimen>
+
+
+    <!--  listview -->
+    <dimen name="listview_item_width">145dp</dimen>
+    <dimen name="listview_item_height">130dp</dimen>
+    <dimen name="listview_bottom_padding">50dp</dimen>
+    <dimen name="directory_browser_item_size">40dp</dimen>
+
+    <!--
+Refer to App Widget Documentation for margin information
+http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
+    -->
+    <dimen name="widget_margin">8dp</dimen>
+
+
+    <!--测试顶部滑动菜单start-->
+    <dimen name="rdo0">0dp</dimen>
+    <dimen name="rdo1">100dp</dimen>
+    <dimen name="rdo2">200dp</dimen>
+    <dimen name="rdo3">300dp</dimen>
+    <dimen name="rdo4">400dp</dimen>
+    <dimen name="rdo5">500dp</dimen>
+    <dimen name="rdo6">600dp</dimen>
+    <dimen name="rdo7">700dp</dimen>
+    <dimen name="rdo8">800dp</dimen>
+
+    <!--测试顶部滑动菜单end-->
+
+    <!--环形字体尺寸-->
+    <dimen name="round_progress_text_size">15sp</dimen>
+    <!--环形边框宽度-->
+    <dimen name="round_progress_border_width">5dp</dimen>
+
+    <dimen name="round_radius">3dp</dimen>
+    <dimen name="ymd_text_size">17sp</dimen>
+    <dimen name="tcl_website_large_size">23sp</dimen>
+
+    <!--********直播 gensee  start********-->
+    <dimen name="input_width">320dp</dimen>
+    <dimen name="input_size">12sp</dimen>
+    <!--********直播 gensee  end********-->
+</resources>

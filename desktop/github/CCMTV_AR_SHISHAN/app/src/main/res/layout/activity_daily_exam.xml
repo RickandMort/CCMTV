@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include layout="@layout/activity_title8"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f7f7f7" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@mipmap/pingjia_top"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="总得分"
+                    android:textColor="#3897F9"
+                    android:textSize="13sp"
+                    android:background="@mipmap/total_score"
+                    android:gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="24dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/id_tv_daily_exam_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="75"
+                        android:textColor="#3897F9"
+                        android:textSize="36sp"
+                        android:layout_marginBottom="20dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分"
+                        android:textColor="#3897F9"
+                        android:textSize="20sp"
+                        android:layout_marginBottom="20dp"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="满分100分，80分以下为差评"
+                    android:textColor="@color/black66"
+                    android:textSize="11sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="22dp"
+                    android:layout_marginBottom="15dp"
+                    android:visibility="gone"
+                    />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/id_ll_daily_exam_stu_top_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/id_ll_daily_exam_stu_layout_left"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/id_ll_daily_exam_stu_department"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:text="考核科室:"
+                                android:textColor="#999" />
+
+                            <TextView
+                                android:id="@+id/id_tv_daily_exam_stu_department"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:text="" />
+
+                        </LinearLayout>
+
+                        <!--<LinearLayout
+                            android:id="@+id/id_ll_daily_exam_stu_doctor_officer"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:text="医干:"
+                                android:textColor="#999" />
+
+                            <TextView
+                                android:id="@+id/id_tv_daily_exam_stu_doctor_officer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:text="" />
+
+                        </LinearLayout>-->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/id_ll_daily_exam_stu_layout_right"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/id_ll_daily_exam_stu_teacher"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:text="带教老师:"
+                                android:textColor="#999" />
+
+                            <TextView
+                                android:id="@+id/id_tv_daily_exam_stu_teacher"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:text="" />
+
+                        </LinearLayout>
+
+                        <!--<LinearLayout
+                            android:id="@+id/id_ll_daily_exam_stu_head_nurse"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:text="护士长:"
+                                android:textColor="#999" />
+
+                            <TextView
+                                android:id="@+id/id_tv_daily_exam_stu_head_nurse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:text="" />
+
+                        </LinearLayout>-->
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/id_ll_daily_exam_stu_mark_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="打分日期:"
+                        android:textColor="#999" />
+
+                    <TextView
+                        android:id="@+id/id_tv_daily_exam_stu_mark_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/id_ll_daily_exam_doctor_top_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                >
+
+                <LinearLayout
+                    android:id="@+id/id_ll_daily_exam_doctor_layout_left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/id_ll_daily_exam_doctor_mark_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="打分日期:"
+                            android:textColor="#999" />
+
+                        <TextView
+                            android:id="@+id/id_tv_daily_exam_doctor_mark_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/id_ll_daily_exam_doctor_student"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="考核学员:"
+                            android:textColor="#999" />
+
+                        <TextView
+                            android:id="@+id/id_tv_daily_exam_doctor_student"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/id_ll_daily_exam_doctor_department"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="考核科室:"
+                            android:textColor="#999" />
+
+                        <TextView
+                            android:id="@+id/id_tv_daily_exam_doctor_department"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/id_ll_daily_exam_doctor_doctor_teacher"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="带教老师:"
+                            android:textColor="#999" />
+
+                        <TextView
+                            android:id="@+id/id_tv_daily_exam_doctor_doctor_teacher"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="" />
+
+                    </LinearLayout>
+
+                    <!--<LinearLayout
+                        android:id="@+id/id_ll_daily_exam_doctor_head_nurse"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="护士长:"
+                            android:textColor="#999" />
+
+                        <org.angmarch.views.NiceSpinner
+                            android:id="@+id/id_spinner_daily_exam_doctor_head_nurse"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                             />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/id_ll_daily_exam_doctor_doctor_officer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="医干:"
+                            android:textColor="#999" />
+
+                        <org.angmarch.views.NiceSpinner
+                            android:id="@+id/id_spinner_daily_exam_doctor_doctor_officer"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp" />
+
+                    </LinearLayout>-->
+
+                </LinearLayout>
+
+                <!--<LinearLayout
+                    android:id="@+id/id_ll_daily_exam_doctor_layout_right"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/id_ll_daily_exam_doctor_student"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="考核学员:"
+                            android:textColor="#999" />
+
+                        <TextView
+                            android:id="@+id/id_tv_daily_exam_doctor_student"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="" />
+
+                    </LinearLayout>
+
+                </LinearLayout>-->
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/id_tv_daily_exam_prompt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:textSize="12sp"
+                android:textColor="@color/black66"
+                android:layout_marginBottom="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#EFEFEF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.linlic.ccmtv.yx.utils.MyListView
+                    android:id="@+id/id_lv_daily_exam_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:listSelector="@color/transparent2"
+                    android:scrollbars="none" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="备注："
+                    android:textColor="#333" />
+
+                <EditText
+                    android:id="@+id/id_et_daily_exam_comments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="top"
+                    android:minLines="5"
+                    android:background="@drawable/bg_edittext_normal"
+                    android:hint="若成绩低于80分，请说明情况"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_ll_daily_exam_button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/id_tv_daily_exam_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/anniu23"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp"
+                    android:paddingTop="10dp"
+                    android:text="取消"
+                    android:textColor="#fff" />
+
+                <View
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/id_tv_daily_exam_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/anniu6"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp"
+                    android:paddingTop="10dp"
+                    android:text="提交"
+                    android:textColor="#fff" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

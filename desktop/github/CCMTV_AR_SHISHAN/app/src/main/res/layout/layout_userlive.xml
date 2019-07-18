@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/userlivetop" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="23px"
+                    android:layout_marginLeft="22px"
+                    android:layout_marginRight="20px"
+                    android:layout_marginTop="26px"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="3dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="-1dp"
+                            android:background="#4392d9" />
+
+                        <TextView
+                            style="@style/home_buttom_title"
+                            android:text="@string/live_preview" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_nodata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@mipmap/icon_nolive" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="暂无数据"
+                    android:textColor="#D3D3D3" />
+            </LinearLayout>
+
+            <com.linlic.ccmtv.yx.utils.MyListView
+                android:id="@+id/lv_userlive"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:listSelector="#00000000"
+                android:scrollbars="none" />
+
+            <LinearLayout
+                android:id="@+id/btn_morelive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/anniu4"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:drawableRight="@mipmap/img_more"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="更多精彩预告"
+                    android:textColor="@color/text_blue"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_jingcaihuigu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="23px"
+                        android:layout_marginLeft="22px"
+                        android:layout_marginRight="20px"
+                        android:layout_marginTop="26px"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_width="3dp"
+                                android:layout_height="15dp"
+                                android:layout_marginTop="-1dp"
+                                android:background="#4392d9" />
+
+                            <TextView
+                                style="@style/home_buttom_title"
+                                android:text="@string/live_history" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/live_history_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/img_default" />
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="left"
+                                android:layout_marginRight="5dp"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/free_img_blue"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/live_history_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/img_default" />
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="left"
+                                android:layout_marginLeft="5dp"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/free_img_blue"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22px"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_live_history_1"
+                            style="@style/home_buttom_textview"
+                            android:text="杜光阳：2016年甲状腺外科中的热点和新进展" />
+
+                        <TextView
+                            android:id="@+id/tv_live_history_2"
+                            style="@style/home_buttom_textview"
+                            android:text="高力：改良Miccli模式的腔内全镜下视野手术腺叶切除+中央区清扫" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/recommendForMe_list2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/live_history_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/img_default" />
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="left"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/free_img_blue"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/live_history_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_weight="1"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/img_default" />
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="left"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/free_img_blue"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22px"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_live_history_3"
+                            style="@style/home_buttom_textview"
+                            android:text="叶京英：甲状腺术后声嘶和呼吸困难" />
+
+                        <TextView
+                            android:id="@+id/tv_live_history_4"
+                            style="@style/home_buttom_textview"
+                            android:text="王选锭：抗菌药物临床应用管理与合理使用——政策与专业的高度结合" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/recommendForMe_list3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left"
+                        android:orientation="horizontal">
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/live_history_5"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/img_default" />
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="left"
+                                android:layout_marginRight="5dp"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/free_img_blue"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/live_history_6"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_weight="1"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/img_default" />
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="left"
+                                android:scaleType="fitXY"
+                                android:src="@mipmap/free_img_blue"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22px"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_live_history_5"
+                            style="@style/home_buttom_textview"
+                            android:text="王宇：腔镜辅助下侧颈淋巴结清扫术" />
+
+                        <TextView
+                            android:id="@+id/tv_live_history_6"
+                            style="@style/home_buttom_textview"
+                            android:text="王丕 ：改良腹膜切口左直疝TAPP" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_morehistorylive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/anniu4"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:drawableRight="@mipmap/img_more"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:text="更多精彩回顾"
+                            android:textColor="@color/text_blue"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

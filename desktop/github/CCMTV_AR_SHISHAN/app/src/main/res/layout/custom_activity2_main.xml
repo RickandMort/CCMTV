@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 搜索页 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/layout_bg"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/acitvity_search_three_hean_bg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="fill_parent"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@mipmap/sousuo_03"
+            android:drawableLeft="@mipmap/search_icon"
+            android:hint="@string/search_hit"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:paddingLeft="15dip"
+            android:singleLine="true"
+            android:textSize="14dip"></EditText>
+
+        <TextView
+            android:id="@+id/search_recall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:onClick="back"
+            android:text="@string/acitvity_search_three_hean_Text"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/hr_bg2"/>
+
+    <LinearLayout
+        android:id="@+id/video_play_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/custom_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <com.linlic.ccmtv.yx.utils.CategoryView
+                    android:id="@+id/category2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical"/>
+
+                <LinearLayout
+                    android:id="@+id/categoryLayout"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:background="#ffffff"
+                    android:gravity="center"
+                    android:onClick="back"
+                    android:orientation="vertical"
+                    android:tag="收缩">
+
+                    <ImageView
+                        android:id="@+id/categoryImg"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/categoryimg1"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <com.linlic.ccmtv.yx.utils.CategoryView
+                android:id="@+id/category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/newest_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/custom_chenck_text_bg"
+                android:textSize="20sp"
+                android:visibility="gone"/>
+
+
+            <TextView
+                android:id="@+id/types_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/custom_chenck_text_bg"
+                android:textSize="20sp"
+                android:visibility="gone"/>
+
+
+            <TextView
+                android:id="@+id/years_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/custom_chenck_text_bg"
+                android:textSize="20sp"
+                android:visibility="gone"/>
+
+
+            <TextView
+                android:id="@+id/departments_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/custom_chenck_text_bg"
+                android:textSize="20sp"
+                android:visibility="gone"/>
+
+
+            <TextView
+                android:id="@+id/member_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/custom_chenck_text_bg"
+                android:textSize="20sp"
+                android:visibility="gone"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#EFEFEF"/>
+
+        <com.linlic.ccmtv.yx.widget.NodataEmptyLayout
+            android:id="@+id/lt_nodata1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:visibility="gone"
+            app:empty_src="@mipmap/nodata_empty"
+            app:empty_topLine="true"/>
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/lt_nodata1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="#fff"-->
+        <!--android:visibility="gone">-->
+
+        <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="15px"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:background="#EFEFEF" />-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/nodata_img"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:src="@mipmap/nodata"/>-->
+
+        <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_below="@+id/nodata_img"-->
+        <!--android:text="还没有任何数据哦~"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:textSize="18sp"-->
+        <!--android:textColor="#999"/>-->
+
+        <!--</RelativeLayout>-->
+
+        <ListView
+            android:id="@+id/lv_search_all"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:divider="@color/transparent2"
+            android:listSelector="@color/transparent2"></ListView>
+
+
+        <LinearLayout
+            android:id="@+id/id_ll_single_video_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ListView
+                android:id="@+id/department_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#fff"
+                android:divider="@null"
+                android:listSelector="#00000000"
+                android:paddingBottom="0dp"
+                android:scrollbars="none"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
+
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>&lt;!&ndash; 搜索页 &ndash;&gt;
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/layout_bg"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/acitvity_search_three_hean_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="fill_parent"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@mipmap/sousuo_03"
+                android:drawableLeft="@mipmap/search_icon"
+                android:hint="@string/search_hit"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
+                android:paddingLeft="15dip"
+                android:singleLine="true"
+                android:textSize="14dip"></EditText>
+
+            <TextView
+                android:id="@+id/search_recall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:onClick="back"
+                android:text="@string/acitvity_search_three_hean_Text"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/hr_bg2" />
+
+        <LinearLayout
+            android:id="@+id/video_play_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/custom_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <com.linlic.ccmtv.yx.utils.CategoryView
+                        android:id="@+id/category2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="60dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        android:id="@+id/categoryLayout"
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center"
+                        android:background="#ffffff"
+                        android:gravity="center"
+                        android:onClick="back"
+                        android:orientation="vertical"
+                        android:tag="收缩">
+
+                        <ImageView
+                            android:id="@+id/categoryImg"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@mipmap/categoryimg1" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <com.linlic.ccmtv.yx.utils.CategoryView
+                    android:id="@+id/category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/newest_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/custom_chenck_text_bg"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/types_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/custom_chenck_text_bg"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/years_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/custom_chenck_text_bg"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/departments_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/custom_chenck_text_bg"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/member_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/custom_chenck_text_bg"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#EFEFEF" />
+
+            <RelativeLayout
+                android:id="@+id/lt_nodata1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15px"
+                    android:layout_alignParentTop="true"
+                    android:background="#EFEFEF" />
+
+                <ImageView
+                    android:id="@+id/nodata_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/nodata"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/nodata_img"
+                    android:text="还没有任何数据哦~"
+                    android:gravity="center_horizontal"
+                    android:textSize="18sp"
+                    android:textColor="#999"/>
+
+            </RelativeLayout>
+
+            <ScrollView
+                android:id="@+id/id_sv_three_type_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/id_ll_three_type_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/id_ll_search_video_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="视频"
+                            android:textColor="#9e9e9e"/>
+
+                        <com.linlic.ccmtv.yx.utils.MyGridView
+                            android:id="@+id/id_lv_search_video_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:numColumns="1"
+                            android:background="#fff"
+                            android:divider="@null"
+                            android:listSelector="#00000000"
+                            android:paddingBottom="0dp"
+                            android:scrollbars="none" />
+
+                        <Button
+                            android:id="@+id/id_btn_search_more_video"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@color/transparent2"
+                            android:text="查看更多"
+                            android:textColor="#9e9e9e"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="#EFEFEF" />
+
+                    <LinearLayout
+                        android:id="@+id/id_ll_search_conference_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="会议"
+                            android:textColor="#9e9e9e"/>
+
+                        <com.linlic.ccmtv.yx.utils.MyGridView
+                            android:id="@+id/id_lv_search_conference_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="#fff"
+                            android:numColumns="1"
+                            android:divider="@null"
+                            android:listSelector="#00000000"
+                            android:paddingBottom="0dp"
+                            android:scrollbars="none"
+                            />
+
+                        <Button
+                            android:id="@+id/id_btn_search_more_conference"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@color/transparent2"
+                            android:text="查看更多"
+                            android:textColor="#9e9e9e"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="#EFEFEF" />
+
+                    <LinearLayout
+                        android:id="@+id/id_ll_search_exper_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="专家"
+                            android:textColor="#9e9e9e"/>
+
+                        <com.linlic.ccmtv.yx.utils.MyGridView
+                            android:id="@+id/id_lv_search_expert_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="#fff"
+                            android:numColumns="1"
+                            android:divider="@null"
+                            android:listSelector="#00000000"
+                            android:paddingBottom="0dp"
+                            android:scrollbars="none"
+                            />
+
+                        <Button
+                            android:id="@+id/id_btn_search_more_expert"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@color/transparent2"
+                            android:text="查看更多"
+                            android:textColor="#9e9e9e"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </ScrollView>
+
+
+            <LinearLayout
+                android:id="@+id/id_ll_single_video_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ListView
+                    android:id="@+id/department_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#fff"
+                    android:divider="@null"
+                    android:listSelector="#00000000"
+                    android:paddingBottom="0dp"
+                    android:scrollbars="none" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>-->

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="CCSDK-unspecified">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../app/build/intermediates/exploded-aar/CCMTV-NWY/CCSDK/unspecified/jars/classes.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../app/build/intermediates/exploded-aar/CCMTV-NWY/CCSDK/unspecified/jars/libs/volley.jar!/" />
+      <root url="file://$PROJECT_DIR$/../app/build/intermediates/exploded-aar/CCMTV-NWY/CCSDK/unspecified/res" />
+      <root url="jar://$PROJECT_DIR$/../app/build/intermediates/exploded-aar/CCMTV-NWY/CCSDK/unspecified/jars/libs/gson-2.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

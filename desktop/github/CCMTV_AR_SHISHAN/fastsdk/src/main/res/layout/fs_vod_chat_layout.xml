@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fs_chat_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/fs_gs_both_match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/fs_lv_padding_bottom" >
+
+        <include layout="@layout/fs_gs_bottom_lv_layout" />
+    </LinearLayout>
+
+</RelativeLayout>

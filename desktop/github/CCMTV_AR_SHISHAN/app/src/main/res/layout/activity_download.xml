@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/recent_browse_file_title_bg">
+
+        <include
+            android:id="@+id/download_topInclude"
+            layout="@layout/activity_title7" />
+
+        <TextView
+            android:id="@+id/download_topRightTxt"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="selectDelete"
+            android:paddingRight="7dp"
+            android:text="编辑"
+            android:textColor="#3A95FA"
+            android:textSize="16sp"
+            android:visibility="visible" />
+
+        <!--<ImageView
+            android:id="@+id/download_topRightImg"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:onClick="selectDelete"
+            android:paddingRight="7dp"
+            android:src="@drawable/delete_top_right_img_selecter"
+            android:visibility="visible" />-->
+
+    </RelativeLayout>
+
+    <!--
+    <View
+        android:id="@+id/download_topview"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DCDCDC" />
+    -->
+
+    <include layout="@layout/layout_nodata_empty" />
+
+    <LinearLayout
+        android:id="@+id/download_top_downloading"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/img_download" />
+
+        <TextView
+            android:id="@+id/download_downloading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="0个任务正在下载" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/more" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DCDCDC" />
+
+    <ListView
+        android:id="@+id/download_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="visible" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#DCDCDC" />
+
+    <include layout="@layout/memory" />
+
+    <LinearLayout
+        android:id="@+id/download_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/selectAllCheck"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="selectAllCheck"
+            android:text="全选"
+            android:textColor="@color/activity_title_name" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#DCDCDC" />
+
+        <TextView
+            android:id="@+id/delete_video"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="deleteVideo"
+            android:text="删除"
+            android:textColor="@color/activity_title_name" />
+    </LinearLayout>
+</LinearLayout>

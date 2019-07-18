@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+             >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/_item_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/_item_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="外院带教（sdfjlas）"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:textColor="@color/black33"
+            />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="right"
+            android:layout_marginLeft="5dp">
+
+            <TextView
+                android:id="@+id/_item_the_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="@mipmap/grade_weight"
+                android:gravity="center"
+                android:text="权重：2"
+                android:textColor="#EF8E10"
+                android:textSize="11sp"
+                />
+
+
+
+                <LinearLayout
+                    android:id="@+id/layout"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/anniu10"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    >
+                    <RelativeLayout
+                        android:id="@+id/_item_grade"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <TextView
+                                android:id="@+id/tv_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:text="10"
+                                android:singleLine="true"
+                                android:textColor="@color/black99"
+                                android:layout_weight="1"
+                                android:textSize="15sp"/>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="10dp"
+                                android:background="#E1E1E1"/>
+
+                            <LinearLayout
+                                android:id="@+id/bt_dropdown"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#fff"
+                                android:gravity="center"
+                                android:layout_weight="1"
+                                android:layout_margin="1dp"
+                                >
+
+                                <ImageView
+                                    android:id="@+id/id_iv_spinner_arrow"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@mipmap/down_icon"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+</LinearLayout>

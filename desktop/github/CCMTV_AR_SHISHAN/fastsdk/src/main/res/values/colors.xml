@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="fs_title_bar_bg">#80000000</color>
+    <color name="fs_gs_black">#000000</color>
+    <color name="fs_gs_white">#ffffff</color>
+    <color name="fs_gs_transparent">#00000000</color>
+    <color name="fs_gs_color_nav_bg">#73BA20</color>
+    <color name="fs_gs_other_color_pop">#66000000</color>
+    <color name="fs_gs_video_no_video_bg">#1a1a1a</color>
+    <color name="fs_doc_default_bg">#262626</color>
+    <color name="fs_doc_default_bg_day">#f4f4f6</color>
+    <color name="fs_nothing_text_color">#666666</color>
+    <color name="fs_video_have_tip_bg">#34000000</color>
+
+    <!-- chat -->
+    <color name="fs_gs_chat_bottom_bg">#292929</color>
+    <color name="fs_gs_chat_can_send">#ffffff</color>
+    <color name="fs_gs_chat_can_send_day">#4d4d4d</color>
+    <color name="fs_gs_chat_cannot_send">#666666</color>
+    <color name="fs_gs_chat_cannot_send_day">#999999</color>
+    <color name="fs_gs_chat_edit_view">#aaaaaa</color>
+    <color name="fs_gs_chat_edit_view_day">#4d4d4d</color>
+    <color name="fs_gs_chat_edit_view_unenaable">#4d4d4d</color>
+    <color name="fs_gs_msg_bottom_bg">#cc000000</color>
+
+    <color name="fs_chat_bottom_bg">#242424</color>
+    <color name="fs_chat_bottom_bg_day">#eff0f3</color>
+    <color name="fs_pad_chat_bottom_bg">#1f1f1f</color>
+    <color name="fs_chat_send">#b3b3b3</color>
+    <color name="fs_chat_send_unenable">#4d4d4d</color>
+    <color name="fs_chat_can_send">#00aeef</color>
+    <color name="fs_chat_cannot_send">#666666</color>
+    <color name="fs_chat_edit_view">#aaaaaa</color>
+    <color name="fs_chat_edit_view_unenaable">#4d4d4d</color>
+    <color name="fs_chat_edit_view_unenaable_day">#cccccc</color>
+    <color name="fs_chat_bg">#262626</color>
+    <color name="fs_chat_bg_day">#f4f4f6</color>
+    <color name="fs_chat_content">#373737</color>
+    <color name="fs_chat_send_by_me">#F8A80F</color>
+
+    <!-- private chat -->
+    <color name="fs_private_chat_title">#999999</color>
+    <color name="fs_private_chat_title_day">#666666</color>
+    <color name="fs_private_chat_offline_title">#999999</color>
+    <color name="fs_private_chat_offline_title_day">#666666</color>
+    <color name="fs_private_chat_title_sep">#1a1a1a</color>
+    <color name="fs_private_chat_title_sep_day">#CCCCCC</color>
+    <color name="fs_private_chat_bottom_sep">#212121</color>
+    <color name="fs_private_content">#ddf0fc</color>
+    <color name="fs_private_content_day">#333333</color>
+    <color name="fs_private_me_content">#ddf0fc</color>
+    <color name="fs_private_me_content_day">#ffffff</color>
+    <color name="fs_private_time">#999999</color>
+    <color name="fs_private_time_day">#808080</color>
+    <color name="fs_private_chat_bg">#262626</color>
+    <color name="fs_private_chat_bg_day">#ebebeb</color>
+
+    <!-- public chat item -->
+    <color name="fs_public_chat_item_host_tip">#00aeef</color>
+    <color name="fs_public_chat_item_host_tip_day">#339cf5</color>
+    <color name="fs_public_chat_item_default_tip">#999999</color>
+    <color name="fs_public_chat_item_default_content">#d9d9d9</color>
+    <color name="fs_public_chat_item_default_content_day">#4d4d4d</color>
+    <color name="fs_public_chat_item_sys_title">#999999</color>
+    <color name="fs_public_chat_item_sys_title_day">#fe4451</color>
+    <color name="fs_public_chat_item_sys_content">#ff665d</color>
+    <color name="fs_public_chat_item_sys_content_day">#fe4451</color>
+    <color name="fs_public_chat_item_to_tip">#00aeef</color>
+    <color name="fs_public_chat_item_to_tip_day">#339cf5</color>
+    <color name="fs_public_chat_item_line">#666666</color>
+    <color name="fs_public_chat_item_line_day">#cccccc</color>
+    <color name="fs_public_chat_tip_text">#d9d9d9</color>
+    <color name="fs_public_chat_tip_text_day">#4d4d4d</color>
+
+    <!-- qa -->
+    <color name="fs_qa_item_question_tip">#00aeef</color>
+    <color name="fs_qa_item_question_tip_day">#339cf5</color>
+    <color name="fs_qa_item_question_voice">#ff665d</color>
+    <color name="fs_qa_item_answer_tip">#00aeef</color>
+    <color name="fs_qa_item_content">#d9d9d9</color>
+    <color name="fs_qa_item_content_day">#4d4d4d</color>
+    <color name="fs_qa_item_time">#666666</color>
+    <color name="fs_qa_item_time_day">#999999</color>
+    <color name="fs_qa_item_answer_question">#999999</color>
+    <color name="fs_qa_item_answer_question_day">#808080</color>
+
+    <!-- fs_gs_dialog -->
+    <color name="fs_gs_dialog_line">#9e9e9e</color>
+    <color name="fs_gs_dialog_btn_text_red">#e43e36</color>
+    <color name="fs_gs_dialog_btn_text_black">#000000</color>
+
+    <!-- idc -->
+    <color name="fs_gs_idc_line_color">#f5f5f5</color>
+    <color name="fs_gs_idc_title_tv">#00aeef</color>
+    <color name="fs_gs_card_page_title_line_tv">#e7e7e7</color>
+    <color name="fs_gs_tip_board_text_color">#333333</color>
+
+    <!-- card -->
+    <color name="fs_card_expand_tv">#00aeef</color>
+    <color name="fs_card_page_title_tv">#00aeef</color>
+    <color name="fs_card_page_title_line_tv">#e7e7e7</color>
+    <color name="fs_card_page_content_tip_bg">#ffe7e6</color>
+    <color name="fs_card_page_content_tip_tv">#ff665d</color>
+    <color name="fs_card_page_result_failure">#999999</color>
+    <color name="fs_card_page_result_success">#ff665d</color>
+    <color name="fs_card_page_options_tv">#666666</color>
+
+    <!-- vote -->
+    <color name="fs_vote_title_tv">#00aeef</color>
+    <color name="fs_vote_title_live_iv">#e6e6e6</color>
+    <color name="fs_vote_force_tv">#ff665d</color>
+    <color name="fs_vote_force_bg">#ffe7e6</color>
+    <color name="fs_vote_count_tv">#999999</color>
+    <color name="fs_vote_group_item_tv">#666666</color>
+    <color name="fs_vote_child_item_tv">#666666</color>
+    <color name="fs_vote_text_tv">#ff7a72</color>
+
+    <!-- lottery -->
+    <color name="fs_gs_lottery_going_text">#666666</color>
+    <color name="fs_gs_lottery_going_bg">#fadd5c</color>
+    <color name="fs_gs_lottery_title_tv">#00aeef</color>
+    <color name="fs_gs_lottery_finish_text">#666666</color>
+    <color name="fs_gs_rollcall_going_tv">#ff6f5d</color>
+
+    <!-- mid tab -->
+    <color name="fs_mid_tab_bg_nor">#242424</color>
+    <color name="fs_mid_tab_bg_nor_day">#fcfcfc</color>
+    <color name="fs_mid_tab_bg_active">#333333</color>
+    <color name="fs_mid_tab_text_nor">#999999</color>
+    <color name="fs_mid_tab_text_nor_day">#666666</color>
+    <color name="fs_gs_tab_white">#ffffff</color>
+    <color name="fs_gs_tab_white_day">#333333</color>
+
+    <!-- msg tip -->
+    <color name="fs_msg_tip_bg">#484848</color>
+    <color name="fs_msg_tip_bg_day">#e6e6e6</color>
+    <color name="fs_msg_content">#ff665d</color>
+    <color name="fs_msg_content_day">#fe4451</color>
+    <color name="fs_msg_other">#d2564f</color>
+    <color name="fs_msg_other_day">#fe4451</color>
+    <color name="fs_msg_bottom_bg">#cc000000</color>
+    <color name="fs_msg_bottom_bg_day">#e9e9e9</color>
+
+    <!-- pop more -->
+    <color name="fs_pop_more_text">#666666</color>
+    <color name="fs_pop_more_item_presess">#4fd9d9d9</color>
+    <color name="fs_pop_quality_text_select">#e43e36</color>
+
+    <color name="fs_receiver_localvideo_bg">#242424</color>
+    <color name="fs_bottom_chat_top">#1f1f1f</color>
+    <color name="fs_bottom_chat_top_day">#d7d7d7</color>
+
+    <color name="fs_pure_idc_line_color">#d8333333</color>
+
+    <color name="fs_msg_bottom_text">#ffffff</color>
+    <color name="fs_msg_bottom_text_day">#333333</color>
+
+    <color name="fs_no_content_bg_color">#242424</color>
+    <color name="fs_no_content_bg_color_day">#ffffff</color>
+
+    <color name="fs_tv_introdution_title_color">#e5e5e5</color>
+    <color name="fs_tv_introdution_title_color_day">#333333</color>
+    <color name="fs_tv_introdution_color">#999999</color>
+    <color name="fs_tv_introdution_color_day">#666666</color>
+    <color name="fs_tv_introdution_line_color">#313131</color>
+    <color name="fs_tv_introdution_line_color_day">#e7e7e7</color>
+
+    <color name="fs_vod_play_bar_bg">#99000000</color>
+    <color name="fs_player_time_tv">#ffffff</color>
+
+    <color name="fs_chapter_title_tip">#cccccc</color>
+    <color name="fs_chapter_color">#e6e6e6</color>
+    <color name="fs_chapter_time_default">#666666</color>
+    <color name="fs_chapter_cur_color">#00aeef</color>
+    <color name="fs_chapter_index">#cccccc</color>
+    <color name="fs_chapter_select">#b6322c</color>
+    <color name="fs_chapter_click_color">#2b2b2b</color>
+
+    <!-- dialog -->
+    <color name="fs_dialog_line">#9e9e9e</color>
+    <color name="fs_dialog_btn_text">#157efb</color>
+    <color name="fs_dialog_btn_text1">#e43e36</color>
+    <color name="fs_dialog_btn_text2">#333333</color>
+    <color name="fs_dialog_btn_text_gray">#999999</color>
+</resources>

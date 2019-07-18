@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/home_Carousel_figure"
+        layout="@layout/home_carousel_figure_include"
+        android:layout_width="match_parent"
+        android:layout_height="180dp" />
+
+
+
+    <com.linlic.ccmtv.yx.widget.MyGridView
+        android:id="@+id/my_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:listSelector="#FFF"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:numColumns="4" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F7F7F7" />
+    <ImageView
+        android:id="@+id/medical_examination_img_x"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:visibility="gone"
+        android:background="@mipmap/home_item_advertising"
+        android:scaleType="fitXY"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15px"
+        android:background="#F7F7F7" />
+</LinearLayout>

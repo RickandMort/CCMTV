@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/fs_gs_lottery_width"
+    android:layout_height="@dimen/fs_gs_lottery_height"
+    android:background="@color/fs_gs_white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/rollcall_title_ly"
+        style="@style/fs_gs_width_match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_height="45dp"
+        android:paddingLeft="@dimen/fs_gs_lottery_title_hor" >
+
+        <TextView
+            android:id="@+id/rollcall_title_tv"
+            style="@style/fs_gs_width_match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/fs_gs_lottery_title_tv"
+            android:textSize="@dimen/fs_gs_lottery_title_tv" />
+
+        <ImageView
+            android:id="@+id/rollcall_close_iv"
+            style="@style/fs_gs_both_wrap_content"
+            android:background="@drawable/fs_gs_close" />
+    </LinearLayout>
+
+    <ImageView
+        style="@style/fs_gs_width_match_parent"
+        android:layout_height="1px"
+        android:background="@color/fs_gs_card_page_title_line_tv" />
+
+    <RelativeLayout style="@style/fs_gs_both_match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/rollcall_going_rl"
+            style="@style/fs_gs_both_match_parent"
+            android:visibility="visible" >
+
+            <ImageView
+                style="@style/fs_gs_both_wrap_content"
+                android:layout_marginLeft="91dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/fs_gs_roll_call_bg" />
+
+            <TextView
+                android:id="@+id/rollcall_goint_time_tv"
+                style="@style/fs_gs_width_match_parent"
+                android:layout_marginTop="@dimen/fs_gs_rollcall_going_time_top"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="@color/fs_gs_rollcall_going_tv"
+                android:textSize="@dimen/fs_gs_rollcall_going_tv" />
+
+            <Button
+                android:id="@+id/rollcall_poging_roll_btn"
+                style="@style/fs_gs_both_wrap_content"
+                android:layout_width="@dimen/fs_gs_rollcall_going_roll_btn"
+                android:layout_below="@+id/rollcall_goint_time_tv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/fs_gs_rollcall_going_roll_top"
+                android:background="@drawable/fs_gs_pop_btn"
+                android:gravity="center"
+                android:text="@string/fs_rollcall_roll"
+                android:textColor="@color/fs_gs_white"
+                android:textSize="@dimen/fs_gs_rollcall_going_roll_tv" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rollcall_finish_ly"
+            style="@style/fs_gs_both_match_parent"
+            android:layout_marginTop="51dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/rollcall_finish_tv"
+                style="@style/fs_gs_width_match_parent"
+                android:gravity="center"
+                android:text="@string/fs_rollcall_finish_tip"
+                android:textColor="@color/fs_gs_lottery_going_text"
+                android:textSize="@dimen/fs_gs_rollcall_going_roll_tv" >
+            </TextView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

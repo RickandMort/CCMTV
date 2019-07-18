@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/layout_bg"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="23px"
+            android:layout_marginLeft="22px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="26px"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:orientation="horizontal" >
+
+                <View
+                    android:layout_width="7px"
+                    android:layout_height="36px"
+                    android:background="#4392d9" />
+
+                <TextView
+                    android:id="@+id/title_max"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13px"
+                    android:text="手术演示"
+                    android:textColor="#999"
+                    android:singleLine="true"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/special_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:tag="@string/surgeryInfolist"
+                android:gravity="center|right"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="11px"
+                    android:text="更多"
+                    android:textColor="#999"
+                    />
+
+                <ImageView
+                    android:layout_width="14px"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/more" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left"
+            android:orientation="horizontal" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/special_img1"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/img_default" />
+
+                <ImageView
+                    android:id="@+id/special_top_img1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="left"
+                    android:src="@mipmap/free_img_blue"  android:scaleType="fitXY" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/special_img2"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/img_default" />
+
+                <ImageView
+                    android:id="@+id/special_top_img2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="left"
+                    android:src="@mipmap/free_img_blue"  android:scaleType="fitXY" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/special_img3"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/img_default" />
+
+                <ImageView
+                    android:id="@+id/special_top_img3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="left"
+                    android:src="@mipmap/free_img_blue"  android:scaleType="fitXY" />
+            </FrameLayout>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22px"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/special_text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10px"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:text="刘忠臣：单孔腹腔镜辅助乙状结肠癌"
+                android:textColor="#999"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/special_text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10px"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:text="刘忠臣：单孔腹腔镜辅助乙状结肠癌"
+                android:textColor="#999"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/special_text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:text="刘忠臣：单孔腹腔镜辅助乙状结肠癌"
+                android:textColor="#999"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E4E4E4" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15px"
+        android:background="#F7F7F7" />
+
+
+</LinearLayout>

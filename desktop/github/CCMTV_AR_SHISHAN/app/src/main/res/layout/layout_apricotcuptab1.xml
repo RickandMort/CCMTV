@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="50dp"
+    android:orientation="vertical">
+    <!-- 选项卡 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@color/tab_apricot"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <!-- 首页 -->
+
+        <LinearLayout
+            android:id="@+id/tabapricot_layout1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/tab_apricot_down"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="首页"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <!-- <ImageView
+             android:layout_width="2dp"
+             android:layout_height="match_parent"
+             android:background="#ffffff" />-->
+
+        <!-- 精彩展播 -->
+
+        <LinearLayout
+            android:id="@+id/tabapricot_layout2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/tab_apricot"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="病例展示"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <!-- 作品要求 -->
+
+        <LinearLayout
+            android:id="@+id/tabapricot_layout3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/tab_apricot"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="作品要求"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <!-- 参赛说明 -->
+
+        <LinearLayout
+            android:id="@+id/tabapricot_layout4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/tab_apricot"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="参赛说明"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+        <!-- 杏林榜 -->
+
+        <LinearLayout
+            android:id="@+id/tabapricot_layout5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/tab_apricot"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="杏林榜"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

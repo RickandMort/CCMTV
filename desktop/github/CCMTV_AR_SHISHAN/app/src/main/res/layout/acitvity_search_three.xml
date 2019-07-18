@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/acitvity_search_three_hean_bg"
+        android:layout_gravity="center_horizontal"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        >
+
+       <EditText
+            android:id="@+id/editText1"
+            android:layout_width="fill_parent"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/sousuo_03"
+            android:drawableLeft="@mipmap/search_icon"
+            android:hint="@string/search_hit"
+           android:imeOptions="actionSearch"
+           android:singleLine="true"
+            android:paddingLeft="15dip"
+
+            android:textSize="14dip" >
+        </EditText>
+
+
+        <TextView
+            android:id="@+id/search_recall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#ffffff"
+            android:text="@string/acitvity_search_three_hean_Text"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hean_Search_History_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:textColor="#999999"
+                android:text="@string/acitvity_search_three_hean_Search_History"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/three_hean_clearance"
+                android:layout_weight="1"
+                android:gravity="center|right"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/acitvity_search_three_hean_search_history"
+                        android:layout_marginRight="7dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:layout_gravity="right"
+                        android:gravity="right"
+                        android:textColor="#999999"
+                        android:text="@string/acitvity_search_three_hean_clearance"
+                        />
+                </LinearLayout>
+
+        </LinearLayout>
+
+        <com.linlic.ccmtv.yx.utils.MyGridView
+            android:id="@+id/hot_search_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:horizontalSpacing="10dip"
+            android:verticalSpacing="10dp"
+            android:layout_marginBottom="10dp"
+            android:listSelector="#ffffff"
+            descendantFocusability="blocksDescendants"
+            android:focusable="true"
+            android:numColumns="2"
+            android:scrollbars="none">
+        </com.linlic.ccmtv.yx.utils.MyGridView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:background="@color/activity_search_three_view_bg"
+            android:layout_marginBottom="10dp"
+            />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:textSize="18sp"
+        android:layout_marginLeft="10dp"
+        android:textColor="#999999"
+        android:text="@string/acitvity_search_three_hean_Search"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.linlic.ccmtv.yx.utils.MyListView
+            android:id="@+id/trend_Search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#fff"
+            android:divider="@null"
+            android:listSelector="#00000000"
+            android:scrollbars="none"
+            android:paddingBottom="0dp" />
+    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

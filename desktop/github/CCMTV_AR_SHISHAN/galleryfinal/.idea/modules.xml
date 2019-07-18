@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Android-PullToRefresh-master/Android-PullToRefresh-master.iml" filepath="$PROJECT_DIR$/../Android-PullToRefresh-master/Android-PullToRefresh-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CCMTV-NWY.iml" filepath="$PROJECT_DIR$/../CCMTV-NWY.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CCSDK/CCSDK.iml" filepath="$PROJECT_DIR$/../CCSDK/CCSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../PhotoViewlibrary/PhotoViewlibrary.iml" filepath="$PROJECT_DIR$/../PhotoViewlibrary/PhotoViewlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../app/app.iml" filepath="$PROJECT_DIR$/../app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/galleryfinal.iml" filepath="$PROJECT_DIR$/galleryfinal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ijkmediaplayer/ijkmediaplayer.iml" filepath="$PROJECT_DIR$/../ijkmediaplayer/ijkmediaplayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../imageselector/imageselector.iml" filepath="$PROJECT_DIR$/../imageselector/imageselector.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../sharesdk/sharesdk.iml" filepath="$PROJECT_DIR$/../sharesdk/sharesdk.iml" />
+    </modules>
+  </component>
+</project>

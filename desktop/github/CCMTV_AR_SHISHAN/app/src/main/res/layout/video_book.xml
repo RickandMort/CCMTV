@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_height="match_parent">
+  <!--  <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">-->
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:onClick="back">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/bark" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="书架"
+            android:textColor="#626262"
+            android:textSize="18sp" />
+
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/hr_bg2" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/cover_chart"
+                        android:layout_width="100dp"
+                        android:layout_height="130dp"
+                        android:src="@mipmap/text1000"
+                        android:layout_margin="20dp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:padding="20dp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="高兴死了"
+                            android:textColor="#333"
+                            android:textSize="18sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/author"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="作者： （美） 珍妮·罗森，吴洁静（议）"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:textColor="#999"
+                            />
+
+                        <TextView
+                            android:id="@+id/price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="￥16.00"
+                            android:textColor="#FF1B2D"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <com.linlic.ccmtv.yx.utils.AutoTextView
+                    android:id="@+id/synopsis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#666"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:maxLines="4"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:lineSpacingExtra="3dp"
+                    android:ellipsize="end"  />
+                <Button
+                    android:id="@+id/buy_e_books"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@mipmap/button_03"
+                    android:text="阅读"
+                    android:visibility="gone"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/hr_bg2" />
+
+                <LinearLayout
+                    android:id="@+id/video_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <View
+                            android:layout_width="30dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="15dp"
+                            android:background="#333"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:text="相关视频"
+                            android:textColor="#333"
+                            android:textSize="20sp"
+                            />
+                        <View
+                            android:layout_width="30dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15dp"
+                            android:background="#333"
+                            />
+                    </LinearLayout>
+
+                    <!--   <com.linlic.ccmtv.yx.widget.HorizontalListView
+                           android:id="@+id/horizontalListView"
+                           android:layout_width="match_parent"
+                           android:layout_marginRight="20dp"
+                           android:layout_marginLeft="20dp"
+                           android:layout_height="200dp"
+                           android:layout_alignParentTop="true"
+                           android:stackFromBottom="true"
+                           android:transcriptMode="alwaysScroll" />-->
+
+                            <com.linlic.ccmtv.yx.utils.MyGridView
+                                android:id="@+id/horizontalListView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:stretchMode="columnWidth"
+                                android:layout_marginBottom="50dp"
+                                android:numColumns="2"
+                                android:scrollbars="none"/>
+
+
+
+                    <Button
+                        android:id="@+id/purchase_video"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="70dp"
+                        android:visibility="invisible"
+                        android:background="@mipmap/button_01"
+                        android:text="购买"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/buy"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="购买"
+            android:textSize="18sp"
+            android:textColor="#fff"
+            android:background="#3997F9"
+            />
+
+
+
+        </FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/video_id"
+        style="@style/home_buttom_textview"
+        android:layout_marginTop="10dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/hot_layout1"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/video_img1"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@mipmap/img_default"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/video_top_img1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="left"
+                android:scaleType="fitXY"
+                android:src="@mipmap/free_img_blue"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/video_name"
+            style="@style/home_buttom_textview"
+            android:layout_marginTop="10dp"
+            android:gravity="top"
+            android:lines="2"
+            android:maxLines="2"
+            android:text="标题"
+            android:textSize="14sp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</LinearLayout>

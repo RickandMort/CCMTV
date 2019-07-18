@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 已经上传  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/activity_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_isreviewVideo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/upload_video_text1"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_isreviewCase"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/upload_case_text2"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_gravity="bottom"
+        android:background="@color/hr_bg2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="-2dp"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/selectItemOptions_one"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@color/hr_bg" />
+
+
+        <View
+            android:id="@+id/selectItemOptions_two"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@color/hr_bg"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+
+    <include layout="@layout/layout_nodata_empty" />
+
+    <include layout="@layout/layout_loading" />
+
+    <ListView
+        android:id="@+id/upload_selectPageList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:listSelector="#00000000"
+        android:scrollbars="none" />
+
+    <Button
+        android:id="@+id/upload_selectButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:drawablePadding="-250dp"
+        android:drawableTop="@mipmap/boxopen"
+        android:paddingTop="50dp"
+        android:text="敬请期待"
+        android:textColor="@color/activity_title_name"
+        android:textSize="28sp"
+        android:visibility="gone" />
+
+
+</LinearLayout>

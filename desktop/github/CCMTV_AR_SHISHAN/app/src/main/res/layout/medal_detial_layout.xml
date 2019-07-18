@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="190dp"
+        android:layout_height="190dp">
+
+        <ImageView
+            android:id="@+id/medal_detial_icon"
+            android:layout_width="190dp"
+            android:layout_height="190dp" />
+
+        <com.linlic.ccmtv.yx.activity.medal.view.CircleBarView
+            android:id="@+id/medal_detial_cicler_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/medal_detial_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:text="成长新星"
+        android:textColor="#CA5E00"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/medal_detial_number_acquired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_medal_detial_view_count"
+        android:paddingBottom="3dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="3dp"
+        android:text="已经有66666人获得"
+        android:textColor="#CA5E00"
+        android:textSize="14sp" />
+
+    <com.linlic.ccmtv.yx.activity.medal.view.MedalDetialTitleImageView
+        android:id="@+id/medal_detial_reword_sign_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="10dp"
+        app:medal_default_height="50"
+        app:medal_src="@mipmap/medal_detial_content_my_reword" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:gravity="center">
+
+        <com.linlic.ccmtv.yx.kzbf.widget.RichText
+            android:id="@+id/medal_detial_glod_acquired"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:drawablePadding="5dp"
+            android:gravity="center_horizontal"
+            android:text="积分+3"
+            android:textColor="#CA5E00"
+            android:textStyle="bold"
+            app:drawable_height="50dp"
+            app:drawable_location="top"
+            app:drawable_src="@mipmap/medal_detial_content_integral"
+            app:drawable_width="50dp" />
+
+        <com.linlic.ccmtv.yx.kzbf.widget.RichText
+            android:id="@+id/medal_detial_experience_acquired"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:drawablePadding="5dp"
+            android:gravity="center_horizontal"
+            android:text="经验+3"
+            android:textColor="#CA5E00"
+            android:textStyle="bold"
+            app:drawable_height="50dp"
+            app:drawable_location="top"
+            app:drawable_src="@mipmap/medal_detial_content_experience"
+            app:drawable_width="50dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/medal_detial_todo_something"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@mipmap/medal_detial_content_todo_bg_do"
+        android:gravity="center"
+        android:padding="7dp"
+        android:text="分享一下"
+        android:textColor="#f9ffff"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+</LinearLayout>

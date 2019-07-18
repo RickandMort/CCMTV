@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="vertical"
+        android:background="#fff"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <org.angmarch.views.NiceSpinner
+                android:id="@+id/the_activity_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/keyword_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/anniu10"
+                android:paddingBottom="8dp"
+                android:paddingLeft="20dp"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:paddingRight="20dp"
+                android:paddingTop="8dp"/>
+            <TextView
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/anniu18"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginLeft="5dp"
+                android:paddingTop="5dp"
+                android:text="搜索"
+                android:textColor="@color/login_button"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="20dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="学员"
+                />
+
+            <TextView
+                android:id="@+id/select_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/anniu18"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:text="全选"
+                android:textColor="@color/login_button"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/activity_title4"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/student_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:divider="@null"
+            android:listSelector="#00000000"
+            android:layout_marginBottom="55dp"
+            android:scrollbars="none"/>
+        <TextView
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:text="确定"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:background="@color/login_button"
+            android:textColor="#fff"
+            android:layout_height="50dp"/>
+        <com.linlic.ccmtv.yx.widget.NodataEmptyLayout
+            android:id="@+id/management_nodata"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:visibility="gone"
+            app:empty_des="当前暂无可选主讲人哦~"
+            app:empty_src="@mipmap/nodata_empty"
+            app:empty_topLine="false"/>
+    </FrameLayout>
+
+
+
+</LinearLayout>

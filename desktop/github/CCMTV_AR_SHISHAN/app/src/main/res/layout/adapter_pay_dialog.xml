@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:gravity="center"
+              >
+
+    <LinearLayout
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/btn_white_shape"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="付费提醒"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="#5EB5FF"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/study_pay"
+            android:layout_marginTop="28dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp">
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="此视频需要付费"
+            android:textSize="14sp"
+            android:textColor="@color/black33"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="18sp"
+                android:textColor="#f04d4d"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥"
+                android:textSize="14sp"
+                android:textColor="@color/black33"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp">
+
+            <TextView
+                android:id="@+id/tv_cancle"
+                android:layout_width="78dp"
+                android:layout_height="28dp"
+                android:text="以后再说"
+                android:textSize="13sp"
+                android:textColor="@color/black99"
+                android:background="@drawable/study_pay_dialog"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/tv_confirm"
+                android:layout_width="78dp"
+                android:layout_height="28dp"
+                android:text="立即付费"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@drawable/study_buy_button"
+                android:layout_marginLeft="30dp"
+                />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

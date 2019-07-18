@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.linlic.ccmtv.yx.activity.vip.VipDepartmentSelectActivity">
+
+    <include layout="@layout/activity_title8"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.linlic.ccmtv.yx.widget.MyGridView
+                android:id="@+id/id_gv_vip_special_area_department_select_internal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="10dp"
+                android:verticalSpacing="10dp"
+                android:gravity="center"
+                android:listSelector="@color/transparent2"
+                android:numColumns="4"/>
+
+            <View
+                android:id="@+id/id_view1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#bebebe"/>
+
+            <com.linlic.ccmtv.yx.widget.MyGridView
+                android:id="@+id/id_gv_vip_special_area_department_select_surgery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="10dp"
+                android:verticalSpacing="10dp"
+                android:gravity="center"
+                android:listSelector="@color/transparent2"
+                android:numColumns="4"/>
+
+            <View
+                android:id="@+id/id_view2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#bebebe"/>
+
+            <com.linlic.ccmtv.yx.widget.MyGridView
+                android:id="@+id/id_gv_vip_special_area_department_select_women_children"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="10dp"
+                android:verticalSpacing="10dp"
+                android:gravity="center"
+                android:listSelector="@color/transparent2"
+                android:numColumns="4"/>
+
+            <View
+                android:id="@+id/id_view3"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#bebebe"/>
+
+            <com.linlic.ccmtv.yx.widget.MyGridView
+                android:id="@+id/id_gv_vip_special_area_department_select_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="10dp"
+                android:verticalSpacing="10dp"
+                android:gravity="center"
+                android:listSelector="@color/transparent2"
+                android:numColumns="4"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

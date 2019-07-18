@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="true"
+    android:background="#ffffff"
+    android:focusableInTouchMode="true"
+    tools:context="com.linlic.ccmtv.yx.kzbf.MedicineMessageActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:onClick="back">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/login_back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="直播"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/medicine_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/search"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp"
+            android:src="@mipmap/direct_broadcast_icon01" />
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@mipmap/direct_broadcast_icon15" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/custom_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <android.support.design.widget.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:tabMode="scrollable"
+                app:tabIndicatorHeight="0dp"
+                android:layout_marginRight="40dp"
+                app:tabIndicatorColor="#207EDE"
+                android:id="@+id/tablayout"/>
+
+            <LinearLayout
+                android:id="@+id/categoryLayout"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:onClick="back"
+                android:orientation="vertical"
+                android:tag="收缩">
+
+                <ImageView
+                    android:id="@+id/medicine_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/direct_broadcast_icon14" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+   <!-- <android.support.v4.view.ViewPager
+        android:id="@+id/medicine_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                app:image_scale_type="fit_xy"
+                android:layout_height="170dp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="#f0f0f0"
+                    android:layout_gravity="bottom" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:id="@+id/under_way"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:text="进行中"
+                            android:layout_weight="1"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:layout_height="wrap_content" />
+
+                        <View
+                            android:id="@+id/under_way_color"
+                            android:layout_width="60dp"
+                            android:layout_height="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#207EDE"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/trail"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:text="预告"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_height="wrap_content" />
+
+                        <View
+                            android:id="@+id/trail_color"
+                            android:layout_width="60dp"
+                            android:layout_height="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#207EDE"
+                            android:visibility="invisible"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/recent_review"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="近期回顾"
+                            android:layout_weight="1"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:layout_height="wrap_content" />
+
+                        <View
+                            android:id="@+id/recent_review_color"
+                            android:layout_width="90dp"
+                            android:layout_height="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="#207EDE"
+                            android:visibility="invisible"
+                            />
+                    </LinearLayout>
+
+                    <!--
+                                <View
+                                    android:layout_width="40dp"
+                                    android:layout_height="5dp"
+                                    android:background="#207EDE"
+                                    android:layout_below="@+id/under_way"
+                                    />
+                            -->
+
+
+                    <!--   <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_weight="1"
+                           android:text="预告"
+                           android:gravity="center"
+                           android:layout_height="wrap_content" />
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_weight="1"
+                           android:text="近期回顾"
+                           android:gravity="center"
+                           android:layout_height="wrap_content" />-->
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+            <com.linlic.ccmtv.yx.utils.MyListView
+                android:id="@+id/direct_broadcast_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:divider="@null"
+                android:listSelector="#00000000"
+                android:paddingBottom="0dp"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+</LinearLayout>

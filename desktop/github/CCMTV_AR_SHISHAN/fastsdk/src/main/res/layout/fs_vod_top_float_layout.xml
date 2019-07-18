@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/touch_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fs_title_height_vertical"
+        android:background="@color/fs_title_bar_bg" >
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:src="@drawable/fs_ic_exit_app" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/fs_title_margin_hor"
+            android:layout_centerHorizontal="true"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/fs_gs_white"
+                android:maxEms="8"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgMore"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/fs_icon_more" />
+
+        <LinearLayout
+            android:id="@+id/linPower"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/txtPowerPercent"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center" />
+
+            <ImageView
+                android:id="@+id/imgPower"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:src="@drawable/fs_icon_back"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/vod_video_playe_bar_ly"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+        <include layout="@layout/fs_vod_play_bar_layout"></include>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/fs_bright_volume_layout">
+        </include>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/seek_pop_ly"
+        style="@style/fs_gs_both_match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+        <LinearLayout
+            android:layout_width="@dimen/fs_volume_bright_width"
+            android:layout_height="@dimen/fs_player_seek_pop_ly"
+            android:background="@drawable/fs_bright_volume_bg"
+            android:orientation="vertical"
+            android:gravity="center" >
+            <ImageView
+                android:id="@+id/seek_pop_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fs_selector_vod_seek_iv"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:paddingTop="10dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/fs_gs_white"
+                    android:textSize="13sp"
+                    android:text="00:88"
+                    android:id="@+id/seek_have_time_pop_tv"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/fs_gs_white"
+                    android:textSize="13sp"
+                    android:text="/"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/fs_gs_white"
+                    android:textSize="13sp"
+                    android:text="00:88"
+                    android:id="@+id/seek_all_time_pop_tv"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

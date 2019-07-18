@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/myprofile_layout_background"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/myprofile_cont_layout_background"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:onClick="back">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/bark" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="设置中心"
+            android:textColor="#626262"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:onClick="MyprofileSubmit">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="完成"
+                android:textColor="#49A3FA"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+    <include layout="@layout/activity_title4" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:text="个人资料"
+                android:textColor="#6F6F6F" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/myprofile_cont_layout_background"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center|left"
+                    android:onClick="myprofile_head"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/forget_text1"
+                        android:textColor="@color/myprofile_textcolor" />
+
+                    <com.linlic.ccmtv.yx.adapter.CircleImageView
+                        android:id="@+id/myprofile_img"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/myprofile_prople" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:src="@mipmap/more" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/myprofile_view_background"
+                    android:visibility="gone" />
+
+                <LinearLayout style="@style/layout_myzl_style">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="* "
+                        android:textColor="#E61A5F" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:text="姓    名"
+                        android:textColor="@color/myprofile_textcolor" />
+
+                    <EditText
+                        android:id="@+id/myprofile_truename"
+                        style="@style/edit_myzl_style"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/myprofile_view_background" />
+
+                <LinearLayout
+                    android:id="@+id/profile_layout"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout style="@style/layout_myzl_style">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="* "
+                            android:textColor="#E61A5F" />
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/forget_text9"
+                            android:textColor="@color/myprofile_textcolor" />
+
+                        <EditText
+                            android:id="@+id/myprofile_idcard"
+                            style="@style/edit_myzl_style"
+                            android:digits="0123456789xyzXYZ"
+                            android:maxLength="18"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/myprofile_view_background" />
+
+                </LinearLayout>
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/myprofile_view_background" />
+
+                <LinearLayout style="@style/layout_myzl_style">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="* "
+                        android:textColor="#00FFFFFF" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="性    别"
+                        android:textColor="@color/myprofile_textcolor" />
+
+                    <Button
+                        android:id="@+id/myprofile_sex"
+                        style="@style/btn_myzl_style"
+                        android:onClick="getSex"
+                        android:text="@string/forget_selecter" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:text="职业信息"
+                android:textColor="#6F6F6F" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/myprofile_cont_layout_background"
+                android:orientation="vertical">
+
+                <LinearLayout style="@style/layout_myzl_style">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="* "
+                        android:textColor="#E61A5F" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/forget_text2"
+                        android:textColor="@color/myprofile_textcolor" />
+
+                    <Button
+                        android:id="@+id/myprofile_viptype"
+                        style="@style/btn_myzl_style"
+                        android:onClick="getVipType"
+                        android:text="@string/forget_selecter" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/myprofile_view_background" />
+
+                <LinearLayout
+                    android:id="@+id/layout_yiyuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/layout_myzl_style">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="* "
+                            android:textColor="#E61A5F" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/forget_text10"
+                            android:textColor="@color/myprofile_textcolor" />
+
+                        <Button
+                            android:id="@+id/myprofile_hospital"
+                            style="@style/btn_myzl_style"
+                            android:singleLine="true"
+                            android:text="@string/forget_selecter" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/myprofile_view_background" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_danwei"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/layout_myzl_style">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="* "
+                            android:textColor="#00FFFFFF" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/forget_text3"
+                            android:textColor="@color/myprofile_textcolor" />
+
+                        <EditText
+                            android:id="@+id/edit_myprofile_danwei"
+                            style="@style/edit_myzl_style"
+                            android:inputType="text"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/myprofile_view_background" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/layout_keshi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/layout_myzl_style">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="* "
+                            android:textColor="#E61A5F" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/forget_text4"
+                            android:textColor="@color/myprofile_textcolor" />
+
+                <!--        <Button
+                            android:id="@+id/myprofile_department"
+                            style="@style/btn_myzl_style"
+                            android:onClick="getDepartment"
+                            android:text="@string/forget_selecter" />-->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center|right"
+                            android:gravity="center|right"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/myprofile_department_max"
+                                android:text="请选择"
+                                android:background="@drawable/anniu10"
+                                android:layout_width="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:onClick="getDepartment"
+                                android:drawableRight="@mipmap/down_icon"
+                                android:drawablePadding="5dp"
+                                android:paddingTop="5dp"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/myprofile_department_min"
+                                android:text="请选择"
+                                android:background="@drawable/anniu10"
+                                android:layout_width="wrap_content"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:drawableRight="@mipmap/down_icon"
+                                android:drawablePadding="5dp"
+                                android:paddingTop="5dp"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/myprofile_view_background" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_zhicheng"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout style="@style/layout_myzl_style">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="* "
+                            android:textColor="#E61A5F" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/forget_text5"
+                            android:textColor="@color/myprofile_textcolor" />
+
+                        <Button
+                            android:id="@+id/myprofile_title"
+                            style="@style/btn_myzl_style"
+                            android:onClick="getTitle"
+                            android:text="@string/forget_selecter" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/myprofile_view_background" />
+
+                </LinearLayout>
+
+
+                <LinearLayout style="@style/layout_myzl_style">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="* "
+                        android:textColor="#00FFFFFF" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/forget_text8"
+                        android:textColor="@color/myprofile_textcolor" />
+
+                    <EditText
+                        android:id="@+id/myprofile_address"
+                        style="@style/edit_myzl_style"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/myprofile_view_background" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="2dp"
+                    android:text="* "
+                    android:textColor="#E61A5F" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="号为必填项"
+                    android:textColor="#8e8e8e" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

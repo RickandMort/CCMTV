@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="@dimen/input_width"
+        android:layout_height="wrap_content"/>
+
+    <Spinner
+        android:id="@+id/Spinner01"
+        android:layout_width="@dimen/input_width"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/pub_param_set_ly"
+        android:layout_width="@dimen/input_width"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+        <Spinner
+            android:id="@+id/sp_pub_screen_mode"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+        <Spinner
+            android:id="@+id/sp_pub_hard_encode"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:id="@+id/sp_pub_quality"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/watch_param_set_ly"
+        android:layout_width="@dimen/input_width"
+        android:layout_height="wrap_content">
+        <Spinner
+            android:id="@+id/sp_watch_screen_mode"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/gs_domin"
+        android:layout_width="@dimen/input_width"
+        android:layout_height="wrap_content"
+        android:hint="@string/zhandianwangzhi"
+        android:shadowColor="#000000"
+        android:text="ccmtvbj.gensee.com"
+        android:textSize="@dimen/input_size"
+        android:imeOptions="actionNext"/>
+
+    <EditText
+        android:id="@+id/gs_numble"
+        android:layout_width="@dimen/input_width"
+        android:layout_height="wrap_content"
+        android:hint="@string/bianhao"
+        android:shadowColor="#000000"
+        android:text="84151266"
+        android:textSize="@dimen/input_size"
+        android:imeOptions="actionNext"/>
+
+    <EditText
+        android:id="@+id/gs_account"
+        android:layout_width="@dimen/input_width"
+        android:layout_height="wrap_content"
+        android:hint="@string/zhandian"
+        android:shadowColor="#000000"
+        android:textSize="@dimen/input_size"
+        android:imeOptions="actionNext"/>
+
+    <EditText
+        android:id="@+id/gs_account_psw"
+        android:layout_width="@dimen/input_width"
+        android:layout_height="wrap_content"
+        android:hint="@string/zhandianpassword"
+        android:shadowColor="#000000"
+        android:textSize="@dimen/input_size"
+        android:imeOptions="actionNext"/>
+
+    <EditText
+        android:id="@+id/gs_nickroom"
+        android:layout_width="@dimen/input_width"
+        android:layout_height="wrap_content"
+        android:hint="@string/roomnickname"
+        android:text="移动端直播测试课堂"
+        android:shadowColor="#000000"
+        android:textSize="@dimen/input_size"
+        android:imeOptions="actionNext"/>
+
+    <EditText
+        android:id="@+id/gs_nickname_psw"
+        android:layout_width="@dimen/input_width"
+        android:layout_height="wrap_content"
+        android:hint="@string/roompassword"
+        android:text="676457"
+        android:shadowColor="#000000"
+        android:textSize="@dimen/input_size"
+        android:imeOptions="actionNext"/>
+    <EditText
+        android:id="@+id/gs_k"
+        android:layout_width="@dimen/input_width"
+        android:layout_height="wrap_content"
+        android:hint="@string/authk"
+        android:shadowColor="#000000"
+        android:textSize="@dimen/input_size"
+        android:imeOptions="actionNext"/>
+    <EditText
+        android:id="@+id/gs_userId"
+        android:layout_width="@dimen/input_width"
+        android:layout_height="wrap_content"
+        android:hint="@string/gs_uid"
+        android:inputType="number"
+        android:maxLength="12"
+        android:shadowColor="#000000"
+        android:textSize="@dimen/input_size"
+        android:imeOptions="actionNext"/>
+    <LinearLayout
+        android:id="@+id/gs_ll_fixed_money"
+        android:layout_width="@dimen/input_width"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="打赏固定金额:"
+                android:textSize="13sp"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(单位是分)"
+                android:textSize="13sp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/et_money1"
+                    style="@style/gs_fix_money_style"
+                    android:hint="@string/fixed_money_1"/>
+                <EditText
+                    android:id="@+id/et_money2"
+                    style="@style/gs_fix_money_style"
+                    android:hint="@string/fixed_money_2"/>
+                <EditText
+                    android:id="@+id/et_money3"
+                    style="@style/gs_fix_money_style"
+                    android:hint="@string/fixed_money_3"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/et_money4"
+                    style="@style/gs_fix_money_style"
+                    android:hint="@string/fixed_money_4"/>
+                <EditText
+                    android:id="@+id/et_money5"
+                    style="@style/gs_fix_money_style"
+                    android:hint="@string/fixed_money_5"/>
+                <EditText
+                    android:id="@+id/et_money6"
+                    style="@style/gs_fix_money_style"
+                    android:hint="@string/fixed_money_6"
+                    android:imeOptions="actionDone"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/gs_bnt_more_setting"
+        android:layout_width="@dimen/input_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="更多配置项"
+        android:textSize="@dimen/input_size"
+        android:drawableRight="@mipmap/gs_right_enter"/>
+
+    <Button
+        android:id="@+id/gs_bnt_room_join"
+        android:layout_width="@dimen/input_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="加入"
+        android:textSize="@dimen/input_size" />
+</LinearLayout>

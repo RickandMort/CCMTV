@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?><!--查看考卷-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/arrow_back"
+                    android:layout_width="45dip"
+                    android:layout_height="match_parent"
+                    android:onClick="back">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="11dp"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/bark" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/activity_title_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="查看"
+                    android:textColor="#626262"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/check_the_answer_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|right"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:text="查看答题卡"
+                    android:textColor="#55A7F3"
+                    android:textSize="16sp" />
+
+            </FrameLayout>
+
+            <include layout="@layout/activity_title4" />
+
+            <TextView
+                android:id="@+id/examination_instructions_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F0F7FF"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:src="@mipmap/exams2_03" />
+
+                <TextView
+                    android:id="@+id/examination_instructions_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center|left"
+                    android:maxEms="13"
+                    android:maxLines="1"
+                    android:textColor="#A3A7A8"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/schedule_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center|left"
+                    android:text="32/50"
+                    android:textColor="#55A7F3"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <include layout="@layout/activity_title4" />
+
+            <ListView
+                android:id="@+id/examination_instructions_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:listSelector="#00000000"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:scrollbars="none" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/imageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <com.linlic.ccmtv.yx.widget.ZoomImageView
+                android:id="@+id/matrixImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="50dp"
+                android:clickable="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/examination_instructions_timing3"
+            android:layout_width="match_parent"
+            android:background="@mipmap/anti_cheating_bg"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:animateLayoutChanges="true"
+            android:visibility="gone"
+            android:paddingBottom="100dp"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:background="#fff"
+
+                android:layout_height="wrap_content">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/arrow_back2"
+                        android:layout_width="45dip"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="11dp"
+                            android:scaleType="centerInside"
+                            android:src="@mipmap/x_icon02" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="答题卡"
+                        android:textColor="#626262"
+                        android:textSize="20sp" />
+
+
+
+                </FrameLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EEEEEE"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="30dp"
+                    >
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/anniu14"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:text="答题正确"
+                        android:textSize="16sp"
+                        />
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/anniu15"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:text="答题错误"
+                        android:textSize="16sp"
+                        />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/curr_num_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|right"
+                        android:layout_gravity="center|right"
+                        android:layout_marginLeft="5dp"
+                        android:text="20/100"
+                        android:textSize="16sp"
+                        />
+
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:scrollbars="none"
+                    android:background="#fff"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:layout_height="wrap_content">
+
+
+                        <!-- <com.linlic.ccmtv.yx.utils.MyGridView
+                             android:id="@+id/button_gridview"
+                             android:layout_width="fill_parent"
+                             android:layout_height="wrap_content"
+                             android:horizontalSpacing="0.0dip"
+                             android:listSelector="@null"
+                             android:numColumns="6"
+                             android:scrollbars="none"
+                             android:layout_marginLeft="5dp"
+                             android:layout_marginRight="5dp"
+                             android:stretchMode="columnWidth"
+                             android:verticalSpacing="0.0dip" />-->
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_list"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                </ScrollView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

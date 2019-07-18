@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#fff"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:onClick="back">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/bark"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="消息"
+            android:textColor="#626262"
+            android:textSize="18sp"/>
+
+    </FrameLayout>
+
+    <include layout="@layout/activity_title4"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp">
+
+        <LinearLayout
+            android:id="@+id/system_information_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:text="系统消息"/>
+
+                <View
+                    android:id="@+id/system_information_new"
+                    android:layout_width="7dp"
+                    android:layout_height="7dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/anniu1"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/system_information"
+                android:layout_width="35dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:background="#3997F9"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/announcement_notice_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:text="公告通知"/>
+
+                <View
+                    android:id="@+id/announcement_notice_new"
+                    android:layout_width="7dp"
+                    android:layout_height="7dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/anniu1"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/announcement_notice"
+                android:layout_width="35dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:background="#3997F9"
+                android:gravity="center"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/interactive_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:text="互动"/>
+
+                <View
+                    android:id="@+id/interactive_new"
+                    android:layout_width="7dp"
+                    android:layout_height="7dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/anniu1"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/interactive"
+                android:layout_width="25dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:background="#3997F9"
+                android:gravity="center"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#e5e5e5"/>
+
+    <com.linlic.ccmtv.yx.widget.NodataEmptyLayout
+        android:id="@+id/management_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:visibility="gone"
+        app:empty_des="当前还没有消息哦~"
+        app:empty_src="@mipmap/nodata_empty"
+        app:empty_topLine="false"/>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.linlic.ccmtv.yx.widget.SwipeListView
+                android:id="@+id/message_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:divider="#e5e5e5"
+                android:dividerHeight="0.1dp"
+                android:listSelector="#00000000"
+                android:paddingBottom="10dp"
+                android:scrollbars="none"/>
+
+            <com.linlic.ccmtv.yx.widget.SwipeListView
+                android:id="@+id/hu_msg_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#fff"
+                android:divider="#e5e5e5"
+                android:dividerHeight="0.1dp"
+                android:listSelector="#00000000"
+                android:paddingBottom="10dp"
+                android:scrollbars="none"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+
+
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+    <ListView
+        android:id="@+id/message_list2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:divider="@null"
+        android:listSelector="#00000000"
+        android:scrollbars="none"/>
+
+
+</LinearLayout>

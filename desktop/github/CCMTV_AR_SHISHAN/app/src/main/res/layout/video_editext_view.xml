@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/video_menu_comment_edittext"
+            android:layout_width="fill_parent"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/anniu10"
+            android:drawableLeft="@mipmap/video_paly3_19"
+            android:hint="  我来说几句"
+            android:imeOptions="actionSend"
+            android:maxLines="1"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:textColorHint="@color/integral_main_Button_text_color1"
+            android:textSize="14dip"></EditText>
+
+        <TextView
+            android:id="@+id/video_editext_submit"
+            android:layout_width="wrap_content"
+            android:text="发送"
+            android:textColor="#fff"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:paddingBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="5dp"
+            android:background="@drawable/anniu3"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

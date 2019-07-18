@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <TextView
+        android:id="@+id/cid_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+    <!-- 存放down_url -->
+    <TextView
+        android:id="@+id/task_image_download_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text=""/>
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/cid_type">
+
+        <ImageView
+            android:id="@+id/task_image_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:scaleType="fitXY"
+            android:src="@mipmap/learning_task05" />
+
+        <ImageView
+            android:id="@+id/task_image_text1"
+            android:layout_width="100dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/img_default" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="95dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/is_show"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/task_image_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text=""
+                android:textSize="18dp" />
+
+            <ImageView
+                android:id="@+id/task_uploadtimeimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/learning_task06"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:id="@+id/task_uploadtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/task_uploadtimeimage"
+                android:text=""
+                android:textSize="16sp"
+                android:textColor="#999"
+                android:layout_marginBottom="30dp"/>
+
+           <LinearLayout
+               android:id="@+id/id_ll_item_task_detail_delete_down"
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:gravity="bottom|right"
+               android:layout_height="match_parent">
+               <TextView
+                   android:id="@+id/task_detail_delete"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:paddingTop="5dp"
+                   android:paddingBottom="5dp"
+                   android:paddingLeft="10dp"
+                   android:paddingRight="10dp"
+                   android:layout_marginRight="5dp"
+                   android:layout_alignParentBottom="true"
+                   android:layout_alignParentRight="true"
+                   android:background="@drawable/btn_yuan_shape_blue"
+                   android:text="删除"
+                   android:onClick="delete"
+                   android:textSize="14sp"
+                   android:textColor="#3698F9"/>
+
+               <TextView
+                   android:id="@+id/task_detail_download"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginRight="5dp"
+                   android:layout_toLeftOf="@+id/task_detail_delete"
+                   android:onClick="download"
+                   android:paddingTop="5dp"
+                   android:paddingBottom="5dp"
+                   android:paddingLeft="10dp"
+                   android:paddingRight="10dp"
+                   android:layout_alignParentBottom="true"
+                   android:background="@drawable/btn_yuan_shape_blue"
+                   android:text="下载"
+                   android:textSize="14sp"
+                   android:textColor="#3698F9"/>
+
+           </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"
+        android:layout_toEndOf="@+id/task_image_id">
+
+        <ImageView
+            android:id="@+id/task_image_text_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/learning_task05" />
+
+        <!--<ImageView
+            android:id="@+id/task_image_text1_2"
+            android:layout_width="100dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/img_default" />-->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/is_show_2"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/task_image_title_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:id="@+id/task_uploadtimeimage_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/learning_task06"
+                android:layout_alignParentBottom="true"/>
+
+            <TextView
+                android:id="@+id/task_uploadtime_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/task_uploadtimeimage_2"
+                android:text=""
+                android:textSize="16sp"
+                android:textColor="#999"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="bottom|right"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/task_detail_delete_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/btn_yuan_shape_blue"
+                    android:text="删除"
+                    android:onClick="delete"
+                    android:textSize="14sp"
+                    android:textColor="#3698F9"/>
+
+                <TextView
+                    android:id="@+id/task_detail_download_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/task_detail_delete"
+                    android:onClick="download2"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/btn_yuan_shape_blue"
+                    android:text="下载"
+                    android:textSize="14sp"
+                    android:textColor="#3698F9"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_height="5px"
+        android:background="#EFEFEF"
+        android:layout_width="match_parent" />
+
+    <!-- 存放id -->
+    <TextView
+        android:id="@+id/task_image_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+
+
+</RelativeLayout>

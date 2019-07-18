@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentView="@+id/content"
+        app:rightMenuView="@+id/right_delete">
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_message_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true">
+
+                <ImageView
+                    android:id="@+id/c_uesr_img"
+                    android:layout_width="80dp"
+                    android:layout_height="55dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/img_default"
+                    android:visibility="visible" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toRightOf="@+id/c_uesr_img">
+
+                    <TextView
+                        android:id="@+id/c_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text="高血压病合理用药指南，截取一下慢性乙肝肝炎领域诊治发展"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/c_drug"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/btn_yuan_shape_blue"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="赛诺菲"
+                        android:textColor="#3698F9"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/c_addtime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:paddingTop="5dp"
+                        android:text="2017-12-18"
+                        android:textColor="#999"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rl_message_item"
+                android:background="#EFEFEF" />
+
+            <TextView
+                android:id="@+id/tv_red_dot"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_look_num"
+                android:gravity="center"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/right_delete"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="#00AEEB">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="取消收藏"
+                android:textColor="#FFF"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout>
+
+</RelativeLayout>

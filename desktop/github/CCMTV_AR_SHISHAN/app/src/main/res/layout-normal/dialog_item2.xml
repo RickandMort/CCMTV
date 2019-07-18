@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--透明层 禁止事件下透-->
+
+        <LinearLayout
+            android:id="@+id/transparent_layer1"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/direct_broadcast_icon18"
+                />
+            <TextView
+                android:id="@+id/dialog_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="您已经成功预约"
+                />
+
+
+            <TextView
+                android:id="@+id/i_understand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我知道了"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="#fff"
+                android:layout_marginBottom="30dp"
+                android:background="@mipmap/direct_broadcast_icon11"
+                />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+
+</LinearLayout>

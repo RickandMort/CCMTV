@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.linlic.ccmtv.yx.activity.medal.view.MedalDetialTitleImageView
+        android:id="@+id/medal_title_icon_upper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:medal_src="@mipmap/medal_detial_title_upper" />
+
+    <FrameLayout
+        android:id="@+id/medal_detial_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/medal_title_icon_upper"
+        android:layout_centerVertical="true">
+
+        <com.linlic.ccmtv.yx.activity.medal.view.MedalDetialTitleImageView
+            android:id="@+id/medal_title_icon_lower"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:medal_default_height="349"
+            app:medal_src="@mipmap/medal_detial_title_lower" />
+
+        <com.linlic.ccmtv.yx.activity.medal.view.MedalDetialView
+            android:id="@+id/medal_detial_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@mipmap/medal_detial_content_bg"/>
+
+
+    </FrameLayout>
+
+</RelativeLayout>

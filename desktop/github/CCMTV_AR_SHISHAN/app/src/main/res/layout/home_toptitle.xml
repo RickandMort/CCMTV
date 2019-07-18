@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_hometitle"
+    android:layout_width="match_parent"
+    android:layout_height="46dp"
+    android:background="#4394D9"
+    android:orientation="horizontal">
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center|left"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/home_logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp"
+        android:gravity="center|left"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@mipmap/search_bg">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/ding_09"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="搜索"
+                    android:textColor="#FFF"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/scanning"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/ding_14"/>
+
+        <ImageView
+            android:id="@+id/browsingRecord"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:src="@mipmap/ding_11"/>
+
+        <ImageView
+            android:id="@+id/personalCenter"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/ding_13"
+            android:visibility="gone"/>
+    </LinearLayout>
+</LinearLayout>
+
+

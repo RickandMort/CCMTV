@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_title" />
+
+    <com.linlic.ccmtv.yx.widget.HoverScrollView
+        android:id="@+id/hoversc"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="50dp"
+        android:fillViewport="true">
+        <!--android:scrollbars="none"-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/mIvHead"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/img_lyb_top" />
+
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include layout="@layout/layout_apricotcuptab2" />
+
+                <!-- 选项卡内容显示区域 -->
+
+                <FrameLayout
+                    android:id="@+id/content_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.linlic.ccmtv.yx.widget.HoverScrollView>
+
+    <!--悬浮顶部-->
+    <include
+        android:id="@+id/layout_apricotcuptab1"
+        layout="@layout/layout_apricotcuptab1"
+        android:visibility="invisible" />
+    <!--悬浮顶部-->
+</RelativeLayout>

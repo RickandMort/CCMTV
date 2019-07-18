@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFF"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_height="wrap_content">
+
+            <com.othershe.calendarview.weiget.WeekView
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+            <com.othershe.calendarview.weiget.CalendarView
+                android:id="@+id/calendar"
+                android:layout_width="match_parent"
+                app:choose_type="single"
+                app:show_last_next="false"
+                android:layout_height="220dp" />
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

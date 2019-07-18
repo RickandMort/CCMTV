@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <com.linlic.ccmtv.yx.utils.CircleImageView
+            android:id="@+id/_item_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/anti_cheating"
+            />
+
+
+        <TextView
+            android:id="@+id/_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="都说了附件三老地方"
+            android:textColor="#333"/>
+
+
+    </LinearLayout>
+
+    <include layout="@layout/activity_title4"/>
+
+
+
+</LinearLayout>

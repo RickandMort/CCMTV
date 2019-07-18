@@ -1,0 +1,43 @@
+-keep class com.meiyou.framework.biz.ui.LoadResActivity { <init>(); }
+-keep class com.lingan.seeyou.messagein.NotificationTranslucentActivity{ <init>(); }
+-keep class com.j256.ormlite.field.**
+-keep class com.lingan.seeyou.ui.application.AppShell{
+    <init>();
+}
+-keep class com.tencent.tinker.loader.** {
+    *;
+}
+-keep class com.lingan.seeyou.ui.application.TinkerApp {
+    *;
+}
+-keep class com.lingan.seeyou.ui.application.SeeyouApplication {
+    *;
+}
+-keep public class * implements com.tencent.tinker.loader.app.ApplicationLifeCycle {
+    *;
+}
+-keep public class * extends com.tencent.tinker.loader.TinkerLoader {
+    *;
+}
+-keep public class * extends com.tencent.tinker.loader.app.TinkerApplication {
+    *;
+}
+
+-dontwarn com.tencent.bugly.**
+-keep public class com.tencent.bugly.**{*;}
+# tinker混淆规则
+-dontwarn com.tencent.tinker.**
+-keep class com.tencent.tinker.** { *; }
+
+ -keep class android.support.**{*;}
+
+#基线包使用，生成mapping.txt
+-printmapping mapping.txt
+#生成的mapping.txt在app/build/outputs/mapping/release路径下，移动到/app路径下
+#修复后的项目使用，保证混淆结果一致
+#-applymapping mapping.txt
+#hotfix
+-keep class com.taobao.sophix.**{*;}
+-keep class com.ta.utdid2.device.**{*;}
+#防止inline
+-dontoptimize

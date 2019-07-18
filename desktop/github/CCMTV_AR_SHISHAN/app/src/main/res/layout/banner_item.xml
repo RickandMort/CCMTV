@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--
+
+        <ImageView
+            android:id="@+id/banner_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            />
+    -->
+
+    <ImageView
+        android:id="@+id/banner_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:elevation="8dp"
+        android:onClick="mzBannerClickItem"
+        android:src="@mipmap/ys" />
+    <!--app:image_shadow="true"-->
+    <!--app:image_radius = "5dp"-->
+    <!--app:image_shadow_radius="10dp"-->
+
+
+</LinearLayout>

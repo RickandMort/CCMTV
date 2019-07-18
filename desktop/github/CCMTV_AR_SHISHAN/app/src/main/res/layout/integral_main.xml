@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 积分首页 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/activity_title" />
+
+    <include layout="@layout/layout_loading" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:background="@mipmap/integral_main_title_bg"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_integarule"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="left"
+            android:text="@string/interule"
+            android:textColor="@color/intgral_main_title_left_color" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!--<ImageView
+                android:id="@+id/intgral_main_title_middle_img"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@mipmap/get_integral_main_title_img"
+                android:visibility="gone" />-->
+
+            <LinearLayout
+                android:id="@+id/intgral_main_title_middle_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.linlic.ccmtv.yx.widget.RiseNumberTextView
+                        android:id="@+id/bigtv_nowintegration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:maxLength="8"
+                        android:singleLine="true"
+                        android:text="0"
+                        android:textColor="@color/integral_color"
+                        android:textSize="50sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_addhao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/bigtv_nowintegration"
+                        android:textColor="#FFCC66"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/getintegral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tv_addhao"
+                        android:textColor="#FFCC66"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_nowintegration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/current_integration_name"
+                    android:textColor="@color/integral_color"
+                    android:textSize="12dp" />
+
+
+                <LinearLayout
+                    android:id="@+id/integer_layout_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/anniu1"
+                    android:visibility="invisible"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="@string/integration_prompting_name"
+                        android:textColor="@color/integral_color"
+                        android:textSize="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="积分规则"
+            android:textColor="@color/intgral_main_title_left_color"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#fff"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/get_integral"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/get_integral" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/get_integral_name"
+                android:textColor="@color/get_integral_main_color" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.1dp"
+            android:layout_height="match_parent"
+            android:background="@color/hr_bg2" />
+
+        <LinearLayout
+            android:id="@+id/integral_deduction"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/integral_deduction" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/integral_deduction_name"
+                android:textColor="@color/get_integral_main_color" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/hr_bg2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/integral_main_Button_bg_color1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/get_free_integral"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/anniu2"
+            android:padding="8dp"
+            android:text="@string/integral_main_Button_text1"
+            android:textColor="@color/integral_main_Button_text_color1"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/exchange_integral"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/anniu2"
+            android:padding="8dp"
+            android:text="@string/integral_main_exchange_integral"
+            android:textColor="@color/integral_main_Button_text_color1"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btn_open_vip"
+            style="@style/btn_style2"
+            android:text="@string/integral_main_Button_text2"
+            android:textColor="@color/integral_main_Button_text_color2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/integral_description"
+            android:textColor="@color/integral_description" />
+    </LinearLayout>
+
+</LinearLayout>

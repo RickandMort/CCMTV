@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="81dp"
+              android:background="@color/white"
+              android:orientation="vertical"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="13dp">
+
+        <TextView
+            android:id="@+id/tv_jie_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第1节"
+            android:textColor="@color/black33"
+            android:textSize="15sp"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/black33"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="王忠：剜除术能否成为治疗前列腺增生..."
+            android:textColor="@color/black33"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="13dp">
+
+        <TextView
+            android:id="@+id/tv_time_long"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="需购买 | 0时30分"
+            android:textColor="@color/black99"
+            android:textSize="12sp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="13dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="632￥"
+                android:textColor="#ffefad46"
+                android:textSize="12sp"
+                />
+
+            <TextView
+                android:id="@+id/tv_buy"
+                android:layout_width="46dp"
+                android:layout_height="23dp"
+                android:layout_marginLeft="7dp"
+                android:background="@drawable/buy_shape"
+                android:gravity="center"
+                android:text="购买"
+                android:textColor="#ff34a1fe"
+                android:textSize="12sp"
+                />
+
+            <LinearLayout
+                android:id="@+id/ll_listening"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/test_ting"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="试播"
+                    android:textColor="#707070"
+                    android:textSize="12sp"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

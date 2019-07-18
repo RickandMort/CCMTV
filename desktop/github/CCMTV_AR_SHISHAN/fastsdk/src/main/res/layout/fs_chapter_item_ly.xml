@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chapter_ly"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="false"
+    android:clickable="false"
+    android:focusableInTouchMode="false"
+    android:background="@android:color/transparent"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/fs_chapter_padding_item_left"
+    android:paddingRight="@dimen/fs_chapter_padding_item_right">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_height="@dimen/fs_chapter_item_height">
+    <LinearLayout
+        android:layout_width="@dimen/fs_chapter_left_width"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/chapter_index"
+            style="@style/fs_chapter_tv"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:text="@string/fs_chapter_index"
+            android:textSize="@dimen/fs_chapter_index_text"
+            android:textColor="@color/fs_chapter_color" >
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/chapter_title"
+            style="@style/fs_chapter_tv"
+            android:paddingLeft="@dimen/fs_chapter_item_padding_left"
+            android:paddingRight="@dimen/fs_chapter_item_padding_left"
+            android:layout_weight="1"
+            android:textColor="@color/fs_chapter_color"
+            android:textSize="14sp"
+            android:text="@string/fs_chapter_title" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/chapter_time"
+            style="@style/fs_chapter_tv"
+            android:layout_width="wrap_content"
+            android:paddingRight="@dimen/fs_chapter_right_margin"
+            android:textSize="@dimen/fs_chapter_index_text"
+            android:textColor="@color/fs_chapter_time_default"
+            android:text="@string/fs_chapter_time" >
+        </TextView>
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

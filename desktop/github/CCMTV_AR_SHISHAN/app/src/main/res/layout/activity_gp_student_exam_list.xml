@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_title8"/>
+
+    <View
+        android:id="@+id/id_view_line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eeeeee"/>
+
+    <LinearLayout
+        android:id="@+id/id_ll_select_view_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#FFFFFF">
+
+        <LinearLayout
+            android:id="@+id/id_ll_select_view_type_arrange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="15dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/id_tv_gp_student_exam_list_arrange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="考试安排"/>
+
+            <ImageView
+                android:id="@+id/id_iv_title_arrange"
+                android:layout_width="40dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="5dp"
+                android:background="#3897f9" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_ll_select_view_type_score_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="15dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/id_tv_gp_student_exam_list_score_report"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="成绩单"/>
+
+            <ImageView
+                android:id="@+id/id_iv_title_score_report"
+                android:layout_width="30dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="5dp"
+                android:background="#3897f9"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/id_view_line1"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#eeeeee"/>
+
+    <FrameLayout
+        android:id="@+id/id_fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+</LinearLayout>

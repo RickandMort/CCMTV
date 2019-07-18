@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/id_tv_item_conference_singleline"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:text=""
+        android:layout_centerVertical="true"
+        android:gravity="center"/>
+
+</RelativeLayout>

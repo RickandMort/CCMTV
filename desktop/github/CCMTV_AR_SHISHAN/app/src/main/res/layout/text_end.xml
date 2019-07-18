@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:onClick="back">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/bark" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="测试结束"
+            android:textColor="#626262"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+    <include layout="@layout/activity_title4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:src="@mipmap/text_end01"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#686868"
+            android:textSize="25sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="测试结束"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:src="@mipmap/text_end02"
+            />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@mipmap/text_end03"
+        >
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="100dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/answer_yes_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3个"
+                android:textSize="35sp"
+                android:textColor="#F0A701"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正确项数"
+                android:layout_marginTop="15dp"
+                android:textSize="16sp"
+                android:textColor="#6A6A6A"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="60dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/layout1"
+            android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/view_l"
+            android:layout_width="0.1dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:background="#9D9D9D"
+            />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="100dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/layout2"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/user_qualified"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10%"
+                android:textSize="35sp"
+                android:textColor="#F0A701"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正确率"
+                android:layout_marginTop="15dp"
+                android:textSize="16sp"
+                android:textColor="#6A6A6A"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/task_qualified"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="该任务测试题合格率设置为60%"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:textColor="#CACACA"
+        />
+
+    <TextView
+        android:id="@+id/is_yes_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="任务还未完成"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textColor="#CACACA"
+        android:textSize="22sp"
+        />
+
+
+    <Button
+        android:id="@+id/examination_instructions_buttpm"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="返回"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:layout_gravity="center"
+        android:textColor="#ffffff"
+        android:onClick="back"
+        android:background="@mipmap/button_01"
+        />
+
+
+</LinearLayout>

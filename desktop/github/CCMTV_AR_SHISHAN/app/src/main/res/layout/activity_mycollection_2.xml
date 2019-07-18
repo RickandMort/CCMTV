@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@color/recent_browse_file_title_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <include layout="@layout/activity_title" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#eee"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/id_ll_my_collection_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="popwindow"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp">
+
+            <TextView
+                android:id="@+id/id_tv_my_collection_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="视频"
+                android:textColor="#3897f9"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/id_iv_my_collection_video_icon"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/ic_arrow_blue" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_ll_my_collection_conference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="popwindow2"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:id="@+id/id_tv_my_collection_conference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="会议"
+                android:textColor="#666"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/id_iv_my_collection_conference_icon"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/ic_arrow_gray" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--<include layout="@layout/layout_nodata"/>-->
+
+    <com.linlic.ccmtv.yx.widget.NodataEmptyLayout
+        android:id="@+id/nodata_empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:visibility="gone"
+        app:empty_src="@mipmap/nodata_empty"
+        app:empty_topLine="false" />
+
+    <include layout="@layout/layout_loading" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both">
+
+        <com.linlic.ccmtv.yx.widget.SwipeListView
+            android:id="@+id/mycollection_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@color/recent_browse_file_list_bg"
+            android:divider="@color/hr_bg4"
+            android:dividerHeight="0.1dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_scrollview_conference"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both">
+
+        <com.linlic.ccmtv.yx.widget.SwipeListView
+            android:id="@+id/mycollection_conference_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@color/recent_browse_file_list_bg"
+            android:divider="@color/hr_bg4"
+            android:dividerHeight="0.1dp"
+            android:scrollbars="none" />
+
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+</LinearLayout>

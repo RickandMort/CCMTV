@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:focusable="false"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_left"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/direct_broadcast_icon16"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@+id/img_left"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/direct_broadcast_list_item2_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#333"
+                    android:text="B3消化内镜"
+                    android:textSize="18sp"
+                    />
+
+                <TextView
+                    android:id="@+id/direct_broadcast_list_item2_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textSize="13sp"
+                    android:textColor="#999"
+                    android:maxLines="2"
+                    android:text="12月1日08:00"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/direct_broadcast_list_item2_button"
+                android:layout_width="wrap_content"
+                android:text="进行中"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@mipmap/direct_broadcast_icon08"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

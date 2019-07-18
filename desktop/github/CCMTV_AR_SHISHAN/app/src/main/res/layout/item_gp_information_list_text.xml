@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:src="@mipmap/small_dot_blue"/>
+
+    <TextView
+        android:id="@+id/id_tv_item_gp_information"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_gravity="center"
+        android:text="跨境电商垃圾筐"/>
+
+</LinearLayout>

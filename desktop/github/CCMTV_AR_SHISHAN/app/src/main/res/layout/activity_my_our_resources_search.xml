@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.linlic.ccmtv.yx.activity.my.our_video.MyOurResourcesSearchActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/activity_title_bg"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:onClick="back"
+            android:scaleType="centerInside"
+            android:src="@mipmap/login_back"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@mipmap/edittext_bg_img">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerInside"
+                android:src="@mipmap/custom_search"/>
+
+            <EditText
+                android:id="@+id/id_et_our_resources_search"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="本院资源"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"/>
+
+            <ImageView
+                android:id="@+id/id_iv_our_resources_search_delete"
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerInside"
+                android:src="@mipmap/medicine_delete"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/id_tv_our_resources_search_cancel"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#3897F9"
+            android:textSize="17sp"/>
+
+        <!--<TextView
+            android:id="@+id/tv_search"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/tvbg_search"
+            android:gravity="center"
+            android:text="查找"
+            android:textColor="#FFF"
+            android:textSize="16sp" />-->
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/id_tv_our_resources_search_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#dedede"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="8dp"
+        android:text="搜索结果(4)"
+        android:visibility="gone"/>
+
+    <com.linlic.ccmtv.yx.widget.NodataEmptyLayout
+        android:id="@+id/lt_nodata1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:visibility="gone"
+        app:empty_des="还没有任何数据哦~"
+        app:empty_src="@mipmap/nodata_file"
+        app:empty_topLine="true"/>
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/lt_nodata1"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="#fff"-->
+    <!--android:visibility="gone">-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="15px"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:background="#EFEFEF" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/nodata_img"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:src="@mipmap/nodata"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/nodata_img"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:text="还没有任何数据哦~"-->
+    <!--android:textSize="18sp"-->
+    <!--android:textColor="#999"/>-->
+
+    <!--</RelativeLayout>-->
+
+    <ListView
+        android:id="@+id/id_lv_our_resources_search_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:divider="@null"
+        android:listSelector="#00000000"
+        android:scrollbars="none"/>
+
+</LinearLayout>

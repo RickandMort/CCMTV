@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 上传视频 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@color/recent_browse_file_title_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <include layout="@layout/activity_title" />
+
+        <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="上传管理"
+            android:layout_alignParentRight="true"
+            android:onClick="uploadManager"
+            android:gravity="center_vertical"
+            android:layout_marginRight="10dp"/>-->
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/upload_video_layoutid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/id_fl_upload_video_select_video"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:id="@+id/id_iv_upload_select_video"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ys"/>
+
+                <TextView
+                    android:id="@+id/id_tv_select_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#55999999"
+                    android:padding="10dp"
+                    android:text="点击选择视频封面"/>
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#11999999"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="标题："/>
+
+                <EditText
+                    android:id="@+id/id_et_upload_video_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#11999999"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/charge_videoPath"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="收费"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="收费："/>
+
+                    <RadioGroup
+                        android:id="@+id/id_radiogroup_upload_fees"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="35dp"
+                        android:layout_toRightOf="@+id/id_tv_upload_video_fees"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/id_rb_upload_video_free"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:button="@drawable/ic_upload_rb_selector"
+                            android:checked="true"
+                            android:drawablePadding="10dp"
+                            android:text="免费"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/id_rb_upload_video_fees"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="60dp"
+                            android:background="@null"
+                            android:button="@drawable/ic_upload_rb_selector"
+                            android:drawablePadding="10dp"
+                            android:text="收费"
+                            />
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <GridView
+                    android:id="@+id/id_gv_upload_fees"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginLeft="50dp"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="3"
+                    android:verticalSpacing="5dp"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#11999999"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#11999999"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingTop="10dp"
+                    android:text="文件摘要"/>
+
+                <EditText
+                    android:id="@+id/id_et_upload_video_filemsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@mipmap/bg_upload_file_msg"
+                    android:gravity="start"
+                    android:hint="请输入文件摘要"
+                    android:padding="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#11999999"
+                android:orientation="vertical"
+                android:paddingTop="15dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="80dp"
+                    android:onClick="submit"
+                    android:src="@mipmap/ic_btn_upload"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@mipmap/bg_upload_message"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/ic_upload_explain_left"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="上传规则"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/ic_upload_explain_right"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="· "
+                            android:textColor="#999999"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="请仔细核对信息，上传后不可修改和删除"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="35dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="· "
+                            android:textColor="#999999"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="上传中退出APP将导致上传中断"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <!--<LinearLayout
+        android:id="@+id/upload_video_layoutid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="* "
+                android:textColor="#E61A5F" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|left"
+                android:layout_weight="3"
+                android:gravity="center|left"
+                android:text="@string/upload_video_name"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/upload_plName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/upload_video_name_hint"
+                android:textColorHint="@color/upload_video_file_tile_hint"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/hr_bg6" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15px"
+            android:background="@color/hr_bg2" />
+
+        <LinearLayout
+            android:id="@+id/upload_upvideo"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="* "
+                android:textColor="#E61A5F" />
+
+            <TextView
+                android:id="@+id/upload_text1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|left"
+                android:layout_weight="2.6"
+                android:gravity="center|left"
+                android:text="@string/upload_file"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/upload_text2"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center|left"
+                android:gravity="center|left"
+                android:padding="5dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/forget1"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/upload_videoPath"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerInside"
+                android:src="@mipmap/bark2" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/hr_bg6" />
+
+        <LinearLayout
+            android:id="@+id/upload_charge"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="* "
+                android:textColor="#E61A5F" />
+
+            <TextView
+                android:id="@+id/charge_text1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|left"
+                android:layout_weight="2.6"
+                android:gravity="center|left"
+                android:text="@string/charge_text1"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/charge_text2"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center|left"
+                android:gravity="center|left"
+                android:padding="5dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/forget1"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/charge_videoPath"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="免费"
+                android:gravity="center|right"
+                android:tag="0"
+                android:paddingRight="10dp"
+                android:textSize="16sp" />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerInside"
+                android:src="@mipmap/bark2" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/hr_bg6" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="* "
+                android:textColor="#E61A5F" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center|left"
+                android:text="@string/abstract_file"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/upload_fileMsg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bg_edittext"
+            android:enabled="true"
+            android:gravity="top"
+            android:hint="@string/abstract_file_text"
+            android:inputType="textMultiLine"
+            android:maxLines="10"
+            android:minLines="8"
+            android:padding="10dp"
+            android:scrollbars="vertical"
+            android:singleLine="true"
+            android:textColorHint="@color/upload_video_file_tile_hint"
+            android:textSize="16sp" />
+
+        <Button
+            style="@style/btn_style"
+            android:onClick="submit"
+            android:text="@string/upload_sumit" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="我们将在1~2个工作日内审核完毕"
+            android:textColor="#747474"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>-->
+
+
+</LinearLayout>

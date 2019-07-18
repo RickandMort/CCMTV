@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 已经上传  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/recent_browse_file_title_bg">
+
+        <include layout="@layout/activity_title" />
+
+        <TextView
+            android:id="@+id/upload_has_topRightTxt"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="topRightTxt"
+            android:paddingRight="7dp"
+            android:text="上传记录"
+            android:textColor="@color/activity_title_name"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_selectVideo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/upload_video_text1"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_selectCase"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/upload_case_text2"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_gravity="bottom"
+        android:background="@color/hr_bg2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="-2dp"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/selectItemOptions_one"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@color/hr_bg" />
+
+
+        <View
+            android:id="@+id/selectItemOptions_two"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@color/hr_bg"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+
+    <include layout="@layout/layout_nodata" />
+
+    <include layout="@layout/layout_loading" />
+
+    <ListView
+        android:id="@+id/upload_selectPageList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:listSelector="#00000000"
+        android:scrollbars="none" />
+
+
+
+</LinearLayout>

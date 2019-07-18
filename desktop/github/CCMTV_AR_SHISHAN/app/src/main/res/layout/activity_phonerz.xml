@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@color/recent_browse_file_title_bg"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/activity_title" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF" >
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="@string/phone_number"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edit_mobphone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_phone"
+            android:background="@null"
+            android:singleLine="true"
+            android:inputType="number"
+            android:textColorHint="@color/hint_color"
+            android:maxLength="11"
+            android:hint="@string/my_edit_phone" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e4e4e4" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_validate"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="@string/validate_number"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edit_validate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_validate"
+            android:background="@null"
+            android:maxLength="4"
+            android:singleLine="true"
+            android:inputType="number"
+            android:textColorHint="@color/hint_color"
+            android:hint="@string/my_validate_number" />
+
+        <Button
+            android:id="@+id/btn_codeget"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/bg_validate"
+            android:text="发送验证码"
+            android:onClick="getnum"
+            android:layout_alignParentRight="true"
+            android:textColor="#77CAF7"
+            android:layout_marginRight="10dp"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e4e4e4" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#FBFBFB"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:text="提示:"
+            android:textColor="#F70101"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/step_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_tip"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:text="1.验证手机号码可以提高信誉度。"
+            android:textColor="#368AD8"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/step_one"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:text="2.手机号码只有管理员才有权限查看，请放心!"
+            android:textColor="#368AD8"
+            android:layout_marginBottom="10dp"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/regist_button"
+        android:text="提交验证"
+        android:textColor="#FFF"
+        android:padding="8dp"
+        android:onClick="phonerz"
+        android:textSize="20sp" />
+
+</LinearLayout>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 获取免费积分 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_bg"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:onClick="back">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/bark" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="积分充值"
+            android:textColor="#333333"
+            android:textSize="18sp" />
+
+
+    </FrameLayout>
+
+
+
+    <include layout="@layout/layout_loading" />
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/hr_bg2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:text="积分余额："
+            android:textSize="15sp"
+            android:textColor="#333333"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/usermoneytext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FE6E02"
+                android:gravity="right"
+                android:textSize="20sp"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:textColor="#FD8E00"
+                android:layout_marginLeft="5dp"
+                android:textSize="13sp"
+                android:text="积分"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/hr_bg2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layout_buyinte_10"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/get_free_integral_select"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_height="90dp">
+
+                <TextView
+                    android:id="@+id/tv_intenumber_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#343434"
+                    android:textSize="20sp"
+                    />
+                <TextView
+                    android:id="@+id/tv_inteprice_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="售价："
+                    android:textColor="#939393"
+                    android:textSize="15sp"
+                    />
+                <TextView
+                    android:id="@+id/tv_inteprice_one_vipflg_str"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_buyinte_20"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/get_free_integral_select"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_height="90dp">
+                <TextView
+                    android:id="@+id/tv_intenumber_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#343434"
+                    android:textSize="20sp"
+                    />
+                <TextView
+                    android:id="@+id/tv_inteprice_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="售价："
+                    android:textColor="#939393"
+                    android:textSize="15sp"
+                    />
+                <TextView
+                    android:id="@+id/tv_inteprice_two_vipflg_str"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/layout_buyinte_50"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/get_free_integral_select"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_height="90dp">
+
+                <TextView
+                    android:id="@+id/tv_intenumber_there"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#343434"
+                    android:textSize="20sp"
+                    />
+                <TextView
+                    android:id="@+id/tv_inteprice_there"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="售价："
+                    android:textColor="#939393"
+                    android:textSize="15sp"
+                    />
+                <TextView
+                    android:id="@+id/tv_inteprice_there_vipflg_str"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_buyinte_100"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/get_free_integral_select"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_height="90dp">
+                <TextView
+                    android:id="@+id/tv_intenumber_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#343434"
+                    android:textSize="20sp"
+                    />
+                <TextView
+                    android:id="@+id/tv_inteprice_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="售价："
+                    android:textColor="#939393"
+                    android:textSize="15sp"
+                    />
+                <TextView
+                    android:id="@+id/tv_inteprice_four_vipflg_str"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_buyinte"
+            android:layout_width="200dp"
+            android:layout_height="38dp"
+            android:layout_margin="20dp"
+            android:layout_gravity="center"
+            android:text="充值"
+            android:textSize="15sp"
+            android:background="@mipmap/change11"
+            android:textColor="@color/integral_main_Button_text_color2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:layout_marginLeft="17dp"
+                android:layout_gravity="center|top"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/anniu12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:textColor="#666666"
+                android:text="如有疑问，请与我们联系（021-51082567 转 8674）"
+                android:textSize="13sp"
+                />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

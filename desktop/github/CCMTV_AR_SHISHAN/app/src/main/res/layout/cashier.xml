@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 积分首页 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/activity_title" />
+
+    <include layout="@layout/layout_loading" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@mipmap/cashier_bj"
+        android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@mipmap/cashier_bj" >
+
+        <TextView
+            android:id="@+id/tv_integarule"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="left"
+            android:text="我的余额"
+            android:textColor="@color/intgral_main_title_left_color" />
+
+        <LinearLayout
+            android:id="@+id/intgral_main_title_middle_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.linlic.ccmtv.yx.widget.RiseNumberTextView
+                    android:id="@+id/bigtv_nowintegration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:singleLine="true"
+                    android:text="0元"
+                    android:textColor="@color/integral_color"
+                    android:textSize="50sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="积分规则"
+            android:textColor="@color/intgral_main_title_left_color"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#fff"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/cashier_recharge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:src="@mipmap/cashier_07" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="充值"
+                android:textColor="@color/cashier_text_color" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="3dp"
+            android:layout_height="50dp"
+            android:lineSpacingMultiplier="0.2"
+            android:layout_gravity="center"
+            android:singleLine="false"
+            android:text="................"
+            android:textColor="#d3d1d1"
+            android:textSize="10dp" />
+
+        <LinearLayout
+            android:id="@+id/cashier_present_application2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:src="@mipmap/cashier_10" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="提现"
+                android:textColor="@color/cashier_text_color" />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/hr_bg4" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/hr_bg2" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/hr_bg4" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:background="@color/hr_bg2"
+        android:gravity="top"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/cashier_records_of_consumptionlayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center|left"
+            android:gravity="center|left"
+            android:background="@color/integral_main_Button_bg_color1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/cashier_15" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="消费记录"
+                android:textColor="@color/cashier_text_color" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/hr_bg4" />
+        <LinearLayout
+            android:id="@+id/cashier_revenue_log"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center|left"
+            android:background="@color/integral_main_Button_bg_color1"
+            android:gravity="center|left"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/cashier_19" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="收入记录"
+                android:textColor="@color/cashier_text_color" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/hr_bg4" />
+        <LinearLayout
+            android:id="@+id/cashier_present_application"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center|left"
+            android:gravity="center|left"
+            android:background="@color/integral_main_Button_bg_color1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/cashier_22" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="提现申请"
+                android:textColor="@color/cashier_text_color" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/hr_bg4" />
+        <LinearLayout
+            android:id="@+id/cashier_present_record"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center|left"
+            android:gravity="center|left"
+            android:background="@color/integral_main_Button_bg_color1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/cashier_25" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="提现记录"
+                android:textColor="@color/cashier_text_color" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/hr_bg4" />
+    </LinearLayout>
+
+</LinearLayout>

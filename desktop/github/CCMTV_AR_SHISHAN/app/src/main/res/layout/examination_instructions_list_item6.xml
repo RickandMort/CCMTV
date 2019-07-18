@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:paddingTop="10dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/length_of_examination4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5.5"
+        android:textColor="#333"
+        android:gravity="center"
+        />
+    <TextView
+        android:id="@+id/length_of_examination5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4.5"
+        android:textColor="#333"
+        android:gravity="center"
+        />
+    <TextView
+        android:id="@+id/length_of_examination6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:textColor="#333"
+        android:gravity="center"
+        />
+
+        <TextView
+            android:id="@+id/length_of_examination7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:onClick="enter_the_examination2"
+            android:gravity="center"
+            android:text="答题卡"
+
+            android:textColor="#4CA0FF"
+            />
+
+</LinearLayout>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#3798F9"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:onClick="back">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/arrow2" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_title_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="我的考试"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/search"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:onClick="clickSS">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/search_icon05" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+    <!--  <android.support.design.widget.TabLayout
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          app:tabIndicatorHeight="2dp"
+          android:background="#3798F9"
+          app:tabMode="scrollable"
+          app:tabIndicatorColor="@color/channel_main_tab_item"
+          android:id="@+id/tablayout"
+          app:tabGravity="fill"
+          app:tabSelectedTextColor="@android:color/white"
+          app:tabTextColor="@color/channel_main_tab_item"
+          app:theme="@style/Widget.Design.TabLayout"
+          />-->
+    <!--<com.linlic.ccmtv.yx.utils.HorizontalListView
+        android:id="@+id/grid"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="#3798F9" />-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/grid"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="#3798F9" />
+    
+ <!--   <com.youth.banner.Banner
+        android:layout_width=""
+        android:layout_height=""></com.youth.banner.Banner>-->
+
+    <LinearLayout
+        android:id="@+id/nodata_layout"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/img_show_no"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@mipmap/icon_nosubdata" />
+
+        <TextView
+            android:id="@+id/tv_nodata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="此分类暂无相关视频"
+            android:textColor="#888A8D"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+    <com.linlic.ccmtv.yx.utils.MyScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/channel_main_icon03"
+        >
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/isshow"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="185dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="#3798F9"
+                    />
+
+                <com.zhouwei.mzbanner.MZBannerView
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="185dp"
+                    app:open_mz_mode="true"
+                    app:middle_page_cover="false"
+                    app:canLoop="true"
+                    app:indicatorAlign="center"
+                    />
+            </FrameLayout>
+
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_height="10dp"
+                android:background="#F6F6F6"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/channel_main_icon01"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="会议·直播"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#666666"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/channel_main_icon02"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                >
+
+                <ImageView
+                    android:id="@+id/banner5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@mipmap/texticon05"
+                    android:onClick="clickHY"
+                    android:scaleType="fitXY"
+                    />
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"/>
+                <ImageView
+                    android:id="@+id/banner6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/texticon06"
+                    android:onClick="clickHY1"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    />
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="#F6F6F6"/>
+
+
+            <com.linlic.ccmtv.yx.utils.MyGridView
+                android:id="@+id/videos"
+                android:layout_width="match_parent"
+                android:numColumns="2"
+                android:listSelector="@null"
+                android:layout_marginBottom="20dp"
+                android:horizontalSpacing="5dp"
+                android:layout_height="match_parent"/>
+
+
+
+        </LinearLayout>
+    </com.linlic.ccmtv.yx.utils.MyScrollView>
+
+
+
+
+
+</LinearLayout>

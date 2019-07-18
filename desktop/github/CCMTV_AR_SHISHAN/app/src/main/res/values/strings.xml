@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">医学视频</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="activity_title_name">科室选择</string>
+    <string name="activity_title_video">视频播放</string>
+    <string name="activity_title_name_recent">最近浏览文件</string>
+
+    <string name="drop_down_screen">筛选</string>
+    <string name="menu_text_home">首页</string>
+    <string name="menu_text_subscribe">订阅</string>
+    <string name="menu_text_my">我的</string>
+    <string name="get_integral_name">积分获取记录</string>
+    <string name="integral_title_name">我的积分</string>
+    <string name="integral_deduction_name">积分扣除记录</string>
+    <string name="integral_description">会员期间，所有视频、文献不限次数免费观看和下载</string>
+    <string name="current_integration_name">当前可用积分：</string>
+    <string name="cashier_revenue_log_name">当前余额：加载中</string>
+    <string name="integration_prompting_name">	 已领过，明天再来哦	 </string>
+    <string name="get_integration_name">用户名</string>
+    <string name="get_integral_description">更多记录请登录官网http://www.ccmtv.cn/查询</string>
+    <string name="integral_main_Button_text1">获取积分</string>
+    <string name="integral_main_exchange_integral">兑换积分</string>
+    <string name="integral_main_Button_text2">开通会员</string>
+    <string name="integral_main_Button_text3">立即购买</string>
+    <string name="get_free_integral_Button_text1">立即上传</string>
+
+    <string name="login_name">账号    </string>
+
+    <string name="get_verification_code">获取动态密码</string>
+    <string name="login_password">密码    </string>
+    <string name="login_text">登录</string>
+
+    <string name="login_forgetpassword_new">忘记密码</string>
+    <string name="login_remeberpass">记住密码</string>
+
+    <string name="login_toast_user">账号不能为空</string>
+    <string name="login_toast_pass">密码不能为空</string>
+    <string name="phone_toast">手机号码不能为空</string>
+    <string name="num_toast">验证码不能为空</string>
+    <string name="truename_toast">真实姓名不能为空</string>
+    <string name="zjnum_toast">证件号不能为空</string>
+    <string name="video_menu_abstract">摘要</string>
+    <string name="video_menu_expert">专家</string>
+    <string name="video_menu_comment">评论</string>
+    <string name="video_menu_relevant">相关</string>
+    <string name="regist_top_title">注册完成可获得10积分哦</string>
+    <string name="regist_text_repeatPass">重复密码</string>
+    <string name="regist_text_phone">手机号码</string>
+    <string name="regist_getcode">发送验证码</string>
+    <string name="regist_getcode_new">获取短信验证码</string>
+    <string name="regist_invitation_code">邀请码</string>
+    <string name="regist_invitation_code_tip">可不填写</string>
+    <string name="regist_code_hint">请输入短信验证码</string>
+    <string name="regist_xieyi_text">我已经阅读并同意</string>
+    <string name="regist_xieyi_text1">CCMTV用户协议</string>
+    <string name="regist_button">提交</string>
+    <string name="post_hint1">网络连接不可用，请打开网络</string>
+    <string name="post_hint2">网络连接不可用，请打开网络</string>
+    <string name="post_hint3">您与服务器的链接出现了小差错，建议您稍后再试</string>
+    <!-- 当前网络不佳，请稍后再试 -->
+    <string name="post_hint4">网络连接不可用，请打开网络</string>
+    <string name="post_hint5">您与服务器的链接出现了小差错，建议您稍后再试</string>
+    <string name="post_hint6">当前网络不稳定，建议您稍后再试</string>
+    <string name="regist_hint1">手机号码不能为空</string>
+    <string name="regist_hint2">请输入正确的11位手机号码</string>
+    <string name="regist_title_name">注册</string>
+    <string name="forget_title_name">忘记密码</string>
+    <string name="myprofile_title_name">我的资料</string>
+    <string name="forget_text_phone">手机号</string>
+    <string name="forget_text_code">验证码</string>
+    <string name="change_old_pass">旧    密    码</string>
+    <string name="forget_text_pass">新    密    码</string>
+    <string name="change_confirm_pass">确认密码</string>
+    <string name="forget_text_button">提交</string>
+    <string name="change_text_button">修改</string>
+    <string name="forget_selecter">请选择</string>
+    <string name="forget_text1">头像</string>
+    <string name="forget_text2">会员类型</string>
+    <string name="forget_text3">单位</string>
+    <string name="forget_text10">医院</string>
+    <string name="forget_text4">科室</string>
+    <string name="forget_text5">职称</string>
+    <string name="forget_text6">姓名</string>
+    <string name="forget_text7">性别</string>
+    <string name="forget_text8">联系地址</string>
+    <string name="forget_text9">身份证</string>
+    <string name="forget_toast_phone">手机号不能为空</string>
+    <string name="forget_toast_code">验证码不能为空</string>
+    <string name="invitation_code">邀请码不能为空</string>
+    <string name="forget_toast_pass">密码不能为空</string>
+    <string name="forget_toast_code_error">请输入正确的4位验证码</string>
+    <string name="regist_toast_repeatpass">重复密码不能为空</string>
+    <string name="regist_toast_pass_repeatpass">两次输入的密码不一致</string>
+    <string name="forget_sendcode_OK">s后重发</string>
+    <string name="regist_xieyi">请勾选用户协议</string>
+    <string name="myhead_alertMessage">请选择上传方式</string>
+    <string name="myhead_xj">相机</string>
+    <string name="myhead_tk">图库</string>
+    <string name="myhead_sd_is_null">请确认已经插入SD卡</string>
+    <string name="load_fail">加载失败</string>
+    <string name="depa_max">选择大科室</string>
+    <string name="depa_min">选择小科室</string>
+    <string name="hosp">选择医院</string>
+    <string name="hosp_city">选择市</string>
+    <string name="hosp_prov">选择省</string>
+    <string name="my_integral">积分：0</string>
+    <string name="my_msgl">消息</string>
+    <string name="my_follow">关注</string>
+    <string name="my_colleague">同事</string>
+    <string name="my_openvip">开通会员</string>
+    <string name="my_invitation">邀请好友注册</string>
+    <string name="my_integral_task">积分任务</string>
+    <string name="my_myIntegral">我的积分</string>
+    <string name="my_myCollection">我的收藏</string>
+    <string name="Collection">收藏</string>
+    <string name="my_myData">我的资料</string>
+    <string name="my_phoneAuthentication">手机认证</string>
+    <string name="my_doctorLicenseAuthentication">医生执照认证</string>
+    <string name="my_RecentlyViewed">最近浏览</string>
+    <string name="my_feedback">意见反馈</string>
+    <string name="my_download_list">我的下载</string>
+    <string name="my_setting">设置</string>
+    <string name="my_changepass">修改密码</string>
+    <string name="my_ccmtvRecommend">CCMTV推荐应用</string>
+    <string name="i_want_to_upload">我要上传</string>
+    <string name="has_been_uploaded">已经上传</string>
+    <string name="is_uploaded">上传记录</string>
+    <string name="upload_case">上传病例</string>
+    <string name="upload_video">上传视频</string>
+    <string name="is_the_audit">正在审核</string>
+    <string name="download_list">下载</string>
+    <string name="upload_video_file_tile">文件标题:</string>
+    <string name="upload_video_file_tile_hint">请在此输入文件标题</string>
+    <string name="upload_file">文件上传</string>
+    <string name="abstract_file">文件摘要</string>
+    <string name="abstract_file_text">请在此输入输入文件摘要... ...</string>
+    <string name="upload_case_name">病例名称</string>
+    <string name="upload_video_name">视频名称</string>
+    <string name="upload_case_name_hint">请在此输入病例名称</string>
+    <string name="upload_video_name_hint">请在此输入视频名称</string>
+    <string name="patient_information">患者信息</string>
+    <string name="medical_history">病史</string>
+    <string name="clinical_manifestation">临床表现</string>
+    <string name="supplementary_examination">辅助检查</string>
+    <string name="special_examination">特殊检查</string>
+    <string name="diagnosis">诊断</string>
+    <string name="treatment">治疗</string>
+    <string name="operation">手术</string>
+    <string name="upload_case_hint">注：上传图片只能为jpg、jpeg、png、gif</string>
+    <string name="upload_sumit">提交</string>
+    <string name="upload">提交</string>
+    <string name="upload_video_text1">视频</string>
+    <string name="upload_case_text2">病例</string>
+    <string name="surgeryInfolist">手术演示</string>
+    <string name="hotInfolist">热门视频</string>
+    <string name="discussInfo">病例讨论</string>
+    <string name="accessInfo">超级访问</string>
+    <string name="pulpitInfo">百家讲坛</string>
+    <string name="medicalStyle">名家视角</string>
+    <string name="recommendForMe">为我推荐</string>
+    <string name="my_mymessage">我的消息</string>
+    <string name="my_myfollow">我的关注</string>
+    <string name="my_hismoreratevideo">他发布的收费视频</string>
+    <string name="my_hismorefreevideo">他发布的免费视频</string>
+    <string name="my_myworkmate">我的同事</string>
+    <string name="my_hisfollow">他的关注</string>
+    <string name="my_hisworkmate">他的同事</string>
+    <string name="phone_number">手机号码</string>
+    <string name="my_edit_phone">请在此输入手机号码</string>
+    <string name="validate_number">验    证    码</string>
+    <string name="my_validate_number">请在此输入验证码</string>
+    <string name="my_yijian">意见不能为空</string>
+    <string name="to_perfect">去完善</string>
+    <string name="again_upload">重新上传</string>
+    <string name="camera">拍照</string>
+    <string name="album">从相册中选择</string>
+    <string name="give_up">取消</string>
+    <string name="interule">积分规则</string>
+    <string name="inva_rule">        用户登录账户后进入活动页面，在页面点击“立即邀请”,可通过微信，QQ等方式发送给好友，好友在CCMTV网站或app端完成注册，用户即可获得50积分。（3小时之内到账）</string>
+    <string name="inva_shuoming">---活动说明---</string>
+    <string name="now_inva">立即邀请</string>
+    <string name="menu_get">收件箱</string>
+    <string name="menu_send">已发送</string>
+    <string name="menu_new">写消息</string>
+    <string name="video_play_count">0 次浏览</string>
+    <string name="video_download">下载</string>
+    <string name="video_no_zambia">赞</string>
+    <string name="video_zambia">已赞</string>
+    <string name="popular_search">热门搜索</string>
+    <string name="search_result">搜索结果</string>
+    <string name="bofanganddown">播放和下载</string>
+    <string name="clearcache">清除缓存</string>
+    <string name="arassert">AR资源管理</string>
+    <string name="setpush">消息通知</string>
+    <string name="sync_asset">同步资源</string>
+    <string name="clear_asset">清空资源</string>
+    <string name="checknew">检查更新</string>
+    <string name="about_own">关于我们</string>
+    <string name="feedback">意见反馈</string>
+    <string name="quit_user">退出登录</string>
+    <string name="only_wifidown">只允许无线局域网下载</string>
+    <string name="no_wifi_remind">非wlan网络提醒</string>
+    <string name="every_remind">每次提醒</string>
+    <string name="one_remind">提醒一次</string>
+    <string name="down_filepath">离线下载存储目录</string>
+    <string name="phone_cache">手机存储</string>
+    <string name="sdcard_cache">sd卡存储</string>
+    <string name="down_first">下载时优先选择</string>
+    <string name="call_custom">联系客服</string>
+    <string name="read_only">只读</string>
+
+
+    <!--nodata-->
+    <string name="btnnodata_tofollow">添加关注</string>
+    <string name="tvnodata_tofollow">暂无关注，快来添加关注吧</string>
+    <string name="btnnodata_toup">立即上传</string>
+    <string name="tvnodata_toup">没有正在审核的文件，快去上传吧</string>
+    <string name="tvnodata_toupreview">没有已经上传的文件，快去上传吧</string>
+    <string name="tvnodata_toupjilu">没有任何上传记录，快去上传吧</string>
+    <string name="tvnodata_tosee">那么多的临床视频，竟然一个收藏都没有~</string>
+    <string name="btnnodata_tosee">去看看</string>
+    <string name="tvnodata_recent">最近浏览为空，快去观看视频吧</string>
+    <string name="btnnodata_recent">观看视频</string>
+
+
+    <string name="getname_null">收件人用户名不能为空</string>
+    <string name="title_null">标题不能为空</string>
+    <string name="content_null">内容不能为空</string>
+    <string name="but_copy">复制链接</string>
+
+
+    <!--===========================================================石山视频所需start===================================================================== -->
+
+    <!-- MainActivity -->
+
+    <string name="label_video">视频管理</string>
+
+    <string name="label_download">下载管理</string>
+    <string name="title_activity_play_video">PlayVideoActivity</string>
+    <string name="title_activity_upload">UploadActivity</string>
+    <string name="title_activity_download">DownloadActivity</string>
+    <string name="title_test_activity">TestActivity</string>
+    <string name="play_video">播放视频</string>
+
+    <string name="upload_multiple">上传多个</string>
+    <string name="upload_test">上传测试</string>
+    <string name="upload_success">上传成功</string>
+    <string name="upload_failure">上传失败</string>
+    <string name="cancel_upload">已取消上传</string>
+    <string name="start_all">全部开始</string>
+    <string name="stop_all">全部暂停</string>
+    <string name="cancel_all">全部取消</string>
+    <string name="download_success">下载成功</string>
+    <string name="download_failure">下载失败</string>
+    <string name="cancel_download">已取消下载</string>
+    <string name="empty">暂无视频信息！</string>
+    <string name="api_limit_exceeded">超过API的最大调用次数。</string>
+    <string name="token_wrong">请设置正确的Token</string>
+    <string name="video1">未知</string>
+    <string name="video2">未知</string>
+    <string name="video3">未知</string>
+
+    <!-- fragment_download -->
+    <string name="start">开始</string>
+    <string name="pause">暂停</string>
+    <string name="cancel">取消</string>
+    <string name="play">播放</string>
+    <string name="video_title">标题：%1$s</string>
+
+    <string name="upload_progress">进度: %1$d</string>
+    <string name="upload_status">状态: %1$s</string>
+    <string name="download_progress">进度\n%1$d</string>
+    <string name="download_status">状态\n%1$d</string>
+
+    <!-- fragment_upload -->
+    <string name="upload_retry">重试</string>
+    <string name="upload_status_wait">等待上传</string>
+    <string name="upload_status_running">正在上传</string>
+    <string name="upload_status_success">上传成功</string>
+    <string name="upload_status_failure">上传失败</string>
+    <string name="upload_status_wait_network">没有网络连接</string>
+
+    <!-- DetailFragment -->
+    <string name="detail">视频信息</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="str_id">id</string>
+    <string name="str_title">title</string>
+    <string name="str_description">description</string>
+    <string name="str_tags">tags</string>
+    <string name="str_activated">activated</string>
+    <string name="str_true">true</string>
+    <string name="str_false">false</string>
+    <string name="str_ok">OK</string>
+    <string name="str_smooth">流畅</string>
+    <string name="str_standard">标清</string>
+    <string name="str_hd">高清</string>
+    <string name="select_definition">选择下载视频的版本</string>
+    <string name="download_begin">开始下载视频</string>
+    <string name="deactivate_prompt">视频未上线,请上线后重试!</string>
+    <string name="current_play_progress">当前播放时间：%1$s</string>
+    <string name="loading">正在加载，请稍候</string>
+    <string name="title_activity_directory_browser">选择需要上传的视频</string>
+
+
+    <string name="seek">跳到10s</string>
+    <string name="play_pause">播放/暂停</string>
+    <string name="show_hide_progress_bar">显示/隐藏进度条</string>
+    <string name="video_defenition">清晰度：%1$s</string>
+    <string name="no_file_selected">没有选中任何视频文件</string>
+    <string name="internal_memory">Internal memory</string>
+    <string name="cover_art">Cover art</string>
+    <string name="title">Title</string>
+
+    <string name="parent_folder">转到上级目录</string>
+    <plurals name="subfolders_quantity">
+        <item quantity="other">%d 个子文件夹</item>
+    </plurals>
+    <plurals name="mediafiles_quantity">
+        <item quantity="other">%d 个媒体文件</item>
+    </plurals>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="buffering">缓冲中</string>
+    <string name="sort">排序</string>
+    <string name="vitamio_init_decoders">初始化解码器...</string>
+    <string name="vitamio_videoview_error_title">本视频不能播放</string>
+    <string name="vitamio_videoview_error_text_invalid_progressive_playback">对不起，该视频文件已损坏或已迁移至其他目录</string>
+    <string name="vitamio_videoview_error_text_unknown">对不起，该视频文件已损坏</string>
+    <string name="vitamio_videoview_error_button">好的</string>
+    <string name="mediacontroller_play_pause">播放/暂停</string>
+
+    <!--AutoListview-->
+    <string name="pull_down_refresh">下拉可以刷新</string>
+    <string name="release_to_refresh1">松开刷新</string>
+    <string name="pull_up_refresh">上拉加载更多</string>
+    <string name="release_to_refresh2">松开加载更多</string>
+
+    <!--===========================================================石山视频所需end ===========================================================-->
+    <item name="tag_one" type="id">1</item>
+    <item name="tag_two" type="id">2</item>
+    <string name="title_activity_my_change_pass">MyChangePassActivity</string>
+    <!--weixinpay_begin-->
+    <string name="app_tip">提示</string>
+    <string name="pay_result_tip">这个界面用于显示第三方app通过微信支付的结果</string>
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+    <string name="getting_prepayid">订单信息加载中...</string>
+    <string name="title_activity_has_zzrz">HasZzrzActivity</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <!--weixinpay_end-->
+
+    <string name="medical_Live_Room">医学直播间</string>
+    <string name="medical_title">学习视频</string>
+    <string name="live_preview">直播预告</string>
+    <string name="live_history">精彩回顾</string>
+    <string name="practice_examination">执业考试</string>
+    <string name="toar">AR</string>
+
+    <!--柳叶杯首页活动介绍-->
+    <string name="introduction">\t\t\t\t手术，顾名思义\"手之艺术\"，即外科医生在人体局部进行操作，以达到去除病变组织、修复损伤、移植器官、改善机体的功能和形态等目的。自18世纪80年代，医学先驱Billroth完成了人类历史上首例外科手术以来，手术的发展日新月异，各种新的术式、新的器械设备、新的手术理念不断更新，给予手术更为广义上的概念，更稳固了手术在医学治疗领域不可替代的地位。\n\t\t\t\t用文字甚至图片来描述手术操作的过程显得苍白无力，视频的展示更为直观清晰且易于学习。CCMTV自上线以来，手术演示一直是CCMTV最受欢迎的节目，通过与各个领域临床科室的合作，上线了大量有质量、有价值的手术操作视频，促进外科领域的学术交流、手术操作经验的分享，鼓励和培养外科医师立足于手术操作技能，拓宽视野，从外科综合治疗角度更全面深入理解手术的价值。 围而观之，不如乐于从之。2017年，CCMTV将举行\"2017 柳叶杯 优秀手术征集及展播\"，给临床一线外科医师搭建一个交流分享的平台，大家可以将自己在临床的精彩手术记录下来，进行编辑后上传到CCMTV，领域不限，普外科、心胸外科、骨科、脑外科及血管外科等均可参与。\n\t\t\t\t本次大赛，我们将开放网络投票通道并邀请专家对优秀手术视频进行点评，不仅仅展现临床一线外科医师的精湛技艺，也能完美展示手术过程及外科综合治疗的理念耀眼光芒。群英汇聚，术有专攻。来吧，让我们一起，就此开启一场优秀手术病例的角逐盛宴！</string>
+    <!--杏林杯首页活动介绍-->
+    <string name="apricot_introduction">\t\t\t\t学术的声音需要更广泛的传播，临床的新理念、新技术也需要不断的宣讲，中国临床医学频道(CCMTV)是一家专业的医学视频新媒体，致力于临床医生间的学术交流与传播，向临床医生传递更符合临床需求的诊疗理念，以及相关新技术、新进展。\n\t\t\t\t如何更好的将临床医师的诊疗经验通过媒体传播给广大一线工作的临床医生以借鉴参考？这是CCMTV一直思考并且致力提高的问题和挑战。\n\t\t\t\t2017年，CCMTV将举行\"2017 杏林杯 优秀病例征集及分享\"，给临床一线医师搭建一个交流分享的平台，大家可以将自己在临床的体会和经验总结记录下来，进行编辑后上传到CCMTV。\n\t\t\t\t本次病例征集与分享活动不限领域、不限类型，希望各科室临床医师均能踊跃参与，将自己在门诊、急诊、病房、会诊或多学科综合诊治病例讨论的病例展现，供同仁参考学习。\n\t\t\t\t我们相信，本次病例征集分享活动不仅仅展现临床一线医师的精湛诊疗技艺，也能完美展示诊疗过程以及规范化个体化综合治疗的理念。每一个上传的病例都会是一个\"艺术品\"，在CCMTV的平台上体现独特价值、散发耀眼光芒。</string>
+    <string name="acitvity_search_three_hean_Text">取消</string>
+    <string name="acitvity_search_three_hean_Search_History">搜索历史</string>
+    <string name="acitvity_search_three_hean_Search">热门搜索</string>
+    <string name="acitvity_search_three_hean_clearance">清空</string>
+    <string name="search_hit">输入医院科室字段或与医院相关的字段</string>
+    <string name="search_hit_private_letter">输入好友的名字或名字相关的字段</string>
+    <string name="search_text">搜索</string>
+    <string name="hot_search">热门搜索</string>
+    <string name="personal_profile_private_letter">私信</string>
+    <string name="personal_profile_attention">关注</string>
+    <string name="charge_text1">是否收费</string>
+
+    <string name="viewpager_indicator">%1$d/%2$d</string>
+
+    <!--时间日期选择控件-->
+    <string name="date_pick_cancel">取消</string>
+    <string name="date_pick_title">请选择时间</string>
+    <string name="date_pick_commit">确定</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="hour">时</string>
+    <string name="minute">分</string>
+
+
+    <!--*************个推start***************-->
+    <string name="no_clientid">(none)</string>
+    <string name="clientid">clientid&#160;=&#160;</string>
+    <string name="stop">已停止</string>
+    <string name="clear">清除日志</string>
+    <string name="enablelog">开启debug日志</string>
+    <string name="bindcell">绑定手机号</string>
+    <string name="pmsg">透传测试</string>
+    <string name="psmsg">通知栏测试</string>
+    <string name="transmit">透传内容</string>
+    <string name="begin">开始(h)</string>
+    <string name="end">结束</string>
+    <string name="duration">持续时间(h)</string>
+    <string name="set_heartbeat">心跳间隔(s)</string>
+    <string name="send_msg">发送消息</string>
+    <string name="bind_alias">绑定别名</string>
+    <string name="bind_alias_unknown_exception">绑定别名失败，未知异常</string>
+    <string name="bind_alias_success">绑定别名成功</string>
+    <string name="bind_alias_error_frequency">绑定别名失败，请求频次超限</string>
+    <string name="bind_alias_error_param_error">绑定别名失败，参数错误</string>
+    <string name="bind_alias_error_request_filter">绑定别名失败，请求被过滤</string>
+    <string name="bind_alias_error_cid_lost">绑定别名失败，未获取到cid</string>
+    <string name="bind_alias_error_connect_lost">绑定别名失败，网络错误</string>
+    <string name="bind_alias_error_alias_invalid">绑定别名失败，别名无效</string>
+    <string name="bind_alias_error_sn_invalid">绑定别名失败，sn无效</string>
+    <string name="unbind_alias">解绑别名</string>
+    <string name="unbind_alias_unknown_exception">取消绑定别名失败，未知异常</string>
+    <string name="unbind_alias_success">取消绑定别名成功</string>
+    <string name="unbind_alias_error_frequency">取消绑定别名失败，请求频次超限</string>
+    <string name="unbind_alias_error_param_error">取消绑定别名失败，参数错误</string>
+    <string name="unbind_alias_error_request_filter">取消绑定别名失败，请求被过滤</string>
+    <string name="unbind_alias_error_cid_lost">取消绑定别名失败，未获取到cid</string>
+    <string name="unbind_alias_error_connect_lost">取消绑定别名失败，网络错误</string>
+    <string name="unbind_alias_error_alias_invalid">取消绑定别名失败，别名无效</string>
+    <string name="unbind_alias_error_sn_invalid">取消绑定别名失败，sn无效</string>
+    <string name="add_tag">添加标签</string>
+    <string name="add_tag_unknown_exception">设置标签失败，未知异常</string>
+    <string name="add_tag_success">接口调用成功</string>
+    <string name="add_tag_error_count">接口调用失败, tag数量过大, 最大不能超过200个</string>
+    <string name="add_tag_error_frequency">设置标签失败，频率过快</string>
+    <string name="add_tag_error_null">接口调用失败, tag 为空</string>
+    <string name="add_tag_error_repeat">设置标签失败, 标签重复</string>
+    <string name="add_tag_error_unbind">设置标签失败, 服务未初始化成功</string>
+    <string name="add_tag_error_not_online">还未登陆成功</string>
+    <string name="add_tag_error_black_list">该应用已经在黑名单中,请联系售后支持~</string>
+    <string name="add_tag_error_exceed">已存 tag 超过限制</string>
+    <string name="version">版本号</string>
+    <string name="silentime">静默时间</string>
+    <string name="getclientid">获取cid</string>
+    <string name="confirm">确定</string>
+    <string name="exit">退出</string>
+    <string name="appid">appid&#160;=&#160;</string>
+    <string name="appkey">appkey&#160;=&#160;</string>
+    <string name="appsecret">appsecret&#160;=&#160;</string>
+    <string name="mastersecret">mastersecret&#160;=&#160;</string>
+    <string name="show_version">当前sdk版本&#160;=&#160;</string>
+    <string name="show_cid">当前应用的cid&#160;=&#160;</string>
+    <string name="set_silenttime">设置静默时间段</string>
+    <string name="push_notification_title">通知栏测试</string>
+    <string name="push_notification_msg_title">通知栏测试</string>
+    <string name="push_notification_msg_content">您收到一条测试消息，点击访问</string>
+    <string name="push_transmission_data">收到一条透传测试消息</string>
+    <string name="network_invalid">对不起，当前网络不可用~</string>
+    <!--*************个推end***************-->
+    <!--*************小米start***************-->
+    <string name="recv_passthrough_message"> Receive a passthrough message. Content is \"%1$s\"</string>
+    <string name="click_notification_message"> Clicked a notification message. Content is \"%1$s\"</string>
+    <string name="arrive_notification_message"> Arrived a notification message. Content is \"%1$s\"</string>
+    <string name="register_success">Register push success.</string>
+    <string name="register_fail">Register push fail.</string>
+    <string name="set_alias_success"> Set alias \"%1$s\" success.</string>
+    <string name="set_alias_fail"> Set alias fail for %1$s.</string>
+    <string name="unset_alias_success"> Unset alias \"%1$s\" success.</string>
+    <string name="unset_alias_fail"> Unset alias fail for %1$s.</string>
+    <string name="set_account_success"> Set account \"%1$s\" success.</string>
+    <string name="set_account_fail"> Set account fail for %1$s.</string>
+    <string name="unset_account_success"> Unset account \"%1$s\" success.</string>
+    <string name="unset_account_fail"> Unset account fail for %1$s.</string>
+    <string name="subscribe_topic_success"> Subscribe topic \"%1$s\" success.</string>
+    <string name="subscribe_topic_fail"> Subscribe topic fail for %1$s.</string>
+    <string name="unsubscribe_topic_success"> Unsubscribe topic \"%1$s\" success.</string>
+    <string name="unsubscribe_topic_fail"> Unsubscribe topic fail for %1$s.</string>
+    <string name="set_accept_time_success"> Set accept time %1$s - %2$s success.</string>
+    <string name="set_accept_time_fail"> Set accept time fail for %1$s.</string>
+    <!--*************小米end***************-->
+
+    <string name="ok">确 认</string>
+    <string name="cancel1">取 消</string>
+
+
+    <!--日期选择轮子的title-->
+    <string name="query_time_select_title">请选择日期</string>
+
+    <string name="begin_at">开始于\n</string>
+    <string name="end_at">结束于\n</string>
+
+    <string name="time_start_larger_end_not_allowed">开始时间不能大于结束时间</string>
+
+    <string name="time_left">还有%ss</string>
+
+
+    <!--************直播gensee  start************-->
+    <!-- test login -->
+    <string name="vod_mode">vod mode</string>
+    <string name="publish_mode">publish mode</string>
+    <string name="watch_mode">watch mode</string>
+    <string name="zhandianwangzhi">domain</string>
+    <string name="bianhao">number</string>
+    <string name="zhandian">account</string>
+    <string name="zhandianpassword">pwd</string>
+    <string name="roomnickname">nickName</string>
+    <string name="roompassword">joinPwd</string>
+    <string name="webcast_type">webcast</string>
+    <string name="training_type">training</string>
+    <string name="vod_player_type">vod</string>
+    <string name="live_player_type">live</string>
+    <string name="pub_mode_portrait">竖屏直播</string>
+    <string name="pub_mode_landscape">横屏直播</string>
+    <string name="pub_hard_encode">硬编</string>
+    <string name="pub_soft_encode">软编</string>
+    <string name="pub_quality_hd">高清</string>
+    <string name="pub_quality_sd">普清</string>
+    <string name="authk">认证K值</string>
+    <string name="gs_uid">自定义userid大于10亿有效</string>
+    <string name="fixed_money_1">金额1</string>
+    <string name="fixed_money_2">金额2</string>
+    <string name="fixed_money_3">金额3</string>
+    <string name="fixed_money_4">金额4</string>
+    <string name="fixed_money_5">金额5</string>
+    <string name="fixed_money_6">金额6</string>
+    <!--************直播gensee  end************-->
+    <string name="notifyMsg">系统检测到未开启GPS定位服务,是否前往手机设置中授权？</string>
+
+    <!--************课程录制 start************-->
+    <string name="label_recording_dialog_title">课程录制</string>
+    <string name="label_recording_dialog_now">现场录制</string>
+    <string name="label_recording_dialog_file">选择文件</string>
+
+
+    <!--****************arcface虹软start*******************-->
+    <string name="page_preview">face attributes detect(video)</string>
+    <string name="page_ir_preview">ir liveness detect(video)</string>
+    <string name="face_recognize_mode">face compare 1:n(video vs database,rgb liveness detect)</string>
+    <string name="ir_face_recognize_mode">face compare 1:n(video vs database,ir liveness detect)</string>
+    <string name="page_single_image">face attributes detect(image)</string>
+    <string name="page_multi_image">face compare 1:n(image vs image)</string>
+    <string name="start_process">process</string>
+    <string name="choose_local_image">choose local image</string>
+    <string name="choose_main_image">choose main image</string>
+    <string name="add_item_image">add item image</string>
+    <string name="processing">processing</string>
+    <string name="get_picture_failed">failed to get picture!</string>
+    <string name="permission_denied">permission denied!</string>
+    <string name="active_engine">active engine</string>
+    <string name="active_success">active success</string>
+    <string name="already_activated">already activated</string>
+    <string name="active_failed">active failed,code is %d</string>
+    <string name="init_failed">init failed,code is %d</string>
+    <string name="engine_not_initialized">engine not initialized! code is %d</string>
+    <string name="notice_choose_main_img">please choose main image first</string>
+    <string name="compare_failed">compare failed!code is %d</string>
+    <string name="register">register</string>
+    <string name="liveness_detect">liveness detect</string>
+    <string name="face_manage">face manage</string>
+    <string name="batch_register">batch register</string>
+    <string name="notification_register">please put the images that need to register into directory \nsdcard/arcfacedemo/register</string>
+    <string name="registering_please_wait">registering,please wait</string>
+    <string name="clear_faces">clear faces</string>
+    <string name="no_face_need_to_delete">no face need to delete</string>
+    <string name="notification">notification</string>
+    <string name="confirm_delete">delete those %d images and face features?</string>
+
+    <string name="ft_op_0">only detect 0 degree in video mode</string>
+    <string name="ft_op_90">only detect 90 degree in video mode</string>
+    <string name="ft_op_180">only detect 180 degree in video mode</string>
+    <string name="ft_op_270">only detect 270 degree in video mode</string>
+    <string name="ft_op_all">detect all degrees in video mode</string>
+    <string name="camera_rgb">RGB CAMERA</string>
+    <string name="camera_ir">IR CAMERA</string>
+    <string name="camera_error_notice">\npossible reason:open two cameras at the same time is not allowed on this device</string>
+    <string name="draw_ir_rect_mirror_horizontal">draw IR face rect mirror horizontal</string>
+    <string name="draw_ir_rect_mirror_vertical">draw IR face rect mirror vertical</string>
+    <!--****************arcface虹软end*******************-->
+
+</resources>

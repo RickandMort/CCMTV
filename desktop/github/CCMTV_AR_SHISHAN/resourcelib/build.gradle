@@ -1,0 +1,16 @@
+apply plugin: 'com.android.library'
+    android {
+        compileSdkVersion 27
+        buildToolsVersion   '26.0.2'
+
+        defaultConfig  {
+            minSdkVersion 17
+            targetSdkVersion  22
+            versionCode  1
+            versionName  "1.0"
+        }
+    }
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/gensee_expression.jar')
+}

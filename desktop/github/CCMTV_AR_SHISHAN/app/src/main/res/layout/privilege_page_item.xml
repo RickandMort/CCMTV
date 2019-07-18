@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/privilege_page_icon2"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@mipmap/privilege_page_icon3"
+        android:paddingLeft="45dp"
+        android:paddingTop="5dp"
+        android:paddingRight="45dp"
+        android:paddingBottom="40dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/add_layout"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+
+        </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/privilege_img"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:onClick="birthday_gift_bag"
+                android:layout_gravity="center"
+                android:src="@mipmap/privilege_page_icon4"
+                />
+
+    </LinearLayout>
+
+</LinearLayout>

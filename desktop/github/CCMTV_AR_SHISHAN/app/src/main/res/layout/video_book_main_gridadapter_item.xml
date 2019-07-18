@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+              android:paddingBottom="10dp"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/cover_chart"
+        android:layout_width="100dp"
+        android:layout_height="130dp"
+        android:src="@mipmap/text1000"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_marginTop="3dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textColor="#333"
+        android:layout_gravity="center"
+        android:gravity="center|left"
+        android:paddingLeft="3dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="高兴死了"
+        />
+    <TextView
+        android:id="@+id/estate"
+        android:layout_marginTop="3dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textColor="#999"
+        android:layout_gravity="center"
+        android:gravity="center|left"
+        android:maxLines="1"
+        android:paddingLeft="3dp"
+        android:text="已读完"
+        />
+    <TextView
+        android:id="@+id/money"
+        android:layout_marginTop="3dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textColor="#EA1E1E"
+        android:layout_gravity="center"
+        android:gravity="center|left"
+        android:paddingLeft="3dp"
+        android:paddingBottom="10dp"
+        android:maxLines="1"
+        android:text="￥8.00"
+        />
+</LinearLayout>

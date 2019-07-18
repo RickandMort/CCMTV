@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layout_title1"
+        layout="@layout/activity_title" />
+
+    <com.linlic.ccmtv.yx.widget.ProgressWebView
+        android:id="@+id/webview_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_title1"
+        android:layout_marginBottom="45dp"
+        android:scrollbars="none" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/vote_bg"
+            android:onClick="Vote"
+            android:padding="8dp"
+            android:text="投票"
+            android:textColor="#FFF" />
+        <!--
+        android:background="@color/tab_apricot"
+         android:background="@color/tab_apricot_down"
+        -->
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/vote_bg"
+            android:onClick="Share"
+            android:padding="8dp"
+            android:text="分享"
+            android:textColor="#FFF" />
+    </LinearLayout>
+
+
+</RelativeLayout>

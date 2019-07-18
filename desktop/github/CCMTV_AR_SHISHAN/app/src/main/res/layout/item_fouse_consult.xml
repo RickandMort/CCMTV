@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentView="@+id/rl_consult_content"
+        app:rightMenuView="@+id/right">
+
+        <RelativeLayout
+            android:id="@+id/rl_consult_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/rl_medicine_fouse_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.linlic.ccmtv.yx.utils.CustomImageView
+                    android:id="@+id/consult_fouse_head_icon"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/img_default" />
+
+                <LinearLayout
+                    android:id="@+id/ll_medicine_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/consult_fouse_helper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="小蕊"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/consult_fouse_company"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="辉瑞制药有限公司 络活喜"
+                        android:textColor="#999"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/fouse_consult"
+                    android:layout_width="55dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@mipmap/icon_medicine_consult"
+                    android:gravity="center"
+                    android:text="咨询"
+                    android:textColor="#FFF"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <!--<View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/consult_fouse_head_icon"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="-3dp"
+                    android:layout_toRightOf="@+id/consult_fouse_head_icon"
+                    android:background="#EFEFEF" />-->
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/mid_view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/rl_medicine_fouse_item"
+                android:layout_marginLeft="55dp"
+                android:layout_marginTop="5dp"
+                android:background="#EFEFEF" />
+
+            <TextView
+                android:id="@+id/consult_fouse_article_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mid_view"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="清晨血压就是晨峰血压吗？"
+                android:textColor="#666"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/consult_fouse_article_title"
+                android:layout_marginTop="5dp"
+                android:background="#EFEFEF" />
+
+            <TextView
+                android:id="@+id/tv_look_num"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_above="@+id/rl_medicine_fouse_item"
+                android:layout_marginBottom="-16dp"
+                android:layout_marginLeft="32dp"
+                android:background="@drawable/shape_look_num"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#FFF"
+                android:textSize="10sp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/right"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/content"
+            android:background="#00AEEB">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="取消关注"
+                android:textColor="#FFF"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout>
+
+</RelativeLayout>

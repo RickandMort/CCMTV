@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingTop="15dp"
+              android:paddingBottom="10dp"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/video_title"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#333"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="点播专区，5折观看"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/video_more"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center|right"
+            android:gravity="center|right"
+            android:onClick="clickmoreVideos"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|right"
+                android:gravity="center|right"
+                android:text="更多" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/vip_icon03" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/video_rows_layout"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/video_layout_01"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:onClick="clickVideo"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/video_img_01"
+                    android:layout_width="match_parent"
+                    android:src="@mipmap/ys"
+                    android:scaleType="fitXY"
+                    android:layout_height="100dp" />
+
+                <ImageView
+                    android:id="@+id/video_item_top_img1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="5dp"
+                    android:src="@mipmap/vip_img"
+                    android:visibility="invisible"
+                    />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/video_aid1"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/video_text_01"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:text="史美诚：胸痛中心手术"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View
+            android:layout_width="5dp"
+            android:background="#fff"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:id="@+id/video_layout_02"
+            android:layout_width="match_parent"
+            android:onClick="clickVideo"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/video_img_02"
+                    android:layout_width="match_parent"
+                    android:src="@mipmap/ys"
+                    android:scaleType="fitXY"
+                    android:layout_height="100dp" />
+
+                <ImageView
+                    android:id="@+id/video_item_top_img2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="5dp"
+                    android:src="@mipmap/vip_img"
+                    android:visibility="invisible"
+                    />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/video_aid2"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/video_text_02"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:text="史美诚：胸痛中心手术"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/video_rows_layout2"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/video_layout_03"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:onClick="clickVideo"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/video_img_03"
+                    android:layout_width="match_parent"
+                    android:src="@mipmap/ys"
+                    android:scaleType="fitXY"
+                    android:layout_height="100dp" />
+
+                <ImageView
+                    android:id="@+id/video_item_top_img3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="5dp"
+                    android:src="@mipmap/vip_img"
+                    android:visibility="invisible"
+                    />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/video_aid3"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/video_text_03"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:text="史美诚：胸痛中心手术"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View
+            android:layout_width="5dp"
+            android:background="#fff"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:id="@+id/video_layout_04"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:onClick="clickVideo"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/video_img_04"
+                    android:layout_width="match_parent"
+                    android:src="@mipmap/ys"
+                    android:scaleType="fitXY"
+                    android:layout_height="100dp" />
+
+                <ImageView
+                    android:id="@+id/video_item_top_img4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="5dp"
+                    android:src="@mipmap/vip_img"
+                    android:visibility="invisible"
+                    />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/video_aid4"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/video_text_04"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:text="史美诚：胸痛中心手术"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

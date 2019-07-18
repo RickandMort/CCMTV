@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fs_title_height_vertical"
+        android:background="@drawable/fs_gs_title_tab_bg">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:src="@drawable/fs_ic_exit_app" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@+id/imgBack"
+            android:gravity="left|center_vertical">
+
+            <TextView
+                android:id="@+id/gs_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:maxEms="11"
+                android:maxLines="1"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/fs_gs_ts_title" />
+
+            <TextView
+                android:id="@+id/gs_tv_topState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/fs_gs_shape_top_state"
+                android:paddingBottom="1dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:paddingTop="1dp"
+                android:text="@string/fs_gs_cast_status_notstart"
+                android:textColor="#000000"
+                android:textSize="8sp"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/imgDanmaku"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:src="@drawable/fs_selector_title_danmaku" />
+
+            <ImageView
+                android:id="@+id/imgQuality"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:visibility="gone"
+                android:src="@drawable/fs_selector_video_quality" />
+
+            <ImageView
+                android:id="@+id/imgMore"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/fs_icon_more" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/linPower"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txtPowerPercent"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center" />
+
+            <ImageView
+                android:id="@+id/imgPower"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/fs_icon_back" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/video_have_rl"
+        style="@style/fs_gs_width_match_parent"
+        android:layout_below="@+id/titleLayout"
+        android:background="@color/fs_video_have_tip_bg"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/video_have_tv"
+            style="@style/fs_gs_width_match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/fs_video_audio_have_tip"
+            android:textColor="@color/fs_gs_white"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/video_have_close_iv"
+            style="@style/fs_gs_both_wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/fs_video_have_close" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/gs_linMicBar"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/fs_gs_selector_lin_mic_ly"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            style="@style/fs_gs_both_wrap_content"
+            android:background="@drawable/fs_gs_mic_open"
+            android:id="@+id/gs_volumeView" />
+
+        <ImageView
+            android:id="@+id/gs_imgMic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fs_gs_icon_mic" />
+    </LinearLayout>
+</RelativeLayout>

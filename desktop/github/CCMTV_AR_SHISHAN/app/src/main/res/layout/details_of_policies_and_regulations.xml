@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/arrow_back"
+            android:layout_width="45dip"
+            android:layout_height="match_parent"
+            android:onClick="back">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/bark" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#626262"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/arrow_participate"
+            android:layout_width="45dip"
+            android:layout_gravity="right"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:onClick="back">
+
+            <ImageView
+                android:id="@+id/participate"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/participate_icon01" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <include layout="@layout/activity_title4" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/id_ll_article_bottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/activity_title_name"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="#333"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="第三季度风口浪尖对方是否考虑接受对方考虑决定是否快乐就是发呆"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/time_text"
+                        android:layout_width="match_parent"
+                        android:textColor="#999"
+                        android:text="CCMTV  08-21 20:20"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/see"
+                        android:layout_width="wrap_content"
+                        android:textColor="#999"
+                        android:text=" 353"
+                        android:gravity="center"
+                        android:drawableLeft="@mipmap/see_icon01"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+
+                <WebView
+                    android:id="@+id/web_cont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    tools:ignore="WebViewLayout" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="#EFEFEF" />
+
+                <LinearLayout
+                    android:id="@+id/ll_look_pdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/detial_download_icon"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:text="点击预览"
+                        android:textSize="14sp"
+                        android:textColor="#999"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/id_ll_article_bottom"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="@mipmap/button_bg01"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom|center"
+            android:gravity="center"
+            android:layout_height="50dp">
+
+            <LinearLayout
+                android:id="@+id/house"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="clickcollection"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/house_img"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/house_icon01" />
+
+                <TextView
+                    android:id="@+id/house_text"
+                    android:layout_width="wrap_content"
+                    android:text="收藏"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:background="#fff"
+                android:layout_gravity="center" />
+            <LinearLayout
+                android:id="@+id/assist"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="clickdetail"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/assist_img"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/assist_icon01"
+                    />
+
+                <TextView
+                    android:id="@+id/assist_text"
+                    android:layout_width="wrap_content"
+                    android:text="点赞"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
